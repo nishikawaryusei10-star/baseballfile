@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>架空棒球維基首頁</title>
+  <style>
+    /* ==== Reset & Base ==== */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: "Noto Sans TC", sans-serif; background: #f9fafb; color: #333; line-height: 1.6; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ==== Header ==== */
+    .header { background: linear-gradient(135deg, #1e3a8a, #2563eb); color: #fff; padding: 50px 20px; text-align: center; }
+    .header h1 { font-size: 2.8em; margin-bottom: 10px; letter-spacing: 1px; }
+    .header p { font-size: 1.15em; opacity: 0.9; }
+
+    /* ==== 節日區塊 ==== */
+    .hero-image { max-width: 1536px; aspect-ratio: 1280/520; margin: 20px auto 30px; padding: 0 20px; }
+    .hero-image img { width: 100%; height: 100%; object-fit: cover; border-radius: 12px; display: block; background: #e5e7eb; }
+
+    /* ==== 對話方塊 ==== */
+    .editor-note { max-width: 1200px; margin: 0 auto 30px; padding: 0 20px; }
+    .editor-card { background: #fff; border-radius: 10px; padding: 18px 22px; box-shadow: 0 3px 10px rgba(0,0,0,0.05); }
+    .editor-card h2 { font-size: 1.4em; margin-bottom: 10px; color: #1e3a8a; }
+    .editor-card p { font-size: 0.95em; color: #374151; }
+
+    /* ==== 雙欄區塊 ==== */
+    .columns { display: flex; flex-wrap: wrap; gap: 20px; max-width: 1200px; margin: 30px auto; padding: 0 20px; }
+    .column { flex: 1 1 48%; background: #fff; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.05); padding: 20px; }
+    .column h3 { border-left: 6px solid #2563eb; padding-left: 12px; margin-bottom: 15px; font-size: 1.5em; }
+    .qa-list, .news-list, .recommend-list { list-style: none; }
+    .qa-list li, .news-list li, .recommend-list li { padding: 10px 0; border-bottom: 1px solid #eee; font-size: 0.95em; }
+
+    /* ==== 最新新聞輪播 ==== */
+    .news-list li { display: none; }
+    .news-list li.active { display: block; }
+    .news-list li a { font-weight: bold; color: #2563eb; }
+    .news-list li span { display: block; font-size: 0.75em; color: #888; margin-top: 4px; }
+
+    /* ==== 推薦頁面 ==== */
+    .recommend-list li { background: #f0f4f8; padding: 12px 15px; margin-bottom: 10px; border-radius: 6px; transition: background 0.2s; }
+    .recommend-list li:hover { background: #dce6f3; }
+
+    /* ==== 職棒入口 ==== */
+    .league-section { max-width: 1200px; margin: 30px auto 50px; padding: 0 20px; }
+    .league-section h2 { border-left: 6px solid #2563eb; padding-left: 12px; font-size: 1.65em; margin-bottom: 16px; }
+    .league-links { display: flex; flex-wrap: wrap; gap: 12px; }
+    .league-links a { flex: 0 1 23%; text-align: center; background: #fff; padding: 12px 0; border-radius: 6px; transition: background 0.2s; }
+    .league-links a:hover { background: #e6eef8; }
+
+    /* ==== Footer ==== */
+    .footer { text-align: center; padding: 25px 20px; font-size: 0.9em; color: #777; background: #fff; border-top: 1px solid #ddd; }
+
+    /* ==== 搜尋欄 ==== */
+    .search-wrapper { max-width: 1200px; margin: 20px auto 10px; padding: 0 20px; position: relative; }
+    .search-box { width: 100%; padding: 12px 14px; font-size: 1rem; border-radius: 8px; border: 1px solid #d1d5db; outline: none; }
+    .search-box:focus { border-color: #2563eb; }
+
+    /* 搜尋結果 */
+    .search-results { position: absolute; top: 100%; left: 0; right: 0; background: #fff; border: 1px solid #d1d5db; border-radius: 8px; box-shadow: 0 6px 20px rgba(0,0,0,0.08); z-index: 50; display: none; }
+    .search-results ul { list-style: none; margin: 0; padding: 0; }
+    .search-results li { padding: 10px 14px; border-bottom: 1px solid #eee; cursor: pointer; }
+    .search-results li:last-child { border-bottom: none; }
+    .search-results li:hover { background: #f0f4f8; }
+    .search-results small { display: block; font-size: 0.75em; color: #6b7280; }
+   
+   /* ==== 時間控制 ==== */ 
+  .fake-time-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  }
+
+  .fake-time {
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  background: #f0f4f8;
+  padding: 6px 12px;
+  border-radius: 6px;
+  color: #1e3a8a;
+  }
+
+  .fake-time span {
+  margin-right: 6px;
+  }
+
+    /* ==== 響應式 ==== */
+    @media screen and (max-width:900px) { .columns { flex-direction: column; } .column { flex: 1 1 100%; } .league-links a { flex: 0 1 48%; } }
+    @media screen and (max-width:500px) { .league-links a { flex: 0 1 100%; } }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <h1>架空棒球世界資料站</h1>
+    <p>人物・球隊・賽事・紀錄 — 全面紀錄棒球的虛構與想像</p>
+  </header>
+
+  <!-- 搜尋欄 -->
+  <div class="search-wrapper">
+    <input
+      type="text"
+      class="search-box"
+      id="searchInput"
+      placeholder="搜尋球員、球隊、賽事"
+      oninput="handleSearch()"
+      onfocus="showSuggestions()"
+    >
+    <div class="search-results" id="searchResults">
+      <ul id="resultList"></ul>
+    </div>
+  </div>
+
+  <!-- 站長的話 -->
+  <section class="editor-note">
+    <div class="editor-card">
+      <h2>站長的話</h2>
+      <p>
+        歡迎來到架空棒球世界資料站。這裡不只是整理紀錄的地方，而是一個讓
+        想像中的棒球世界能被完整保存的空間。無論是未來聯盟、虛構球員，
+        或真實歷史的再詮釋，希望這個網站能成為你查資料、發想故事，
+        甚至單純熱愛棒球時的一個據點。<br>
+        如果你想加入我們，把你自己投入到架空世界中，
+        歡迎聯繫：nishikawaryusei10@gmail.com
+      </p>
+    </div>
+  </section>
+  
+  <!-- 站長的話 -->
+  <section class="editor-note">
+    <div class="editor-card">
+      <h2>架空時間</h2>
+    <br>  
+    <div class="fake-time-wrapper">
+    <div class="fake-time">
+    <span id="fake-date">2052-01-01</span>
+    <span id="fake-weekday">(Tue)</span>
+    <span id="fake-time">00:00:00</span>
+    </div>
+    </div>
+    <p>
+        這個架空的時間是在真實世界的26年後，下面有日期<br>
+    </p>
+    </div>
+  </section>
+
+  <!-- 雙欄內容 -->
+  <div class="columns">
+
+    <!-- Q&A 小問答 -->
+    <div class="column">
+      <h3>⚾ 棒球小問答</h3>
+      <ul class="qa-list">
+        <li>Q: 職棒史上第一場夜間比賽是哪一年？<br>A: 1935年在辛辛那提紅人主場。</li>
+        <li>Q: 台灣第一位旅美球員是誰？<br>A: 胡金龍。</li>
+        <li>Q: 室內棒球聯盟成立於哪一年？<br>A: 2000年。</li>
+      </ul>
+    </div>
+
+    <!-- 最新新聞 -->
+    <div class="column">
+      <h3>📰 最新新聞</h3>
+      <ul class="news-list" id="newsList">
+        <li class="active"><a href="#">2051室內棒球聯盟選秀結果公布，中信子彈隊選進林昱傑</a><span>2025-11-09</span></li>
+        <li><a href="#">玉里高中U18代表賽奪冠，再度締造東部傳奇</a><span>2025-11-05</span></li>
+        <li><a href="#">北鐵狼公布新主場計畫，預計於2053完工</a><span>2025-10-28</span></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- 推薦頁面 -->
+  <div class="columns">
+    <div class="column">
+      <h3>🌟 推薦頁面</h3>
+      <ul class="recommend-list">
+        <li><a href="#">林昱傑 — 黑豹旗的傳奇投手</a></li>
+        <li><a href="#">2051 室內棒球聯盟季後賽總覽</a></li>
+        <li><a href="#">玉里高中 — 東部棒球搖籃</a></li>
+        <li><a href="#">徐子凡 — 味全天龍強打指定打擊</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 職棒入口 -->
+  <div class="league-section">
+    <h2>🌏 職棒聯盟入口</h2>
+    <div class="league-links">
+      <a href="#">世界職棒大聯盟 (MWB)</a>
+      <a href="#">日本野球聯盟 (NPL)</a>
+      <a href="#">韓國職棒聯盟 (KPBL)</a>
+      <a href="#">室內棒球聯盟 (IBL)</a>
+    </div>
+  </div>
+
+  <!-- ==== JS 新聞輪播 ==== -->
+  <script>
+    const newsItems = document.querySelectorAll('#newsList li');
+    let currentIndex = 0;
+    setInterval(() => {
+      newsItems.forEach(i => i.classList.remove('active'));
+      currentIndex = (currentIndex + 1) % newsItems.length;
+      newsItems[currentIndex].classList.add('active');
+    }, 4000);
+  </script>
+
+  <!-- ==== JS 搜尋功能 ==== -->
+  <script>
+    const searchData = [
+      { title: "周敬倫", url: "https://sites.google.com/d/1-WtcvXz0dqq-lOlDVX6n0akF6zWH3x4c/p/1XNE9OyhpL7Ec2TSeNawkXz_CI5AiC_cC/edit", tag: "台灣球員｜味全天龍" },
+      
+      { title: "林侑承", url: "https://sites.google.com/d/1-WtcvXz0dqq-lOlDVX6n0akF6zWH3x4c/p/1UnppHKjY0DcPnAzb4wG3n4SmlddN4bao/edit", tag: "台灣球員｜全聯熊" },
+      
+      { title: "邱家濬", url: "https://sites.google.com/d/1-WtcvXz0dqq-lOlDVX6n0akF6zWH3x4c/p/1-9mShF6K5irXzqcYfGoC-qQaOmPoFm4V/edit", tag: "台灣球員｜全聯熊" },
+      
+      { title: "辛棄湲", url: "https://sites.google.com/d/1-WtcvXz0dqq-lOlDVX6n0akF6zWH3x4c/p/1psiovRoMD1qgkXlW2Tv9G_N19hvyGorE/edit", tag: "台灣球員｜富邦守護者" },
+      
+      { title: "郭宸佑", url: "https://sites.google.com/d/1-WtcvXz0dqq-lOlDVX6n0akF6zWH3x4c/p/1moDwRTq5TjL14MEQysG6-_n-mogLvj3i/edit", tag: "台灣球員｜富邦守護者" },
+      
+       { title: "Jakub Novák", url: "https://sites.google.com/d/1-WtcvXz0dqq-lOlDVX6n0akF6zWH3x4c/p/1--zJ7WHDXIpnhzew5m5y57nU_DVSQICc/edit", tag: "捷克球員｜樂天桃猿" },
+      
+      { title: "林佳恩", url: "https://sites.google.com/d/1-WtcvXz0dqq-lOlDVX6n0akF6zWH3x4c/p/1auAHh0754lEO5RLFJ-5OIXBRVU3NXyEu/edit", tag: "台灣球員｜北鐵狼" },
+      
+      { title: "阿華田・米烙", url: "https://sites.google.com/d/1-WtcvXz0dqq-lOlDVX6n0akF6zWH3x4c/p/1qr-cMQb4XUiQaxPNJGlEaRJaBwCfmWQi/edit", tag: "台灣球員｜北鐵狼" },
+      
+      { title: "宋昌紘", url: "https://sites.google.com/d/1-WtcvXz0dqq-lOlDVX6n0akF6zWH3x4c/p/1LjGIubmJY3betPclPunAzOrrXZDXxTXv/edit", tag: "台灣球員｜北鐵狼" },
+      
+      { title: "許景成", url: "https://sites.google.com/d/1-WtcvXz0dqq-lOlDVX6n0akF6zWH3x4c/p/1gSNEtIiZBe7w4GT4pJKHsfni6yfVYFMV/edit", tag: "台灣球員｜南投雷霆" },
+      
+      { title: "林澤安", url: "https://sites.google.com/d/1-WtcvXz0dqq-lOlDVX6n0akF6zWH3x4c/p/1pAJkuWH8QKGnWGT_UH3LZN-NsIJAGcOg/edit", tag: "台灣球員｜南投雷霆" },
+      
+       { title: "李俊洺", url: "https://sites.google.com/d/1-WtcvXz0dqq-lOlDVX6n0akF6zWH3x4c/p/1WU7rkdvtY8XzlL4j2o-GNuMAExuawtZO/edit", tag: "台灣球員｜南投雷霆" },
+      
+      { title: "杜霆睿", url: "https://sites.google.com/d/1-WtcvXz0dqq-lOlDVX6n0akF6zWH3x4c/p/1ymqoX8CWrKSGaX5BBf5Dc5S3mtO2fSfx/edit", tag: "台灣球員｜中信子彈" },
+      
+      { title: "羅以翔", url: "https://sites.google.com/d/1-WtcvXz0dqq-lOlDVX6n0akF6zWH3x4c/p/1ukjkIiHAc73dmf98uudEXuHQHsvpHEbY/edit", tag: "台灣球員｜阿里山小火車" },
+      
+      { title: "周敬祐", url: "https://sites.google.com/d/1-WtcvXz0dqq-lOlDVX6n0akF6zWH3x4c/p/1alVDdg4UZcWPdl_lNxrP1pqdfFWPFlH4/edit", tag: "台灣球員｜墾丁鯊魚" },
+      
+      { title: "張庭睿", url: "https://sites.google.com/d/1-WtcvXz0dqq-lOlDVX6n0akF6zWH3x4c/p/1JNIOmkqCD7BATiYCu0-QcH2knvsNFOYs/edit", tag: "台灣球員｜台鋼巨鷹" },
+      
+      { title: "游仕堯", url: "https://sites.google.com/d/1-WtcvXz0dqq-lOlDVX6n0akF6zWH3x4c/p/1kEiVa9dQOvRO-miuyqJdqmwTXji0gaIc/edit", tag: "台灣球員｜台鋼巨鷹" },
+      
+      { title: "余宥達", url: "https://sites.google.com/d/1-WtcvXz0dqq-lOlDVX6n0akF6zWH3x4c/p/1wm0pRm1RGSuTYVEm2Eye6-XiNTgcSwNN/edit", tag: "台灣球員｜奇醫海燕" },
+      
+      { title: "林聖平", url: "https://sites.google.com/d/1-WtcvXz0dqq-lOlDVX6n0akF6zWH3x4c/p/1fEsQCpXYiWfvda1ENM15w79GDz1P_Kcu/edit", tag: "台灣球員｜奇醫海燕" },
+      
+       { title: "李小亨", url: "https://sites.google.com/d/1-WtcvXz0dqq-lOlDVX6n0akF6zWH3x4c/p/1fEsQCpXYiWfvda1ENM15w79GDz1P_Kcu/edit", tag: "台灣球員｜花蓮眼鏡蛇" },
+      
+      { title: "金在勳", url: "https://sites.google.com/d/1-WtcvXz0dqq-lOlDVX6n0akF6zWH3x4c/p/1meYFxY11TbOqisJjgxEgqhlyStozkgc_/edit", tag: "韓國球員｜花蓮眼鏡蛇" },
+
+      { title: "林昱傑", url: "https://sites.google.com/d/1-WtcvXz0dqq-lOlDVX6n0akF6zWH3x4c/p/1C-kNTKwn4Tgiz_QUJdkbb5ZI2HS6LVGa/edit", tag: "台灣球員｜舊金山巨人隊" },
+      
+      { title: "王彥翔", url: "https://sites.google.com/d/1-WtcvXz0dqq-lOlDVX6n0akF6zWH3x4c/p/1rIjYrXH7ck2kbGFAyjtLe0utPSsmylNx/edit", tag: "台灣球員｜辛辛那提紅人隊" },
+      
+      { title: "2051 室內棒球聯盟季後賽", url: "https://sites.google.com/d/1-WtcvXz0dqq-lOlDVX6n0akF6zWH3x4c/p/1LLs80rgU3ZeCdajqsWyjQZpJAaxSp6QD/edit", tag: "賽事" },
+      
+      { title: "室內棒球聯盟年度全壘打王", url: "https://sites.google.com/d/1-WtcvXz0dqq-lOlDVX6n0akF6zWH3x4c/p/1Y9hmAOVrKMkvZghjvc8zWX6gKSkWQ_uf/edit", tag: "年度獎項｜室內棒球聯盟" },
+      
+      { title: "室內棒球聯盟年度新人王", 
+      url: "https://sites.google.com/d/1-WtcvXz0dqq-lOlDVX6n0akF6zWH3x4c/p/1Y9hmAOVrKMkvZghjvc8zWX6gKSkWQ_uf/edit", tag: "年度獎項｜室內棒球聯盟" },
+      
+      { title: "室內棒球聯盟年度金手套獎", 
+      url: "https://sites.google.com/d/1-WtcvXz0dqq-lOlDVX6n0akF6zWH3x4c/p/1eyPL2gcRQzufO__yJY2tqncAhy2aP7ml/edit", tag: "年度獎項｜室內棒球聯盟" },
+      
+      { title: "室內棒球聯盟新人選秀會", 
+      url: "https://sites.google.com/d/1-WtcvXz0dqq-lOlDVX6n0akF6zWH3x4c/p/17tJYYf8a8t77ff08URYHa3DNS383GfaH/edit", tag: "國內活動｜職棒選秀" },
+      
+      
+      
+      { title: "彰化高中青棒隊", url: "#", tag: "國內球隊｜青棒球隊" },
+      { title: "平鎮高中青棒隊", url: "#", tag: "國內球隊｜青棒球隊" }
+    ];
+
+    const suggestions = [
+      "彰化高中青棒隊",
+      "室內棒球聯盟新人選秀會",
+      "中信子彈",
+      "金手套得主",
+      "玉里高中"
+    ];
+
+    const input = document.getElementById("searchInput");
+    const resultsBox = document.getElementById("searchResults");
+    const resultList = document.getElementById("resultList");
+
+    function handleSearch() {
+      const keyword = input.value.trim();
+      resultList.innerHTML = "";
+      if (!keyword) { resultsBox.style.display = "none"; return; }
+
+      const matches = searchData.filter(item => item.title.includes(keyword)).slice(0,5);
+      if (matches.length === 0) { resultsBox.style.display = "none"; return; }
+
+      matches.forEach(item => {
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="${item.url}">${item.title}<small>${item.tag}</small></a>`;
+        resultList.appendChild(li);
+      });
+
+      resultsBox.style.display = "block";
+    }
+
+    function showSuggestions() {
+      if (input.value.trim()) return;
+
+      resultList.innerHTML = "";
+      suggestions.forEach(text => {
+        const li = document.createElement("li");
+        li.innerHTML = `${text}<small>推薦查詢</small>`;
+        li.onclick = () => { input.value = text; handleSearch(); };
+        resultList.appendChild(li);
+      });
+
+      resultsBox.style.display = "block";
+    }
+
+    document.addEventListener("click", e => {
+      if (!e.target.closest(".search-wrapper")) {
+        resultsBox.style.display = "none";
+      }
+    });
+  </script>
+  
+  <script>
+// 星期對照
+const weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+
+// 取得當前時間並轉換成2052年的架空時間
+function updateFakeTime() {
+  const now = new Date();
+
+  // 取得UTC+8中原標準時間
+  const utc8 = new Date(now.getTime() + (8 * 60 + now.getTimezoneOffset()) * 60000);
+
+  // 將年份固定為2052，月日時分秒保持不變
+  const fakeDate = new Date(utc8);
+  fakeDate.setFullYear(2052);
+
+  const year = fakeDate.getFullYear();
+  const month = String(fakeDate.getMonth() + 1).padStart(2, '0');
+  const day = String(fakeDate.getDate()).padStart(2, '0');
+  const hours = String(fakeDate.getHours()).padStart(2, '0');
+  const minutes = String(fakeDate.getMinutes()).padStart(2, '0');
+  const seconds = String(fakeDate.getSeconds()).padStart(2, '0');
+
+  const weekday = weekdays[fakeDate.getDay()];
+
+  document.getElementById('fake-date').textContent = `${year}-${month}-${day}`;
+  document.getElementById('fake-weekday').textContent = `(${weekday})`;
+  document.getElementById('fake-time').textContent = `${hours}:${minutes}:${seconds}`;
+}
+
+// 每秒更新
+setInterval(updateFakeTime, 1000);
+
+// 初始化
+updateFakeTime();
+</script>
+
+</body>
+</html>
