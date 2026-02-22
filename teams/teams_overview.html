@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>室內棒球聯盟｜棒球維基館</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background: #ffffff;
+  color: #111827;
+  line-height: 1.6;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ===== 頁首 ===== */
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header .sub {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* ===== 區塊 ===== */
+.section {
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-left: 4px solid #111827;
+  padding-left: 8px;
+}
+
+/* ===== 頂部導覽列 ===== */
+.topnav {
+  display: flex;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 3px solid #e5e7eb;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.topnav a {
+  color: #006000;
+  font-weight:450;
+}
+
+.topnav a:hover {
+  color: #1d4ed8;
+}
+}
+
+
+/* ===== 基本資料 ===== */
+.profile {
+  font-size: 0.95rem;
+}
+
+.profile div {
+  padding: 5px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.profile span {
+  display: inline-block;
+  width: 120px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ===== 連結不換行 ===== */
+.no-break {
+  white-space: nowrap;
+  font-size: 0.85em;
+}
+
+/* ===== 球隊速查表 ===== */
+/* 表格基本樣式保留 */
+table.state {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.state th,
+table.state td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+/* ==== 標題列也套用顏色 ==== */
+table.state th:nth-child(3n+1) { background-color: #A6FFA6; color: #000; } /* 藍 */
+table.state th:nth-child(3n+2) { background-color: #FFFF93; color: #000; } /* 綠 */
+table.state th:nth-child(3n+3) { background-color: #FFBFFF; color: #000; } /* 黃 */
+
+/* ==== 內容列：深淺交錯 ==== */
+table.state tbody tr:nth-child(odd) td:nth-child(3n+1) { background-color: 	#F0FFF0; }  
+table.state tbody tr:nth-child(odd) td:nth-child(3n+2) { background-color: 	#FFFFDF; }  
+table.state tbody tr:nth-child(odd) td:nth-child(3n+3) { background-color: 	#FFF7FF; }  
+
+table.state tbody tr:nth-child(even) td:nth-child(3n+1) { background-color: 	#A6FFA6; }  
+table.state tbody tr:nth-child(even) td:nth-child(3n+2) { background-color: 	#FFFF93; }  
+table.state tbody tr:nth-child(even) td:nth-child(3n+3) { background-color: 	#FFBFFF; }  
+
+.best {
+  font-weight: bold;       /* 加粗字體 */        
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.test {
+  font-weight: bold;       /* 加粗字體 */
+  color: #FF0000;          /* 改成紅色 */
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+/* ===== 年度賽況整體 ===== */
+.season-wrapper {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+               "Noto Sans TC", sans-serif;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* ===== 十年切換按鈕 ===== */
+.decade-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.decade-tabs button {
+  padding: 8px 14px;
+  border: 1px solid #ccc;
+  background: #f5f5f5;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.decade-tabs button.active {
+  background: #1f2937;
+  color: #fff;
+  border-color: #1f2937;
+}
+
+/* ===== 十年內容區 ===== */
+.decade-content {
+  display: none;
+}
+
+.decade-content.active {
+  display: block;
+}
+
+/* ===== 年度列表 ===== */
+.season-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 10px;
+}
+
+.season-list a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #111;
+  background: #fff;
+  font-size: 14px;
+}
+
+.season-list a:hover {
+  background: #f0f4f8;
+  border-color: #999;
+}
+
+</style>
+</head>
+
+<body>
+
+  <div class="container">
+  
+  <nav class="topnav">
+  <a href="../index.html">首頁</a> ⮕ <b>球隊</b>
+  </nav>  
+
+  <!-- 頁首 -->
+  <div class="header">
+    <h1>球隊</h1>
+  </div>
+
+  <!-- 簡介 -->
+  <div class="section">
+    <h2>簡介</h2>
+   本頁面是球隊導覽頁，點選後進一步導覽<br>
+  </div>
+
+  <!-- 歷年列表 -->
+  <div class="section">
+    <h2>國內球隊</h2>
+    ・<a href="../teams/IBL_teams_overview.html">室內棒球聯盟球隊</a></br>
+    ・<a href="../teams/TW_adult_teams.html">國內甲組成棒球隊</a></br>
+    ・<a href="../teams/TW_student_teams.html">國內三級棒球球隊</a></br>
+  </div>
+  
+   <!-- 歷年列表 -->
+  <div class="section">
+    <h2>國外球隊</h2>
+    ・<a href="../teams/NPB_teams_overview.html">日本職棒球隊</a></br>
+    ・<a href="../teams/KBO_teams_overview.html">韓國職棒球隊</a></br>
+    ・<a href="../teams/MLB_teams_overview.html">美國職棒大聯盟球隊</a></br>
+    ・歐洲職業棒球大聯盟</br>
+    ・國外業餘球隊</br>
+  
+  </div>
+
+
+</body>
+</html>
