@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> 球員資料｜棒球維基館 </title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background: #ffffff;
+  color: #111827;
+  line-height: 1.6;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 80px;
+}
+
+html, body {
+  height: auto;
+  overflow-y: auto;
+}
+
+/* ===== 橫幅照片 ===== */
+.banner-photo {
+  width: 100%;
+  height: 320px;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* ===== 頁首 ===== */
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header .sub {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* ===== 主版面 ===== */
+.section {
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-left: 4px solid #111827;
+  padding-left: 8px;
+}
+
+/* ===== 基本資料 ===== */
+.profile {
+  font-size: 0.95rem;
+}
+
+.profile div {
+  padding: 5px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.profile span {
+  display: inline-block;
+  width: 100px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ===== 經歷 ===== */
+.career a {
+  display: inline-block;
+  margin-right: 4px;
+}
+
+.no-break {
+  white-space: nowrap; /* 括號內文字不換行 */
+}
+
+/* ===== 年表 ===== */
+.timeline {
+  font-size: 0.95rem;
+}
+
+.timeline div {
+  margin-bottom: 6px;
+}
+
+.timeline b {
+  display: inline-block;
+  width: 60px;
+}
+
+/* ===== 頂部導覽列 ===== */
+.topnav {
+  display: flex;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 3px solid #e5e7eb;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.topnav a {
+  color: #006000;
+  font-weight:450;
+}
+
+.topnav a:hover {
+  color: #1d4ed8;
+}
+
+/* ===== 表格 ===== */
+table.stats {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats th,
+table.stats td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats th {
+  background: #F9F900;
+  color: #000000;
+  font-weight: 600;
+}
+
+table.stats tbody tr:nth-child(even) td {
+  background: #FFFFDF;
+}
+
+table.stats tbody tr:hover td {
+  background: #dce6f3;
+}
+
+table.stats th:nth-child(2),
+table.stats td:nth-child(2) {
+  white-space: nowrap;
+}
+
+.best {
+  font-weight: bold;       /* 加粗字體 */        
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.test {
+  font-weight: bold;       /* 加粗字體 */
+  color: #FF0000;          /* 改成紅色 */
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+/* ===== Footer ===== */
+.footer {
+  border-top: 1px solid #d1d5db;
+  margin-top: 48px;
+  padding-top: 16px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+   
+   <nav class="topnav">
+  <a href="../index.html">首頁</a> ⮕ <a href="../players/players_overall.html">球員</a> ⮕  <a href="../players/taiwan_players_overall.html">台灣球員</a> ⮕  <b>林尚軒</b> </nav>    
+
+  <!-- 頁首 -->
+  <div class="header">
+    <h1>林尚軒</h1>
+    <div class="sub"> LIN,SHANG-XUAN｜投手（P）</div>
+  </div>
+
+  <!-- 基本資料 -->
+  <div class="section">
+    <h2>基本資料</h2>
+    <div class="profile">
+      <div><span>出生日期</span>2029 年 5 月 12 日（22歲）</div>
+      <div><span>身高體重</span>185 公分／89 公斤</div>
+      <div><span>出生地</span>台灣・花蓮縣</div>
+      <div><span>投打習慣</span>右投右打</div>
+      <div><span>守備位置</span>投手 RHP</div>
+      <div><span>最快球速</span>160.8 km/h（室內棒球聯盟／2051年）</div>
+      <div><span>職棒選秀</span><a href="../draft/IBL_draft2047.html">2047年室內棒球聯盟選秀會</a><a href="../teams/IBL_bullet.html">中信子彈隊</a>第二輪指名</div>
+    </div>
+  </div>
+
+  <!-- 球員經歷 -->
+  <div class="section">
+    <h2>球員經歷</h2>
+    <div class="career">
+      <a href="#">花蓮縣</a><a href="#">中原國小少棒隊</a></br>
+      <a href="#">花蓮縣</a><a href="#">花崗國中青少棒隊</a></br>
+      <a href="#">花蓮縣</a><a href="#">花蓮高中青棒隊</a></br>
+      <a href="#">室內棒球聯盟</a><a href="../teams/IBL_bullet.html">中信子彈</a>（2047/08～）</br>
+    </div>
+  </div>
+
+  <!-- 球員介紹 -->
+  <div class="section">
+    <h2>球員介紹</h2>
+林尚軒是一位來自花蓮縣的棒球選手，守備位置為投手，目前效力於室內棒球聯盟中信子彈隊<br> 
+<br> 
+林尚軒出生於花蓮，從小在山海之間長大。國小時期便展現優異的協調性與下肢力量，早期以游擊手與外野手為主。直到國中後期，教練才發現他出手角度乾淨、肩肘結構條件良好，開始嘗試讓他站上投手丘。當時他的球速僅約135km左右，但出手穩定、手臂揮動效率佳，屬於可塑性極高的投手原石。國中畢業後，他選擇升學，進入花蓮高中就讀。這個決定成為職涯轉折點。在投手教練徐大勇的指導下，他開始接觸運動課學，透過動作捕捉分析、出手角度與旋轉效率優化、下肢動能傳導訓練，透過數據與影像回放，他逐步修正跨步幅度與軀幹旋轉時間點，使球速在短時間內明顯提升。高一黑豹旗最快球速就進不到143km。雖然不算亮眼，但也開始進入球探觀察名單。高二最速提升至149km，入選該年U18青棒代表隊，集訓期間新增一顆高速滑球作為主要決勝球，轉速與位移幅度皆達慢慢成熟。該年黑豹旗帶領花蓮高中闖進64強，最終因投球數限制無法登板，惜敗穀保家商，但已讓全國記住他的名字。高三球速正式突破152km，控球穩定度顯著進步，四縫線速球具上竄尾勁，搭配滑球與變速球，三球種品質完整。各大賽事場邊測速槍林立，球探筆記本翻頁速度甚至比比賽節奏還快。當時對他的評語是：「原始素材好，成長曲線漂亮，還沒到極限。」<br>
+<br>
+面對旅外、選秀與升學三條道路，林尚軒始終低調。黑熊旗結束後，他公開表示希望先升學，再評估選秀時機。然而，透過學測申請入學時，在第二階段面試接連受挫。雖仍有備取機會，他卻在思考後選擇放棄。林尚軒自評身體已接近成熟階段且投球機制穩定，適合提前進入職業系統，若再等四年，成長幅度未必更高，最終，他決定直接投入該屆選秀。該年競爭異常激烈包括彰中的國家隊二遊、多名即戰力大專王牌，而林尚軒屬於天花板高、但需時間養成型。然而，中信子彈隊看中他的上限與可塑性，毫不猶豫在第二輪選中這位東部未來之星。<br>
+<br>
+選秀後，球團立即安排他進入國軍隊服役。在紀律化生活與球團專屬菜單下，他專注於球隊的菜單，增加肌肉量、提升身體素質。隔年六月退伍後測試成果良好，球團在七月中將他升上一軍。新人年10出賽，雖局數受控，成績不亮眼，但以他這個年紀來看，壓制力與成熟度已超出預期。2049年是林尚軒第一個完整新人賽季，他正式卡住輪值位置。防禦率低於3.00，FIP、K/9、被打擊率皆屬聯盟前段。被評為「最有機會挑戰王牌地位的年輕先發」。2050年林尚軒除了在球季表現更進步，季末也受到國家隊教練團肯定，入選世界棒球16強代表隊，以先發身分主投16.1局僅失1分，壓制波多黎各與南韓強打線，成為中華隊奪得季軍的重要功臣。這年他僅21歲。2051年，他繳出：防禦率1.78，隨著2051年防禦率王到手，國外球探密切關注。被普遍認為是：「下一位具備旅外實力的本土王牌投手候選人。」
+
+  </div>
+
+  <!-- 個人年表 -->
+  <div class="section">
+    <h2>個人年表</h2>
+    <div class="timeline">
+<div><b>2047年</b>7月，參加該年選秀會，在第二輪被中信子彈隊隊指名，後以簽約金1485萬新台幣、4年新人合約加盟</div>
+<div><b>2047年</b>7月，進入國軍鳳凰隊服役</div>
+<div><b>2050年</b>6月24日，對戰苗栗石虎隊的比賽投出161公里的速球，經官方認證後為160.5公里，成為室內棒球聯盟第二位投出超過160公里的本土選手</div>
+</div>
+  </div>
+
+  <!-- 生涯成績 -->
+ <!-- 生涯成績 -->
+  <div class="section">
+    <h2>職棒生涯成績</h2>
+    <b>室內棒球聯盟一軍投球成績：</b>
+    <table class="stats">
+    <thead>
+      <tr>
+      <th>年度</th>
+      <th>球隊</th>
+      <th>G</th>
+      <th>GS</th>
+      <th>W</th>
+      <th>L</th>
+      <th>HLD</th>
+      <th>SV</th>
+      <th>IP</th>
+      <th>QS</th>
+      <th>BF</th>
+      <th>BH</th>
+      <th>BHR</th>
+      <th>OAVG</th>
+      <th>SO</th>
+      <th>BB</th>
+      <th>R</th>
+      <th>ER</th>
+      <th>ERA</th>
+      <th>WHIP</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    <tr>
+     <td>2048</td>
+      <td>中信子彈</td>
+      <td>10</td>
+      <td>10</td>
+      <td>2</td>
+      <td>3</td>
+      <td>0</td>
+      <td>0</td>
+      <td>56.1</td>
+      <td>6</td>
+      <td>203</td>
+      <td>54</td>
+      <td>3</td>
+      <td>.266</td>
+      <td>49</td>
+      <td>19</td>
+      <td>27</td>
+      <td>25</td>
+      <td>3.99</td>
+      <td>1.30</td>
+    </tr>
+
+    <tr>
+     <td>2049</td>
+      <td>中信子彈</td>
+      <td>27</td>
+      <td>25</td>
+      <td>11</td>
+      <td>5</td>
+      <td>0</td>
+      <td>0</td>
+      <td>162.1</td>
+      <td>13</td>
+      <td>653</td>
+      <td>138</td>
+      <td>7</td>
+      <td>.211</td>
+      <td>142</td>
+      <td>38</td>
+      <td>59</td>
+      <td>53</td>
+      <td>2.94</td>
+      <td>1.08</td>
+    </tr>
+
+    <tr>
+     <td>2050</td>
+      <td>中信子彈</td>
+      <td>29</td>
+      <td>29</td>
+      <td>14</td>
+      <td>7</td>
+      <td>0</td>
+      <td>0</td>
+      <td>188.0</td>
+      <td>22</td>
+      <td>744</td>
+      <td>154</td>
+      <td>11</td>
+      <td>.207</td>
+      <td>192</td>
+      <td>41</td>
+      <td>56</td>
+      <td>52</td>
+      <td>2.49</td>
+      <td>1.04</td>
+    </tr>
+
+   <tr>
+     <td>2051</td>
+      <td>中信子彈</td>
+      <td>31</td>
+      <td>31</td>
+      <td>16</td>
+      <td>6</td>
+      <td>0</td>
+      <td>0</td>
+      <td>192.2</td>
+      <td>25</td>
+      <td>793</td>
+      <td>149</td>
+      <td>4</td>
+      <td>.188</td>
+      <td>205</td>
+      <td>43</td>
+      <td>43</td>
+      <td>38</td>
+      <td><span class="best">1.78</span></td>
+      <td>1.00</td>
+    </tr>
+    <tr class="career">
+      <td colspan="2">通算成績</td>
+      <td>97</td>
+      <td>95</td>
+      <td>43</td>
+      <td>21</td>
+      <td>0</td>
+      <td>0</td>
+      <td>599.1</td>
+      <td>66</td>
+      <td>2393</td>
+      <td>495</td>
+      <td>25</td>
+      <td>.207</td>
+      <td>588</td>
+      <td>141</td>
+      <td>185</td>
+      <td>168</td>
+      <td>2.52</td>
+      <td>1.06</td>
+    </tr>
+
+
+  
+    </tbody>
+  </table>
+
+      <!-- 成績資料保持原本內容 -->
+      <!-- 這裡略去為簡潔，可直接保留你原本 table 內容 -->
+    </tbody>
+    </table>
+  </div>
+
+  <!-- 個人獎項 -->
+  <div class="section">
+    <h2>個人獎項</h2>
+    ・<a href="../award/IBL_ERA_leading.html">室內棒球聯盟年度防禦率王</a>：2051</br>
+    ・<a href="../award/IBL_GG_award.html">室內棒球聯盟年度金手套</a>：2050</br>
+    </div>
+
+  <!-- 特殊事蹟 -->
+  <div class="section">
+    <h2>特殊事蹟</h2>
+    ・<a href="#">2046年U18世界青棒錦標賽</a>中華代表隊</br>
+    ・<a href="#">2047年U18世界青棒錦標賽</a>中華代表隊</br>
+    ・<a href="#">2050年WBSC世界16強錦標賽</a>中華代表隊</br>
+    ・<a href="#">2052年世界棒球經典賽</a>中華代表隊</br>
+  </div>
+
+  <!-- 相關新聞 -->
+  <div class="section">
+    <h2>相關新聞</h2>
+    <a href="#"></a><br>
+    <a href="#"></a>
+  </div>
+  
+  <div class="section">
+    <h2>延伸閱讀</h2>
+    ・球速超過160km/h的選手<br>
+  </div>
+  
+</div>
+
+  
+
+
+</body>
+</html>
