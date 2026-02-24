@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> 球員資料｜棒球維基館 </title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background: #ffffff;
+  color: #111827;
+  line-height: 1.6;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 80px; /* 關鍵 */
+}
+
+html, body {
+  height: auto;
+  overflow-y: auto;
+}
+
+/* ===== 橫幅照片 ===== */
+.banner-photo {
+  width: 100%;
+  height: 320px;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* ===== 頁首 ===== */
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header .sub {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* ===== 主版面 ===== */
+.section {
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-left: 4px solid #111827;
+  padding-left: 8px;
+}
+
+/* ===== 基本資料 ===== */
+.profile {
+  font-size: 0.95rem;
+}
+
+.profile div {
+  padding: 5px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.profile span {
+  display: inline-block;
+  width: 100px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ===== 經歷 ===== */
+.career a {
+  display: inline-block;
+}
+
+.no-break {
+  white-space: nowrap; /* 括號內文字不換行 */
+}
+
+/* ===== 年表 ===== */
+.timeline {
+  font-size: 0.95rem;
+}
+
+.timeline div {
+  margin-bottom: 6px;
+}
+
+.timeline b {
+  display: inline-block;
+  width: 60px;
+}
+
+/* ===== 頂部導覽列 ===== */
+.topnav {
+  display: flex;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 3px solid #e5e7eb;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.topnav a {
+  color: #006000;
+  font-weight:450;
+}
+
+.topnav a:hover {
+  color: #1d4ed8;
+}
+
+/* ===== 表格 ===== */
+table.stats {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats th,
+table.stats td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats th {
+  background: #0066CC;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+table.stats tbody tr:nth-child(even) td {
+  background: #ECF5FF;
+}
+
+table.stats th:nth-child(2),
+table.stats td:nth-child(2) {
+  white-space: nowrap;
+}
+
+.best {
+  font-weight: bold;       /* 加粗字體 */        
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.test {
+  font-weight: bold;       /* 加粗字體 */
+  color: #FF0000;          /* 改成紅色 */
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+/* ===== Footer ===== */
+.footer {
+  border-top: 1px solid #d1d5db;
+  margin-top: 48px;
+  padding-top: 16px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    
+  <nav class="topnav">
+  <a href="../index.html">首頁</a> ⮕ <a href="../players/players_overall.html">球員</a> ⮕  <a href="../players/korea_players_overall.html">韓國球員</a> ⮕  <b>徐賓</b> </nav>     
+
+  <!-- 頁首 -->
+  <div class="header">
+    <h1>徐賓</h1>
+    <div class="sub"> Seo Bin｜內野手（SS）</div>
+  </div>
+
+  <!-- 基本資料 -->
+  <div class="section">
+    <h2>基本資料</h2>
+    <div class="profile">
+      <div><span>綽號別稱</span>漢江之子（한강의아들）、三星皇太孫（삼성황태손）</div>
+      <div><span>出生日期</span>2028 年 7 月 12 日（23歲）</div>
+      <div><span>身高體重</span>182 公分／79 公斤</div>
+      <div><span>出生地</span>美國・華盛頓州西雅圖（🇰🇷韓國籍）</div>
+      <div><span>投打習慣</span>右投右打</div>
+      <div><span>守備位置</span>內野手 SS 3B 2B</div>
+      <div><span>職棒選秀</span>2048年韓國職棒選秀會<a href="#">三星獅隊</a>第一輪指名</div>
+      <div><span>原文姓名</span><b>서빈（Seo Bin）</b></div>
+      <div><span>親屬關係</span>祖父是韓國傳奇投手徐明，父親是曾效力於美職和韓職的徐廷煥</div>
+    </div>
+  </div>
+
+  <!-- 球員經歷 -->
+  <div class="section">
+    <h2>球員經歷</h2>
+    <div class="career">
+      首爾慶信中學校</br>
+      首爾德壽高等學校</br>
+      延世大學</br>
+      <a href="#">韓國職棒</a><a href="#">三星獅隊</a>（2048～）</br>
+    </div>
+  </div>
+
+  <!-- 球員介紹 -->
+  <div class="section">
+    <h2>球員介紹</h2>
+徐賓是一位來自大邱廣域市的棒球選手，守備位置為游擊手，現效力於韓國職棒三星獅隊。其以教科書般的游擊守備、極致的安打製造能力以及優越的長打產出聞名，被譽為當今亞洲職棒最具統治力的中長槍型內野手。<br>
+<br>
+徐賓出身於顯赫的棒球世家，其祖父為韓國棒球傳奇徐明，父親則是曾效力於西雅圖水手隊的徐廷煥。2028 年夏季，徐賓於父親旅美征戰期間出生於美國西雅圖，自幼便在美職體系的高張力環境下耳濡目染，展現出過人的運動天賦。
+國小時期，徐賓就讀於西雅圖當地的基層學校，並在當地的少棒聯盟中嶄露頭角。高年級時，他趁著暑假隨祖父徐明前往台灣觀摩室內棒球聯盟賽事，親眼目睹了台灣職棒在全天候環境下的高強度對抗，這場台灣之旅成為他心中立志投身職業賽場的轉折點。13歲那年，隨著父親結束旅美生涯回國任職，徐賓隨家人回到韓國，進入首爾慶信中學就讀，接觸先進的數據監控與VR 訓練，迅速成為首爾青少棒界的明星。<br>
+<br>
+進入棒球名校德壽高等學校後，徐賓確立了其作為頂級游擊手的地位。即便在豪門校隊中，他仍以優異的守備範圍與驚人的傳球臂力站穩先發。高二時他隨隊來台參加亞青賽，在天母球場展現出卓越的打擊覆蓋面，開始引起MLB球探與IBL 球團的廣泛關注。高三賽季，他展現了驚人的領袖氣質，不僅帶領德壽高奪下全國大賽冠軍，更在各項賽事繳出 5 成以上的打擊率。當時MLB 球隊曾開出高額價碼邀其出國，但徐賓選擇先進入延世大學磨練，並在 2048 年以「早期選秀」身分投入韓國職棒 新人選秀會，最終以狀元之姿加盟家鄉球隊三星獅。<br>
+<br>
+2049 年新人球季，徐賓甫登一軍便展現了「皇太子」的架勢。他不僅迅速銜接職業投手的球速，更以單季 .317 的打擊率奪下新人王與游擊手金手套獎，正式開啟他在 KBO 的統治之路。2050 年，徐賓入選韓國國家隊參加名古屋亞運，在對決中華隊的決賽中，他在 9 局下半擊出再見安打，助隊奪金並順利解決兵役問題。該季他繳出12支全壘打與 42次盜壘成功，長打產出明顯提升。<br>
+<br>
+2051 年，徐賓迎來了職業生涯的史詩級賽季。他以驚人的擊球精準度單季敲出202 支安打，成為 KBO 史上極少數的「兩百安俱樂部」成員。該季他展現了極致的壘間破壞力，以 55 次盜壘成功拿下盜壘王，同時包辦了打擊王（.358）、得分王（118）、安打王（202）與上壘率王（.428）。其在游擊區的守備校正值（UZR）更寫下聯盟紀錄，成功蟬聯金手套三連霸，並榮獲年度最有價值球員（MVP）大滿貫。韓國媒體評論道：「徐賓不僅承襲了家族的優良基因，他更用科技化的自主訓練與過人的球場智慧，將游擊手這個位置推向了新的高度。」<br>
+  </div>
+
+  <!-- 個人年表 -->
+  <div class="section">
+    <h2>個人年表</h2>
+    <div class="timeline">
+      <div><b>2028年</b>7月，出生於美國西雅圖</div>
+      <div><b>2040年</b>入選西雅圖少棒全明星賽中</div>
+      <div><b>2041年</b>隨父親回到韓國，進入首爾慶信中學。</div>
+      <div><b>2047年</b>進入延世大學體育教育系就讀</div>
+      <div><b>2048年</b>參加韓國職棒選秀會，在第一輪第一順位被三星獅指名，後以15億韓元加盟</div>
+      <div><b>2050年</b>7月，入選名古屋亞運，在冠軍賽對上中華隊敲出再見安打</div>
+    </div>
+  </div>
+
+  <!-- 生涯成績 -->
+ <!-- 生涯成績 -->
+  <div class="section">
+    <h2>職棒生涯成績</h2>
+    室內棒球聯盟一軍打擊成績：
+    <table class="stats">
+    <thead>
+      <tr>
+        <th>年度</th>
+        <th>球隊</th><th>G</th><th>PA</th><th>AB</th><th>H</th>
+        <th>2B</th><th>3B</th><th>HR</th>
+        <th>RBI</th><th>R</th><th>SB</th><th>TB</th><th>SO</th><th>BB</th><th>SAC</th><th>SF</th>
+        <th>AVG</th><th>OBP</th><th>SLG</th><th>OPS</th>
+      </tr>
+    </thead>
+    <tbody>
+        
+    <tr>
+      <td>2049</td>
+      <td>三星獅</td>
+      <td>135</td>
+      <td>562</td>
+      <td>498</td>
+      <td>158</td>
+      <td>32</td>
+      <td>6</td>
+      <td>8</td>
+      <td>65</td>
+      <td>88</td>
+      <td>35</td>
+      <td>226</td>
+      <td>72</td>
+      <td>52</td>
+      <td>6</td>
+      <td>6</td>
+      <td>.317</td>
+      <td>.378</td>
+      <td>.454</td>
+      <td>.832</td>
+    </tr>
+    
+    <tr>
+      <td>2050</td>
+      <td>三星獅</td>
+      <td>138</td>
+      <td>605</td>
+      <td>531</td>
+      <td>176</td>
+      <td>38</td>
+      <td>8</td>
+      <td>12</td>
+      <td>78</td>
+      <td>102</td>
+      <td>42</td>
+      <td>266</td>
+      <td>68</td>
+      <td>62</td>
+      <td>4</td>
+      <td>8</td>
+      <td>.331</td>
+      <td>.396</td>
+      <td>.501</td>
+      <td>.897</td>
+    </tr>
+    <tr>
+      <td>2051</td>
+      <td>三星獅</td>
+      <td><span class="test">144</span></td>
+      <td>642</td>
+      <td>565</td>
+      <td><span class="best">202</span></td>
+      <td><span class="best">45</span></td>
+      <td><span class="best">11</span></td>
+      <td>15</td>
+      <td>85</td>
+      <td><span class="best">118</span></td>
+      <td>55</td>
+      <td>314</td>
+      <td>55</td>
+      <td>70</td>
+      <td>2</td>
+      <td>5</td>
+      <td><span class="best">.358</span></td>
+      <td><span class="best">.425</span></td>
+      <td>.556</td>
+      <td>.981</td>
+    </tr>
+    
+    <tr class="career">
+      <td colspan="2">通算成績</td>
+      <td>417</td>
+      <td>1809</td>
+      <td>1594</td>
+      <td>536</td>
+      <td>115</td>
+      <td>25</td>
+      <td>35</td>
+      <td>228</td>
+      <td>308</td>
+      <td>132</td>
+      <td>806</td>
+      <td>195</td>
+      <td>184</td>
+      <td>12</td>
+      <td>19</td>
+      <td>.334</td>
+      <td>.401</td>
+      <td>.506</td>
+      <td>.907</td>
+    </tr>
+
+
+  
+    </tbody>
+  </table>
+  </div>
+
+  <!-- 個人獎項 -->
+  <div class="section">
+    <h2>個人獎項</h2>
+    ・<a href="#">韓國職棒年度打擊王</a>：2051</br>
+    ・<a href="#">韓國職棒年度上壘率王</a>：2051</br>
+    ・<a href="#">韓國職棒年度安打王</a>：2051<br>
+    ・<a href="#">韓國職棒年度得分王</a>：2051<br>
+    ・<a href="#">韓國職棒年度新人王</a>：2049</br>
+    ・<a href="#">韓國職棒年度金手套</a>游擊手：2049～2051</br>
+    ・<a href="#">韓國職棒年度守備賞</a>游擊手：2051</br>
+    
+  </div>
+
+  <!-- 特殊事蹟 -->
+  <div class="section">
+    <h2>特殊事蹟</h2>
+    ・2046年U18世界青棒錦標賽韓國代表隊<br>
+    ・2048年U23世界盃棒球錦標賽韓國代表隊<br>
+    ・2050年名古屋亞運會韓國代表隊<br>
+    ・2052年世界棒球經典賽韓國代表隊<br>
+    ・韓國職棒明星賽：2049～2051<br>
+  </div>
+
+  <!-- 相關新聞 -->
+  <div class="section">
+    <h2>相關新聞</h2>
+    <a href="#"></a>
+    <a href="#"></a>
+  </div>
+
+</div>
+
+
+</body>
+</html>
