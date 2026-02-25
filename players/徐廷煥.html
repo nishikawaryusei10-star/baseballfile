@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> 球員資料｜棒球維基館 </title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background: #ffffff;
+  color: #111827;
+  line-height: 1.6;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 80px; /* 關鍵 */
+}
+
+html, body {
+  height: auto;
+  overflow-y: auto;
+}
+
+/* ===== 橫幅照片 ===== */
+.banner-photo {
+  width: 100%;
+  height: 320px;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* ===== 頁首 ===== */
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header .sub {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* ===== 主版面 ===== */
+.section {
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-left: 4px solid #111827;
+  padding-left: 8px;
+}
+
+/* ===== 基本資料 ===== */
+.profile {
+  font-size: 0.95rem;
+}
+
+.profile div {
+  display: flex;    
+  padding: 5px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.profile-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile span {
+  display: inline-block;
+  width: 100px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ===== 經歷 ===== */
+.career a {
+  display: inline-block;
+}
+
+.no-break {
+  white-space: nowrap; /* 括號內文字不換行 */
+}
+
+/* ===== 年表 ===== */
+.timeline {
+  font-size: 0.95rem;
+}
+
+.timeline div {
+  margin-bottom: 6px;
+}
+
+.timeline b {
+  display: inline-block;
+  width: 60px;
+}
+
+/* ===== 頂部導覽列 ===== */
+.topnav {
+  display: flex;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 3px solid #e5e7eb;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.topnav a {
+  color: #006000;
+  font-weight:450;
+}
+
+.topnav a:hover {
+  color: #1d4ed8;
+}
+
+/* ===== 表格 ===== */
+table.stats {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats th,
+table.stats td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats th {
+  background: #336666;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+table.stats tbody tr:nth-child(even) td {
+  background: #CFE4EE;
+}
+
+/* ===== 表格 ===== */
+table.stats1 {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats1 th,
+table.stats1 td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats1 th {
+  background: #0066CC;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+table.stats1 tbody tr:nth-child(even) td {
+  background: #ECF5FF;
+}
+
+table.stats th:nth-child(2),
+table.stats td:nth-child(2) {
+  white-space: nowrap;
+}
+
+table.stats1 th:nth-child(2),
+table.stats1 td:nth-child(2) {
+  white-space: nowrap;
+}
+
+.best {
+  font-weight: bold;       /* 加粗字體 */        
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.test {
+  font-weight: bold;       /* 加粗字體 */
+  color: #FF0000;          /* 改成紅色 */
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+/* ===== Footer ===== */
+.footer {
+  border-top: 1px solid #d1d5db;
+  margin-top: 48px;
+  padding-top: 16px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    
+  <nav class="topnav">
+  <a href="../index.html">首頁</a> ⮕ <a href="../players/players_overview.html">球員</a> ⮕  <a href="../players/korea_players_overview.html">韓國球員</a> ⮕  <b>徐廷煥</b> </nav>     
+
+  <!-- 頁首 -->
+  <div class="header">
+    <h1>徐廷煥</h1>
+    <div class="sub"> Seo Jung-hwan｜內野手（SS）</div>
+  </div>
+
+  <!-- 基本資料 -->
+  <div class="section">
+    <h2>基本資料</h2>
+    <div class="profile">
+      <div><span>綽號別稱</span>The Korean Kraken、三星皇太子（삼성황태자）</div>
+      <div><span>出生日期</span>2002 年 11 月 15 日（49歲）</div>
+      <div><span>身高體重</span>188 公分／92 公斤</div>
+      <div><span>出生地</span>韓國・大邱廣域市</div>
+      <div><span>投打習慣</span>右投左打</div>
+      <div><span>守備位置</span>內野手 SS 3B</div>
+      <div><span>職棒選秀</span>2021年美國職棒西雅圖水手隊自由契約球員</div>
+      <div><span>原文姓名</span><b>서정한（Seo Jung-hwan）</b></div>
+      <div><span>親屬關係</span>父親是韓國傳奇投手徐明，兒子是效力三星獅的<a href="徐賓.html">徐賓</a></div>
+    </div>
+  </div>
+
+  <!-- 球員經歷 -->
+  <div class="section">
+    <h2>球員經歷</h2>
+    <div class="career">
+      慶信中學校</br>
+      慶北高等學校</br>
+      延世大學</br>
+      <a href="#">美國職棒</a><a href="#">西雅圖水手隊</a>（小聯盟～大聯盟，2021～2034）</br>
+      <a href="#">韓國職棒</a><a href="#">三星獅隊</a>（2039～2040）</br>
+    </div>
+  </div>
+
+  <!-- 球員介紹 -->
+  <div class="section">
+    <h2>球員介紹</h2>
+徐廷煥是一位出身大邱廣域市的棒球選手，守備位置為三壘手及游擊手，曾效力於美國職棒西雅圖水手隊及韓國職棒三星獅隊。其以驚人的擊球爆發力、開闊的守備覆蓋面與強力的傳球臂力聞名，是2020年代末至 2030年代初期，大聯盟最具代表性的亞裔強力內野手。<br>
+<br>
+徐廷煥出身於顯赫的棒球世家，父親為三星獅傳奇球星徐明。自幼在大邱慶信中學展現過人天賦，高中時期就讀於慶北高，憑藉著高三單季超過10 支全壘打的恐怖數據橫掃全國。2021年，就讀延世大學一年級的他以「亞洲頭號長打者」之姿受大聯盟球探青睞，以高額簽約金加盟西雅圖水手隊。<br>
+<br>
+在美職體系中，徐廷煥展現了驚人的適應力，2025年正式登陸大聯盟。2028年是他職業生涯的巔峰，他在長子徐賓出生的那個賽季，繳出.302打擊率、33支全壘打與25次盜壘的史詩級數據，成為大聯盟史上罕見的「30-20」型亞洲重砲，並榮獲美聯三壘手銀棒獎。在國際賽場上，他率領韓國隊奪下2029年第7屆世界棒球經典賽季軍，自己則拿下大會最佳三壘手。<br>
+<br>
+然而，輝煌的生涯卻因傷病蒙上陰影。2032年6 月，徐廷煥在對陣奧克蘭運動家的比賽中，為破壞雙殺與二壘手Tyler Black 發生激烈碰撞，導致左手腕粉碎性骨折；隔年春訓復健時又遭遇左膝前十字韌帶斷裂。這兩次毀滅性傷勢奪走了他的長打爆發力與移動速度。2034年底，他毅然宣布結束旅美生涯，回歸故里。<br>
+<br>
+2035 年，徐廷煥以狀元身分加盟家鄉球隊三星獅，正式開啟其「皇太子」回歸之旅。儘管身體機能大不如前，他仍憑藉深厚的美職經驗與擊球紀律，在2037年繳出26 支全壘打與95分打點，拿下KBO金手套獎，並帶領三星獅重登王座。2040年，因手腕與膝蓋傷勢達臨界點，37歲的徐廷煥宣布退役，轉任三星獅技術顧問。
+<br>
+<br>
+退役後的徐廷煥致力於引進美式數據追蹤系統與科學化訓練，並親自指導其子徐賓。韓國媒體評論道：「徐廷煥的生涯雖然受困於傷痕，但他將大聯盟的視野與遺憾轉化為養分，不僅在三星獅延續了家族榮光，更為韓國棒球開拓了通往世界頂點的道路。」<br>
+  </div>
+
+  <!-- 個人年表 -->
+  <div class="section">
+    <h2>個人年表</h2>
+    <div class="timeline">
+      <div><b>2021年</b>進入延世大學就讀</div>
+      <div><b>2022年</b>3月18日，與西雅圖水手隊簽約，簽約金為160萬美元</div>
+      <div><b>2025年</b>4月26日，首度登上大聯盟，以代跑亮相</div>
+      <div><b>2026年</b>8月，參加廣州亞運獲得冠軍，得到免服兵役的資格</div>
+      <div><b>2030年</b>右膝半月板磨損與積水，季後接受清創手術</div>
+      <div><b>2031年</b>6月，因椎間盤突出而進入30日傷兵名單</div>
+      <div><b>2032年</b>5月15日，在對陣運動家隊時，因滑壘與二壘手Tyler Black激烈碰撞導致左手腕粉碎性骨折，該賽季直接報銷</div>
+      <div><b>2033年</b>春訓，復健後重返賽場，卻在春訓遭遇左膝前十字韌帶 (ACL) 斷裂，該季報銷</div>
+      <div><b>2034年</b>10月，遭到水手隊釋出</div>
+      <div><b>2035年</b>回歸韓職，以5年37億韓元加盟三星獅隊</div>
+      <div><b>2038年</b>7月28日，左手腕韌帶撕裂，後續賽季報銷</div>
+      <div><b>2040年</b>1月9日，宣布退休，結束19年的職棒生涯</div>
+    </div>
+  </div>
+
+ 
+ <!-- 生涯成績 -->
+  <div class="section">
+    <h2>職棒生涯成績</h2>
+    美國職棒大聯盟打擊成績：
+    <table class="stats">
+    <thead>
+      <tr>
+        <th>年度</th>
+        <th>球隊</th><th>G</th><th>PA</th><th>AB</th><th>H</th>
+        <th>2B</th><th>3B</th><th>HR</th>
+        <th>RBI</th><th>R</th><th>SB</th><th>TB</th><th>SO</th><th>BB</th><th>SAC</th><th>SF</th>
+        <th>AVG</th><th>OBP</th><th>SLG</th><th>OPS</th>
+      </tr>
+    </thead>
+    <tbody>
+    
+    <tr>
+      <td>2025</td>
+      <td>SEA</td>
+      <td>88</td>
+      <td>352</td>
+      <td>321</td>
+      <td>85</td>
+      <td>18</td>
+      <td>2</td>
+      <td>15</td>
+      <td>52</td>
+      <td>45</td>
+      <td>12</td>
+      <td>152</td>
+      <td>85</td>
+      <td>25</td>
+      <td>1</td>
+      <td>5</td>
+      <td>.265</td>
+      <td>.313</td>
+      <td>.474</td>
+      <td>.787</td>
+    </tr>
+    
+    <tr>
+      <td>2026</td>
+      <td>SEA</td>
+      <td>145</td>
+      <td>612</td>
+      <td>550</td>
+      <td>155</td>
+      <td>32</td>
+      <td>3</td>
+      <td>24</td>
+      <td>88</td>
+      <td>90</td>
+      <td>20</td>
+      <td>265</td>
+      <td>122</td>
+      <td>52</td>
+      <td>2</td>
+      <td>8</td>
+      <td>.282</td>
+      <td>.339</td>
+      <td>.482</td>
+      <td>.821</td>
+    </tr>
+    
+    <tr>
+      <td>2027</td>
+      <td>SEA</td>
+      <td>152</td>
+      <td>658</td>
+      <td>580</td>
+      <td>171</td>
+      <td>38</td>
+      <td>2</td>
+      <td>31</td>
+      <td>95</td>
+      <td>102</td>
+      <td>18</td>
+      <td>306</td>
+      <td>135</td>
+      <td>68</td>
+      <td>1</td>
+      <td>9</td>
+      <td>.295</td>
+      <td>.364</td>
+      <td>.528</td>
+      <td>.892</td>
+    </tr>
+    
+    <tr>
+      <td>2028</td>
+      <td>SEA</td>
+      <td>155</td>
+      <td>682</td>
+      <td>590</td>
+      <td>178</td>
+      <td>42</td>
+      <td>4</td>
+      <td>33</td>
+      <td>105</td>
+      <td>112</td>
+      <td>25</td>
+      <td>327</td>
+      <td>128</td>
+      <td>82</td>
+      <td>0</td>
+      <td>10</td>
+      <td>.302</td>
+      <td>.381</td>
+      <td>.554</td>
+      <td>.925</td>
+    </tr>
+    
+    <tr>
+      <td>2029</td>
+      <td>SEA</td>
+      <td>140</td>
+      <td>605</td>
+      <td>535</td>
+      <td>154</td>
+      <td>30</td>
+      <td>1</td>
+      <td>28</td>
+      <td>85</td>
+      <td>88</td>
+      <td>15</td>
+      <td>270</td>
+      <td>118</td>
+      <td>62</td>
+      <td>0</td>
+      <td>9</td>
+      <td>.288</td>
+      <td>.357</td>
+      <td>.505</td>
+      <td>.862</td>
+    </tr>
+    
+    <tr>
+      <td>2030</td>
+      <td>SEA</td>
+      <td>132</td>
+      <td>568</td>
+      <td>502</td>
+      <td>138</td>
+      <td>25</td>
+      <td>0</td>
+      <td>22</td>
+      <td>75</td>
+      <td>72</td>
+      <td>10</td>
+      <td>229</td>
+      <td>110</td>
+      <td>58</td>
+      <td>0</td>
+      <td>8</td>
+      <td>.275</td>
+      <td>.345</td>
+      <td>.456</td>
+      <td>.801</td>
+    </tr>
+    
+    <tr>
+      <td>2031</td>
+      <td>SEA</td>
+      <td>95</td>
+      <td>398</td>
+      <td>354</td>
+      <td>95</td>
+      <td>18</td>
+      <td>0</td>
+      <td>18</td>
+      <td>55</td>
+      <td>50</td>
+      <td>5</td>
+      <td>167</td>
+      <td>85</td>
+      <td>40</td>
+      <td>0</td>
+      <td>4</td>
+      <td>.268</td>
+      <td>.339</td>
+      <td>.472</td>
+      <td>.811</td>
+    </tr>
+        
+    <tr>
+      <td>2032</td>
+      <td>SEA</td>
+      <td>35</td>
+      <td>148</td>
+      <td>132</td>
+      <td>41</td>
+      <td>12</td>
+      <td>1</td>
+      <td>6</td>
+      <td>24</td>
+      <td>22</td>
+      <td>8</td>
+      <td>73</td>
+      <td>28</td>
+      <td>14</td>
+      <td>0</td>
+      <td>2</td>
+      <td>.311</td>
+      <td>.372</td>
+      <td>.553</td>
+      <td>.925</td>
+    </tr>
+    
+    <tr>
+      <td>2033</td>
+      <td>SEA</td>
+      <td>2</td>
+      <td>8</td>
+      <td>7</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>3</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>.143</td>
+      <td>.250</td>
+      <td>.143</td>
+      <td>.393</td>
+    </tr>
+    
+    
+    <tr class="career">
+      <td colspan="2">通算成績</td>
+      <td>952</td>
+      <td>4031</td>
+      <td>3571</td>
+      <td>1018</td>
+      <td>215</td>
+      <td>13</td>
+      <td>177</td>
+      <td>576</td>
+      <td>584</td>
+      <td>113</td>
+      <td>1790</td>
+      <td>811</td>
+      <td>402</td>
+      <td>4</td>
+      <td>54</td>
+      <td>.285</td>
+      <td>.353</td>
+      <td>.501</td>
+      <td>.854</td>
+    </tr>
+
+
+  
+    </tbody>
+  </table>
+    
+    <br> 
+    韓國職棒一軍打擊成績：
+    <table class="stats1">
+    <thead>
+      <tr>
+        <th>年度</th>
+        <th>球隊</th><th>G</th><th>PA</th><th>AB</th><th>H</th>
+        <th>2B</th><th>3B</th><th>HR</th>
+        <th>RBI</th><th>R</th><th>SB</th><th>TB</th><th>SO</th><th>BB</th><th>SAC</th><th>SF</th>
+        <th>AVG</th><th>OBP</th><th>SLG</th><th>OPS</th>
+      </tr>
+    </thead>
+    <tbody>
+    
+    <tr>
+      <td>2035</td>
+      <td>三星獅</td>
+      <td>92</td>
+      <td>385</td>
+      <td>328</td>
+      <td>98</td>
+      <td>22</td>
+      <td>1</td>
+      <td>18</td>
+      <td>65</td>
+      <td>52</td>
+      <td>5</td>
+      <td>176</td>
+      <td>72</td>
+      <td>45</td>
+      <td>1</td>
+      <td>4</td>
+      <td>.299</td>
+      <td>.382</td>
+      <td>.537</td>
+      <td>.919</td>
+    </tr>
+    
+    <tr>
+      <td>2036</td>
+      <td>三星獅</td>
+      <td>110</td>
+      <td>462</td>
+      <td>395</td>
+      <td>115</td>
+      <td>25</td>
+      <td>0</td>
+      <td>22</td>
+      <td>78</td>
+      <td>68</td>
+      <td>3</td>
+      <td>206</td>
+      <td>88</td>
+      <td>58</td>
+      <td>0</td>
+      <td>5</td>
+      <td>.291</td>
+      <td>.375</td>
+      <td>.522</td>
+      <td>.897</td>
+    </tr>
+    
+    <tr>
+      <td>2037</td>
+      <td>三星獅</td>
+      <td>125</td>
+      <td>532</td>
+      <td>458</td>
+      <td>138</td>
+      <td>32</td>
+      <td>1</td>
+      <td>26</td>
+      <td>95</td>
+      <td>82</td>
+      <td>2</td>
+      <td>250</td>
+      <td>92</td>
+      <td>62</td>
+      <td>0</td>
+      <td>8</td>
+      <td>.301</td>
+      <td>.391</td>
+      <td>.546</td>
+      <td>.937</td>
+    </tr>
+    
+    <tr>
+      <td>2038</td>
+      <td>三星獅</td>
+      <td>75</td>
+      <td>312</td>
+      <td>265</td>
+      <td>72</td>
+      <td>15</td>
+      <td>0</td>
+      <td>12</td>
+      <td>45</td>
+      <td>35</td>
+      <td>1</td>
+      <td>123</td>
+      <td>65</td>
+      <td>42</td>
+      <td>0</td>
+      <td>3</td>
+      <td>.272</td>
+      <td>.365</td>
+      <td>.464</td>
+      <td>.829</td>
+    </tr>
+    
+    <tr>
+      <td>2039</td>
+      <td>三星獅</td>
+      <td>42</td>
+      <td>168</td>
+      <td>142</td>
+      <td>35</td>
+      <td>8</td>
+      <td>0</td>
+      <td>5</td>
+      <td>22</td>
+      <td>15</td>
+      <td>0</td>
+      <td>58</td>
+      <td>38</td>
+      <td>22</td>
+      <td>0</td>
+      <td>2</td>
+      <td>.246</td>
+      <td>.333</td>
+      <td>.408</td>
+      <td>.741</td>
+    </tr>
+    
+    
+    <tr class="career">
+      <td colspan="2">通算成績</td>
+      <td>444</td>
+      <td>1859</td>
+      <td>1588</td>
+      <td>458</td>
+      <td>102</td>
+      <td>2</td>
+      <td>83</td>
+      <td>305</td>
+      <td>252</td>
+      <td>11</td>
+      <td>813</td>
+      <td>355</td>
+      <td>229</td>
+      <td>1</td>
+      <td>22</td>
+      <td>.288</td>
+      <td>.375</td>
+      <td>.512</td>
+      <td>.887</td>
+    </tr>
+
+
+  
+    </tbody>
+  </table>
+  
+  </div>
+
+  <!-- 個人獎項 -->
+  <div class="section">
+    <h2>個人獎項</h2>
+    ・2024年美國職棒2A年度最佳新秀<br>
+    ・<a href="#">美國職棒年度銀棒獎</a>三壘手：2028</br>
+    ・2029年世界棒球經典賽最佳三壘手
+    ・2037年韓國職棒明星賽MVP<br>
+    ・韓國職棒年度金手套游擊手：2037
+  </div>
+
+  <!-- 特殊事蹟 -->
+  <div class="section">
+    <h2>特殊事蹟</h2>
+    ・2026年世界棒球經典賽韓國代表隊<br>
+    ・2026年廣州亞運韓國代表隊<br>
+    ・2029年世界棒球經典賽韓國代表隊<br>
+    ・美國職棒明星賽：2027～2028<br>
+    ・韓國職棒明星賽：2035～2037<br>
+    ・為韓國第二位在MLB達成千安、百轟、百盜的選手
+  </div>
+
+  <!-- 相關新聞 -->
+  <div class="section">
+    <h2>相關新聞</h2>
+    <a href="#"></a>
+    <a href="#"></a>
+  </div>
+
+</div>
+
+
+</body>
+</html>
