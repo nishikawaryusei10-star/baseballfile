@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> 球員資料｜棒球維基館 </title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background: #ffffff;
+  color: #111827;
+  line-height: 1.6;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 80px; /* 關鍵 */
+}
+
+html, body {
+  height: auto;
+  overflow-y: auto;
+}
+
+/* ===== 橫幅照片 ===== */
+.banner-photo {
+  width: 100%;
+  height: 320px;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* ===== 頁首 ===== */
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header .sub {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* ===== 主版面 ===== */
+.section {
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-left: 4px solid #111827;
+  padding-left: 8px;
+}
+
+/* ===== 基本資料 ===== */
+.profile {
+  font-size: 0.95rem;
+}
+
+.profile div {
+  display: flex;    
+  padding: 5px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.profile-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile span {
+  display: inline-block;
+  width: 100px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ===== 經歷 ===== */
+.career a {
+  display: inline-block;
+}
+
+.no-break {
+  white-space: nowrap; /* 括號內文字不換行 */
+}
+
+/* ===== 年表 ===== */
+.timeline {
+  font-size: 0.95rem;
+}
+
+.timeline div {
+  margin-bottom: 6px;
+}
+
+.timeline b {
+  display: inline-block;
+  width: 60px;
+}
+
+/* ===== 頂部導覽列 ===== */
+.topnav {
+  display: flex;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 3px solid #e5e7eb;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.topnav a {
+  color: #006000;
+  font-weight:450;
+}
+
+.topnav a:hover {
+  color: #1d4ed8;
+}
+
+/* ===== 表格 ===== */
+table.stats {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats th,
+table.stats td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats th {
+  background: #336666;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+table.stats tbody tr:nth-child(even) td {
+  background: #CFE4EE;
+}
+
+/* ===== 表格 ===== */
+table.stats1 {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats1 th,
+table.stats1 td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats1 th {
+  background: #570514;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+table.stats1 tbody tr:nth-child(even) td {
+  background: #F3DDE1;
+}
+
+table.stats th:nth-child(2),
+table.stats td:nth-child(2) {
+  white-space: nowrap;
+}
+
+table.stats1 th:nth-child(2),
+table.stats1 td:nth-child(2) {
+  white-space: nowrap;
+}
+
+.best {
+  font-weight: bold;       /* 加粗字體 */        
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.test {
+  font-weight: bold;       /* 加粗字體 */
+  color: #FF0000;          /* 改成紅色 */
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+/* ===== Footer ===== */
+.footer {
+  border-top: 1px solid #d1d5db;
+  margin-top: 48px;
+  padding-top: 16px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    
+  <nav class="topnav">
+  <a href="../index.html">首頁</a> ⮕ <a href="../players/players_overview.html">球員</a> ⮕  <a href="../players/korea_players_overview.html">韓國球員</a> ⮕  <b>裴守煥</b> </nav>     
+
+  <!-- 頁首 -->
+  <div class="header">
+    <h1>裴守煥</h1>
+    <div class="sub"> Bae Su-hwan｜外野手（cf）</div>
+  </div>
+
+  <!-- 基本資料 -->
+  <div class="section">
+    <h2>基本資料</h2>
+    <div class="profile">
+      <div><span>出生日期</span>2025 年 6 月 18 日（26歲）</div>
+      <div><span>身高體重</span>181 公分／82 公斤</div>
+      <div><span>出生地</span>韓國・全羅南道光州</div>
+      <div><span>投打習慣</span>右投左打</div>
+      <div><span>守備位置</span>外野手 CF</div>
+      <div><span>職棒選秀</span>2047年韓國職棒選秀會培證英雄隊第一輪第三指名</div>
+      <div><span>原文姓名</span><b>배수환（Bae Su-hwan）</b></div>
+    </div>
+  </div>
+
+  <!-- 球員經歷 -->
+  <div class="section">
+    <h2>球員經歷</h2>
+    <div class="career">
+      光州瑞石初等學校<br>    
+      光州忠壯中學校<br>
+      光州第一高等學校<br>
+      成均館大學<br>
+      <a href="#">韓國職棒</a><a href="#">培證英雄隊</a>（2048～2049）<br>
+    </div>
+  </div>
+
+  <!-- 個人年表 -->
+  <div class="section">
+    <h2>個人年表</h2>
+    <div class="timeline">
+      <div><b>2044年</b>進入成均館大學。決定暫緩職棒夢，專注於身體素質開發。</div>
+      <div><b>2047年</b>9月，在該年選秀會被培證英雄隊指名，後以5.5億韓元加盟</div>
+      <div><b>2048年</b>3月27日，生涯首次出賽，先發第九棒、中外野手</div>
+      <div><b>2048年</b>3月27日，二局下對戰斗山熊隊Edward Sanchez敲出右外野安打，為職棒首安</div>
+      <div><b>2048年</b>5月12日，四局上對戰三星獅隊崔民赫敲出生涯首轟</div>
+      <div><b>2048年</b>6月，對戰三星獅隊時因飛撲撞到全壘打牆造成左手腕韌帶拉傷，休養了三週才回到一軍</div>
+      <div><b>2051年</b>8月，右大腿後側肌群一級拉傷，進入十天傷兵名單</div>
+      
+    </div>
+  </div>
+
+ 
+ <!-- 生涯成績 -->
+  <div class="section">
+    <h2>職棒生涯成績</h2>
+    韓國職棒一軍打擊成績：
+    <table class="stats1">
+    <thead>
+      <tr>
+        <th>年度</th>
+        <th>球隊</th><th>G</th><th>PA</th><th>AB</th><th>H</th>
+        <th>2B</th><th>3B</th><th>HR</th>
+        <th>RBI</th><th>R</th><th>SB</th><th>TB</th><th>SO</th><th>BB</th><th>SAC</th><th>SF</th>
+        <th>AVG</th><th>OBP</th><th>SLG</th><th>OPS</th>
+      </tr>
+    </thead>
+    <tbody>
+    
+    <tr>
+      <td>2048</td>
+      <td>培證英雄</td>
+      <td>132</td>
+      <td>525</td>
+      <td>493</td>
+      <td>142</td>
+      <td>22</td>
+      <td>4</td>
+      <td>2</td>
+      <td>45</td>
+      <td>78</td>
+      <td>15</td>
+      <td>178</td>
+      <td>65</td>
+      <td>28</td>
+      <td>2</td>
+      <td>2</td>
+      <td>.288</td>
+      <td>.325</td>
+      <td>.361</td>
+      <td>.686</td>
+    </tr>
+    
+    <tr>
+      <td>2049</td>
+      <td>培證英雄</td>
+      <td>128</td>
+      <td>542</td>
+      <td>498</td>
+      <td>148</td>
+      <td>25</td>
+      <td>3</td>
+      <td>3</td>
+      <td>48</td>
+      <td>82</td>
+      <td>22</td>
+      <td>188</td>
+      <td>58</td>
+      <td>38</td>
+      <td>3</td>
+      <td>3</td>
+      <td>.297</td>
+      <td>.345</td>
+      <td>.378</td>
+      <td>.723</td>
+    </tr>
+    
+    <tr>
+      <td>2050</td>
+      <td>培證英雄</td>
+      <td><span class="test">144</span></td>
+      <td>668</td>
+      <td>590</td>
+      <td><span class="best">196</span></td>
+      <td>35</td>
+      <td>6</td>
+      <td>4</td>
+      <td>62</td>
+      <td>105</td>
+      <td>28</td>
+      <td>255</td>
+      <td>52</td>
+      <td>65</td>
+      <td>5</td>
+      <td>8</td>
+      <td>.332</td>
+      <td>.394</td>
+      <td>.432</td>
+      <td>.826</td>
+    </tr>
+    
+    <tr>
+      <td>2051</td>
+      <td>培證英雄</td>
+      <td>134</td>
+      <td>615</td>
+      <td>548</td>
+      <td>188</td>
+      <td>38</td>
+      <td>4</td>
+      <td>6</td>
+      <td>65</td>
+      <td>98</td>
+      <td>32</td>
+      <td>252</td>
+      <td>48</td>
+      <td>58</td>
+      <td>3</td>
+      <td>6</td>
+      <td>.343</td>
+      <td>.402</td>
+      <td>.460</td>
+      <td>.862</td>
+    </tr>
+    
+    
+    <tr class="career">
+      <td colspan="2">通算成績</td>
+      <td>538</td>
+      <td>2350</td>
+      <td>2129</td>
+      <td>674</td>
+      <td>120</td>
+      <td>17</td>
+      <td>15</td>
+      <td>220</td>
+      <td>363</td>
+      <td>97</td>
+      <td>873</td>
+      <td>223</td>
+      <td>189</td>
+      <td>13</td>
+      <td>19</td>
+      <td>.317</td>
+      <td>.371</td>
+      <td>.410</td>
+      <td>.781</td>
+    </tr>
+
+
+  
+    </tbody>
+  </table>
+  
+  </div>
+
+  <!-- 個人獎項 -->
+  <div class="section">
+    <h2>個人獎項</h2>
+    ・<a href="#">韓國職棒安打王</a>：2050</br>
+    ・<a href="#">韓國職棒年度守備賞</a>外野手：2050、2051</br>
+  </div>
+
+  <!-- 特殊事蹟 -->
+  <div class="section">
+    <h2>特殊事蹟</h2>
+    ・2050年世界16強棒球錦標賽韓國代表隊<br>
+    ・2052年世界棒球經典賽韓國代表隊<br>
+    ・韓國職棒明星賽：2050、2051<br>
+  </div>
+
+  <!-- 相關新聞 -->
+  <div class="section">
+    <h2>相關新聞</h2>
+    <a href="#"></a>
+    <a href="#"></a>
+  </div>
+
+</div>
+
+
+</body>
+</html>
