@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> 球員資料｜棒球維基館 </title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background: #ffffff;
+  color: #111827;
+  line-height: 1.6;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 80px; /* 關鍵 */
+}
+
+html, body {
+  height: auto;
+  overflow-y: auto;
+}
+
+/* ===== 橫幅照片 ===== */
+.banner-photo {
+  width: 100%;
+  height: 320px;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* ===== 頁首 ===== */
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header .sub {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* ===== 主版面 ===== */
+.section {
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-left: 4px solid #111827;
+  padding-left: 8px;
+}
+
+/* ===== 基本資料 ===== */
+.profile {
+  font-size: 0.95rem;
+}
+
+.profile div {
+  display: flex;    
+  padding: 5px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.profile-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile span {
+  display: inline-block;
+  width: 100px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ===== 經歷 ===== */
+.career a {
+  display: inline-block;
+}
+
+.no-break {
+  white-space: nowrap; /* 括號內文字不換行 */
+}
+
+/* ===== 年表 ===== */
+.timeline {
+  font-size: 0.95rem;
+}
+
+.timeline div {
+  margin-bottom: 6px;
+}
+
+.timeline b {
+  display: inline-block;
+  width: 60px;
+}
+
+/* ===== 頂部導覽列 ===== */
+.topnav {
+  display: flex;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 3px solid #e5e7eb;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.topnav a {
+  color: #006000;
+  font-weight:450;
+}
+
+.topnav a:hover {
+  color: #1d4ed8;
+}
+
+/* ===== 表格 ===== */
+table.stats {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats th,
+table.stats td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats th {
+  background: #c70125;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+table.stats tbody tr:nth-child(even) td {
+  background: #F8D9DE;
+}
+
+/* ===== 表格 ===== */
+table.stats1 {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats1 th,
+table.stats1 td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+/* 聯盟 */
+.bg-NPB { background:#E0E0E0; color:#000000; font-weight: bold;}
+.bg-pacific { background:#00BFFF; color:#ffffff; font-weight: bold;}
+.bg-central { background:#32CD32; color:#ffffff; font-weight: bold;}
+
+/* 淺色系 */
+.bg-Lotte { background:#000000; color:#ffffff;font-weight: bold; }
+.bg-SoftBank { background:#ffcc00; color:#000000;font-weight: bold;}
+.bg-orix { background:#202040; color:#ffffff;font-weight: bold; }
+.bg-nipponham { background:#01609a; color:#ffffff;font-weight: bold; }
+.bg-giant { background:#f79727; color:#000000;font-weight: bold; }
+.bg-tiger { background:#ffe100; color:#000000;font-weight: bold; }
+.bg-dragon { background:#003595; color:#FFFFFF;font-weight: bold; }
+.bg-lion { background:#00215b; color:#FFFFFF;font-weight: bold; }
+.bg-eagle { background:#990000; color:#FFFFFF;font-weight: bold; }
+.bg-Phoenix { background:#FFFF37; color:#000000;font-weight: bold; }
+.bg-pirate { background:#F72B02; color:#FFFFFF;font-weight: bold; }
+.bg-DeNA { background:#0052cd; color:#FFFFFF;font-weight: bold; }
+.bg-skylab { background:#FFFFFF; color:	#FF359A;font-weight: bold; }
+.bg-swallow { background:#073180; color:#FFFFFF;font-weight: bold; }
+.bg-carps { background:#e50012; color:#FFFFFF;font-weight: bold; }
+.bg-hawks { background:#A1C4FD; color:#000000;font-weight: bold; }
+
+
+table.stats th:nth-child(2),
+table.stats td:nth-child(2) {
+  white-space: nowrap;
+}
+
+
+
+.best {
+  font-weight: bold;       /* 加粗字體 */        
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.test {
+  font-weight: bold;       /* 加粗字體 */
+  color: #FF0000;          /* 改成紅色 */
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+/* ===== Footer ===== */
+.footer {
+  border-top: 1px solid #d1d5db;
+  margin-top: 48px;
+  padding-top: 16px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    
+  <nav class="topnav">
+  <a href="../index.html">首頁</a> ⮕ <a href="league/league_overview.html">各職棒聯盟一覽表</a> ⮕   <b>日本野球機構</b> </nav>        
+
+  <!-- 頁首 -->
+  <div class="header">
+    <h1>日本野球機構</h1>
+    <div class="sub"> Nippon Professional Baseball</div>
+  </div>
+  
+  <!-- 速查表-->
+  <table class="stats1">
+      
+      <tbody>
+    <tr>
+      <td colspan="8" class="bg-NPB">NPB 日本野球機構 NPB</td>
+    </tr>
+    
+    <tr>
+      <td colspan="4" class="bg-pacific">太平洋聯盟</td>
+      <td colspan="4" class="bg-central">中央聯盟</td>
+    </tr>
+    
+    <tr>
+      <td class="bg-Lotte">千葉羅德海洋隊</td>
+      <td class="bg-SoftBank">福岡軟銀鷹隊</td>
+      <td class="bg-orix">歐力士猛牛隊</td>
+      <td class="bg-nipponham">北海道日本火腿鬥士隊</td>
+      <td class="bg-giant">讀賣巨人隊</td>
+      <td class="bg-tiger">阪神虎隊</td>
+      <td class="bg-dragon">中日龍隊</td>
+      <td class="bg-DeNA">橫濱DeNA灣星隊</td>
+    </tr>
+    
+    <tr>
+      <td class="bg-lion">埼玉西武獅隊</td>
+      <td class="bg-eagle">東北樂天金鷲隊</td>
+      <td class="bg-Phoenix">福島鳳凰隊</td>
+      <td class="bg-pirate">愛媛橘子海盜隊</td>
+      <td class="bg-hawks">靜岡蒼鷹隊</td>
+      <td class="bg-swallow">東京養樂多燕子隊</td>
+      <td class="bg-skylab">橫須賀天空者隊</td>
+      <td class="bg-carps">廣島東洋鯉魚隊</td>
+    </tr>
+          
+      
+    <tbody>
+    </table>            
+
+</div>
+
+
+</body>
+</html>
