@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> 球員資料｜棒球維基館 </title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background: #ffffff;
+  color: #111827;
+  line-height: 1.6;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 80px; /* 關鍵 */
+}
+
+html, body {
+  height: auto;
+  overflow-y: auto;
+}
+
+/* ===== 橫幅照片 ===== */
+.banner-photo {
+  width: 100%;
+  height: 320px;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* ===== 頁首 ===== */
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header .sub {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* ===== 主版面 ===== */
+.section {
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-left: 4px solid #111827;
+  padding-left: 8px;
+}
+
+/* ===== 基本資料 ===== */
+.profile {
+  font-size: 0.95rem;
+}
+
+.profile div {
+  display: flex;    
+  padding: 5px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.profile-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile span {
+  display: inline-block;
+  width: 100px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ===== 經歷 ===== */
+.career a {
+  display: inline-block;
+}
+
+.no-break {
+  white-space: nowrap; /* 括號內文字不換行 */
+}
+
+/* ===== 年表 ===== */
+.timeline {
+  font-size: 0.95rem;
+}
+
+.timeline div {
+  margin-bottom: 6px;
+}
+
+.timeline b {
+  display: inline-block;
+  width: 60px;
+}
+
+/* ===== 頂部導覽列 ===== */
+.topnav {
+  display: flex;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 3px solid #e5e7eb;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.topnav a {
+  color: #006000;
+  font-weight:450;
+}
+
+.topnav a:hover {
+  color: #1d4ed8;
+}
+
+/* ===== 表格 ===== */
+table.stats {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats th,
+table.stats td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats th {
+  background: #c70125;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+table.stats tbody tr:nth-child(even) td {
+  background: #F8D9DE;
+}
+
+/* ===== 表格 ===== */
+table.stats1 {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats1 th,
+table.stats1 td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats1 th {
+  background: #cc1133;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+table.stats1 tbody tr:nth-child(even) td {
+  background: #FCE8EC;
+}
+
+table.stats th:nth-child(2),
+table.stats td:nth-child(2) {
+  white-space: nowrap;
+}
+
+table.stats1 th:nth-child(2),
+table.stats1 td:nth-child(2) {
+  white-space: nowrap;
+}
+
+.best {
+  font-weight: bold;       /* 加粗字體 */        
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.test {
+  font-weight: bold;       /* 加粗字體 */
+  color: #FF0000;          /* 改成紅色 */
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+/* ===== Footer ===== */
+.footer {
+  border-top: 1px solid #d1d5db;
+  margin-top: 48px;
+  padding-top: 16px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    
+  <nav class="topnav">
+  <a href="../index.html">首頁</a> ⮕ <a href="../players/players_overview.html">球員</a> ⮕  <a href="../players/korea_players_overview.html">韓國球員</a> ⮕  <b>韓政宇</b> </nav>     
+
+  <!-- 頁首 -->
+  <div class="header">
+    <h1>韓政宇</h1>
+    <div class="sub"> Han Jung-woo｜內野手（3B）</div>
+  </div>
+
+  <!-- 基本資料 -->
+  <div class="section">
+    <h2>基本資料</h2>
+    <div class="profile">
+      <div><span>出生日期</span>2017 年 8 月 12 日（34歲）</div>
+      <div><span>身高體重</span>186 公分／95 公斤</div>
+      <div><span>出生地</span>韓國・光州廣域市</div>
+      <div><span>投打習慣</span>右投右打</div>
+      <div><span>守備位置</span>內野手 3B</div>
+      <div><span>職棒選秀</span>2039年韓國職棒選秀會起亞虎隊地域優先指名</div>
+      <div><span>原文姓名</span><b>한정우（Han Jung-woo）</b></div>
+    </div>
+  </div>
+
+  <!-- 球員經歷 -->
+  <div class="section">
+    <h2>球員經歷</h2>
+    <div class="career">
+      光州瑞石國小<br>
+      光州東成國中<br>    
+      光州第一高等學校<br>
+      成均館大學<br>
+      <a href="#">韓國職棒</a><a href="#">起亞虎隊</a>（2040～）<br>
+      <a href="#">韓國職棒</a><a href="#">尚武鳳凰隊</a>（2043～2044）<br>
+    </div>
+  </div>
+
+  <!-- 個人年表 -->
+  <div class="section">
+    <h2>個人年表</h2>
+    <div class="timeline">
+      <div><b>2035年</b>進入成均館大學就讀</div>
+      <div><b>2039年</b>參加韓職選秀會，在首輪地域優先指名被起亞虎隊選中，後以簽約金4.8億韓元加盟</div>
+      <div><b>2040年</b>3月31日，生涯首次出賽，以代打身分出賽，最後遭到三振</div>
+      <div><b>2040年</b>4月15日，四局下半對戰三星獅隊投手崔成勳敲出生涯首安</div>
+      <div><b>2040年</b>7月24日，對戰樂天巨人隊柳志赫敲出左外野二分打點全壘打，為職棒生涯首轟</div>
+      <div><b>2043年</b>在球隊安排下進入尚武鳳凰隊服兵役</div>
+      <div><b>2044年</b>11月，退伍</div>
+      <div><b>2045年</b>進行右膝半月板清創手術，缺陣約45天後才回歸</div>
+      <div><b>2048年</b>1月，與起亞虎隊簽下4年120億韓元的延長合約</div>
+      <div><b>2051年</b>12月，與起亞虎隊簽下3+1年65億韓元的延長合約</div>
+      
+    </div>
+  </div>
+
+ 
+ <!-- 生涯成績 -->
+  <div class="section">
+    <h2>職棒生涯成績</h2>
+    韓國職棒一軍打擊成績：
+    <table class="stats1">
+    <thead>
+      <tr>
+        <th>年度</th>
+        <th>球隊</th><th>G</th><th>PA</th><th>AB</th><th>H</th>
+        <th>2B</th><th>3B</th><th>HR</th>
+        <th>RBI</th><th>R</th><th>SB</th><th>TB</th><th>SO</th><th>BB</th><th>SAC</th><th>SF</th>
+        <th>AVG</th><th>OBP</th><th>SLG</th><th>OPS</th>
+      </tr>
+    </thead>
+    <tbody>
+    
+    <tr>
+      <td>2040</td>
+      <td>起亞虎</td>
+      <td>15</td>
+      <td>32</td>
+      <td>30</td>
+      <td>6</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>4</td>
+      <td>3</td>
+      <td>0</td>
+      <td>10</td>
+      <td>12</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>.200</td>
+      <td>.250</td>
+      <td>.333</td>
+      <td>.583</td>
+    </tr>
+    
+    <tr>
+      <td>2041</td>
+      <td>起亞虎</td>
+      <td>42</td>
+      <td>85</td>
+      <td>78</td>
+      <td>18</td>
+      <td>3</td>
+      <td>0</td>
+      <td>2</td>
+      <td>10</td>
+      <td>8</td>
+      <td>1</td>
+      <td>27</td>
+      <td>25</td>
+      <td>6</td>
+      <td>0</td>
+      <td>1</td>
+      <td>.231</td>
+      <td>.282</td>
+      <td>.346</td>
+      <td>.628</td>
+    </tr>
+    
+    <tr>
+      <td>2042</td>
+      <td>起亞虎</td>
+      <td>28</td>
+      <td>55</td>
+      <td>50</td>
+      <td>12</td>
+      <td>2</td>
+      <td>0</td>
+      <td>2</td>
+      <td>8</td>
+      <td>5</td>
+      <td>0</td>
+      <td>20</td>
+      <td>18</td>
+      <td>4</td>
+      <td>0</td>
+      <td>1</td>
+      <td>.240</td>
+      <td>.291</td>
+      <td>.400</td>
+      <td>.691</td>
+    </tr>
+    
+    <tr>
+      <td>2045</td>
+      <td>起亞虎</td>
+      <td>75</td>
+      <td>225</td>
+      <td>202</td>
+      <td>58</td>
+      <td>10</td>
+      <td>1</td>
+      <td>8</td>
+      <td>32</td>
+      <td>28</td>
+      <td>2</td>
+      <td>94</td>
+      <td>48</td>
+      <td>18</td>
+      <td>0</td>
+      <td>2</td>
+      <td>.287</td>
+      <td>.351</td>
+      <td>.465</td>
+      <td>.816</td>
+    </tr>
+    
+    <tr>
+      <td>2046</td>
+      <td>起亞虎</td>
+      <td><span class="best">144</span></td>
+      <td>612</td>
+      <td>550</td>
+      <td>182</td>
+      <td>32</td>
+      <td>2</td>
+      <td>25</td>
+      <td>95</td>
+      <td>92</td>
+      <td>5</td>
+      <td>293</td>
+      <td>65</td>
+      <td>58</td>
+      <td>0</td>
+      <td>4</td>
+      <td>.331</td>
+      <td>.392</td>
+      <td>.533</td>
+      <td>.925</td>
+    </tr>
+    
+    <tr>
+      <td>2047</td>
+      <td>起亞虎</td>
+      <td>140</td>
+      <td>598</td>
+      <td>542</td>
+      <td>175</td>
+      <td>30</td>
+      <td>1</td>
+      <td>28</td>
+      <td>102</td>
+      <td>88</td>
+      <td>6</td>
+      <td>291</td>
+      <td>68</td>
+      <td>52</td>
+      <td>0</td>
+      <td>4</td>
+      <td>.323</td>
+      <td>.380</td>
+      <td>.537</td>
+      <td>.917</td>
+    </tr>
+    
+    <tr>
+      <td>2048</td>
+      <td>起亞虎</td>
+      <td>142</td>
+      <td>635</td>
+      <td>566</td>
+      <td><span class="best">194</span></td>
+      <td>38</td>
+      <td>1</td>
+      <td>28</td>
+      <td><span class="best">115</span></td>
+      <td>105</td>
+      <td>4</td>
+      <td><span class="best">318</span></td>
+      <td>55</td>
+      <td>62</td>
+      <td>0</td>
+      <td>7</td>
+      <td><span class="best">.343</span></td>
+      <td>.403</td>
+      <td>.562</td>
+      <td>.965</td>
+    </tr>
+    
+    <tr>
+      <td>2049</td>
+      <td>起亞虎</td>
+      <td>138</td>
+      <td>608</td>
+      <td>538</td>
+      <td>180</td>
+      <td>32</td>
+      <td>0</td>
+      <td>30</td>
+      <td><span class="best">110</span></td>
+      <td>92</td>
+      <td>3</td>
+      <td>302</td>
+      <td>65</td>
+      <td>60</td>
+      <td>0</td>
+      <td>5</td>
+      <td>.335</td>
+      <td>.403</td>
+      <td>.561</td>
+      <td>.964</td>
+    </tr>
+    
+    <tr>
+      <td>2050</td>
+      <td>起亞虎</td>
+      <td><span class="best">144</span></td>
+      <td>628</td>
+      <td>555</td>
+      <td>188</td>
+      <td>34</td>
+      <td>1</td>
+      <td>26</td>
+      <td>105</td>
+      <td>98</td>
+      <td>2</td>
+      <td>302</td>
+      <td>58</td>
+      <td>68</td>
+      <td>0</td>
+      <td>5</td>
+      <td>.339</td>
+      <td>.408</td>
+      <td>.544</td>
+      <td>.952</td>
+    </tr>
+    
+    <tr>
+      <td>2051</td>
+      <td>起亞虎</td>
+      <td><span class="best">144</span></td>
+      <td>645</td>
+      <td>572</td>
+      <td>190</td>
+      <td>36</td>
+      <td>1</td>
+      <td>22</td>
+      <td>108</td>
+      <td>98</td>
+      <td>2</td>
+      <td>294</td>
+      <td>52</td>
+      <td>65</td>
+      <td>0</td>
+      <td>5</td>
+      <td>.332</td>
+      <td>.400</td>
+      <td>.514</td>
+      <td>.914</td>
+    </tr>
+    
+    
+    <tr class="career">
+      <td colspan="2">通算成績</td>
+      <td>1082</td>
+      <td>4123</td>
+      <td>3683</td>
+      <td>1213</td>
+      <td>218</td>
+      <td>7</td>
+      <td>172</td>
+      <td>697</td>
+      <td>622</td>
+      <td>26</td>
+      <td>1961</td>
+      <td>466</td>
+      <td>395</td>
+      <td>0</td>
+      <td>39</td>
+      <td>.329</td>
+      <td>.391</td>
+      <td>.532</td>
+      <td>.923</td>
+    </tr>
+
+
+  
+    </tbody>
+  </table>
+  
+  </div>
+
+  <!-- 個人獎項 -->
+  <div class="section">
+    <h2>個人獎項</h2>
+    ・<a href="#">韓國職棒打擊王</a>：2048</br>
+    ・<a href="#">韓國職棒安打王</a>：2048</br>
+    ・<a href="#">韓國職棒打點王</a>：2048、2049</br>
+    ・<a href="#">韓國職棒年度金手套</a>三壘手：2046～2049</br>
+    ・<a href="#">韓國職棒年度金手套</a>指定打擊：2051</br>
+  </div>
+
+  <!-- 特殊事蹟 -->
+  <div class="section">
+    <h2>特殊事蹟</h2>
+    ・2046年世界16強棒球錦標賽韓國代表隊<br>
+    ・2048年世界棒球經典賽韓國代表隊<br>
+    ・2050年世界16強棒球錦標賽韓國代表隊<br>
+    ・2052年世界棒球經典賽韓國代表隊<br>
+    ・韓國職棒明星賽：2046～2051<br>
+  </div>
+
+  <!-- 相關新聞 -->
+  <div class="section">
+    <h2>相關新聞</h2>
+    <a href="#"></a>
+    <a href="#"></a>
+  </div>
+
+</div>
+
+
+</body>
+</html>
