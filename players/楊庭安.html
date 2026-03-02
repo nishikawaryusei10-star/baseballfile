@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> 球員資料｜棒球維基館 </title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background: #ffffff;
+  color: #111827;
+  line-height: 1.6;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 80px; /* 關鍵 */
+}
+
+html, body {
+  height: auto !important;
+  overflow-y: auto !important;
+}
+
+.container {
+  min-height: 120vh;
+}
+/* ===== 橫幅照片 ===== */
+.banner-photo {
+  width: 100%;
+  height: 320px;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* ===== 頁首 ===== */
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header .sub {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* ===== 主版面 ===== */
+.section {
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-left: 4px solid #111827;
+  padding-left: 8px;
+}
+
+/* ===== 頂部導覽列 ===== */
+.topnav {
+  display: flex;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 3px solid #e5e7eb;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.topnav a {
+  color: #006000;
+  font-weight:450;
+}
+
+.topnav a:hover {
+  color: #1d4ed8;
+}
+
+/* ===== 基本資料 ===== */
+.profile {
+  font-size: 0.95rem;
+}
+
+.profile div {
+  padding: 5px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.profile span {
+  display: inline-block;
+  width: 100px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ===== 經歷 ===== */
+.career a {
+  display: inline-block;
+}
+
+.no-break {
+  white-space: nowrap; /* 括號內文字不換行 */
+}
+
+/* ===== 年表 ===== */
+.timeline {
+  font-size: 0.95rem;
+}
+
+.timeline div {
+  margin-bottom: 6px;
+}
+
+.timeline b {
+  display: inline-block;
+  width: 60px;
+}
+
+/* ===== 表格 ===== */
+table.stats {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats th,
+table.stats td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats th {
+   background: #2F7F8F;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+table.stats tbody tr:nth-child(even) td {
+  background: #DCECEF;
+}
+
+table.stats th:nth-child(2),
+table.stats td:nth-child(2) {
+  white-space: nowrap;
+}
+
+.best {
+  font-weight: bold;       /* 加粗字體 */        
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.test {
+  font-weight: bold;       /* 加粗字體 */
+  color: #FF0000;          /* 改成紅色 */
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+/* ===== Footer ===== */
+.footer {
+  border-top: 1px solid #d1d5db;
+  margin-top: 48px;
+  padding-top: 16px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  
+  <nav class="topnav">
+  <a href="../index.html">首頁</a> ⮕ <a href="../players/players_overview.html">球員</a> ⮕  <a href="../players/taiwan_players_overview.html">台灣球員</a> ⮕  <b>楊庭安</b> </nav>       
+
+  <!-- 頁首 -->
+  <div class="header">
+    <h1>楊庭安</h1>
+    <div class="sub"> YANG,TING-AN｜外野手（CF）</div>
+  </div>
+
+  <!-- 基本資料 -->
+  <div class="section">
+    <h2>基本資料</h2>
+    <div class="profile">
+      <div><span>出生日期</span>2026 年 2 月 13 日（25歲）</div>
+      <div><span>身高體重</span>177 公分／76 公斤</div>
+      <div><span>出生地</span>台灣・南投縣</div>
+      <div><span>投打習慣</span>左投左打</div>
+      <div><span>守備位置</span>外野手 CF LF RF</div>
+      <div><span>職棒選秀</span><a href="#">2044年室內棒球聯盟選秀會</a><a href="#">基隆雨都隊</a>第一輪指名</div>
+    </div>
+  </div>
+
+  <!-- 球員經歷 -->
+  <div class="section">
+    <h2>球員經歷</h2>
+    <div class="career">
+      <a href="#">南投縣</a><a href="#">草屯國小青棒隊</a></br>    
+      <a href="#">台中市</a><a href="#">中山國中青棒隊</a></br>
+      <a href="#">桃園市</a><a href="#">平鎮高中青棒隊</a></br>
+      <a href="#">室內棒球聯盟</a><a href="#">基隆雨都隊</a><span class="no-break">（2044/08）</span></br>
+      <a href="#">室內棒球聯盟</a><a href="#">國軍鳳凰隊</a>（2045）</br>
+    </div>
+  </div>
+
+  <!-- 球員介紹 -->
+  <div class="section">
+    <h2>球員介紹</h2>
+楊庭安是一位來自南投縣的棒球選手，守備位置為外野手，目前效力於室內棒球聯盟的基隆雨都。左投左打的他，職涯初期其實並非以外野手身分嶄露頭角，而是站在投手丘上開始自己的棒球人生。<br>
+<br>
+成長於南投山城的楊庭安，自小就展現優於同齡孩子的運動天賦。國小時期，他以左投身分在地方賽事嶄露頭角，球速在同年齡層中已屬突出，手臂角度自然、出手隱蔽性高，使他的直球帶有尾勁。然而在一次次比賽中，教練逐漸發現，比起投球，他在打擊區裡的從容與判斷力更加難得。他對好壞球的辨識能力極強，揮棒軌跡乾淨，擊球點穩定，即使面對變化球也能維持節奏。這樣的特質，讓教練開始思考是否應該將他往野手方向培養。<br>
+<br>
+國中時，在教練建議下，楊庭安離開家鄉，前往台中市的中山國中就讀，接受更完整的訓練體系。那段離鄉生活對他而言既辛苦又關鍵。除了技術磨練，他也學會獨立與自律。在中山國中，他逐步減少投球局數，將重心轉往外野守備與打擊訓練。國三那年，他的打擊率已躍升至全國前段班水準，外野判斷與第一步啟動速度也顯著提升。最終，他如願在國中最後一年入選U15國家代表隊，第一次披上國家隊戰袍出征國際賽事。那次經驗讓他真正意識到，自己可以站上更高的舞台。升上高中後，楊庭安接受平鎮高中的邀請北上桃園發展。進入平鎮後，他做出一項影響深遠的決定——正式放棄投手身份，專注於外野與打擊。平鎮完整的重量訓練與運動科學輔助體系，讓他的身體素質與擊球品質大幅提升。原本流暢的打擊機制，在高強度重訓與動作修正下變得更加穩定且具破壞力。他很快擠進木棒組名單，並在高二、高三連續入選國家代表隊。2044年的國際賽堪稱他高中生涯的巔峰，他在七場比賽中敲出十五支安打，不僅奪下安打王，更以一次關鍵的飛撲美技守備技驚四座，拿下最佳外野手獎項。那一年，他的名字成為各隊球探報告上的焦點。<br>
+<br>
+2044年畢業後，楊庭安隨即投入室內棒球聯盟選秀。在高中階段已累積高度聲量的他，被視為第一輪熱門人選，最終在首輪被基隆雨都選中並成功加盟。球團看中的不只是他的成績，更是他成熟的選球能力與穩定的擊球品質，認為他有潛力成為未來打線的核心。2045年，楊庭安依規定先至國軍隊服役。春訓期間他展現極佳狀態，在官辦熱身賽中十七打數七安打，包含一支全壘打，成功從一軍開季。新人年雖然季中遭遇短暫低潮而被下放二軍調整，但整體表現仍相當亮眼，單季突破百安，打擊率高達 .303。只可惜因打席數不足，未達規定門檻，無緣新人王票選。原本雨都隊評估他需要在二軍多磨一年，但國軍隊期間的成熟表現讓教練團改變計畫，決定讓他直接在一軍站穩腳步。<br>
+<br>
+2046年正式回歸母隊後，他的開季表現令人驚艷，擊球穩定、上壘能力出色，逐漸坐穩主力外野位置。然而傷勢卻接連找上門來，季中多次因小傷勢進出二軍，八月底更因右手鉤狀骨骨折動刀治療，賽季提前畫下句點。隔年2047年，他在官辦熱身賽滑壘時造成左膝十字韌帶傷勢，長時間缺陣，直到明星賽後才重返一軍。儘管當年僅出賽四十七場，他依然維持穩定打擊輸出，但連續兩年的傷勢，讓他的職涯一度蒙上陰影。真正的轉折發生在2048年。健康回歸的楊庭安，終於擺脫傷病困擾，連續兩年全勤出賽，2050年更出賽超過一百四十場。在打擊端，他展現極高的contact能力，打擊率連年突破三成；在跑壘端，他的判斷與起跑時機成熟，連續四年盜壘成功數超過二十次；長打能力也隨著擊球初速與仰角優化而逐年提升。2049年，他完成單季兩百安的里程碑，正式躋身聯盟頂尖打者行列。<br>
+<br>
+2050年季末，為了留下這位正值巔峰的核心外野手，基隆雨都開出十二年總額兩億四千九百萬新台幣的長約，第五年附帶逃脫權，成功續留這名明日之星。這份合約不僅是對他能力的肯定，也象徵球團將他視為未來十年的建隊基石。2051年，楊庭安迎來生涯至今最佳賽季。他以.424的上壘率拿下聯盟上壘率王，並獲選最佳陣容第一隊外野手。那一年，他在打線中扮演絕對穩定器的角色，幾乎場場製造攻勢。儘管季末手感下滑，最後二十打數僅兩安，錯失安打王與打擊王的競逐機會，但整體攻擊貢獻依然名列聯盟前茅。他不再只是天賦耀眼的新星，而是成為球隊更衣室中能穩定軍心的核心人物。<br>
+<br>
+從南投山城的左投少年，到基隆雨都隊的打線支柱，楊庭安的職涯並非一路順遂，而是在轉型、傷勢與自我調整中逐步完成蛻變。他用穩定與紀律建立價值，用健康與持續進化鞏固地位。只要身體狀況維持良好，他無疑將在聯盟歷史中留下屬於自己的篇章。<br>
+
+  </div>
+
+  <!-- 個人年表 -->
+  <div class="section">
+    <h2>個人年表</h2>
+    <div class="timeline">
+      <div><b>2044年</b>7月，投入室內棒球聯盟選秀會，被基隆雨都隊在第一輪指名，後以1795萬台幣加盟</div>
+      <div><b>2045年</b>2月，在球隊安排下前往國軍隊服役</div>
+      <div><b>2049年</b>10月02日，達成單季200安的里程碑</div>
+      <div><b>2050年</b>4月19日，達成生涯百盜的里程碑</div>
+      <div><b>2050年</b>12月29日，與基隆雨都隊簽下一份12年2.49億新台幣的延長合約，合約中附帶在第五年合約結束的逃脫權</div>
+    </div>
+  </div>
+
+  <!-- 生涯成績 -->
+ <!-- 生涯成績 -->
+  <div class="section">
+    <h2>職棒生涯成績</h2>
+    室內棒球聯盟一軍打擊成績：
+    <table class="stats">
+    <thead>
+      <tr>
+        <th>年度</th>
+        <th>球隊</th><th>G</th><th>PA</th><th>AB</th><th>H</th>
+        <th>2B</th><th>3B</th><th>HR</th>
+        <th>RBI</th><th>R</th><th>SB</th><th>TB</th><th>SO</th><th>BB</th><th>SAC</th><th>SF</th>
+        <th>AVG</th><th>OBP</th><th>SLG</th><th>OPS</th>
+      </tr>
+    </thead>
+    <tbody>
+        
+      <tr>
+      <td>2045</td>
+      <td>國軍鳳凰</td>
+      <td>103</td>
+      <td>379</td>
+      <td>337</td>
+      <td>102</td>
+      <td>14</td>
+      <td>4</td>
+      <td>4</td>
+      <td>38</td>
+      <td>61</td>
+      <td>12</td>
+      <td>136</td>
+      <td>42</td>
+      <td>37</td>
+      <td>4</td>
+      <td>1</td>
+      <td>.303</td>
+      <td>.371</td>
+      <td>.404</td>
+      <td>.775</td>
+    </tr>
+      
+      <tr>
+      <td>2046</td>
+      <td>基隆雨都</td>
+      <td>92</td>
+      <td>341</td>
+      <td>300</td>
+      <td>97</td>
+      <td>13</td>
+      <td>3</td>
+      <td>2</td>
+      <td>26</td>
+      <td>33</td>
+      <td>6</td>
+      <td>122</td>
+      <td>47</td>
+      <td>35</td>
+      <td>5</td>
+      <td>1</td>
+      <td>.323</td>
+      <td>.393</td>
+      <td>.407</td>
+      <td>.800</td>
+    </tr>
+    
+      <tr>
+      <td>2047</td>
+      <td>基隆雨都</td>
+      <td>47</td>
+      <td>171</td>
+      <td>152</td>
+      <td>49</td>
+      <td>7</td>
+      <td>3</td>
+      <td>1</td>
+      <td>13</td>
+      <td>11</td>
+      <td>4</td>
+      <td>65</td>
+      <td>31</td>
+      <td>19</td>
+      <td>4</td>
+      <td>2</td>
+      <td>.322</td>
+      <td>.407</td>
+      <td>.428</td>
+      <td>.835</td>
+    </tr>
+    
+    <tr>
+      <td>2048</td>
+      <td>基隆雨都</td>
+      <td><span class="test">150</span></td>
+      <td>661</td>
+      <td>601</td>
+      <td>191</td>
+      <td>31</td>
+      <td>7</td>
+      <td>7</td>
+      <td>48</td>
+      <td>93</td>
+      <td>31</td>
+      <td>257</td>
+      <td>87</td>
+      <td>53</td>
+      <td>3</td>
+      <td>4</td>
+      <td>.317</td>
+      <td>.371</td>
+      <td>.428</td>
+      <td>.799</td>
+    </tr>
+    
+    <tr>
+      <td>2049</td>
+      <td>基隆雨都</td>
+      <td><span class="test">150</span></td>
+      <td>688</td>
+      <td>614</td>
+      <td>201</td>
+      <td>26</td>
+      <td><span class="best">13</span></td>
+      <td>8</td>
+      <td>51</td>
+      <td><span class="best">119</span></td>
+      <td>27</td>
+      <td>277</td>
+      <td>91</td>
+      <td>69</td>
+      <td>4</td>
+      <td>1</td>
+      <td>.327</td>
+      <td>.395</td>
+      <td>.415</td>
+      <td>.810</td>
+    </tr>
+    
+    <tr>
+      <td>2050</td>
+      <td>基隆雨都</td>
+      <td>144</td>
+      <td>576</td>
+      <td>509</td>
+      <td>167</td>
+      <td>27</td>
+      <td>5</td>
+      <td>13</td>
+      <td>75</td>
+      <td>92</td>
+      <td>23</td>
+      <td>243</td>
+      <td>79</td>
+      <td>58</td>
+      <td>6</td>
+      <td>3</td>
+      <td>.328</td>
+      <td>.395</td>
+      <td>.477</td>
+      <td>.872</td>
+    </tr>
+    
+    <tr>
+      <td>2051</td>
+      <td>基隆雨都</td>
+      <td>147</td>
+      <td>606</td>
+      <td>528</td>
+      <td>185</td>
+      <td>28</td>
+      <td>4</td>
+      <td>14</td>
+      <td>72</td>
+      <td>103</td>
+      <td>26</td>
+      <td>263</td>
+      <td>76</td>
+      <td>69</td>
+      <td>7</td>
+      <td>2</td>
+      <td>.350</td>
+      <td><span class="best">.424</span></td>
+      <td>.498</td>
+      <td>.922</td>
+    </tr>
+
+    <tr class="career">
+      <td colspan="2">通算成績</td>
+      <td>833</td>
+      <td>3422</td>
+      <td>3041</td>
+      <td>992</td>
+      <td>146</td>
+      <td>39</td>
+      <td>49</td>
+      <td>323</td>
+      <td>512</td>
+      <td>129</td>
+      <td>1363</td>
+      <td>453</td>
+      <td>340</td>
+      <td>33</td>
+      <td>14</td>
+      <td>.326</td>
+      <td>.393</td>
+      <td>.448</td>
+      <td>.841</td>
+    </tr>
+
+
+  
+    </tbody>
+  </table>
+  </div>
+
+  <!-- 個人獎項 -->
+  <div class="section">
+    <h2>個人獎項</h2>
+    ・<a href="#">室內棒球聯盟年度上壘率王</a>：2051<br>
+    ・<a href="＃">室內棒球聯盟年度最佳陣容</a>第一隊外野手：2051<br>
+    ・<a href="#">室內棒球聯盟金手套</a>外野手：2048、2050<br>
+    
+    
+  </div>
+
+  <!-- 特殊事蹟 -->
+  <div class="section">
+    <h2>特殊事蹟</h2>
+    ・2041年U15世界青少棒錦標賽中華代表隊<br>
+    ・2044年U18世界青棒錦標賽中華代表隊<br>
+    ・2050年世界棒球16強錦標賽中華代表隊<br>
+    ・室內棒球聯盟明星賽：2050、2051
+  </div>
+
+  <!-- 相關新聞 -->
+  <div class="section">
+    <h2>相關新聞</h2>
+    <a href="#"></a><br>
+    <a href="#"></a>
+  </div>
+
+</div>
+
+
+</body>
+</html>
