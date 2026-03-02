@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> 球員資料｜棒球維基館 </title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background: #ffffff;
+  color: #111827;
+  line-height: 1.6;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 80px; /* 關鍵 */
+}
+
+html, body {
+  height: auto;
+  overflow-y: auto;
+}
+
+/* ===== 橫幅照片 ===== */
+.banner-photo {
+  width: 100%;
+  height: 320px;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* ===== 頁首 ===== */
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header .sub {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* ===== 主版面 ===== */
+.section {
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-left: 4px solid #111827;
+  padding-left: 8px;
+}
+
+/* ===== 基本資料 ===== */
+.profile {
+  font-size: 0.95rem;
+}
+
+.profile div {
+  display: flex;    
+  padding: 5px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.profile-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile span {
+  display: inline-block;
+  width: 100px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ===== 經歷 ===== */
+.career a {
+  display: inline-block;
+}
+
+.no-break {
+  white-space: nowrap; /* 括號內文字不換行 */
+}
+
+/* ===== 年表 ===== */
+.timeline {
+  font-size: 0.95rem;
+}
+
+.timeline div {
+  margin-bottom: 6px;
+}
+
+.timeline b {
+  display: inline-block;
+  width: 60px;
+}
+
+/* ===== 頂部導覽列 ===== */
+.topnav {
+  display: flex;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 3px solid #e5e7eb;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.topnav a {
+  color: #006000;
+  font-weight:450;
+}
+
+.topnav a:hover {
+  color: #1d4ed8;
+}
+
+/* ===== 表格 ===== */
+table.stats {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats th,
+table.stats td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats th {
+  background: #c70125;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+table.stats tbody tr:nth-child(even) td {
+  background: #F8D9DE;
+}
+
+/* ===== 表格 ===== */
+table.stats1 {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats1 th,
+table.stats1 td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats1 th {
+  background: #D0D0D0;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+table.stats1 tbody tr:nth-child(even) td {
+  background: #F0F0F0;
+}
+
+table.stats th:nth-child(2),
+table.stats td:nth-child(2) {
+  white-space: nowrap;
+}
+
+table.stats1 th:nth-child(2),
+table.stats1 td:nth-child(2) {
+  white-space: nowrap;
+}
+
+.best {
+  font-weight: bold;       /* 加粗字體 */        
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.test {
+  font-weight: bold;       /* 加粗字體 */
+  color: #FF0000;          /* 改成紅色 */
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+/* ===== Footer ===== */
+.footer {
+  border-top: 1px solid #d1d5db;
+  margin-top: 48px;
+  padding-top: 16px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    
+  <nav class="topnav">
+  <a href="../index.html">首頁</a> ⮕ <a href="../players/players_overview.html">球員</a> ⮕  <a href="../players/taiwan_players_overview.html">台灣球員</a> ⮕  <b>鍾冠程</b> </nav>     
+
+  <!-- 頁首 -->
+  <div class="header">
+    <h1>鍾冠程</h1>
+    <div class="sub"> CHUNG,KUAN-CHENG	｜外野手（CF）</div>
+  </div>
+
+  <!-- 基本資料 -->
+  <div class="section">
+    <h2>基本資料</h2>
+    <div class="profile">
+      <div><span>出生日期</span>2028 年 1 月 17 日（23歲）</div>
+      <div><span>身高體重</span>178 公分／84 公斤</div>
+      <div><span>出生地</span>台灣・花蓮縣玉里鎮</div>
+      <div><span>投打習慣</span>右投右打</div>
+      <div><span>守備位置</span>外野手 CF LF RF</div>
+      <div><span>職棒選秀</span>2048年室內棒球聯盟選秀會北鐵狼隊第三輪指名</div>
+    </div>
+  </div>
+
+  <!-- 球員經歷 -->
+  <div class="section">
+    <h2>球員經歷</h2>
+    <div class="career">
+      臺北市東園國小少棒隊<br>
+      臺北市長安國中青少棒隊<br>    
+      桃園市平鎮高中青棒隊<br>
+      桃園市國立體育大學棒球隊<br>
+      <a href="#">室內棒球聯盟</a><a href="#">北鐵狼隊</a>（2048/08～）<br>
+    </div>
+  </div>
+
+  <!-- 個人年表 -->
+  <div class="section">
+    <h2>個人年表</h2>
+    <div class="timeline">
+      <div><b>2046年</b>畢業後決定暫時不參加選秀，先服兵役</div>
+      <div><b>2047年</b>退伍後進入國立體育大學球類競技學系就讀</div>
+      <div><b>2048年</b>參加室內棒球聯盟選秀會，在第三輪被北鐵狼隊選中，後以簽約金新台幣926萬加盟</div>
+      <div><b>2049年</b>9月18日，生涯首次出賽，先發第八棒左外野手</div>
+      <div><b>2049年</b>9月24日，面對中信子彈敲出生涯首安</div>
+      <div><b>2051年</b>4月30日，面對台糖巨人敲出生涯首轟</div>
+    </div>
+  </div>
+
+ 
+ <!-- 生涯成績 -->
+  <div class="section">
+    <h2>職棒生涯成績</h2>
+    室內棒球聯盟一軍打擊成績：
+    <table class="stats1">
+    <thead>
+      <tr>
+        <th>年度</th>
+        <th>球隊</th><th>G</th><th>PA</th><th>AB</th><th>H</th>
+        <th>2B</th><th>3B</th><th>HR</th>
+        <th>RBI</th><th>R</th><th>SB</th><th>TB</th><th>SO</th><th>BB</th><th>SAC</th><th>SF</th>
+        <th>AVG</th><th>OBP</th><th>SLG</th><th>OPS</th>
+      </tr>
+    </thead>
+    <tbody>
+        
+    <tr>
+      <td>2049</td>
+      <td>北鐵狼</td>
+      <td>7</td>
+      <td>22</td>
+      <td>20</td>
+      <td>6</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>1</td>
+      <td>0</td>
+      <td>8</td>
+      <td>4</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>.300</td>
+      <td>.318</td>
+      <td>.400</td>
+      <td>.718</td>
+      </tr>
+ <tr>
+      <td>2050</td>
+      <td>北鐵狼</td>
+      <td>3</td>
+      <td>9</td>
+      <td>8</td>
+      <td>2</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>.250</td>
+      <td>.222</td>
+      <td>.375</td>
+      <td>.597</td>
+      </tr>
+  <tr>
+      <td>2051</td>
+      <td>北鐵狼</td>
+      <td>102</td>
+      <td>449</td>
+      <td>398</td>
+      <td>132</td>
+      <td>27</td>
+      <td>0</td>
+      <td>18</td>
+      <td>66</td>
+      <td>89</td>
+      <td>13</td>
+      <td>213</td>
+      <td>78</td>
+      <td>44</td>
+      <td>2</td>
+      <td>5</td>
+      <td>.332</td>
+      <td>.396</td>
+      <td>.535</td>
+      <td>.931</td>
+    </tr>
+    <tr class="career">
+      <td colspan="2">通算成績</td>
+     <td>112</td>
+      <td>480</td>
+      <td>426</td>
+      <td>140</td>
+      <td>30</td>
+      <td>0</td>
+      <td>18</td>
+      <td>69</td>
+      <td>90</td>
+      <td>13</td>
+      <td>224</td>
+      <td>84</td>
+      <td>45</td>
+      <td>2</td>
+      <td>7</td>
+      <td>.329</td>
+      <td>.387</td>
+      <td>.526</td>
+      <td>.913</td>
+    </tr>
+
+
+  
+    </tbody>
+  </table>
+  
+  </div>
+
+  <!-- 個人獎項 -->
+  <div class="section">
+    <h2>個人獎項</h2>
+   （尚無）
+  </div>
+
+  <!-- 特殊事蹟 -->
+  <div class="section">
+    <h2>特殊事蹟</h2>
+    ・2046年U18世界青棒錦標賽中華代表隊<br>
+  </div>
+
+  <!-- 相關新聞 -->
+  <div class="section">
+    <h2>相關新聞</h2>
+    <a href="#"></a>
+    <a href="#"></a>
+  </div>
+
+</div>
+
+
+</body>
+</html>
