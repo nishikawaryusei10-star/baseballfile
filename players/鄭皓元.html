@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> 球員資料｜棒球維基館 </title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background: #ffffff;
+  color: #111827;
+  line-height: 1.6;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 80px; /* 關鍵 */
+}
+
+html, body {
+  height: auto;
+  overflow-y: auto;
+}
+
+/* ===== 橫幅照片 ===== */
+.banner-photo {
+  width: 100%;
+  height: 320px;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* ===== 頁首 ===== */
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header .sub {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* ===== 主版面 ===== */
+.section {
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-left: 4px solid #111827;
+  padding-left: 8px;
+}
+
+/* ===== 基本資料 ===== */
+.profile {
+  font-size: 0.95rem;
+}
+
+.profile div {
+  display: flex;    
+  padding: 5px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.profile-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile span {
+  display: inline-block;
+  width: 100px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ===== 經歷 ===== */
+.career a {
+  display: inline-block;
+}
+
+.no-break {
+  white-space: nowrap; /* 括號內文字不換行 */
+}
+
+/* ===== 年表 ===== */
+.timeline {
+  font-size: 0.95rem;
+}
+
+.timeline div {
+  margin-bottom: 6px;
+}
+
+.timeline b {
+  display: inline-block;
+  width: 60px;
+}
+
+/* ===== 頂部導覽列 ===== */
+.topnav {
+  display: flex;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 3px solid #e5e7eb;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.topnav a {
+  color: #006000;
+  font-weight:450;
+}
+
+.topnav a:hover {
+  color: #1d4ed8;
+}
+
+/* ===== 表格 ===== */
+table.stats {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats th,
+table.stats td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats th {
+  background: #c70125;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+table.stats tbody tr:nth-child(even) td {
+  background: #F8D9DE;
+}
+
+/* ===== 表格 ===== */
+table.stats1 {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats1 th,
+table.stats1 td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats1 th {
+  background: #671a32;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+table.stats1 tbody tr:nth-child(even) td {
+  background: #EEDCE2;
+}
+
+table.stats th:nth-child(2),
+table.stats td:nth-child(2) {
+  white-space: nowrap;
+}
+
+table.stats1 th:nth-child(2),
+table.stats1 td:nth-child(2) {
+  white-space: nowrap;
+}
+
+.best {
+  font-weight: bold;       /* 加粗字體 */        
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.test {
+  font-weight: bold;       /* 加粗字體 */
+  color: #FF0000;          /* 改成紅色 */
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+/* ===== Footer ===== */
+.footer {
+  border-top: 1px solid #d1d5db;
+  margin-top: 48px;
+  padding-top: 16px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    
+  <nav class="topnav">
+  <a href="../index.html">首頁</a> ⮕ <a href="../players/players_overview.html">球員</a> ⮕  <a href="../players/taiwan_players_overview.html">台灣球員</a> ⮕  <b>鄭皓元</b> </nav>     
+
+  <!-- 頁首 -->
+  <div class="header">
+    <h1>鄭皓元</h1>
+    <div class="sub"> CHENG,HAO-YUAN｜外野手（RF）</div>
+  </div>
+
+  <!-- 基本資料 -->
+  <div class="section">
+    <h2>基本資料</h2>
+    <div class="profile">
+      <div><span>出生日期</span>2026 年 7 月 22 日（25歲）</div>
+      <div><span>身高體重</span>182 公分／81 公斤</div>
+      <div><span>出生地</span>台灣・新竹縣竹東鎮</div>
+      <div><span>投打習慣</span>右投右打</div>
+      <div><span>守備位置</span>外野手 RF LF</div>
+      <div><span>職棒選秀</span>2045年室內棒球聯盟選秀會樂天桃猿隊第二輪指名</div>
+    </div>
+  </div>
+
+  <!-- 球員經歷 -->
+  <div class="section">
+    <h2>球員經歷</h2>
+    <div class="career">
+      新竹縣竹東國小少棒隊<br>
+      新竹縣竹東國中青少棒隊<br>    
+      臺南市南英商工青棒隊<br>
+      臺中市中國醫藥大學大學棒球隊<br>
+      <a href="#">室內棒球聯盟</a><a href="#">樂天桃猿隊隊</a>（2045/08～）<br>
+    </div>
+  </div>
+
+  <!-- 個人年表 -->
+  <div class="section">
+    <h2>個人年表</h2>
+    <div class="timeline">
+      <div><b>2044年</b>錄取中國醫藥大學運動醫學系，為正取第一名</div>
+      <div><b>2045年</b>6月，參加2045年室內棒球聯盟選秀會，第二輪第二十五順位被樂天桃猿隊指名，後以簽約金1386萬新台幣加盟</div>
+      <div><b>2046年</b>4月7日，生涯首次出賽以代打上場，打成游擊滾地出局</div>
+      <div><b>2046年</b>4月12日，面對富邦守護者隊林昱廷敲出生涯首安</div>
+      <div><b>2046年</b>5月5日，面對台鋼巨鷹隊Michael Torres敲出生涯首轟</div>
+      <div><b>2048年</b>該季與隊友郭哲恩、林宏祐合計組成外野「鐵三角」，單季合力守下聯盟最多外野刺殺</div>
+      <div><b>2049年</b>5月，因大腿後肌拉傷被放入30日傷兵名單</div>
+    </div>
+  </div>
+
+ 
+ <!-- 生涯成績 -->
+  <div class="section">
+    <h2>職棒生涯成績</h2>
+    室內棒球聯盟一軍打擊成績：
+    <table class="stats1">
+    <thead>
+      <tr>
+        <th>年度</th>
+        <th>球隊</th><th>G</th><th>PA</th><th>AB</th><th>H</th>
+        <th>2B</th><th>3B</th><th>HR</th>
+        <th>RBI</th><th>R</th><th>SB</th><th>TB</th><th>SO</th><th>BB</th><th>SAC</th><th>SF</th>
+        <th>AVG</th><th>OBP</th><th>SLG</th><th>OPS</th>
+      </tr>
+    </thead>
+    <tbody>
+    
+    <tr>
+      <td>2047</td>
+      <td>樂天桃猿</td>
+      <td>74</td>
+      <td>198</td>
+      <td>176</td>
+      <td>47</td>
+      <td>8</td>
+      <td>2</td>
+      <td>1</td>
+      <td>18</td>
+      <td>21</td>
+      <td>7</td>
+      <td>62</td>
+      <td>42</td>
+      <td>15</td>
+      <td>7</td>
+      <td>0</td>
+      <td>.267</td>
+      <td>.325</td>
+      <td>.352</td>
+      <td>.677</td>
+    </tr>
+    
+    <tr>
+      <td>2047</td>
+      <td>樂天桃猿</td>
+      <td>129</td>
+      <td>522</td>
+      <td>471</td>
+      <td>146</td>
+      <td>24</td>
+      <td>5</td>
+      <td>12</td>
+      <td>62</td>
+      <td>74</td>
+      <td>14</td>
+      <td>216</td>
+      <td>89</td>
+      <td>41</td>
+      <td>7</td>
+      <td>3</td>
+      <td>.310</td>
+      <td>.363</td>
+      <td>.459</td>
+      <td>.822</td>
+    </tr>
+    
+    <tr>
+      <td>2048</td>
+      <td>樂天桃猿</td>
+      <td>144</td>
+      <td>611</td>
+      <td>558</td>
+      <td>152</td>
+      <td>29</td>
+      <td>3</td>
+      <td>11</td>
+      <td>69</td>
+      <td>81</td>
+      <td>21</td>
+      <td>220</td>
+      <td>102</td>
+      <td>47</td>
+      <td>5</td>
+      <td>1</td>
+      <td>.272</td>
+      <td>.328</td>
+      <td>.394</td>
+      <td>.722</td>
+    </tr>
+        
+    <tr>
+      <td>2049</td>
+      <td>樂天桃猿</td>
+      <td>92</td>
+      <td>379</td>
+      <td>340</td>
+      <td>92</td>
+      <td>15</td>
+      <td>2</td>
+      <td>6</td>
+      <td>37</td>
+      <td>44</td>
+      <td>9</td>
+      <td>129</td>
+      <td>68</td>
+      <td>32</td>
+      <td>4</td>
+      <td>3</td>
+      <td>.271</td>
+      <td>.331</td>
+      <td>.379</td>
+      <td>.710</td>
+    </tr>
+    
+ <tr>
+      <td>2050</td>
+      <td>樂天桃猿</td>
+      <td>138</td>
+      <td>577</td>
+      <td>521</td>
+      <td>149</td>
+      <td>26</td>
+      <td>4</td>
+      <td>9</td>
+      <td>56</td>
+      <td>72</td>
+      <td>17</td>
+      <td>210</td>
+      <td>94</td>
+      <td>53</td>
+      <td>2</td>
+      <td>1</td>
+      <td>.286</td>
+      <td>.351</td>
+      <td>.403</td>
+      <td>.754</td>
+      </tr>
+  <tr>
+      <td>2051</td>
+      <td>樂天桃猿</td>
+      <td>142</td>
+      <td>615</td>
+      <td>548</td>
+      <td>156</td>
+      <td>31</td>
+      <td>4</td>
+      <td>16</td>
+      <td>82</td>
+      <td>88</td>
+      <td>18</td>
+      <td>243</td>
+      <td>105</td>
+      <td>58</td>
+      <td>3</td>
+      <td>6</td>
+      <td>.285</td>
+      <td>.350</td>
+      <td>.443</td>
+      <td>.793</td>
+    </tr>
+    
+    <tr class="career">
+      <td colspan="2">通算成績</td>
+     <td>719</td>
+      <td>2902</td>
+      <td>2614</td>
+      <td>742</td>
+      <td>133</td>
+      <td>20</td>
+      <td>55</td>
+      <td>324</td>
+      <td>380</td>
+      <td>86</td>
+      <td>1080</td>
+      <td>500</td>
+      <td>246</td>
+      <td>28</td>
+      <td>14</td>
+      <td>.284</td>
+      <td>.344</td>
+      <td>.413</td>
+      <td>.757</td>
+    </tr>
+
+
+  
+    </tbody>
+  </table>
+  
+  </div>
+
+  <!-- 個人獎項 -->
+  <div class="section">
+    <h2>個人獎項</h2>
+   ・2044年大專棒球聯賽公開一級最佳九人外野手<br>
+    </div>
+
+  <!-- 特殊事蹟 -->
+  <div class="section">
+    <h2>特殊事蹟</h2>
+    ・高三賽季跑出單季21次盜壘成功，目前仍為校史紀錄<br>
+    ・2047年賽季連續20場敲出安打，目前仍為樂天桃猿隊史第三長的紀錄<br>
+    ・室內棒球聯盟明星賽：2047<br>
+  </div>
+
+  <!-- 相關新聞 -->
+  <div class="section">
+    <h2>相關新聞</h2>
+    <a href="#"></a>
+    <a href="#"></a>
+  </div>
+
+</div>
+
+
+</body>
+</html>
