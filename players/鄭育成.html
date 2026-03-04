@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> 球員資料｜棒球維基館 </title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background: #ffffff;
+  color: #111827;
+  line-height: 1.6;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 80px; /* 關鍵 */
+}
+
+html, body {
+  height: auto;
+  overflow-y: auto;
+}
+
+/* ===== 橫幅照片 ===== */
+.banner-photo {
+  width: 100%;
+  height: 320px;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* ===== 頁首 ===== */
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header .sub {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* ===== 主版面 ===== */
+.section {
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-left: 4px solid #111827;
+  padding-left: 8px;
+}
+
+/* ===== 基本資料 ===== */
+.profile {
+  font-size: 0.95rem;
+}
+
+.profile div {
+  display: flex;    
+  padding: 5px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.profile-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile span {
+  display: inline-block;
+  width: 100px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ===== 經歷 ===== */
+.career a {
+  display: inline-block;
+}
+
+.no-break {
+  white-space: nowrap; /* 括號內文字不換行 */
+}
+
+/* ===== 年表 ===== */
+.timeline {
+  font-size: 0.95rem;
+}
+
+.timeline div {
+  margin-bottom: 6px;
+}
+
+.timeline b {
+  display: inline-block;
+  width: 60px;
+}
+
+/* ===== 頂部導覽列 ===== */
+.topnav {
+  display: flex;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 3px solid #e5e7eb;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.topnav a {
+  color: #006000;
+  font-weight:450;
+}
+
+.topnav a:hover {
+  color: #1d4ed8;
+}
+
+/* ===== 表格 ===== */
+table.stats {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats th,
+table.stats td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats th {
+  background: #003060;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+table.stats tbody tr:nth-child(even) td {
+  background: #ECF5FF;
+}
+
+/* ===== 表格 ===== */
+table.stats1 {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats1 th,
+table.stats1 td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats1 th {
+  background: #D0D0D0;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+table.stats1 tbody tr:nth-child(even) td {
+  background: #F0F0F0;
+}
+
+table.stats th:nth-child(2),
+table.stats td:nth-child(2) {
+  white-space: nowrap;
+}
+
+table.stats1 th:nth-child(2),
+table.stats1 td:nth-child(2) {
+  white-space: nowrap;
+}
+
+.best {
+  font-weight: bold;       /* 加粗字體 */        
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.test {
+  font-weight: bold;       /* 加粗字體 */
+  color: #FF0000;          /* 改成紅色 */
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+/* ===== Footer ===== */
+.footer {
+  border-top: 1px solid #d1d5db;
+  margin-top: 48px;
+  padding-top: 16px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    
+  <nav class="topnav">
+  <a href="../index.html">首頁</a> ⮕ <a href="../players/players_overview.html">球員</a> ⮕  <a href="../players/taiwan_players_overview.html">台灣球員</a> ⮕  <b>鄭育成</b> </nav>     
+
+  <!-- 頁首 -->
+  <div class="header">
+    <h1>鄭育成</h1>
+    <div class="sub"> CHENG,YU-CHENG｜內野手（SS）</div>
+  </div>
+
+  <!-- 基本資料 -->
+  <div class="section">
+    <h2>基本資料</h2>
+    <div class="profile">
+      <div><span>出生日期</span>2024 年 7 月 18 日（27歲）</div>
+      <div><span>身高體重</span>187 公分／93 公斤</div>
+      <div><span>出生地</span>台灣・臺中市西區</div>
+      <div><span>投打習慣</span>右投右打</div>
+      <div><span>守備位置</span>內野手 SS 3B 2B</div>
+      <div><span>職棒選秀</span>2042年室內棒球聯盟選秀會北鐵狼隊第一輪指名</div>
+    </div>
+  </div>
+
+  <!-- 球員經歷 -->
+  <div class="section">
+    <h2>球員經歷</h2>
+    <div class="career">
+      臺中市健行國小少棒隊<br>
+      臺中市向上國中青少棒隊<br>    
+      彰化縣彰化藝中青棒隊<br>
+      <a href="#">室內棒球聯盟</a><a href="#">北鐵狼隊</a>（2042/08～2051）<br>
+      <a href="#">室內棒球聯盟</a><a href="#">國軍鳳凰隊</a>（2048）<br>
+      <a href="#">美國職棒</a><a href="#">坦帕灣光芒</a>（2052～）<br>
+    </div>
+  </div>
+  
+ 
+ <!-- 球員介紹 -->
+  <div class="section">
+    <h2>球員介紹</h2>
+鄭育成是一位來自台中的內野手，主守三壘、游擊與二壘，曾效力於室內棒球聯盟的北鐵狼，目前則披上坦帕灣光芒戰袍<br>
+<br>
+鄭育成自小在台中完成國小與國中學業。少棒時期，他並非身材最出色的孩子，卻是場上最安靜、卻最精準的一個。教練回憶，他從小就展現出異於同齡的比賽閱讀能力，知道什麼時候該強攻、什麼時候該拉長打席；守備時步伐細碎而穩定，接球後的傳球動作乾淨俐落。國中階段，他開始同時鎮守游擊與三壘，展現罕見的橫向移動範圍與手套穩定度，也逐漸培養出中長程火力。那時球探筆記上對他的評語往往只有幾個字——「完成度高」。<br>
+<br>
+高中時，鄭育成選擇就讀鄰近的彰化縣強權——彰化藝術高中。高一他便成功卡位一軍主力，在2039年黑熊旗賽事中脫穎而出，拿下最佳新人獎。那一年，他的打擊不僅穩定，關鍵打席更展現大心臟特質。高二時，美國知名網站「Baseball U18 Prediction」將他列為全球高中生第27名、台灣第一名的內野手，這項評價大幅提升他的國際能見度。此後，他多次入選國家代表隊，參與U18亞洲棒球錦標賽與U18世界青棒錦標賽，面對更高層級投手時依舊能維持擊球品質與選球紀律。<br>
+<br>
+升上高三後，鄭育成的打擊實力全面成熟。春季木棒聯賽，他在長打率與上壘率雙雙領先隊友，成功入選彰化縣聯隊，並在玉山盃以全方位表現拿下最有價值球員。當時球探普遍評估，他是典型「跑打守三拍子」內野手，腳程足以覆蓋中線，臂力與反應則能支撐角落內野，且擊球仰角與初速逐年提升，具備旅外潛力。儘管有國外球探積極接觸，他最終仍選擇先投入室內棒球選秀，磨練成熟度後再評估旅外時機。<br>
+<br>
+選秀當年，握有狀元籤的北鐵狼毫無懸念選中他，並以2000萬簽約金完成簽約。這筆簽約金在當時創下高中野手新高，也象徵球團將他視為重建核心。<br>
+<br>
+進入北鐵後，受限於制度規定，高中畢業球員首年不得直接上一軍，他只能在二軍出賽。然而，他的攻守表現很快讓教練團動搖原先的培養節奏。二軍賽季結束後，球團將他送往歐洲冬季聯盟磨練，面對不同投手型態與比賽節奏，他迅速調整，回台時整體力量與節奏掌控更上層樓。<br>
+<br>
+2043年，北鐵中線長年不穩的問題終於迫使教練團下定決心讓他直接從一軍出發。初登場的鄭育成毫無生澀感，迅速鎖住游擊位置。新人年出賽132場，繳出 .315 打擊率、22轟、OPS+ 175 的頂級成績，不僅奪下新人王，也同時包辦游擊手金手套與最佳十人第一隊游擊手。這種攻守同步到位的表現，在聯盟歷史中極為罕見。<br>
+<br>
+2044與2045年，他持續穩定輸出，連續兩年摘下游擊手金手套與最佳十人第一隊。2045年，他以124分打點拿下打點王，成為北鐵打線真正的核心引擎。那兩年的他，既能推進攻勢，也能一棒定江山。
+<br>
+2046年初，他首度入選世界棒球經典賽代表隊，卻在賽事中意外受傷。傷勢影響整個賽季節奏，出賽僅106場，打擊率首次跌破三成，全壘打數銳減至11支，也中斷了連續三年的金手套與最佳陣容紀錄。這是他職業生涯第一次真正面對低潮與質疑。<br>
+
+<br>
+2047年，他傷癒回歸，重新證明自己。出賽140場、28轟、OPS .972 的表現，再度拿下游擊金手套與最佳十人第一隊。MVP票選中，他惜敗於林昱傑，但已重新站回聯盟頂端。球季結束後，他主動申請至國軍服役隊完成兵役，展現對職涯規劃的成熟思維。<br>
+<br>
+2048年在國軍隊，他首度單季30轟，OPS+ 168，率隊闖進季後賽，攻守全面升級。2049年重返北鐵時，因余宥達鎮守游擊，他轉守三壘。這次轉型反而解放他的攻擊潛能。2049年，他締造聯盟史無前例的「50-50紀錄」，單季52轟創新高，同時拿下全壘打王與打點王，包辦最佳陣容第一隊三壘手與金手套三壘手，並奪得生涯首座MVP。<br>
+<br>
+2050年，他再次完成50-50紀錄，並奪下全壘打王、安打王與首位打者獎，加冕打擊三冠王。單季153打點與436壘打數雙雙刷新聯盟紀錄，連續第二年榮獲三壘金手套、最佳陣容第一隊與年度MVP，並率領北鐵奪下總冠軍。那一年，他不僅是數據上的王者，更是隊史第一位以三冠王身份封王的核心人物。<br>
+<br>
+賽季結束後，他宣布以入札制度挑戰美國職棒，引發多隊競逐。2050年12月12日，坦帕灣光芒正式宣布以5年7000萬美元合約達成加盟協議，北鐵則獲得2000萬美元入札金。旅美第一年，鄭育成在攻守兩端皆繳出令人滿意的成績單，雖然沒有像在北鐵狼時那樣動輒締造「50-50」等歷史級數據或是統治性表現，但他在新人年所展現的成熟度與全方位能力，反而更讓教練團放心。<br>
+
+  </div> 
+ 
+ <!-- 個人年表 -->
+  <div class="section">
+    <h2>個人年表</h2>
+    <div class="timeline">
+      <div><b>2042年</b>6月，參加2042年室內棒球聯盟選秀會，第一輪第一順位被北鐵狼隊指名，後以簽約金2000萬新台幣加盟</div>
+      <div><b>2042年</b>11月，在球團安排下加入歐洲冬季聯盟捷克公牛隊</div>
+      <div><b>2043年</b>3月28日，於球隊開幕賽時生涯初登場，先發七棒守二壘</div>
+      <div><b>2043年</b>季末，以獨攬第一名選票抱回新人王獎盃</div>
+      <div><b>2045年</b>以124打點獲得打點王，為個人生涯首座打擊獎項</div>
+      <div><b>2046年</b>7月，因腰部傷勢而休養一個月</div>
+      <div><b>2047年</b>6月23日，對戰竹科工程師隊達成完全打擊</div>
+      <div><b>2048年</b>1月，前往國軍鳳凰隊服役</div>
+      <div><b>2049年</b>8月11日，以25歲又25天達成生涯千安百轟百盜，為目前此紀錄最年輕的保持者</div>
+      <div><b>2049年</b>9月21日，達成50轟50盜，為聯盟第一人達成此成就</div>
+      <div><b>2049年</b>該季刷新多項聯盟紀錄，包括二壘安打數、壘打數、打點數、長打率</div>
+      <div><b>2050年</b>季後，宣布將以入札制度挑戰大聯盟</div>
+      <div><b>2050年</b>12月12日，坦帕灣光芒以5年7000萬美元合約達成加盟協議</div>
+    </div>
+  </div>
+ 
+ <!-- 生涯成績 -->
+  <div class="section">
+    <h2>職棒生涯成績</h2>
+    室內棒球聯盟一軍打擊成績：
+    <table class="stats1">
+    <thead>
+      <tr>
+        <th>年度</th>
+        <th>球隊</th><th>G</th><th>PA</th><th>AB</th><th>H</th>
+        <th>2B</th><th>3B</th><th>HR</th>
+        <th>RBI</th><th>R</th><th>SB</th><th>TB</th><th>SO</th><th>BB</th><th>SAC</th><th>SF</th>
+        <th>AVG</th><th>OBP</th><th>SLG</th><th>OPS</th>
+      </tr>
+    </thead>
+    <tbody>
+    
+    <tr>
+        <td>2043</td>
+        <td>北鐵狼</td>
+        <td>132</td>
+        <td>509</td>
+        <td>457</td>
+        <td>144</td>
+        <td>26</td>
+        <td>3</td>
+        <td>22</td>
+        <td>58</td>
+        <td>53</td>
+        <td>13</td>
+        <td>242</td>
+        <td>78</td>
+        <td>44</td>
+        <td>2</td>
+        <td>6</td>
+        <td>.315</td>
+        <td>.371</td>
+        <td>.530</td>
+        <td>.901</td>
+      </tr>
+
+        <tr>
+        <td>2044</td>
+        <td>北鐵狼</td>
+        <td>142</td>
+        <td>611</td>
+        <td>552</td>
+        <td>170</td>
+        <td>41</td>
+        <td>2</td>
+        <td>26</td>
+        <td>101</td>
+        <td>78</td>
+        <td>15</td>
+        <td>293</td>
+        <td>82</td>
+        <td>48</td>
+        <td>3</td>
+        <td>8</td>
+        <td>.308</td>
+        <td>.359</td>
+        <td>.531</td>
+        <td>.890</td>
+      </tr>
+
+      <tr>
+        <td>2045</td>
+        <td>北鐵狼</td>
+        <td>142</td>
+        <td>609</td>
+        <td>559</td>
+        <td>179</td>
+        <td><span class="best">47</span></td>
+        <td>3</td>
+        <td>29</td>
+        <td><span class="best">124</span></td>
+        <td>87</td>
+        <td>17</td>
+        <td>319</td>
+        <td>91</td>
+        <td>43</td>
+        <td>0</td>
+        <td>7</td>
+        <td>.320</td>
+        <td>.365</td>
+        <td>.571</td>
+        <td>.936</td>
+      </tr>
+
+
+      <tr>
+        <td>2046</td>
+        <td>北鐵狼</td>
+        <td>106</td>
+        <td>404</td>
+        <td>357</td>
+        <td>104</td>
+        <td>23</td>
+        <td>5</td>
+        <td>11</td>
+        <td>49</td>
+        <td>33</td>
+        <td>8</td>
+        <td>170</td>
+        <td>79</td>
+        <td>41</td>
+        <td>1</td>
+        <td>5</td>
+        <td>.291</td>
+        <td>.360</td>
+        <td>.476</td>
+        <td>.836</td>
+      </tr>
+
+    <tr>
+      <td>2047</td>
+      <td>北鐵狼</td>
+      <td>140</td>
+      <td>607</td>
+      <td>528</td>
+      <td>168</td>
+      <td>45</td>
+      <td>4</td>
+      <td>28</td>
+      <td>102</td>
+      <td>79</td>
+      <td>14</td>
+      <td>305</td>
+      <td>89</td>
+      <td>71</td>
+      <td>0</td>
+      <td>8</td>
+      <td>.318</td>
+      <td>.394</td>
+      <td>.578</td>
+      <td>.972</td>
+    </tr>
+    
+    <tr>
+      <td>2048</td>
+      <td>國軍鳳凰</td>
+      <td>143</td>
+      <td>641</td>
+      <td>583</td>
+      <td>177</td>
+      <td><span class="best">47</span></td>
+      <td>5</td>
+      <td>33</td>
+      <td>114</td>
+      <td>91</td>
+      <td>21</td>
+      <td>333</td>
+      <td>79</td>
+      <td>49</td>
+      <td>2</td>
+      <td>7</td>
+      <td>.304</td>
+      <td>.354</td>
+      <td>.571</td>
+      <td>.925</td>
+    </tr>
+    <tr>
+      <td>2049</td>
+      <td>北鐵狼</td>
+      <td>147</td>
+      <td>659</td>
+      <td>609</td>
+      <td>200</td>
+      <td><span class="best">44</span></td>
+      <td>4</td>
+      <td><span class="best">52</span></td>
+      <td>115</td>
+      <td>82</td>
+      <td>53</td>
+      <td><span class="best">408</span></td>
+      <td>87</td>
+      <td>46</td>
+      <td>1</td>
+      <td>3</td>
+      <td>.328</td>
+      <td>.374</td>
+      <td><span class="best">.670</span></td>
+      <td><span class="best">1.044</span></td>
+    </tr>
+    <tr>
+      <td>2050</td>
+      <td>北鐵狼</td>
+      <td>147</td>
+      <td>647</td>
+      <td>602</td>
+      <td><span class="best">211</span></td>
+      <td><span class="test">66</span></td>
+      <td>3</td>
+      <td><span class="best">51</span></td>
+      <td><span class="test">153</span></td>
+      <td><span class="best">126</span></td>
+      <td>51</td>
+      <td><span class="test">436</span></td>
+      <td>55</td>
+      <td>34</td>
+      <td>5</td>
+      <td>6</td>
+      <td><span class="best">.350</span></td>
+      <td>.382</td>
+      <td><span class="test">.724</span></td>
+      <td><span class="best">1.106</span></td>
+    </tr>
+    
+    <tr class="career">
+      <td colspan="2">通算成績</td>
+      <td>1099</td>
+      <td>4687</td>
+      <td>4247</td>
+      <td>1353</td>
+      <td>339</td>
+      <td>29</td>
+      <td>252</td>
+      <td>724</td>
+      <td>629</td>
+      <td>192</td>
+      <td>2506</td>
+      <td>642</td>
+      <td>376</td>
+      <td>14</td>
+      <td>50</td>
+      <td>.319</td>
+      <td>.370</td>
+      <td>.590</td>
+      <td>.960</td>
+    </tr>
+
+
+  
+    </tbody>
+  </table>
+  <br>
+  
+    美國職棒大聯盟打擊成績：
+    <table class="stats">
+    <thead>
+      <tr>
+        <th>年度</th>
+        <th>球隊</th><th>G</th><th>PA</th><th>AB</th><th>H</th>
+        <th>2B</th><th>3B</th><th>HR</th>
+        <th>RBI</th><th>R</th><th>SB</th><th>TB</th><th>SO</th><th>BB</th><th>SAC</th><th>SF</th>
+        <th>AVG</th><th>OBP</th><th>SLG</th><th>OPS</th>
+      </tr>
+    </thead>
+    <tbody>
+    
+    <tr>
+      <td>2051</td>
+      <td>TB</td>
+      <td>156</td>
+      <td>682</td>
+      <td>603</td>
+      <td>173</td>
+      <td>29</td>
+      <td>5</td>
+      <td>18</td>
+      <td>79</td>
+      <td>86</td>
+      <td>14</td>
+      <td>266</td>
+      <td>127</td>
+      <td>74</td>
+      <td>1</td>
+      <td>4</td>
+      <td>.287</td>
+      <td>.363</td>
+      <td>.441</td>
+      <td>.804</td>
+    </tr>
+    
+    <tr class="career">
+      <td colspan="2">通算成績</td>
+      <td>156</td>
+      <td>682</td>
+      <td>603</td>
+      <td>173</td>
+      <td>29</td>
+      <td>5</td>
+      <td>18</td>
+      <td>79</td>
+      <td>86</td>
+      <td>14</td>
+      <td>266</td>
+      <td>127</td>
+      <td>74</td>
+      <td>1</td>
+      <td>4</td>
+      <td>.287</td>
+      <td>.363</td>
+      <td>.441</td>
+      <td>.804</td>
+    </tr>
+    
+    </tbody>
+    </table>    
+        
+  
+  </div>
+
+  <!-- 個人獎項 -->
+  <div class="section">
+    <h2>個人獎項</h2>
+   ・<a href="#">室內棒球聯盟年度安打王</a>：2050<br>
+   ・<a href="#">室內棒球聯盟年度打擊王</a>：2050<br>
+   ・<a href="#">室內棒球聯盟年度全壘打王</a>：2049、2050<br>
+   ・<a href="#">室內棒球聯盟年度打點王</a>：2045、2050<br>
+   ・<a href="#">室內棒球聯盟年度新人王</a>：2043<br>
+   ・<a href="#">室內棒球聯盟年度金手套</a>游擊手：2043～2045、2046～2048<br>
+   ・<a href="#">室內棒球聯盟年度金手套</a>三壘手：2050、2051<br>
+   ・<a href="#">室內棒球聯盟年度最佳陣容</a>游擊手：2043～2045、2046～2048<br>
+   ・<a href="#">室內棒球聯盟年度最佳陣容</a>三壘手：2050、2051<br>
+    </div>
+
+  <!-- 特殊事蹟 -->
+  <div class="section">
+    <h2>特殊事蹟</h2>
+    ・2042年U18世界青棒錦標賽中華代表隊<br>
+    ・2044年世界棒球經典賽中華代表隊<br>
+    ・2046年世界16強錦標賽中華代表隊<br>
+    ・2048年世界棒球經典賽中華代表隊<br>
+    ・2052年世界棒球經典賽中華代表隊<br>
+  </div>
+
+  <!-- 相關新聞 -->
+  <div class="section">
+    <h2>相關新聞</h2>
+    <a href="#"></a>
+    <a href="#"></a>
+  </div>
+
+</div>
+
+
+</body>
+</html>
