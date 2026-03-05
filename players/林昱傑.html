@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> 球員資料｜棒球維基館 </title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background: #ffffff;
+  color: #111827;
+  line-height: 1.6;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ===== 頂部導覽列 ===== */
+.topnav {
+  display: flex;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 3px solid #e5e7eb;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.topnav a {
+  color: #006000;
+  font-weight:450;
+}
+
+.topnav a:hover {
+  color: #1d4ed8;
+}
+
+/* ===== 頁首 ===== */
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header .sub {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* ===== 主版面 ===== */
+.section {
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-left: 4px solid #111827;
+  padding-left: 8px;
+}
+
+/* ===== 基本資料 ===== */
+.profile {
+  font-size: 0.95rem;
+}
+
+.profile div {
+  padding: 5px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.profile span {
+  display: inline-block;
+  width: 100px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ===== 經歷 ===== */
+.career a {
+  display: inline-block;
+}
+
+.no-break {
+  white-space: nowrap; /* 括號內文字不換行 */
+}
+
+/* ===== 年表 ===== */
+.timeline {
+  font-size: 0.95rem;
+}
+
+.timeline div {
+  margin-bottom: 6px;
+}
+
+.timeline b {
+  display: inline-block;
+  width: 60px;
+}
+
+/* ===== 表格 ===== */
+table.stats {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats th,
+table.stats td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats th {
+  background: #FFFF37;
+  color: #000000;
+  font-weight: 600;
+}
+
+table.stats tbody tr:nth-child(even) td {
+  background: #FFFFDF;
+}
+
+table.stats th:nth-child(2),
+table.stats td:nth-child(2) {
+  white-space: nowrap;
+}
+
+/* ===== 表格 ===== */
+table.stats1 {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats1 th,
+table.stats1 td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats1 th {
+  background: #FF5809;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+table.stats1 tbody tr:nth-child(even) td {
+  background: #FFE6D9;
+}
+
+table.stats1 th:nth-child(2),
+table.stats1 td:nth-child(2) {
+  white-space: nowrap;
+}
+
+.best {
+  font-weight: bold;       /* 加粗字體 */        
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.test {
+  font-weight: bold;       /* 加粗字體 */
+  color: #FF0000;          /* 改成紅色 */
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+/* ===== Footer ===== */
+.footer {
+  border-top: 1px solid #d1d5db;
+  margin-top: 48px;
+  padding-top: 16px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  
+  <nav class="topnav">
+  <a href="../index.html">首頁</a> ⮕ <a href="../players/players_overview.html">球員</a> ⮕  <a href="../players/taiwan_players_overview.html">台灣球員</a> ⮕  <b>林昱傑</b> </nav>     
+
+  <!-- 頁首 -->
+  <div class="header">
+    <h1>林昱傑</h1>
+    <div class="sub"> LIN,YU-JIE｜外野手（CF）</div>
+  </div>
+
+  <!-- 基本資料 -->
+  <div class="section">
+    <h2>基本資料</h2>
+    <div class="profile">
+      <div><span>出生日期</span>2024 年 3 月 15 日（27歲）</div>
+      <div><span>身高體重</span>185 公分／85 公斤</div>
+      <div><span>出生地</span>台灣・台中市西屯區</div>
+      <div><span>投打習慣</span>右投右打</div>
+      <div><span>守備位置</span>外野手 CF LF</div>
+      <div><span>職棒選秀</span><a href="#">2042年室內棒球聯盟選秀會</a><a href="#">澎湖雙心隊</a>第一輪指名</div>
+    </div>
+  </div>
+
+  <!-- 球員經歷 -->
+  <div class="section">
+    <h2>球員經歷</h2>
+    <div class="career">
+      <a href="#">台中市</a><a href="#">崇光國小少棒隊</a></br>
+      <a href="#">台中市</a><a href="#">崇光國中青少棒隊</a></br>
+      <a href="#">台中市</a><a href="#">台中一中青棒隊</a></br>
+      <a href="../league/indoor baseball league.html">室內棒球聯盟</a><a href="#">澎湖雙心隊</a>（2042/08～2045）</br>
+      <a href="../league/indoor baseball league.html">室內棒球聯盟</a><a href="#">中信子彈隊</a>（2045～2049）</br>
+       
+      <a href="#">美國職棒</a><a href="#">舊金山巨人隊</a>（2050～）</br>
+    </div>
+  </div>
+
+  <!-- 球員介紹 -->
+  <div class="section">
+    <h2>球員介紹</h2>
+林昱傑是出生於台中的選手，守備位置為外野手，曾效力於室內棒球聯盟澎湖雙心、中信子彈隊，目前效力於美國職棒舊金山巨人隊。
+<br>
+<br>
+林昱傑自幼便對棒球展現出近乎本能的熱情。成長於台中，他從小在社區球場與父親、哥哥拋接球，外野的廣闊視野與奔跑距離，成了他最熟悉、也最自在的空間。相較於同齡孩子追逐力量與全壘打，他更早理解「接得到球、跑得到位」的價值，這樣的特質，也為他日後的外野手生涯奠定基礎。進入台中市崇光國中後，林昱傑加入校隊不久便站上主力外野手位置。他的身材並非當時最突出，但速度、第一步反應與對飛球落點的判斷能力，明顯高出同齡選手一個層級。國二那年，全國青少棒錦標賽成為他學生時代的第一個代表作。整個賽會期間，他以沉穩成熟的打擊內容繳出高達.450的打擊率，奪下賽會打擊王，並多次在關鍵局數敲出帶有打點的長打，帶領崇光國中一路挺進決賽，最終拿下亞軍。賽後，他毫無懸念地入選最佳九人，而教練在受訪時給了他一個後來廣為流傳的評語——「只要球打到外野，交給林昱傑，球隊就少掉一半的危險。」<br>
+<br>
+國中畢業後，林昱傑選擇就讀台中一中。這所並非傳統體育班出身、卻長期深耕基層棒球的學校，給了他更多磨練比賽理解力與自我管理的空間。高一，他便站穩一軍外野手位置；高二開始，國內多支職業球團球探頻繁現身台中一中的比賽看台。真正讓他從「潛力股」晉升為「同屆指標性野手」，是在高三那一年。升上高三後，林昱傑接下隊長一職，不僅在場上負責守備中樞與跑壘節奏，更在休息室內成為年輕學弟的精神支柱。當年高中木棒聯賽，他以.385的高打擊率、10次盜壘成功，率領台中一中打破長達11年的四強荒。賽季結束後，他順利入選U18國手名單，在國際賽場上以速度與守備立足，開始受到美、日職球探的實質接觸。<br>
+<br>
+面對旅外機會，林昱傑選擇評估自身發展曲線後，先留在台灣累積職業基礎。2042年室內棒球聯盟選秀會上，他毫無懸念地成為狀元，由澎湖雙心隊以首輪第一順位選中<br>
+<br>
+加盟雙心隊後，林昱傑幾乎沒有適應期。新人年便被固定安排在先發外野名單中，整季繳出2成80打擊率、11支全壘打的亮眼成績，攻守兩端都展現即戰力。然而，賽季中後段，他的膝蓋傷勢開始反覆發作，影響跑壘爆發力與守備橫移。儘管如此，他仍選擇帶傷撐完整個新人球季，直到季後才接受手術。<br>
+<br>
+2044年，林昱傑因復健進度調整，出賽場次降至99場，但擊球品質與選球能力依舊在線，證明傷勢並未動搖他的核心價值，也讓他成為交易市場上的焦點人物。2045年季後，中信子彈隊以三名輪值等級選手作為籌碼，成功換回林昱傑。轉隊後，球團打擊教練針對他原本高抬腿、節奏較長的打擊動作進行微調，簡化準備動作，使揮棒更具連續性。這項調整徹底釋放他的打擊潛能。<br>
+<br>
+2046年起，他連續奪下打擊王，並同時包辦金手套與最佳十人外野手；2047年更進一步拿下打擊雙冠王，各項數據全面領先全隊，連續三年入選明星賽，並在2047至2048年完成年度MVP連莊，正式站上聯盟門面球星的位置。2049年季初，林昱傑已不避諱對外透露旅外念頭，但也清楚表示必須先繳出足以被國際市場注意的成績。該季他出賽146場，敲出209支安打，再度奪下安打王，OPS突破0.990，並在季中完成生涯千安與百盜里程碑，加上前一季已完成百轟，成為聯盟史上少數在旅外前就完成「100轟、100盜、1000安」的全能型外野手，儘管年度MVP最終由完成歷史級50-50的鄭育成拿下，但這並未影響林昱傑在聯盟與球探圈中的高度評價。</br>
+</br>
+10月28日，林昱傑正式宣布透過入札制度挑戰大聯盟，並獲得中信子彈隊全力支持。歷經多支球隊洽談後，他最終選擇舊金山巨人隊。1月16日，球團官宣以4年6400萬美元合約簽下他，並支付1500萬美元入札金，正式開啟旅美生涯。<br>
+<br>
+踏上大聯盟後，林昱傑的打擊成績不再如在室內棒球聯盟時般誇張，但他穩定繳出聯盟平均以上的攻擊表現，搭配頂級外野守備與成熟的跑壘判斷，很快站穩先發位置。他的價值，不僅體現在成績單上，更體現在能長期提升球隊勝率的全面影響力。<br>
+
+  </div>
+
+  <!-- 個人年表 -->
+  <div class="section">
+    <h2>個人年表</h2>
+    <div class="timeline">
+      <div><b>2042年</b>投入室內棒球聯盟選秀會，被澎湖雙心隊在第一輪指名，後以2000萬新台幣加盟</div>
+      <div><b>2043年</b>站穩雙心隊先發外野手，繳出打擊率.280、11支全壘打的成績，成為聯盟最受矚目的新人之一，但賽季中後段膝蓋傷勢開始反覆出現</div>
+      <div><b>2044年</b>季後接受膝蓋手術，該季僅出賽99場</div>
+      <div><b>2045年</b>季後，在球團重建考量下，澎湖雙心隊將林昱傑交易至中信子彈隊，成為聯盟震撼級交易案之一</div>
+      <div><b>2046年</b>以22歲又203天達成單季200安的里程碑</div>
+      <div><b>2048年</b>8月4日，達成生涯百轟</div>
+      <div><b>2049年</b>5月18日，達成生涯千安</div>
+      <div><b>2049年</b>8月24日，達成生涯百盜，以25歲又193天的年紀完成千安百轟百盜</div>
+      <div><b>2049年</b>10月28日，宣布透過入札制度挑戰美國職棒</div>
+      <div><b>2050年</b>1月16日，以入札制度加盟美國職棒舊金山巨人隊，簽下4年6400萬美元合約，巨人隊另支付1500萬美元入札金予中信子彈隊，正式開啟旅美生涯</div>
+
+    </div>
+  </div>
+
+  <!-- 生涯成績 -->
+ <!-- 生涯成績 -->
+  <div class="section">
+    <h2>職棒生涯成績</h2>
+<strong>室內棒球聯盟一軍打擊成績</strong>
+    <table class="stats">
+    <thead>
+      <tr>
+        <th>年度</th>
+        <th>球隊</th>
+        <th>G</th>
+        <th>PA</th>
+        <th>AB</th>
+        <th>H</th>
+        <th>2B</th>
+        <th>3B</th>
+        <th>HR</th>
+        <th>RBI</th>
+        <th>R</th>
+        <th>SB</th>
+        <th>TB</th>
+        <th>SO</th>
+        <th>BB</th>
+        <th>SAC</th>
+        <th>SF</th>
+        <th>AVG</th>
+        <th>OBP</th>
+        <th>SLG</th>
+        <th>OPS</th>
+      </tr>
+    </thead>
+    <tbody>
+        
+     <tr>
+      <td>2043</td>
+      <td>澎湖雙心</td>
+      <td>112</td>
+      <td>409</td>
+      <td>375</td>
+      <td>105</td>
+      <td>22</td>
+      <td>2</td>
+      <td>11</td>
+      <td>31</td>
+      <td>36</td>
+      <td>8</td>
+      <td>162</td>
+      <td>79</td>
+      <td>31</td>
+      <td>2</td>
+      <td>1</td>
+      <td>.280</td>
+      <td>.334</td>
+      <td>.432</td>
+      <td>.766</td>
+    </tr>    
+
+     <tr>
+      <td>2044</td>
+      <td>澎湖雙心</td>
+      <td>99</td>
+      <td>374</td>
+      <td>348</td>
+      <td>101</td>
+      <td>17</td>
+      <td>1</td>
+      <td>6</td>
+      <td>27</td>
+      <td>23</td>
+      <td>5</td>
+      <td>138</td>
+      <td>46</td>
+      <td>22</td>
+      <td>3</td>
+      <td>1</td>
+      <td>.290</td>
+      <td>.332</td>
+      <td>.397</td>
+      <td>.729</td>
+    </tr>
+
+     <tr>
+      <td>2045</td>
+      <td>澎湖雙心</td>
+      <td>117</td>
+      <td>405</td>
+      <td>377</td>
+      <td>116</td>
+      <td>27</td>
+      <td>3</td>
+      <td>15</td>
+      <td>39</td>
+      <td>41</td>
+      <td>11</td>
+      <td>194</td>
+      <td>33</td>
+      <td>27</td>
+      <td>1</td>
+      <td>0</td>
+      <td>.308</td>
+      <td>.354</td>
+      <td>.515</td>
+      <td>.869</td>
+    </tr>
+
+     <tr>
+      <td>2046</td>
+      <td>中信子彈</td>
+      <td>142</td>
+      <td>596</td>
+      <td>543</td>
+      <td>201</td>
+      <td>40</td>
+      <td>2</td>
+      <td>21</td>
+      <td>75</td>
+      <td>77</td>
+      <td>25</td>
+      <td>308</td>
+      <td>67</td>
+      <td>47</td>
+      <td>2</td>
+      <td>4</td>
+      <td><span class="best">.370</span></td>
+      <td><span class="best">.418</span></td>
+      <td>.567</td>
+      <td>.985</td>
+    </tr>
+
+     <tr>
+      <td>2047</td>
+      <td>中信子彈</td>
+      <td>147</td>
+      <td>629</td>
+      <td>571</td>
+      <td><span class="best">202</span></td>
+      <td>38</td>
+      <td>4</td>
+      <td>27</td>
+      <td>81</td>
+      <td>87</td>
+      <td>24</td>
+      <td>329</td>
+      <td>81</td>
+      <td>54</td>
+      <td>0</td>
+      <td>4</td>
+      <td><span class="best">.354</span></td>
+      <td>.407</td>
+      <td>.576</td>
+      <td>.983</td>
+    </tr>
+
+    <tr>
+      <td>2048</td>
+      <td>中信子彈</td>
+      <td>143</td>
+      <td>668</td>
+      <td>603</td>
+      <td><span class="best">205</span></td>
+      <td>39</td>
+      <td>5</td>
+      <td>32</td>
+      <td>82</td>
+      <td>91</td>
+      <td>19</td>
+      <td>350</td>
+      <td>79</td>
+      <td>61</td>
+      <td>1</td>
+      <td>3</td>
+      <td>.340</td>
+      <td>.399</td>
+      <td>.580</td>
+      <td>.979</td>
+    </tr>
+
+    <tr>
+      <td>2049</td>
+      <td>中信子彈</td>
+      <td>146</td>
+      <td>671</td>
+      <td>600</td>
+      <td><span class="best">209</span></td>
+      <td>34</td>
+      <td>4</td>
+      <td>33</td>
+      <td>109</td>
+      <td>88</td>
+      <td>22</td>
+      <td>350</td>
+      <td>98</td>
+      <td>65</td>
+      <td>2</td>
+      <td>4</td>
+      <td>.348</td>
+      <td>.410</td>
+      <td>.583</td>
+      <td>.993</td>
+    </tr>
+    
+    <tr class="career">
+      <td colspan="2">通算成績</td>
+      <td>900</td>
+      <td>3752</td>
+      <td>3417</td>
+      <td>1139</td>
+      <td>217</td>
+      <td>21</td>
+      <td>145</td>
+      <td>444</td>
+      <td>443</td>
+      <td>114</td>
+      <td>1831</td>
+      <td>483</td>
+      <td>306</td>
+      <td>11</td>
+      <td>17</td>
+      <td>.307</td>
+      <td>.386</td>
+      <td>.536</td>
+      <td>.922</td>
+    </tr>
+
+
+  
+    </tbody>
+  </table>
+
+  <br>
+
+    <strong>美國職棒大聯盟打擊成績：</strong>
+    <table class="stats1">
+    <thead>
+      <tr>
+        <th>年度</th>
+        <th>球隊</th>
+        <th>G</th>
+        <th>PA</th>
+        <th>AB</th>
+        <th>H</th>
+        <th>2B</th>
+        <th>3B</th>
+        <th>HR</th>
+        <th>RBI</th>
+        <th>R</th>
+        <th>SB</th>
+        <th>TB</th>
+        <th>SO</th>
+        <th>BB</th>
+        <th>SAC</th>
+        <th>SF</th>
+        <th>AVG</th>
+        <th>OBP</th>
+        <th>SLG</th>
+        <th>OPS</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    <tr>
+      <td>2050</td>
+      <td>SF</td>
+      <td>136</td>
+      <td>578</td>
+      <td>505</td>
+      <td>142</td>
+      <td>22</td>
+      <td>3</td>
+      <td>11</td>
+      <td>58</td>
+      <td>62</td>
+      <td>13</td>
+      <td>203</td>
+      <td>78</td>
+      <td>69</td>
+      <td>1</td>
+      <td>3</td>
+      <td>.281</td>
+      <td>.366</td>
+      <td>.402</td>
+      <td>.768</td>
+    </tr>
+
+    <tr>
+      <td>2051</td>
+      <td>SF</td>
+      <td>149</td>
+      <td>638</td>
+      <td>566</td>
+      <td>161</td>
+      <td>32</td>
+      <td>6</td>
+      <td>14</td>
+      <td>63</td>
+      <td>78</td>
+      <td>21</td>
+      <td>247</td>
+      <td>94</td>
+      <td>65</td>
+      <td>1</td>
+      <td>6</td>
+      <td>.284</td>
+      <td>.354</td>
+      <td>.436</td>
+      <td>.790</td>
+    </tr>
+    <tr class="career">
+      <td colspan="2">通算成績</td>
+      <td>285</td>
+      <td>1216</td>
+      <td>1071</td>
+      <td>303</td>
+      <td>54</td>
+      <td>9</td>
+      <td>25</td>
+      <td>121</td>
+      <td>140</td>
+      <td>34</td>
+      <td>450</td>
+      <td>172</td>
+      <td>134</td>
+      <td>2</td>
+      <td>9</td>
+      <td>.283</td>
+      <td>.360</td>
+      <td>.420</td>
+      <td>.780</td>
+    </tr>
+
+
+  
+    </tbody>
+  </table>
+
+  <!-- 個人獎項 -->
+  <div class="section">
+    <h2>個人獎項</h2>
+    ・<a href="#">室內棒球聯盟安打王</a>：2047～2049</br>
+    ・<a href="#">室內棒球聯盟打擊王</a>：2046、2047</br>
+    ・<a href="#">室內棒球聯盟年度MVP</a>：2047、2048</br>
+    ・<a href="../award/IBL GG Award.html">室內棒球聯盟金手套</a>外野手：2046～2049</br>
+    ・<a href="#">室內棒球聯盟最佳陣容</a>第一隊外野手：2046～2049</br>
+  </div>
+
+  <!-- 特殊事蹟 -->
+  <div class="section">
+    <h2>特殊事蹟</h2>
+     ・連續4季達成單季200安，是此紀錄保持者<br>
+     ・<a href="#">室內棒球聯盟明星賽</a>：2043、2045～2049<br>
+     ・<a href="#">2042年U18世界青棒錦標賽</a>中華代表隊<br>
+     ・<a href="#">2046年世界棒球12強錦標賽</a>中華代表隊<br>
+     ・<a href="#">2048年世界棒球經典賽</a>中華代表隊<br>
+     ・<a href="#">2052年世界棒球經典賽</a>中華代表隊<br>
+     
+  </div>
+
+  <!-- 相關新聞 -->
+  <div class="section">
+    <h2>相關新聞</h2>
+    <a href="#"></a><br>
+    <a href="#"></a>
+  </div>
+
+</div>
+
+
+</body>
+</html>
