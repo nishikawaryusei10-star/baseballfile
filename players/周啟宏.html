@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> 球員資料｜棒球維基館 </title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background: #ffffff;
+  color: #111827;
+  line-height: 1.6;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 80px; /* 關鍵 */
+}
+
+html, body {
+  height: auto;
+  overflow-y: auto;
+}
+
+/* ===== 橫幅照片 ===== */
+.banner-photo {
+  width: 100%;
+  height: 320px;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* ===== 頁首 ===== */
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header .sub {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* ===== 主版面 ===== */
+.section {
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-left: 4px solid #111827;
+  padding-left: 8px;
+}
+
+/* ===== 基本資料 ===== */
+.profile {
+  font-size: 0.95rem;
+}
+
+.profile div {
+  padding: 5px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.profile span {
+  display: inline-block;
+  width: 100px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ===== 頂部導覽列 ===== */
+.topnav {
+  display: flex;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 3px solid #e5e7eb;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.topnav a {
+  color: #006000;
+  font-weight:450;
+}
+
+.topnav a:hover {
+  color: #1d4ed8;
+}
+
+/* ===== 經歷 ===== */
+.career a {
+  display: inline-block;
+}
+
+.no-break {
+  white-space: nowrap; /* 括號內文字不換行 */
+}
+
+/* ===== 年表 ===== */
+.timeline {
+  font-size: 0.95rem;
+}
+
+.timeline div {
+  margin-bottom: 6px;
+}
+
+.timeline b {
+  display: inline-block;
+  width: 60px;
+}
+
+/* ===== 表格 ===== */
+table.stats {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats th,
+table.stats td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats th {
+   background: #E6C39A;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+table.stats tbody tr:nth-child(even) td {
+  background: #F6EBDD;
+}
+
+table.stats th:nth-child(2),
+table.stats td:nth-child(2) {
+  white-space: nowrap;
+}
+
+.best {
+  font-weight: bold;       /* 加粗字體 */        
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.test {
+  font-weight: bold;       /* 加粗字體 */
+  color: #FF0000;          /* 改成紅色 */
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+/* ===== Footer ===== */
+.footer {
+  border-top: 1px solid #d1d5db;
+  margin-top: 48px;
+  padding-top: 16px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  
+  <nav class="topnav">
+  <a href="../index.html">首頁</a> ⮕ <a href="../players/players_overview.html">球員</a> ⮕  <a href="../players/taiwan_players_overview.html">台灣球員</a> ⮕  <b>周啟宏</b> </nav>     
+
+  <!-- 頁首 -->
+  <div class="header">
+    <h1>周啟宏</h1>
+    <div class="sub"> JHOU,CI-HONG｜外野手（CF）</div>
+  </div>
+
+  <!-- 基本資料 -->
+  <div class="section">
+    <h2>基本資料</h2>
+    <div class="profile">
+      <div><span>出生日期</span>2022 年 6 月 24 日（29歲）</div>
+      <div><span>身高體重</span>175 公分／78 公斤</div>
+      <div><span>出生地</span>台灣・台東縣</div>
+      <div><span>投打習慣</span>右投右打</div>
+      <div><span>守備位置</span>外野手 CF</div>
+      <div><span>職棒選秀</span><a href="#">2044年室內棒球聯盟選秀會</a><a href="#">苗栗石虎隊</a>第四輪指名</div>
+    </div>
+  </div>
+
+  <!-- 球員經歷 -->
+  <div class="section">
+    <h2>球員經歷</h2>
+    <div class="career">
+      <a href="#">台東縣</a><a href="#">卑南國小少棒隊</a></br>
+      <a href="#">台東縣</a><a href="#">台東體中青少棒隊</a></br>
+      <a href="#">台東縣</a><a href="#">台東體中青棒隊</a></br>
+      <a href="#">桃園市</a><a href="#">國立體育大學</a></br>
+      <a href="#">室內棒球聯盟</a><a href="#">苗栗石虎隊</a><span class="no-break">（2044/08）</span></br>
+      <a href="#">室內棒球聯盟</a><a href="#">國軍鳳凰隊</a>（2045）</br>
+    </div>
+  </div>
+
+  <!-- 球員介紹 -->
+  <div class="section">
+    <h2>球員介紹</h2>
+周啟宏出生於台東，成長於運動風氣濃厚卻資源相對有限的環境。小時候的他並非一開始就以棒球為唯一選項，而是在同儕影響下，放學後常到空地丟球、追球，逐漸對棒球產生興趣。
+
+進入國小後，他加入校內棒球隊，從外野守備開始練起。由於身材條件在同齡孩子中並不突出，教練要求他必須把基本功做到最好，包含：判斷落點、第一時間啟動、正確回傳路線，這些扎實訓練，讓周啟宏在小學六年級時站穩先發外野手位置，成為教練信任、失誤率極低的存在。<br>
+<br>
+國中階段，在家人安排下，周啟宏進入台東體中國中部就讀，正式接受更系統化的棒球訓練。這三年，他始終維持穩定出賽，是教練眼中「不太會出錯，但也不會改變戰局」的球員。然而，國中最後一個大型盃賽，周啟宏卻遭遇嚴重低潮：幾乎無法有效擊球加上心理壓力遠大於技術層面問題。當時外界對他的評價逐漸轉為「工具人潛質」、「安全但天花板有限」。不少同齡選手開始被點名、被討論，而他卻逐漸被忽略。不過，台東體中教練團仍肯定他的守備穩定度、態度與學習能力，最終周啟宏仍順利直升進入台東體中高中部，只是角色定位更偏向「輪替型外野手」。<br>
+<br>
+進入高中後的前兩年，周啟宏依舊沒有太多存在感，棒次多半落在後段，定位以守備、跑壘為主。直到高三賽季，他的身體協調性與擊球內容才終於出現明顯變化。在木棒聯賽中，他開始穩定擊出平飛球、有效運用場地空間、減少不必要的揮棒。高三這一年，他在打擊與外野守備端都繳出不錯的成績，開始重新進入球探視野。然而，周啟宏對自己的評估相當務實，他清楚自己仍缺乏「即戰力打者」的成熟度，因此並未選擇直接投入職棒。最終，他決定先進入國立體育大學，希望透過更完整的身體與技術養成，再決定未來方向。<br>
+<br>
+與三級棒球時期相似，周啟宏在大學前兩年依舊平淡，棒次多半位於後段，成績不上不下，是教練團眼中的「可用之兵」。真正的轉折點發生在大三那年，該年秋季大學聯賽中，周啟宏徹底爆發：打擊三圍.425/.448/.495、長時間佔據上壘點、多次敲出延續攻勢的關鍵安打。隔年的大專盃，他延續好手感，屢次在關鍵局面擊出適時安打，加上原本就屬聯盟上游的外野守備能力，使他重新成為球探名單中的熱門名字。到畢業前，周啟宏已被普遍評價為：「守備即戰力、跑壘加分、打擊不再是負擔的成熟型外野手」<br>
+<br>
+周啟宏決定投入2044 年室內棒球聯盟選秀會，並在第四輪被苗栗石虎隊選中，正式踏上職業舞台。進入職棒後，他很快在二軍出賽，並繳出超水準的打擊內容，九月底即被拉上一軍「開箱」。然而，一軍層級的差距很快顯現：打擊率僅.179、OPS不到.450。這段經歷，讓周啟宏首次真正感受到「即戰力」與「真正一軍主力」之間的巨大落差。2045年，因兵役因素，周啟宏申請進入國軍隊服役並順利過關。在國軍隊期間，教練團著重於身體素質提升、下肢爆發力，該年他在一軍獲得不少機會，卻仍未完全把握，77場出賽拿了308打席但OPS僅0.644。不過，他在跑壘端大放異彩，16次盜壘成功以及衝刺速度名列聯盟前段班。速度，開始成為他在職棒立足的關鍵資本。<br>
+<br>
+2046年春訓，周啟宏調整極佳，開季即站穩一軍先發外野手。開季前一個月打擊率長時間維持在.400左右，並且在攻守兩端皆展現明星外野手等級表現。即便進入夏季，打擊率略為回落，整體火燙手感仍未消退。然而壞消息也隨之而來：6月中旬開始出現腳踝不適，6月底一次滑壘造成右膝十字韌帶輕度傷勢，經診斷後，雖不需手術，但需休養 4–6 個月，導致賽季提前報銷。他留下的成績，仍令人印象深刻：打擊三圍.374/.463/.585，敲出4支全壘打，14次盜壘<br>
+<br>
+2047年，周啟宏以完全康復的狀態回歸。此後數個賽季，他都能穩定扛起石虎隊中外野防線，打擊維持聯盟平均水準以上，速度完全回歸，連續多季35盜以上，他的守備範圍、判斷與穩定性，使他在2047 年獲得金手套獎，並於2048、2050 年，因跑速與守備價值被列入經典賽最終名單。<br>
+
+  </div>
+
+  <!-- 個人年表 -->
+  <div class="section">
+    <h2>個人年表</h2>
+    <div class="timeline">
+      <div><b>2040年</b>考取國立體育大學球類競技學系，以正取3進入就讀</div>
+      <div><b>2044年</b>7月，投入室內棒球聯盟選秀會，被苗栗石虎隊在第四輪指名，後以719萬台幣加盟</div>
+      <div><b>2045年</b>2月，在球隊安排下前往國軍隊服役</div>
+      <div><b>2051年</b>季末，成為完全自由球員</div>
+      <div><b>2051年</b>11月24日，與苗栗石虎隊簽下一份6年9100萬新台幣的延長合約</div>
+    </div>
+  </div>
+
+  <!-- 生涯成績 -->
+ <!-- 生涯成績 -->
+  <div class="section">
+    <h2>職棒生涯成績</h2>
+    室內棒球聯盟一軍打擊成績：
+    <table class="stats">
+    <thead>
+      <tr>
+        <th>年度</th>
+        <th>球隊</th><th>G</th><th>PA</th><th>AB</th><th>H</th>
+        <th>2B</th><th>3B</th><th>HR</th>
+        <th>RBI</th><th>R</th><th>SB</th><th>TB</th><th>SO</th><th>BB</th><th>SAC</th><th>SF</th>
+        <th>AVG</th><th>OBP</th><th>SLG</th><th>OPS</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+      <td>2044</td>
+      <td>苗栗石虎</td>
+      <td>12</td>
+      <td>41</td>
+      <td>39</td>
+      <td>7</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>3</td>
+      <td>1</td>
+      <td>2</td>
+      <td>9</td>
+      <td>9</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>.179</td>
+      <td>.200</td>
+      <td>.231</td>
+      <td>.431</td>
+    </tr>
+      
+      <tr>
+      <td>2045</td>
+      <td>國軍鳳凰</td>
+      <td>77</td>
+      <td>308</td>
+      <td>281</td>
+      <td>69</td>
+      <td>15</td>
+      <td>3</td>
+      <td>2</td>
+      <td>27</td>
+      <td>12</td>
+      <td>16</td>
+      <td>96</td>
+      <td>51</td>
+      <td>23</td>
+      <td>3</td>
+      <td>1</td>
+      <td>.246</td>
+      <td>.302</td>
+      <td>.342</td>
+      <td>.644</td>
+    </tr>
+      
+      <tr>
+      <td>2046</td>
+      <td>苗栗石虎</td>
+      <td>53</td>
+      <td>204</td>
+      <td>171</td>
+      <td>64</td>
+      <td>16</td>
+      <td>4</td>
+      <td>4</td>
+      <td>36</td>
+      <td>46</td>
+      <td>14</td>
+      <td>100</td>
+      <td>48</td>
+      <td>29</td>
+      <td>3</td>
+      <td>1</td>
+      <td>.374</td>
+      <td>.463</td>
+      <td>.585</td>
+      <td>1.048</td>
+    </tr>
+    
+      <tr>
+      <td>2047</td>
+      <td>苗栗石虎</td>
+      <td><span class="test">150</span></td>
+      <td>643</td>
+      <td>591</td>
+      <td>172</td>
+      <td>38</td>
+      <td>5</td>
+      <td>12</td>
+      <td>49</td>
+      <td>93</td>
+      <td><span class="best">49</span></td>
+      <td>256</td>
+      <td>102</td>
+      <td>46</td>
+      <td>4</td>
+      <td>2</td>
+      <td>.291</td>
+      <td>.341</td>
+      <td>.433</td>
+      <td>.774</td>
+    </tr>
+    
+    <tr>
+      <td>2048</td>
+      <td>苗栗石虎</td>
+      <td>141</td>
+      <td>592</td>
+      <td>539</td>
+      <td>141</td>
+      <td>26</td>
+      <td>7</td>
+      <td>8</td>
+      <td>51</td>
+      <td>76</td>
+      <td>39</td>
+      <td>205</td>
+      <td>75</td>
+      <td>49</td>
+      <td>4</td>
+      <td>0</td>
+      <td>.262</td>
+      <td>.323</td>
+      <td>.380</td>
+      <td>.703</td>
+    </tr>
+    
+    <tr>
+      <td>2049</td>
+      <td>苗栗石虎</td>
+      <td><span class="test">150</span></td>
+      <td>672</td>
+      <td>601</td>
+      <td>164</td>
+      <td>34</td>
+      <td>7</td>
+      <td>9</td>
+      <td>54</td>
+      <td>101</td>
+      <td>51</td>
+      <td>239</td>
+      <td>83</td>
+      <td>65</td>
+      <td>3</td>
+      <td>3</td>
+      <td>.283</td>
+      <td>.342</td>
+      <td>.398</td>
+      <td>.740</td>
+    </tr>
+    
+    <tr>
+      <td>2050</td>
+      <td>苗栗石虎</td>
+      <td>145</td>
+      <td>619</td>
+      <td>562</td>
+      <td>156</td>
+      <td>27</td>
+      <td>6</td>
+      <td>11</td>
+      <td>47</td>
+      <td>79</td>
+      <td>48</td>
+      <td>228</td>
+      <td>94</td>
+      <td>51</td>
+      <td>4</td>
+      <td>2</td>
+      <td>.278</td>
+      <td>.337</td>
+      <td>.406</td>
+      <td>.743</td>
+    </tr>
+    
+    <tr>
+      <td>2051</td>
+      <td>苗栗石虎</td>
+      <td>147</td>
+      <td>592</td>
+      <td>538</td>
+      <td>152</td>
+      <td>31</td>
+      <td>5</td>
+      <td>7</td>
+      <td>63</td>
+      <td>91</td>
+      <td>45</td>
+      <td>214</td>
+      <td>76</td>
+      <td>48</td>
+      <td>4</td>
+      <td>2</td>
+      <td>.283</td>
+      <td>.340</td>
+      <td>.398</td>
+      <td>.738</td>
+    </tr>
+
+    <tr class="career">
+      <td colspan="2">通算成績</td>
+      <td>875</td>
+      <td>3671</td>
+      <td>3322</td>
+      <td>925</td>
+      <td>189</td>
+      <td>37</td>
+      <td>53</td>
+      <td>330</td>
+      <td>499</td>
+      <td>264</td>
+      <td>1347</td>
+      <td>538</td>
+      <td>312</td>
+      <td>26</td>
+      <td>11</td>
+      <td>.278</td>
+      <td>.339</td>
+      <td>.405</td>
+      <td>.744</td>
+    </tr>
+
+
+  
+    </tbody>
+  </table>
+  </div>
+
+  <!-- 個人獎項 -->
+  <div class="section">
+    <h2>個人獎項</h2>
+    ・<a href="https://sites.google.com/d/1-WtcvXz0dqq-lOlDVX6n0akF6zWH3x4c/p/179y9Ns5c_hPQNvrD9OrAJC-gvmw6_ZTv/edit">室內棒球聯盟年度盜壘王</a>：2047<br>
+
+    ・<a href="https://sites.google.com/d/1-WtcvXz0dqq-lOlDVX6n0akF6zWH3x4c/p/1eyPL2gcRQzufO__yJY2tqncAhy2aP7ml/edit">室內棒球聯盟金手套</a>外野手：2047<br>
+    
+    
+  </div>
+
+  <!-- 特殊事蹟 -->
+  <div class="section">
+    <h2>特殊事蹟</h2>
+    ・2048年世界棒球經典賽中華代表隊<br>
+    ・2052年世界棒球經典賽中華代表隊<br>
+    ・室內棒球聯盟明星賽：2047
+  </div>
+
+  <!-- 相關新聞 -->
+  <div class="section">
+    <h2>相關新聞</h2>
+    <a href="#"></a><br>
+    <a href="#"></a>
+  </div>
+
+</div>
+
+
+</body>
+</html>
