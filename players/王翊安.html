@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> 球員資料｜棒球維基館 </title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background: #ffffff;
+  color: #111827;
+  line-height: 1.6;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 80px; /* 關鍵 */
+}
+
+html, body {
+  height: auto;
+  overflow-y: auto;
+}
+
+/* ===== 橫幅照片 ===== */
+.banner-photo {
+  width: 100%;
+  height: 320px;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* ===== 頁首 ===== */
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header .sub {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* ===== 主版面 ===== */
+.section {
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-left: 4px solid #111827;
+  padding-left: 8px;
+}
+
+/* ===== 基本資料 ===== */
+.profile {
+  font-size: 0.95rem;
+}
+
+.profile div {
+  padding: 5px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.profile span {
+  display: inline-block;
+  width: 100px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ===== 頂部導覽列 ===== */
+.topnav {
+  display: flex;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 3px solid #e5e7eb;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.topnav a {
+  color: #006000;
+  font-weight:450;
+}
+
+.topnav a:hover {
+  color: #1d4ed8;
+}
+
+/* ===== 經歷 ===== */
+.career a {
+  display: inline-block;
+}
+
+.no-break {
+  white-space: nowrap; /* 括號內文字不換行 */
+}
+
+/* ===== 年表 ===== */
+.timeline {
+  font-size: 0.95rem;
+}
+
+.timeline div {
+  margin-bottom: 6px;
+}
+
+.timeline b {
+  display: inline-block;
+  width: 60px;
+}
+
+/* ===== 表格 ===== */
+table.stats {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats th,
+table.stats td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats th {
+   background: #2F7F8F;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+table.stats tbody tr:nth-child(even) td {
+  background: #DCECEF;
+}
+
+table.stats th:nth-child(2),
+table.stats td:nth-child(2) {
+  white-space: nowrap;
+}
+
+.best {
+  font-weight: bold;       /* 加粗字體 */        
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.test {
+  font-weight: bold;       /* 加粗字體 */
+  color: #FF0000;          /* 改成紅色 */
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+/* ===== Footer ===== */
+.footer {
+  border-top: 1px solid #d1d5db;
+  margin-top: 48px;
+  padding-top: 16px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  
+  <nav class="topnav">
+  <a href="../index.html">首頁</a> ⮕ <a href="players_overview.html">球員</a> ⮕  <a href="taiwan_players_overview.html">台灣球員</a> ⮕  <b>王翊安</b> </nav>    
+
+  <!-- 頁首 -->
+  <div class="header">
+    <h1>王翊安</h1>
+    <div class="sub"> WANG,YI-AN｜內野手（2B）</div>
+  </div>
+
+  <!-- 基本資料 -->
+  <div class="section">
+    <h2>基本資料</h2>
+    <div class="profile">
+      <div><span>出生日期</span>2028 年 8 月 27 日（23歲）</div>
+      <div><span>身高體重</span>182 公分／80 公斤</div>
+      <div><span>出生地</span>台灣・臺北市士林區</div>
+      <div><span>投打習慣</span>右投右打</div>
+      <div><span>守備位置</span>內野手 2B</div>
+      <div><span>職棒選秀</span><a href="#">2046年室內棒球聯盟選秀會</a><a href="#">基隆雨都隊</a>第一輪指名</div>
+    </div>
+  </div>
+
+  <!-- 球員經歷 -->
+  <div class="section">
+    <h2>球員經歷</h2>
+    <div class="career">
+      臺北市福林國小少棒隊</br>
+      桃園市新明國中青少棒隊</br>
+      桃園市平鎮高中青棒隊</br>
+      <a href="#">室內棒球聯盟</a><a href="#">基隆雨都隊</a><span class="no-break">（2046/08～）</span><br>
+      <a href="#">室內棒球聯盟</a><a href="#">國軍鳳凰隊</a>（2049）<br>
+    </div>
+  </div>
+
+
+  <!-- 個人年表 -->
+  <div class="section">
+    <h2>個人年表</h2>
+    <div class="timeline">
+      <div><b>2046年</b>7月，投入室內棒球聯盟選秀會，被基隆雨都隊在第一輪指名，後以1900萬台幣加盟</div>
+      <div><b>2047年</b>8月28日，獲得一軍初登場，代打上陣，面對味全天龍隊投手<a href="林晨祐.html">林晨祐</a>敲出二壘飛球出局</div>
+      <div><b>2047年</b>8月31日，面對富邦守護者隊投手<a href="G.Lasa.html"> Lasa</a>敲出生涯首安</div>
+      <div><b>2049年</b>2月，在球隊安排下前往國軍隊服役</div>
+    </div>
+  </div>
+
+  <!-- 生涯成績 -->
+ <!-- 生涯成績 -->
+  <div class="section">
+    <h2>職棒生涯成績</h2>
+    室內棒球聯盟一軍打擊成績：
+    <table class="stats">
+    <thead>
+      <tr>
+        <th>年度</th>
+        <th>球隊</th><th>G</th><th>PA</th><th>AB</th><th>H</th>
+        <th>2B</th><th>3B</th><th>HR</th>
+        <th>RBI</th><th>R</th><th>SB</th><th>TB</th><th>SO</th><th>BB</th><th>SAC</th><th>SF</th>
+        <th>AVG</th><th>OBP</th><th>SLG</th><th>OPS</th>
+      </tr>
+    </thead>
+    <tbody>
+    
+      <tr>
+      <td>2047</td>
+      <td>基隆雨都</td>
+      <td>22</td>
+      <td>85</td>
+      <td>76</td>
+      <td>18</td>
+      <td>3</td>
+      <td>0</td>
+      <td>1</td>
+      <td>8</td>
+      <td>10</td>
+      <td>1</td>
+      <td>24</td>
+      <td>12</td>
+      <td>8</td>
+      <td>0</td>
+      <td>1</td>
+      <td>.237</td>
+      <td>.306</td>
+      <td>.316</td>
+      <td>.622</td>
+    </tr>
+    
+    <tr>
+      <td>2048</td>
+      <td>基隆雨都</td>
+      <td>132</td>
+      <td>547</td>
+      <td>482</td>
+      <td>133</td>
+      <td>22</td>
+      <td>1</td>
+      <td>6</td>
+      <td>52</td>
+      <td>65</td>
+      <td>14</td>
+      <td>175</td>
+      <td>86</td>
+      <td>48</td>
+      <td>12</td>
+      <td>5</td>
+      <td>.276</td>
+      <td>.338</td>
+      <td>.363</td>
+      <td>.701</td>
+    </tr>
+    
+    <tr>
+      <td>2049</td>
+      <td>國軍鳳凰</td>
+      <td>92</td>
+      <td>388</td>
+      <td>341</td>
+      <td>108</td>
+      <td>17</td>
+      <td>5</td>
+      <td>6</td>
+      <td>41</td>
+      <td>63</td>
+      <td>17</td>
+      <td>153</td>
+      <td>45</td>
+      <td>42</td>
+      <td>4</td>
+      <td>1</td>
+      <td>.317</td>
+      <td>.391</td>
+      <td>.449</td>
+      <td>.840</td>
+    </tr>
+    
+    <tr>
+      <td>2050</td>
+      <td>基隆雨都</td>
+      <td>148</td>
+      <td>632</td>
+      <td>565</td>
+      <td>165</td>
+      <td>28</td>
+      <td>3</td>
+      <td>14</td>
+      <td>88</td>
+      <td>91</td>
+      <td>15</td>
+      <td>241</td>
+      <td>75</td>
+      <td>55</td>
+      <td>7</td>
+      <td>5</td>
+      <td>.292</td>
+      <td>.352</td>
+      <td>.427</td>
+      <td>.779</td>
+    </tr>
+    
+    <tr>
+      <td>2051</td>
+      <td>基隆雨都</td>
+      <td>145</td>
+      <td>616</td>
+      <td>558</td>
+      <td>169</td>
+      <td>29</td>
+      <td>6</td>
+      <td>11</td>
+      <td>75</td>
+      <td>82</td>
+      <td>24</td>
+      <td>243</td>
+      <td>72</td>
+      <td>52</td>
+      <td>6</td>
+      <td>6</td>
+      <td>.303</td>
+      <td>.362</td>
+      <td>.435</td>
+      <td>.797</td>
+    </tr>
+
+    <tr class="career">
+      <td colspan="2">通算成績</td>
+      <td>539</td>
+      <td>2268</td>
+      <td>2022</td>
+      <td>593</td>
+      <td>99</td>
+      <td>15</td>
+      <td>38</td>
+      <td>264</td>
+      <td>311</td>
+      <td>71</td>
+      <td>836</td>
+      <td>290</td>
+      <td>205</td>
+      <td>29</td>
+      <td>18</td>
+      <td>.293</td>
+      <td>.356</td>
+      <td>.413</td>
+      <td>.769</td>
+    </tr>
+
+
+  
+    </tbody>
+  </table>
+  </div>
+
+  <!-- 個人獎項 -->
+  <div class="section">
+    <h2>個人獎項</h2>
+    （尚無）
+    
+    
+  </div>
+
+  <!-- 特殊事蹟 -->
+  <div class="section">
+    <h2>特殊事蹟</h2>
+    ・室內棒球聯盟明星賽：2051
+  </div>
+
+  <!-- 相關新聞 -->
+  <div class="section">
+    <h2>相關新聞</h2>
+    <a href="#"></a><br>
+    <a href="#"></a>
+  </div>
+
+</div>
+
+
+</body>
+</html>
