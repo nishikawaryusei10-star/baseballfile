@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> 球員資料｜棒球維基館 </title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background: #ffffff;
+  color: #111827;
+  line-height: 1.6;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ===== 橫幅照片 ===== */
+.banner-photo {
+  width: 100%;
+  height: 320px;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* ===== 頁首 ===== */
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header .sub {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* ===== 頂部導覽列 ===== */
+.topnav {
+  display: flex;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 3px solid #e5e7eb;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.topnav a {
+  color: #006000;
+  font-weight:450;
+}
+
+.topnav a:hover {
+  color: #1d4ed8;
+}
+
+/* ===== 主版面 ===== */
+.section {
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-left: 4px solid #111827;
+  padding-left: 8px;
+}
+
+/* ===== 基本資料 ===== */
+.profile {
+  font-size: 0.95rem;
+}
+
+.profile div {
+  padding: 5px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.profile span {
+  display: inline-block;
+  width: 100px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ===== 經歷 ===== */
+.career a {
+  display: inline-block;
+}
+
+.no-break {
+  white-space: nowrap; /* 括號內文字不換行 */
+}
+
+/* ===== 年表 ===== */
+.timeline {
+  font-size: 0.95rem;
+}
+
+.timeline div {
+  margin-bottom: 6px;
+}
+
+.timeline b {
+  display: inline-block;
+  width: 60px;
+}
+
+/* ===== 表格 ===== */
+table.stats {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats th,
+table.stats td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats th {
+  background: #006000;
+  color: #FFD306;
+  font-weight: 600;
+}
+
+table.stats tbody tr:nth-child(even) td {
+  background: #F0FFF0;
+}
+
+table.stats th:nth-child(2),
+table.stats td:nth-child(2) {
+  white-space: nowrap;
+}
+
+.best {
+  font-weight: bold;       /* 加粗字體 */        
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.test {
+  font-weight: bold;       /* 加粗字體 */
+  color: #FF0000;          /* 改成紅色 */
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+/* ===== Footer ===== */
+.footer {
+  border-top: 1px solid #d1d5db;
+  margin-top: 48px;
+  padding-top: 16px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  
+  <nav class="topnav">
+  <a href="../index.html">首頁</a> ⮕ <a href="players_overview.html">球員</a> ⮕  <a href="taiwan_players_overview.html">台灣球員</a> ⮕  <b>葉書宏</b> </nav>     
+
+  <!-- 頁首 -->
+  <div class="header">
+    <h1>葉書宏</h1>
+    <div class="sub">Yeh,Shu-Hung｜外野手（LF）</div>
+  </div>
+
+  <!-- 基本資料 -->
+  <div class="section">
+    <h2>基本資料</h2>
+    <div class="profile">
+      <div><span>出生日期</span>2014 年 10 月 12 日（37歲）</div>
+      <div><span>身高體重</span>178 公分／82 公斤</div>
+      <div><span>出生地</span>台灣・宜蘭縣羅東鎮</div>
+      <div><span>投打習慣</span>右投右打</div>
+      <div><span>守備位置</span>外野手 LF RF 內野手1B</div>
+      <div><span>職棒選秀</span><a href="2036年室內棒球聯盟選秀會.html">2036年室內棒球聯盟選秀會</a><a href="台鋼巨鷹隊.html">台鋼巨鷹隊</a>第三輪指名</div>
+    </div>
+  </div>
+
+  <!-- 球員經歷 -->
+  <div class="section">
+    <h2>球員經歷</h2>
+    <div class="career">
+      <a href="#">宜蘭縣</a><a href="#">羅東國小少棒隊</a></br>
+      <a href="#">宜蘭縣</a><a href="#">羅東國中青少棒隊</a></br>
+      <a href="#">宜蘭縣</a><a href="#">羅東高工青棒隊</a></br>
+      台中市國立台灣體育運動大學棒球隊<br>
+      <a href="#">室內棒球聯盟</a><a href="台鋼巨鷹隊.html">台鋼巨鷹隊</a>（2036/08～2047）<br>
+      <a href="#">室內棒球聯盟</a><a href="台鋼巨鷹隊.html">台鋼巨鷹隊</a>農場打擊總監（2049～）</br>
+
+    </div>
+  </div>
+
+  <!-- 球員介紹 -->
+  <div class="section">
+    <h2>球員介紹</h2>
+葉書宏出生於宜蘭縣羅東鎮，那是一個長年細雨綿綿的地方，或許是環境使然，磨練出了他沉穩且細膩的性格。雖然從小就在棒球隊長大，但在高中之前，他所參與的球隊多屬於社團性質，比起那些從小在體育班高壓訓練下成長的選手，葉書宏保有更多對棒球的純粹好奇與思考。直到進入羅東高工，他才真正開始接受正式的科班訓練。高三那年，他在黑熊旗比賽中帶領球隊一路闖進16 強，在對戰傳統強權穀保家商時，他展現了驚人的擊球天賦，單場敲出3 支安打，這場比賽讓他的名字第一次出現在職業球探的筆記本上。<br>
+<br>
+然而，高中時期的葉書宏並未獲得頂尖球團的合約背書，他深知自己仍需磨練，於是選擇進入台體大深造。在大學期間，他展現了與眾不同的球員特質——他在課業與運科研究上投注了極大的心力，試圖用數據與邏輯來拆解棒球。經過兩年的大學洗禮，他不僅穩坐校隊主戰野手，更入選了U23 世界盃國家隊。在那次國際賽中，他那雙彷彿能看穿球路軌跡的「選球眼」與卓越的 Contact 能力震撼了教壇。回到母隊後，他結合運動科學微調打擊姿勢，到了 2035 年大三時再度披上國家隊戰袍，以.425的恐怖打擊率橫掃賽場。當時，日本職棒歐力士猛牛與大聯盟西雅圖水手的球探紛紛給予高度評價，認為他能極速修正擊球盲點，是難得一見的即戰力天才。儘管當時 IBL 多支球隊捧著合約希望他提早選秀，但葉書宏為了完成他關於「利用生物力學減少左打者內角球死角」的研究計畫，毅然決定留校完成學業。大四畢業後，他正式遞交選秀報名表，雖然因長打火力的疑慮使順位落在第三輪，但他平靜地接受了這份挑戰，踏入職棒殿堂。<br>
+<br>
+進入職棒後的葉書宏迅速證明了自己的價值。2037年是他第一個完整的職業球季，他以 134場出賽、.776的OPS震驚聯盟，雖然因當季強投表現過於亮眼而遺憾錯失新人王，但他並未停下腳步。僅僅在加盟後的第三年（2038年），他便達成了單季 200 安的神蹟，強勢摘下安打王座。隨後數年間，他成為了聯盟最穩定的代名詞，打擊率常年維持在3成以上，並能穩定貢獻10轟左右的長打。台鋼雄鷹深知他的價值，在2041年季前便開出5年8100萬新台幣的巨約與其續約。2042年是他生涯最輝煌的巔峰，他打破了聯盟安打紀錄，包辦了安打王、打擊王、上壘率王，並入選最佳十人外野手，成為南台灣球迷心中的英雄。<br>
+<br>
+然而，命運卻在 2044年對他開了一個殘酷的玩笑。在對戰味全天龍的一場關鍵比賽中，葉書宏為了替球隊搶下分數，在一次本壘攻防中嘗試以側身滑壘閃避觸殺。但在高速衝擊下，他的左膝與捕手發生了毀滅性的正面碰撞。一向冷靜、低調的他，在那一刻抱著膝蓋發出了絕望的哀號，這也是他職業生涯唯一一次在眾人面前落淚。7月22日診斷結果出爐，他的左膝前十字韌帶 (ACL) 完全斷裂、內側副韌帶 (MCL) 二度撕裂，甚至伴隨半月板粉碎性骨折與關節腔嚴重淤血骨挫傷，醫療團隊預估至少需休養 15 個月。<br>
+<br>
+在長達一年的空白期中，葉書宏經歷了三次痛苦的手術，2045年全季都在漫長的復健中度過。直到9月他才重新拿起球棒進行輕量練習，並在2046年春訓重返賽場。然而，經歷過毀滅性傷勢的左膝，再也無法支撐他那精密如儀器的打擊重心，復出後的成績與巔峰期相比已不可同日而語。2047年賽季結束後，葉書宏深知自己已無法再以最完美的身影站在打擊區，決定正式引退，將那支寫滿傳奇的球棒交給下一代，轉任台鋼雄鷹打擊總監。<br>
+
+  </div>
+
+  <!-- 個人年表 -->
+  <div class="section">
+    <h2>個人年表</h2>
+    <div class="timeline">
+      <div><b>2036年</b>7月，參加室內棒球聯盟選秀會，被台鋼巨鷹隊以第三指名選中，以簽約金765萬元正式加盟</div>
+      <div><b>2038年</b>10月03日，達成單季200安的里程碑</div>
+      <div><b>2041年</b>3月，與球團達成共識，簽下5年共8100萬新台幣延長合約</div>
+      <div><b>2042年</b>6月29日，對戰墾丁鯊魚隊完成生涯千安</div>
+      <div><b>2042年</b>5月14日，對戰花蓮眼鏡蛇隊達成生涯百盜</div>
+      <div><b>2044年</b>7月11日，對戰味全天龍隊在一次的本壘衝撞傷退</div>
+      <div><b>2044年</b>7月15日，經過診斷為左膝前十字韌帶三度撕裂、左膝內側副韌帶二度嚴重撕裂、左膝外側半月板粉碎性骨折，球團請醫療團隊儘速安排開刀，預估要休養12至14個月</div>
+      <div><b>2047年</b>10月，宣布現役引退</div>
+
+    </div>
+  </div>
+
+  <!-- 生涯成績 -->
+ <!-- 生涯成績 -->
+  <div class="section">
+    <h2>職棒生涯成績</h2>
+<strong>室內棒球聯盟一軍打擊成績</strong>
+    <table class="stats">
+    <thead>
+      <tr>
+        <th>年度</th>
+        <th>球隊</th>
+        <th>G</th>
+        <th>PA</th>
+        <th>AB</th>
+        <th>H</th>
+        <th>2B</th>
+        <th>3B</th>
+        <th>HR</th>
+        <th>RBI</th>
+        <th>R</th>
+        <th>SB</th>
+        <th>TB</th>
+        <th>SO</th>
+        <th>BB</th>
+        <th>SAC</th>
+        <th>SF</th>
+        <th>AVG</th>
+        <th>OBP</th>
+        <th>SLG</th>
+        <th>OPS</th>
+      </tr>
+    </thead>
+    <tbody>
+     
+     <tr>
+      <td>2036</td>
+      <td>台鋼巨鷹</td>
+      <td>4</td>
+      <td>13</td>
+      <td>10</td>
+      <td>2</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>3</td>
+      <td>0</td>
+      <td>3</td>
+      <td>0</td>
+      <td>0</td>
+      <td>.200</td>
+      <td>.385</td>
+      <td>.300</td>
+      <td>.685</td>
+    </tr> 
+     
+     <tr>
+      <td>2037</td>
+      <td>台鋼巨鷹</td>
+      <td>134</td>
+      <td>542</td>
+      <td>486</td>
+      <td>151</td>
+      <td>26</td>
+      <td>1</td>
+      <td>6</td>
+      <td>58</td>
+      <td>74</td>
+      <td>9</td>
+      <td>197</td>
+      <td>39</td>
+      <td>48</td>
+      <td>6</td>
+      <td>2</td>
+      <td>.311</td>
+      <td>.371</td>
+      <td>.405</td>
+      <td>.776</td>
+    </tr> 
+     
+     <tr>
+      <td>2038</td>
+      <td>台鋼巨鷹</td>
+      <td><span class="test">150</span></td>
+      <td><span class="best">695</span></td>
+      <td>623</td>
+      <td><span class="best">201</span></td>
+      <td>31</td>
+      <td>1</td>
+      <td>7</td>
+      <td>69</td>
+      <td><span class="best">138</span></td>
+      <td>23</td>
+      <td>317</td>
+      <td>38</td>
+      <td>64</td>
+      <td>5</td>
+      <td>3</td>
+      <td>.323</td>
+      <td>.384</td>
+      <td>.509</td>
+      <td>.893</td>
+    </tr> 
+     
+     <tr>
+      <td>2039</td>
+      <td>台鋼巨鷹</td>
+      <td>142</td>
+      <td>618</td>
+      <td>552</td>
+      <td>173</td>
+      <td>31</td>
+      <td>3</td>
+      <td>9</td>
+      <td>67</td>
+      <td>89</td>
+      <td>16</td>
+      <td>237</td>
+      <td>31</td>
+      <td>54</td>
+      <td>7</td>
+      <td>5</td>
+      <td>.313</td>
+      <td>.372</td>
+      <td>.429</td>
+      <td>.801</td>
+    </tr> 
+     
+     <tr>
+      <td>2040</td>
+      <td>台鋼巨鷹</td>
+      <td>145</td>
+      <td>644</td>
+      <td>578</td>
+      <td>186</td>
+      <td>34</td>
+      <td>2</td>
+      <td>11</td>
+      <td>72</td>
+      <td>93</td>
+      <td>28</td>
+      <td>257</td>
+      <td>31</td>
+      <td>54</td>
+      <td>7</td>
+      <td>5</td>
+      <td>.322</td>
+      <td>.377</td>
+      <td>.445</td>
+      <td>.822</td>
+    </tr> 
+    
+    <tr>
+      <td>2041</td>
+      <td>台鋼巨鷹</td>
+      <td>148</td>
+      <td>662</td>
+      <td>586</td>
+      <td><span class="best">194</span></td>
+      <td>38</td>
+      <td>4</td>
+      <td>12</td>
+      <td>81</td>
+      <td>104</td>
+      <td>18</td>
+      <td>276</td>
+      <td>24</td>
+      <td>62</td>
+      <td>4</td>
+      <td>10</td>
+      <td>.331</td>
+      <td>.389</td>
+      <td>.471</td>
+      <td>.860</td>
+    </tr>        
+    
+    <tr>
+      <td>2042</td>
+      <td>台鋼巨鷹</td>
+      <td>149</td>
+      <td>678</td>
+      <td>602</td>
+      <td><span class="test">218</span></td>
+      <td><span class="best">44</span></td>
+      <td>3</td>
+      <td>14</td>
+      <td>92</td>
+      <td>118</td>
+      <td>17</td>
+      <td>310</td>
+      <td>22</td>
+      <td>66</td>
+      <td>2</td>
+      <td>8</td>
+      <td><span class="best">.362</span></td>
+      <td><span class="best">.420</span></td>
+      <td>.515</td>
+      <td>.935</td>
+    </tr>    
+   
+    <tr>
+      <td>2043</td>
+      <td>台鋼巨鷹</td>
+      <td>146</td>
+      <td>651</td>
+      <td>582</td>
+      <td>197</td>
+      <td>36</td>
+      <td>2</td>
+      <td>13</td>
+      <td>86</td>
+      <td>101</td>
+      <td>11</td>
+      <td>276</td>
+      <td>27</td>
+      <td>61</td>
+      <td>4</td>
+      <td>4</td>
+      <td>.338</td>
+      <td>.399</td>
+      <td>.474</td>
+      <td>.873</td>
+    </tr>    
+   
+   <tr>
+      <td>2044</td>
+      <td>台鋼巨鷹</td>
+      <td>62</td>
+      <td>274</td>
+      <td>242</td>
+      <td>76</td>
+      <td>14</td>
+      <td>1</td>
+      <td>5</td>
+      <td>31</td>
+      <td>38</td>
+      <td>2</td>
+      <td>107</td>
+      <td>18</td>
+      <td>29</td>
+      <td>2</td>
+      <td>1</td>
+      <td>.314</td>
+      <td>.386</td>
+      <td>.442</td>
+      <td>.828</td>
+    </tr>
+    
+    <tr>
+      <td>2046</td>
+      <td>台鋼巨鷹</td>
+      <td>54</td>
+      <td>198</td>
+      <td>172</td>
+      <td>42</td>
+      <td>9</td>
+      <td>0</td>
+      <td>3</td>
+      <td>14</td>
+      <td>11</td>
+      <td>0</td>
+      <td>60</td>
+      <td>20</td>
+      <td>23</td>
+      <td>1</td>
+      <td>2</td>
+      <td>.244</td>
+      <td>.330</td>
+      <td>.349</td>
+      <td>.679</td>
+    </tr>
+    
+    <tr>
+      <td>2047</td>
+      <td>台鋼巨鷹</td>
+      <td>29</td>
+      <td>89</td>
+      <td>81</td>
+      <td>18</td>
+      <td>4</td>
+      <td>1</td>
+      <td>1</td>
+      <td>7</td>
+      <td>7</td>
+      <td>0</td>
+      <td>27</td>
+      <td>11</td>
+      <td>7</td>
+      <td>1</td>
+      <td>0</td>
+      <td>.222</td>
+      <td>.284</td>
+      <td>.333</td>
+      <td>.617</td>
+    </tr>
+    
+    <tr class="career">
+      <td colspan="2">通算成績</td>
+      <td>1163</td>
+      <td>5064</td>
+      <td>4514</td>
+      <td>1458</td>
+      <td>268</td>
+      <td>18</td>
+      <td>81</td>
+      <td>577</td>
+      <td>774</td>
+      <td>163</td>
+      <td>2067</td>
+      <td>261</td>
+      <td>471</td>
+      <td>39</td>
+      <td>40</td>
+      <td>.323</td>
+      <td>.384</td>
+      <td>.458</td>
+      <td>.832</td>
+    </tr>
+
+
+  
+    </tbody>
+  </table>
+
+      <!-- 成績資料保持原本內容 -->
+      <!-- 這裡略去為簡潔，可直接保留你原本 table 內容 -->
+    </tbody>
+    </table>
+  </div>
+
+  <!-- 個人獎項 -->
+  <div class="section">
+    <h2>個人獎項</h2>
+    ・<a href="../term/室內棒球聯盟年度安打王.html">室內棒球聯盟年度安打王</a>外野手：2038、2041、2042<br>
+    ・<a href="../term/室內棒球聯盟年度打擊王.html">室內棒球聯盟年度打擊王</a>外野手：2042<br>
+    ・<a href="../term/室內棒球聯盟年度上壘率王.html">室內棒球聯盟年度上壘率王</a>外野手：2042<br>
+    ・<a href="../term/室內棒球聯盟年度最佳陣容.html">室內棒球聯盟年度最佳陣容</a>第一隊外野手：2038、2042<br>
+    ・<a href="../term/室內棒球聯盟年度最佳陣容.html">室內棒球聯盟年度最佳陣容</a>第二隊外野手：2041、2043<br>
+    
+  </div>
+
+  <!-- 特殊事蹟 -->
+  <div class="section">
+    <h2>特殊事蹟</h2>
+     ・<a href="2034年U23世界盃棒球錦標賽.html">2034年U23世界盃棒球錦標賽</a>中華代表隊<br>
+     ・<a href="2035年U23世界盃棒球錦標賽.html">2034年U23世界盃棒球錦標賽</a>中華代表隊<br>
+     ・<a href="2038年世界棒球12強錦標賽.html">2038年世界棒球12強錦標賽</a>中華代表隊<br>
+     ・<a href="2040年世界棒球經典賽.html">2040年世界棒球經典賽</a>中華代表隊<br>
+     ・<a href="2042年世界棒球12強錦標賽.html">2042年世界棒球12強錦標賽</a>中華代表隊<br>
+     ・<a href="室內棒球聯盟明星賽.html">室內棒球聯盟明星賽</a>：2037～2043<br>
+  </div>
+
+  <!-- 相關新聞 -->
+  <div class="section">
+    <h2>相關新聞</h2>
+    <a href="#"></a><br>
+    <a href="#"></a>
+  </div>
+
+</div>
+
+
+</body>
+</html>
