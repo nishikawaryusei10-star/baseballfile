@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> 球員資料｜棒球維基館 </title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background: #ffffff;
+  color: #111827;
+  line-height: 1.6;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ===== 橫幅照片 ===== */
+.banner-photo {
+  width: 100%;
+  height: 320px;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* ===== 頁首 ===== */
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header .sub {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* ===== 頂部導覽列 ===== */
+.topnav {
+  display: flex;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 3px solid #e5e7eb;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.topnav a {
+  color: #006000;
+  font-weight:450;
+}
+
+.topnav a:hover {
+  color: #1d4ed8;
+}
+
+/* ===== 主版面 ===== */
+.section {
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-left: 4px solid #111827;
+  padding-left: 8px;
+}
+
+/* ===== 基本資料 ===== */
+.profile {
+  font-size: 0.95rem;
+}
+
+.profile div {
+  padding: 5px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.profile span {
+  display: inline-block;
+  width: 100px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ===== 經歷 ===== */
+.career a {
+  display: inline-block;
+}
+
+.no-break {
+  white-space: nowrap; /* 括號內文字不換行 */
+}
+
+/* ===== 年表 ===== */
+.timeline {
+  font-size: 0.95rem;
+}
+
+.timeline div {
+  margin-bottom: 6px;
+}
+
+.timeline b {
+  display: inline-block;
+  width: 60px;
+}
+
+/* ===== 表格 ===== */
+table.stats {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats th,
+table.stats td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats th {
+   background: #2F7F8F;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+table.stats tbody tr:nth-child(even) td {
+  background: #DCECEF;
+}
+
+table.stats th:nth-child(2),
+table.stats td:nth-child(2) {
+  white-space: nowrap;
+}
+
+.best {
+  font-weight: bold;       /* 加粗字體 */        
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.test {
+  font-weight: bold;       /* 加粗字體 */
+  color: #FF0000;          /* 改成紅色 */
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.let {
+  font-weight: bold;       /* 加粗字體 */
+  color: #FFA042;          /* 改成橘色 */
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+/* ===== Footer ===== */
+.footer {
+  border-top: 1px solid #d1d5db;
+  margin-top: 48px;
+  padding-top: 16px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  
+  <nav class="topnav">
+  <a href="../index.html">首頁</a> ⮕ <a href="players_overview.html">球員</a> ⮕  <a href="taiwan_players_overview.html">台灣球員</a> ⮕  <b>沈雲驍</b> </nav>     
+
+  <!-- 頁首 -->
+  <div class="header">
+    <h1>沈雲驍</h1>
+    <div class="sub">Shen,Yun-Xiao｜內野手（SS）</div>
+  </div>
+
+  <!-- 基本資料 -->
+  <div class="section">
+    <h2>基本資料</h2>
+    <div class="profile">
+      <div><span>綽號別稱</span>白雨之刃</div>  
+      <div><span>出生日期</span>2017 年 5 月 10 日（34歲）</div>
+      <div><span>身高體重</span>176 公分／72 公斤</div>
+      <div><span>出生地</span>台灣・花蓮縣光復鄉</div>
+      <div><span>投打習慣</span>右投左打</div>
+      <div><span>守備位置</span>內野手 SS 2B</div>
+      <div><span>職棒選秀</span><a href="2038年室內棒球聯盟選秀會.html">2036年室內棒球聯盟選秀會</a><a href="基隆雨都隊.html">基隆雨都隊</a>第一輪指名</div>
+    </div>
+  </div>
+
+  <!-- 球員經歷 -->
+  <div class="section">
+    <h2>球員經歷</h2>
+    <div class="career">
+      <a href="#">花蓮縣</a><a href="#">光復國小少棒隊</a></br>
+      <a href="#">花蓮縣</a><a href="#">光復國中青少棒隊</a></br>
+      <a href="#">花蓮縣</a><a href="#">花蓮高中青棒隊</a></br>
+      台北市私立文化大學棒球隊<br>
+      <a href="#">室內棒球聯盟</a><a href="基隆雨都隊.html">基隆雨都隊</a>（2038/08～）<br>
+
+    </div>
+  </div>
+
+  <!-- 生涯成績 -->
+ <!-- 生涯成績 -->
+  <div class="section">
+    <h2>職棒生涯成績</h2>
+<strong>室內棒球聯盟一軍打擊成績</strong>
+    <table class="stats">
+    <thead>
+      <tr>
+        <th>年度</th>
+        <th>球隊</th>
+        <th>G</th>
+        <th>PA</th>
+        <th>AB</th>
+        <th>H</th>
+        <th>2B</th>
+        <th>3B</th>
+        <th>HR</th>
+        <th>RBI</th>
+        <th>R</th>
+        <th>SB</th>
+        <th>TB</th>
+        <th>SO</th>
+        <th>BB</th>
+        <th>SAC</th>
+        <th>SF</th>
+        <th>AVG</th>
+        <th>OBP</th>
+        <th>SLG</th>
+        <th>OPS</th>
+      </tr>
+    </thead>
+    <tbody>
+     
+     <tr>
+      <td>2038</td>
+      <td>台鋼巨鷹</td>
+      <td>3</td>
+      <td>4</td>
+      <td>4</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>.250</td>
+      <td>.250</td>
+      <td>.250</td>
+      <td>.500</td>
+    </tr> 
+     
+     <tr>
+      <td>2039</td>
+      <td>基隆雨都</td>
+      <td>147</td>
+      <td>672</td>
+      <td>592</td>
+      <td>184</td>
+      <td>26</td>
+      <td>11</td>
+      <td>6</td>
+      <td>59</td>
+      <td>108</td>
+      <td><span class="best">56</span></td>
+      <td>250</td>
+      <td>91</td>
+      <td>58</td>
+      <td><span class="best">18</span></td>
+      <td>4</td>
+      <td>.311</td>
+      <td>.370</td>
+      <td>.422</td>
+      <td>.792</td>
+    </tr> 
+     
+     <tr>
+      <td>2040</td>
+      <td>基隆雨都</td>
+      <td>149</td>
+      <td>682</td>
+      <td>614</td>
+      <td>191</td>
+      <td>28</td>
+      <td><span class="best">13</span></td>
+      <td>5</td>
+      <td>63</td>
+      <td>114</td>
+      <td><span class="best">62</span></td>
+      <td>260</td>
+      <td>78</td>
+      <td>51</td>
+      <td>14</td>
+      <td>3</td>
+      <td>.311</td>
+      <td>.362</td>
+      <td>.423</td>
+      <td>.785</td>
+    </tr> 
+    
+    <tr>
+      <td>2041</td>
+      <td>基隆雨都</td>
+      <td>146</td>
+      <td>674</td>
+      <td>603</td>
+      <td>193</td>
+      <td>31</td>
+      <td><span class="best">12</span></td>
+      <td>7</td>
+      <td>68</td>
+      <td>117</td>
+      <td><span class="best">58</span></td>
+      <td>269</td>
+      <td>72</td>
+      <td>56</td>
+      <td>11</td>
+      <td>4</td>
+      <td>.320</td>
+      <td>.376</td>
+      <td>.446</td>
+      <td>.822</td>
+    </tr>        
+    
+    <tr>
+      <td>2042</td>
+      <td>基隆雨都</td>
+      <td><span class="test">150</span></td>
+      <td><span class="best">712</span></td>
+      <td>641</td>
+      <td>208</td>
+      <td>34</td>
+      <td><span class="best">15</span></td>
+      <td>8</td>
+      <td>74</td>
+      <td>126</td>
+      <td><span class="best">67</span></td>
+      <td>296</td>
+      <td>66</td>
+      <td>58</td>
+      <td>9</td>
+      <td>4</td>
+      <td>.324</td>
+      <td>.378</td>
+      <td>.462</td>
+      <td>.840</td>
+    </tr>    
+   
+    <tr>
+      <td>2043</td>
+      <td>基隆雨都</td>
+      <td>148</td>
+      <td><span class="best">708</span></td>
+      <td>637</td>
+      <td><span class="best">202</span></td>
+      <td>36</td>
+      <td><span class="test">18</span></td>
+      <td>9</td>
+      <td>71</td>
+      <td><span class="best">132</span></td>
+      <td><span class="best">71</span></td>
+      <td>301</td>
+      <td>61</td>
+      <td>62</td>
+      <td>3</td>
+      <td>5</td>
+      <td>.317</td>
+      <td>.374</td>
+      <td>.473</td>
+      <td>.847</td>
+    </tr>    
+   
+   <tr>
+      <td>2044</td>
+      <td>基隆雨都</td>
+      <td>145</td>
+      <td>684</td>
+      <td>612</td>
+      <td>196</td>
+      <td>32</td>
+      <td><span class="best">14</span></td>
+      <td>11</td>
+      <td>79</td>
+      <td>119</td>
+      <td><span class="best">62</span></td>
+      <td>292</td>
+      <td>68</td>
+      <td>59</td>
+      <td>8</td>
+      <td>5</td>
+      <td>.320</td>
+      <td>.377</td>
+      <td>.442</td>
+      <td>.819</td>
+    </tr>
+    
+    <tr>
+      <td>2045</td>
+      <td>基隆雨都</td>
+      <td>142</td>
+      <td>661</td>
+      <td>588</td>
+      <td>194</td>
+      <td>29</td>
+      <td>10</td>
+      <td>13</td>
+      <td>82</td>
+      <td>111</td>
+      <td>48</td>
+      <td>282</td>
+      <td>73</td>
+      <td>64</td>
+      <td>5</td>
+      <td>4</td>
+      <td>.330</td>
+      <td>.393</td>
+      <td>.480</td>
+      <td>.873</td>
+    </tr>
+    
+    <tr>
+      <td>2046</td>
+      <td>基隆雨都</td>
+      <td>112</td>
+      <td>504</td>
+      <td>452</td>
+      <td>138</td>
+      <td>21</td>
+      <td>6</td>
+      <td>8</td>
+      <td>54</td>
+      <td>78</td>
+      <td>32</td>
+      <td>195</td>
+      <td>58</td>
+      <td>41</td>
+      <td>7</td>
+      <td>4</td>
+      <td>.305</td>
+      <td>.360</td>
+      <td>.431</td>
+      <td>.791</td>
+    </tr>
+    
+    <tr>
+      <td>2047</td>
+      <td>基隆雨都</td>
+      <td>138</td>
+      <td>612</td>
+      <td>546</td>
+      <td>168</td>
+      <td>25</td>
+      <td>7</td>
+      <td>10</td>
+      <td>61</td>
+      <td>86</td>
+      <td>36</td>
+      <td>237</td>
+      <td>65</td>
+      <td>52</td>
+      <td>11</td>
+      <td>3</td>
+      <td>.308</td>
+      <td>.366</td>
+      <td>.434</td>
+      <td>.800</td>
+    </tr>
+    
+    <tr>
+      <td>2048</td>
+      <td>基隆雨都</td>
+      <td>141</td>
+      <td>622</td>
+      <td>563</td>
+      <td>171</td>
+      <td>24</td>
+      <td>5</td>
+      <td>12</td>
+      <td>67</td>
+      <td>81</td>
+      <td>34</td>
+      <td>241</td>
+      <td>71</td>
+      <td>48</td>
+      <td>8</td>
+      <td>3</td>
+      <td>.304</td>
+      <td>.357</td>
+      <td>.428</td>
+      <td>.785</td>
+    </tr>
+    
+    <tr>
+      <td>2049</td>
+      <td>基隆雨都</td>
+      <td>134</td>
+      <td>574</td>
+      <td>512</td>
+      <td>152</td>
+      <td>19</td>
+      <td>3</td>
+      <td>16</td>
+      <td>69</td>
+      <td>71</td>
+      <td>18</td>
+      <td>225</td>
+      <td>82</td>
+      <td>51</td>
+      <td>8</td>
+      <td>3</td>
+      <td>.297</td>
+      <td>.359</td>
+      <td>.439</td>
+      <td>.798</td>
+    </tr>
+    
+    <tr>
+      <td>2050</td>
+      <td>基隆雨都</td>
+      <td>136</td>
+      <td>588</td>
+      <td>524</td>
+      <td>158</td>
+      <td>22</td>
+      <td>4</td>
+      <td>14</td>
+      <td>72</td>
+      <td>74</td>
+      <td>22</td>
+      <td>230</td>
+      <td>79</td>
+      <td>55</td>
+      <td>6</td>
+      <td>3</td>
+      <td>.302</td>
+      <td>.366</td>
+      <td>.439</td>
+      <td>.805</td>
+    </tr>
+    
+    <tr>
+      <td>2051</td>
+      <td>基隆雨都</td>
+      <td>132</td>
+      <td>562</td>
+      <td>501</td>
+      <td>146</td>
+      <td>18</td>
+      <td>2</td>
+      <td>18</td>
+      <td>66</td>
+      <td>68</td>
+      <td>15</td>
+      <td>222</td>
+      <td>88</td>
+      <td>49</td>
+      <td>9</td>
+      <td>3</td>
+      <td>.291</td>
+      <td>.353</td>
+      <td>.443</td>
+      <td>.796</td>
+    </tr>
+    
+    <tr class="career">
+      <td colspan="2">通算成績</td>
+      <td>1823</td>
+      <td>8259</td>
+      <td>7389</td>
+      <td><span class="let">2302</span></td>
+      <td>345</td>
+      <td><span class="test">120</span></td>
+      <td>137</td>
+      <td>885</td>
+      <td>1285</td>
+      <td><span class="let">582</span></td>
+      <td>3301</td>
+      <td>953</td>
+      <td>704</td>
+      <td>117</td>
+      <td>48</td>
+      <td>.312</td>
+      <td>.369</td>
+      <td>.447</td>
+      <td>.816</td>
+    </tr>
+    </tbody>
+    </table>
+ 
+    <p>
+    <span class="best">粗體黑字</span>為該年度聯盟最高<span class="test">紅字</span>為室內棒球聯盟紀錄，<span class="let">粗體橘字</span>為現役選手最高
+    </p>
+  
+  </div>
+
+  <!-- 個人獎項 -->
+  <div class="section">
+    <h2>個人獎項</h2>
+    ・<a href="../term/室內棒球聯盟年度安打王.html">室內棒球聯盟年度安打王</a>外野手：2043<br>
+    ・<a href="../term/室內棒球聯盟年度盜壘王.html">室內棒球聯盟年度盜壘王</a>外野手：2039～2044<br>
+    ・<a href="../term/室內棒球聯盟年度最佳陣容.html">室內棒球聯盟年度最佳陣容</a>第一隊游擊手：2042<br>
+    ・<a href="../term/室內棒球聯盟年度最佳陣容.html">室內棒球聯盟年度最佳陣容</a>第二隊游擊手：2043、2045<br>
+    ・台灣大賽MVP：2044
+    
+  </div>
+
+  <!-- 特殊事蹟 -->
+  <div class="section">
+    <h2>特殊事蹟</h2>
+     ・<a href="2038年U23世界盃棒球錦標賽.html">2034年U23世界盃棒球錦標賽</a>中華代表隊<br>
+     ・<a href="2040年世界棒球經典賽.html">2040年世界棒球經典賽</a>中華代表隊<br>
+     ・<a href="2042年世界棒球12強錦標賽.html">2042年世界棒球12強錦標賽</a>中華代表隊<br>
+     ・<a href="2044年世界棒球經典賽.html">2044年世界棒球經典賽</a>中華代表隊<br>
+     ・<a href="室內棒球聯盟明星賽.html">室內棒球聯盟明星賽</a>：2039～2045、2047～2050<br>
+     ・目前為聯盟現役安打王
+  </div>
+
+  <!-- 相關新聞 -->
+  <div class="section">
+    <h2>相關新聞</h2>
+    <a href="#"></a><br>
+    <a href="#"></a>
+  </div>
+
+</div>
+
+
+</body>
+</html>
