@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> 球員資料｜棒球維基館 </title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background: #ffffff;
+  color: #111827;
+  line-height: 1.6;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ===== 橫幅照片 ===== */
+.banner-photo {
+  width: 100%;
+  height: 320px;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* ===== 頁首 ===== */
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header .sub {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* ===== 主版面 ===== */
+.section {
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-left: 4px solid #111827;
+  padding-left: 8px;
+}
+
+/* ===== 基本資料 ===== */
+.profile {
+  font-size: 0.95rem;
+}
+
+.profile div {
+  padding: 5px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.profile span {
+  display: inline-block;
+  width: 100px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ===== 頂部導覽列 ===== */
+.topnav {
+  display: flex;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 3px solid #e5e7eb;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.topnav a {
+  color: #006000;
+  font-weight:450;
+}
+
+.topnav a:hover {
+  color: #1d4ed8;
+}
+
+/* ===== 經歷 ===== */
+.career a {
+  display: inline-block;
+}
+
+.no-break {
+  white-space: nowrap; /* 括號內文字不換行 */
+}
+
+/* ===== 年表 ===== */
+.timeline {
+  font-size: 0.95rem;
+}
+
+.timeline div {
+  margin-bottom: 6px;
+}
+
+.timeline b {
+  display: inline-block;
+  width: 60px;
+}
+
+/* ===== 表格 ===== */
+table.stats {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats th,
+table.stats td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats th {
+  background: #4B2D73;
+  color: #E8B200;
+  font-weight: 600;
+}
+
+table.stats tbody tr:nth-child(even) td {
+  background: #F7EDF6;
+}
+
+table.stats th:nth-child(2),
+table.stats td:nth-child(2) {
+  white-space: nowrap;
+}
+
+.best {
+  font-weight: bold;       /* 加粗字體 */        
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.test {
+  font-weight: bold;       /* 加粗字體 */
+  color: #FF0000;          /* 改成紅色 */
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+/* ===== Footer ===== */
+.footer {
+  border-top: 1px solid #d1d5db;
+  margin-top: 48px;
+  padding-top: 16px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    
+  <nav class="topnav">
+  <a href="../index.html">首頁</a> ⮕ <a href="players_overview.html">球員</a> ⮕  <a href="taiwan_players_overview.html">台灣球員</a> ⮕  <b>李小亨</b> </nav>     
+
+  <!-- 頁首 -->
+  <div class="header">
+    <h1>李小亨</h1>
+    <div class="sub"> LI,HSIAO-HENG｜外野手（CF）</div>
+  </div>
+
+  <!-- 基本資料 -->
+  <div class="section">
+    <h2>基本資料</h2>
+    <div class="profile">
+      <div><span>出生日期</span>2020 年 2 月 19 日（32歲）</div>
+      <div><span>身高體重</span>177 公分／83 公斤</div>
+      <div><span>出生地</span>台灣・台東縣</div>
+      <div><span>投打習慣</span>右投左打</div>
+      <div><span>守備位置</span>外野手 CF RF LF</div>
+      <div><span>職棒選秀</span><a href="#">2043年室內棒球聯盟選秀會</a><a href="#">阿里山小火車隊</a>第三輪指名</div>
+    </div>
+  </div>
+
+  <!-- 球員經歷 -->
+  <div class="section">
+    <h2>球員經歷</h2>
+    <div class="career">
+      <a href="#">台東縣</a><a href="#">紅葉國小少棒隊</a></br>
+      <a href="#">花蓮縣</a><a href="#">三民國中青少棒隊</a></br>
+      <a href="#">花蓮縣</a><a href="#">玉里高中青棒隊</a></br>
+      <a href="#">嘉義市</a><a href="#">國立嘉義大學</a></br>
+      <a href="#">室內棒球聯盟</a><a href="#">阿里山小火車隊</a>（2043/08～2046/07）</br>
+      <a href="#">室內棒球聯盟</a><a href="#">全聯熊隊</a>（2046/07～2047/12）</br>
+      <a href="#">室內棒球聯盟</a><a href="#">花蓮眼鏡蛇隊</a>（2048/01～）</br>
+
+    </div>
+  </div>
+
+  <!-- 球員介紹 -->
+  <div class="section">
+    <h2>球員介紹</h2>
+李小亨，來自花蓮縣的棒球選手，守備位置為外野手，曾效力於室內棒球聯盟的阿里山小火車隊與全聯熊隊，現效力於花蓮眼鏡蛇隊。</br>
+</br>
+<strong>早期經歷：從紅葉出發的東部之路</strong></br>
+李小亨的棒球旅程，並非從家鄉花蓮起步，而是始於台東縣。國小二年級時，在鄰居與同學的影響下，他加入了名聲響亮、競爭激烈的紅葉國小少棒隊。由於隊內好手雲集，他在低年級階段始終無法獲得穩定出賽機會，直到六年級才憑藉速度與防守能力站穩主力位置，這段歷程也培養了他面對競爭時的心理韌性。</br>
+</br>
+國中階段，李小亨就讀三民國中，並於國二時正式成為球隊主力外野手，在地方賽事中屢有關鍵表現，逐漸累積名氣。國中畢業後，他進入東部傳統強權——玉里高中就讀，迎來技術成長最快的階段。</br>
+</br>
+在玉里高中期間，他接受韓國客座傳奇教練徐明的指導，重新調整打擊姿勢與揮棒出力方式，原本以速度見長的他，開始具備穩定擊球品質。高一下學期便升上一軍，高二在黑熊旗與全國高中錦標賽皆有亮眼表現，高三更與隊友攜手挺進全國前八，為高中生涯畫下圓滿句點。</br>
+</br>
+<strong>大學時期：耐心累積的成熟期</strong></br>
+儘管高中表現出色，李小亨選擇不急於投入職業選秀，而是進入國立嘉義大學繼續磨練。大學四年間，他逐步提升對投手配球的判斷能力，打擊穩定度明顯成長。</br>
+</br>
+大四賽季，他打擊率突破.300，不僅成為校隊打擊王，也在上壘與盜壘兩端展現價值。2042 年畢業後，他獲得赴美參加秋季聯盟的機會，累積國際實戰經驗。2043 年返台後短暫效力社會人球隊，隨即報名室內棒球聯盟選秀，並在該年第三輪被阿里山小火車隊指名，正式踏上職業舞台。</br>
+</br>
+<strong>職業生涯初期：適應不易的磨合期（阿里山小火車）</strong></br>
+2043年季中，李小亨升上一軍，但面對職業投手的節奏與變化仍顯生澀，118個打席僅繳出.218的打擊率，三振率高達27.1%。即便如此，他在外野展現出的守備範圍與速度，仍獲得教練團一定程度的肯定。</br>
+</br>
+2044年，他成功擠進開季名單，卻在前35場比賽打擊狀況不佳而被下放二軍。整季雖出賽108場，但多以代跑、代守為主，298個打席僅有.233的打擊率。2045 年，腳傷進一步影響出賽數，僅出賽47場，但打擊率與OPS皆較前季進步，顯示調整方向逐漸正確。</br>
+</br>
+然而，2046 年他在一、二軍之間頻繁調動，始終無法取得固定角色，最終被球隊放入指定讓渡名單，職業生涯一度陷入低谷。但最後全聯熊隊選擇撿走李小亨，給了他一個重新開始的機會。</br>
+</br>
+<strong>轉戰全聯熊：短暫回穩卻未能突破</strong></br>
+全聯熊隊撿走李小亨後，他的打擊表現有所回升，單季打擊率提升至.246，OPS 來到.657，盜壘端也具備即戰力價值。然而，2047年整體打擊火力仍未達聯盟平均水準，隨著球隊年輕外野新秀陸續成長，季後遭到戰力外，職業生涯再度面臨不確定性。</br>
+</br>
+<strong>重生於花蓮眼鏡蛇：站穩舞台的轉捩點</strong></br>
+2048年休賽季，花蓮眼鏡蛇隊因外野戰力短缺，決定以3年864萬元簽下李小亨，給予他難得的穩定出賽承諾。這次回到家鄉球隊，也成為他職涯的重要轉折。</br>
+</br>
+2048年，他單季安打數首度突破100支，OPS提升至.676，逐漸站穩先發外野位置。2049年，他迎來職業生涯巔峰：打擊率.349，榮膺聯盟打擊王、13支三壘安打，聯盟第一、OPS 高達.926，除了拿下金手套獎、最佳陣容第一隊獎外，還獲得最佳進步獎，表揚其成績大幅度進步。</br>
+</br>
+<strong>低潮後的回歸：2051年的再證明</strong> </br> 
+2050年，傷病再度找上門，使他整季僅出賽32場，打席未滿100。賽季結束後，原有3年合約到期，花蓮眼鏡蛇隊仍選擇以1年400萬元、附帶激勵條款續約，給予他重新證明的機會。</br> 
+</br> 
+在2051年，李小亨以健康姿態回歸，繳出穩定且高效率的一季成績：打擊三圍是不錯的.294/.351/.413、158支安打、46次盜壘，且許多進階數據都表明他的這個打擊數據絕不是幸運而已。</br> 
+</br> 
+他再度成為聯盟最具威脅性的開路先鋒之一，不僅提供穩定上壘能力，也以盜壘與守備價值彌補長打火力，證明自己不只是曇花一現的巔峰球員，而是能在調整後長期貢獻的實戰型外野手。
+
+  </div>
+
+  <!-- 個人年表 -->
+  <div class="section">
+    <h2>個人年表</h2>
+    <div class="timeline">
+      <div><b>2038年</b>6月，考取國立嘉義大學電機系，正選2，後加入棒球隊</div>
+      <div><b>2043年</b>5月，赴美參加秋季聯盟，之後輾轉前往選秀聯盟測試</div>
+      <div><b>2043年</b>7月，參加室內棒球聯盟選秀會，在選秀會上第三輪被阿里山小火車隊指名。後以簽約金918萬新台幣，四年新人合約加盟</div>
+      <div><b>2045年</b>春訓時在外野守備追球時反覆高強度變向與急停，造成左腳踝慢性韌帶拉傷。由於傷勢初期並未完全休養，導致後來需休養9～12週</div>
+      <div><b>2046年</b>11月，季後被阿里山小火車隊放入指定讓渡名單。後被全聯熊隊撿走</div>
+      <div><b>2047年</b>12月，被全聯熊隊戰力外</div>
+      <div><b>2048年</b>1月，以3年864萬元被花蓮響尾蛇隊延攬入隊</div>
+      <div><b>2048年</b>單季安打數首度突破100支</div>
+      <div><b>2049年</b>該季為目前為止的生涯年，榮獲打擊王、金手套、最佳陣容外野手，另有最佳進步獎以表揚其成績的進步</div>
+      <div><b>2050年</b>2月，在春訓熱身賽中，右大腿後側肌群二級撕裂傷，預計要休養12～16週</div>
+      <div><b>2050年</b>12月，雖該季因傷表現不好，仍與花蓮眼鏡蛇隊簽下1年400萬元（附激勵獎金）續約</div>
+      <div><b>2051年</b>該季回歸後繳出好表現，季後合約到期，累計六年年資，成為完全自由球員</div>
+      <div><b>2052年</b>1月，與眼鏡蛇隊簽下一紙5年4900萬新台幣的延長合約</div>
+
+    </div>
+  </div>
+
+  <!-- 生涯成績 -->
+ <!-- 生涯成績 -->
+  <div class="section">
+    <h2>職棒生涯成績</h2>
+<strong>室內棒球聯盟一軍打擊成績</strong>
+    <table class="stats">
+    <thead>
+      <tr>
+        <th>年度</th>
+        <th>球隊</th>
+        <th>G</th>
+        <th>PA</th>
+        <th>AB</th>
+        <th>H</th>
+        <th>2B</th>
+        <th>3B</th>
+        <th>HR</th>
+        <th>RBI</th>
+        <th>R</th>
+        <th>SB</th>
+        <th>TB</th>
+        <th>SO</th>
+        <th>BB</th>
+        <th>SAC</th>
+        <th>SF</th>
+        <th>AVG</th>
+        <th>OBP</th>
+        <th>SLG</th>
+        <th>OPS</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    <tr>
+      <td>2044</td>
+      <td>阿里山小火車</td>
+      <td>108</td>
+      <td>298</td>
+      <td>275</td>
+      <td>64</td>
+      <td>11</td>
+      <td>5</td>
+      <td>3</td>
+      <td>13</td>
+      <td>33</td>
+      <td>27</td>
+      <td>94</td>
+      <td>49</td>
+      <td>19</td>
+      <td>4</td>
+      <td>0</td>
+      <td>.233</td>
+      <td>.282</td>
+      <td>.342</td>
+      <td>.624</td>
+<tr>
+      <td>2045</td>
+      <td>阿里山小火車</td>
+      <td>47</td>
+      <td>166</td>
+      <td>148</td>
+      <td>42</td>
+      <td>7</td>
+      <td>3</td>
+      <td>0</td>
+      <td>10</td>
+      <td>28</td>
+      <td>11</td>
+      <td>55</td>
+      <td>38</td>
+      <td>12</td>
+      <td>5</td>
+      <td>1</td>
+      <td>.284</td>
+      <td>.335</td>
+      <td>.372</td>
+      <td>.707</td>
+<tr>
+      <td>2046</td>
+      <td>全聯熊/阿里山小火車</td>
+      <td>104</td>
+      <td>439</td>
+      <td>390</td>
+      <td>96</td>
+      <td>20</td>
+      <td>5</td>
+      <td>2</td>
+      <td>45</td>
+      <td>71</td>
+      <td>22</td>
+      <td>132</td>
+      <td>61</td>
+      <td>44</td>
+      <td>3</td>
+      <td>2</td>
+      <td>.246</td>
+      <td>.321</td>
+      <td>.349</td>
+      <td>.670</td>
+<tr>
+      <td>2047</td>
+      <td>全聯熊</td>
+      <td>102</td>
+      <td>423</td>
+      <td>388</td>
+      <td>93</td>
+      <td>19</td>
+      <td>5</td>
+      <td>3</td>
+      <td>59</td>
+      <td>78</td>
+      <td>29</td>
+      <td>131</td>
+      <td>52</td>
+      <td>31</td>
+      <td>3</td>
+      <td>1</td>
+      <td>.240</td>
+      <td>.295</td>
+      <td>.338</td>
+      <td>.633</td>
+  <tr>
+      <td>2048</td>
+      <td>花蓮眼鏡蛇</td>
+      <td>115</td>
+      <td>442</td>
+      <td>409</td>
+      <td>109</td>
+      <td>22</td>
+      <td>7</td>
+      <td>2</td>
+      <td>47</td>
+      <td>65</td>
+      <td>38</td>
+      <td>151</td>
+      <td>46</td>
+      <td>28</td>
+      <td>2</td>
+      <td>3</td>
+      <td>.267</td>
+      <td>.311</td>
+      <td>.369</td>
+      <td>.680</td>
+    <tr>
+      <td>2049</td>
+      <td>花蓮眼鏡蛇</td>
+      <td>128</td>
+      <td>492</td>
+      <td>444</td>
+      <td>155</td>
+      <td>28</td>
+      <td><span class="best">13</span></td>
+      <td>10</td>
+      <td>41</td>
+      <td>77</td>
+      <td>44</td>
+      <td>239</td>
+      <td>88</td>
+      <td>36</td>
+      <td>6</td>
+      <td>6</td>
+      <td><span class="best">.349</span></td>
+      <td>.393</td>
+      <td>.538</td>
+      <td>.931</td>
+    </tr>
+    <tr>
+      <td>2050</td>
+      <td>花蓮眼鏡蛇</td>
+      <td>32</td>
+      <td>92</td>
+      <td>87</td>
+      <td>17</td>
+      <td>3</td>
+      <td>1</td>
+      <td>0</td>
+      <td>4</td>
+      <td>6</td>
+      <td>4</td>
+      <td>22</td>
+      <td>24</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>.195</td>
+      <td>.222</td>
+      <td>.253</td>
+      <td>.475</td>
+    </tr>
+    <tr>
+      <td>2051</td>
+      <td>花蓮眼鏡蛇</td>
+      <td>142</td>
+      <td>603</td>
+      <td>538</td>
+      <td>158</td>
+      <td>25</td>
+      <td><span class="best">12</span></td>
+      <td>5</td>
+      <td>54</td>
+      <td>91</td>
+      <td>46</td>
+      <td>222</td>
+      <td>88</td>
+      <td>51</td>
+      <td>7</td>
+      <td>7</td>
+      <td>.294</td>
+      <td>.351</td>
+      <td>.413</td>
+      <td>.764</td>
+    </tr>
+    <tr class="career">
+      <td colspan="2">通算成績</td>
+      <td>778</td>
+      <td>2955</td>
+      <td>2679</td>
+      <td>734</td>
+      <td>135</td>
+      <td>51</td>
+      <td>25</td>
+      <td>273</td>
+      <td>449</td>
+      <td>221</td>
+      <td>1046</td>
+      <td>446</td>
+      <td>224</td>
+      <td>32</td>
+      <td>20</td>
+      <td>.274</td>
+      <td>.328</td>
+      <td>.390</td>
+      <td>.718</td>
+    </tr>
+
+
+  
+    </tbody>
+  </table>
+
+      <!-- 成績資料保持原本內容 -->
+      <!-- 這裡略去為簡潔，可直接保留你原本 table 內容 -->
+    </tbody>
+    </table>
+  </div>
+
+  <!-- 個人獎項 -->
+  <div class="section">
+    <h2>個人獎項</h2>
+    ・<a href="../term/室內棒球聯盟年度打擊王.html">室內棒球聯盟年度打擊王</a>：2049</br>
+    ・<a href="../term/室內棒球聯盟年度最佳進步獎">室內棒球聯盟年度最佳進步獎</a>：2049</br>
+    ・<a href="../term/室內棒球聯盟年度金手套">室內棒球聯盟年度金手套</a>外野手：2049</br>
+    ・<a href="#">室內棒球聯盟年度最佳陣容</a>第一隊外野手：2049</br>
+
+    
+  </div>
+
+  <!-- 特殊事蹟 -->
+  <div class="section">
+    <h2>特殊事蹟</h2>
+     ・<a href="#">室內棒球聯盟明星賽</a>：2049</br>
+  </div>
+
+  <!-- 相關新聞 -->
+  <div class="section">
+    <h2>相關新聞</h2>
+    <a href="#"></a><br>
+    <a href="#"></a>
+  </div>
+
+</div>
+
+
+</body>
+</html>
