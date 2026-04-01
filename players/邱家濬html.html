@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> 球員資料｜棒球維基館 </title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background: #ffffff;
+  color: #111827;
+  line-height: 1.6;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 80px; /* 關鍵 */
+}
+
+html, body {
+  height: auto;
+  overflow-y: auto;
+}
+
+/* ===== 橫幅照片 ===== */
+.banner-photo {
+  width: 100%;
+  height: 320px;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* ===== 頁首 ===== */
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header .sub {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* ===== 主版面 ===== */
+.section {
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-left: 4px solid #111827;
+  padding-left: 8px;
+}
+
+/* ===== 基本資料 ===== */
+.profile {
+  font-size: 0.95rem;
+}
+
+.profile div {
+  padding: 5px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.profile span {
+  display: inline-block;
+  width: 100px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ===== 頂部導覽列 ===== */
+.topnav {
+  display: flex;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 3px solid #e5e7eb;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.topnav a {
+  color: #006000;
+  font-weight:450;
+}
+
+.topnav a:hover {
+  color: #1d4ed8;
+}
+
+/* ===== 經歷 ===== */
+.career a {
+  display: inline-block;
+}
+
+.no-break {
+  white-space: nowrap; /* 括號內文字不換行 */
+}
+
+/* ===== 年表 ===== */
+.timeline {
+  font-size: 0.95rem;
+}
+
+.timeline div {
+  margin-bottom: 6px;
+}
+
+.timeline b {
+  display: inline-block;
+  width: 60px;
+}
+
+/* ===== 表格 ===== */
+table.stats {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats th,
+table.stats td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats th {
+  background: #4DFFFF;
+  color: #000000;
+  font-weight: 600;
+}
+
+table.stats tbody tr:nth-child(even) td {
+  background: #ECFFFF;
+}
+
+table.stats th:nth-child(2),
+table.stats td:nth-child(2) {
+  white-space: nowrap;
+}
+
+.best {
+  font-weight: bold;       /* 加粗字體 */        
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.test {
+  font-weight: bold;       /* 加粗字體 */
+  color: #FF0000;          /* 改成紅色 */
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+/* ===== Footer ===== */
+.footer {
+  border-top: 1px solid #d1d5db;
+  margin-top: 48px;
+  padding-top: 16px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  
+  <nav class="topnav">
+  <a href="../index.html">首頁</a> ⮕ <a href="players_overview.html">球員</a> ⮕  <a href="taiwan_players_overview.html">台灣球員</a> ⮕  <b>邱家濬</b> </nav>  
+  
+  <!-- 頁首 -->
+  <div class="header">
+    <h1>邱家濬</h1>
+    <div class="sub"> CIOU,JIA-JYUN｜內野手（3B）</div>
+  </div>
+
+  <!-- 基本資料 -->
+  <div class="section">
+    <h2>基本資料</h2>
+    <div class="profile">
+      <div><span>出生日期</span>2026 年 12 月 07 日（25歲）</div>
+      <div><span>身高體重</span>183 公分／84 公斤</div>
+      <div><span>出生地</span>台灣・高雄市</div>
+      <div><span>投打習慣</span>右投左打</div>
+      <div><span>守備位置</span>內野手 3B</div>
+      <div><span>職棒選秀</span><a href="#">2045年室內棒球聯盟選秀會</a><a href="#">全聯熊隊</a>第一輪指名</div>
+    </div>
+  </div>
+
+  <!-- 球員經歷 -->
+  <div class="section">
+    <h2>球員經歷</h2>
+    <div class="career">
+      <a href="#">高雄市</a><a href="#">四維國小少棒隊</a></br>
+      <a href="#">高雄市</a><a href="#">五福國中青少棒隊</a></br>
+      <a href="#">高雄市</a><a href="#">高苑工商青棒隊</a></br>
+      <a href="#">室內棒球聯盟</a><a href="#">全聯熊隊</a>（2045/08～）</br>
+      <a href="#">室內棒球聯盟</a><a href="#">國軍鳳凰隊</a>（2046）</br>
+    </div>
+  </div>
+
+  <!-- 球員介紹 -->
+  <div class="section">
+    <h2>球員介紹</h2>
+邱家濬是來自高雄的棒球選手，守備位置為三壘手，目前效力於室內棒球聯盟全聯熊隊。</br>
+</br>
+邱家濬出生並成長於高雄市，自幼即展現出對運動的高度興趣。小學階段原本接觸過田徑與籃球，但在四年級一次校際運動會中，因臨時支援班級棒球比賽而首次正式接觸棒球。憑藉良好的手眼協調能力與穩定的傳球動作，很快便被學校體育老師注意，建議其加入校內棒球社團。</br>
+</br>
+進入高年級後，邱家濬開始接受較系統化的棒球訓練，主守三壘與游擊。雖然當時身材仍偏瘦小，力量條件並不突出，但他以守備判斷成熟、傳球穩定著稱，屬於「先發型工具人」定位，逐漸在南部基層棒球圈內累積口碑。</br>
+</br>
+國中階段，邱家濬就讀高雄市傳統棒球風氣濃厚的國中，正式進入校隊體系。他在國中初期仍未出現明顯體格優勢，打擊以平飛球與推打為主，但憑藉反應速度與臂力條件，被教練團固定安排在三壘防區。國三時，邱家濬逐漸展現出穩定的比賽抗壓性，多次在關鍵局數完成難度偏高的守備處理，成為球隊內野防線的重要支柱。雖然整體打擊數據並不亮眼，但「守得住、犯錯率低」的評價，使他在升學選擇上獲得多所高中名校關注。</br>
+</br>
+國中畢業後，邱家濬選擇南下就讀素有「綠色怪物」之稱、南部長年強權的高苑工商。進入高苑後，他在高一即成功卡位主戰三壘手，成為少數能在名校一年級就站穩先發的野手之一。</br>
+</br>
+真正的轉捩點出現在高二賽季。該年休賽季期間，邱家濬身高由原本的171公分迅速抽高至182公分，體型也在球隊營養與重量訓練計畫下明顯增壯。隨著揮棒軌跡穩定度提升，他的擊球初速與長打比例大幅成長，逐漸從防守型內野手轉型為具備長打潛力的角落三壘手。</br>
+</br>
+高三年，邱家濬迎來生涯最受矚目的舞台——黑豹旗全國高中棒球大賽。該屆賽事中，他多次在關鍵時刻建功：64強，擊出致勝安打，淘汰曾在預賽擊敗兩支科班球隊、聲勢驚人的黑馬建國中學、32強，面對中部強權台中一中，於中後段關鍵打席敲出超前安打、16強，再度以關鍵二壘安打奠定勝基，最終才在8強不敵該屆冠軍彰化高中止步八強。</br>
+</br>
+雖然因年齡超齡因素，無法參加隔年五月的玉山盃，也無緣披上中華隊戰袍，但邱家濬在黑豹旗展現出的擊球力量與比賽成熟度，已獲得多數職業球探的正面評價。高中畢業後，邱家濬決定不再延後職涯，直接投入室內棒球聯盟選秀會。選前球探報告普遍認為，該屆選秀湧入大量頂級即戰力野手，使邱家濬的行情約落在首輪中段至第二輪初段。</br>
+</br>
+然而，在選秀會當天，全聯熊隊於第一輪即提前指名邱家濬，展現對其長期發展的高度期待。雙方最終簽下一紙簽約金新台幣1,765萬元、為期四年的新人合約。球團內部定位他為「下一世代三壘接班核心」，並規劃以耐心養成方式逐步銜接一軍。加盟隔年，全聯熊即依規定安排邱家濬進入國軍隊服役。該年度他幾乎整季待在二軍體系，專注於體能調整與打擊細節修正，未獲得一軍出賽機會。</br>
+</br>
+2047年，服役結束回到母隊後，邱家濬一度陷入適應期。該年上半季打擊狀況持續低迷，季中一軍打擊三圍僅有 .200/.200/.300，擊球內容不穩。直到季末，他才逐漸找回揮棒節奏。球隊於例行賽最後一週將他拉上一軍「開箱」，雖然僅有兩個打席、未能敲出安打，但仍被視為重新出發的起點。</br>
+</br>
+2048年賽季，邱家濬在二軍前半段繳出亮眼成績，前兩個月打擊三圍達 .321/.348/.436，成功說服教練團將其升上一軍，並一路待到季末。儘管一軍整體OPS僅.606，長打火力尚未完全兌現，但球團仍選擇給予穩定打席數，期望他能在實戰中加速成長。</br>
+</br>
+自2049年起，邱家濬逐漸卡位全聯熊的主戰三壘手。不過，他在長打輸出上的瓶頸逐漸顯現，全壘打數連續數季未能突破5轟，對於以角落內野為主的選手而言，始終被視為明顯短板。2050年，邱家濬的整體攻擊效率回穩，單季繳出OPS+100的聯盟平均水準成績，顯示其已具備穩定一軍輪替戰力，但距離核心主砲仍有落差。</br>
+</br>
+真正的突破出現在2051年。在新任打擊教練指導下，邱家濬調整擊球策略，降低追打率、提升擊球仰角比例。雖然該季打擊率下降至2成6出頭，但長打火力明顯提升，單季敲出17支全壘打，OPS+上升至110，正式展現中長程火力潛能。</br>
+</br>
+整體而言，邱家濬是一名成長曲線相對平穩、非一夕爆發型的三壘手。其守備穩定度、臂力與比賽閱讀能力，始終是教練團信任的基礎；而打擊端則仍處於持續修正與優化階段。在全聯熊長期培養計畫下，邱家濬被視為「仍有上修空間的中生代主力」，未來若能進一步提升選球能力與穩定長打輸出，仍有機會朝聯盟一線角落內野手邁進。</br>
+  </div>
+
+  <!-- 個人年表 -->
+  <div class="section">
+    <h2>個人年表</h2>
+    <div class="timeline">
+      <div><b>2045年</b>考取國立台灣體育運動大學體育系，不過未入學</div>
+      <div><b>2045年</b>7月，參加室內棒球聯盟季中選秀，被全聯熊隊在第一輪選進，選秀後以簽約金1765萬、4年新人合約加盟</div>
+      <div><b>2046年</b>在球隊安排下進入國軍鳳凰隊服役</div>
+    </div>
+  </div>
+
+  <!-- 生涯成績 -->
+ <!-- 生涯成績 -->
+  <div class="section">
+    <h2>職棒生涯成績</h2>
+<strong>室內棒球聯盟一軍打擊成績</strong>
+    <table class="stats">
+    <thead>
+      <tr>
+        <th>年度</th>
+        <th>球隊</th>
+        <th>G</th>
+        <th>PA</th>
+        <th>AB</th>
+        <th>H</th>
+        <th>2B</th>
+        <th>3B</th>
+        <th>HR</th>
+        <th>RBI</th>
+        <th>R</th>
+        <th>SB</th>
+        <th>TB</th>
+        <th>SO</th>
+        <th>BB</th>
+        <th>SAC</th>
+        <th>SF</th>
+        <th>AVG</th>
+        <th>OBP</th>
+        <th>SLG</th>
+        <th>OPS</th>
+      </tr>
+    </thead>
+    <tbody>
+   
+   <tr>
+      <td>2047</td>
+      <td>全聯</td>
+      <td>3</td>
+      <td>2</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>.000</td>
+      <td>.000</td>
+      <td>.000</td>
+      <td>.000</td>
+    </tr>           
+   
+   <tr>
+      <td>2048</td>
+      <td>全聯</td>
+      <td>73</td>
+      <td>287</td>
+      <td>264</td>
+      <td>63</td>
+      <td>7</td>
+      <td>0</td>
+      <td>5</td>
+      <td>19</td>
+      <td>15</td>
+      <td>7</td>
+      <td>85</td>
+      <td>51</td>
+      <td>17</td>
+      <td>5</td>
+      <td>1</td>
+      <td>.239</td>
+      <td>.284</td>
+      <td>.322</td>
+      <td>.606</td>
+    </tr>        
+   
+   <tr>
+      <td>2049</td>
+      <td>全聯</td>
+      <td>142</td>
+      <td>541</td>
+      <td>498</td>
+      <td>136</td>
+      <td>24</td>
+      <td>3</td>
+      <td>7</td>
+      <td>38</td>
+      <td>46</td>
+      <td>18</td>
+      <td>187</td>
+      <td>88</td>
+      <td>39</td>
+      <td>3</td>
+      <td>1</td>
+      <td>.273</td>
+      <td>.325</td>
+      <td>.376</td>
+      <td>.701</td>
+    </tr>
+    
+    <tr>
+      <td>2050</td>
+      <td>全聯</td>
+      <td>135</td>
+      <td>496</td>
+      <td>449</td>
+      <td>129</td>
+      <td>26</td>
+      <td>2</td>
+      <td>3</td>
+      <td>37</td>
+      <td>42</td>
+      <td>13</td>
+      <td>168</td>
+      <td>86</td>
+      <td>41</td>
+      <td>4</td>
+      <td>2</td>
+      <td>.287</td>
+      <td>.346</td>
+      <td>.374</td>
+      <td>.720</td>
+    </tr>
+    
+    <tr>
+      <td>2051</td>
+      <td>全聯</td>
+      <td>136</td>
+      <td>562</td>
+      <td>508</td>
+      <td>136</td>
+      <td>29</td>
+      <td>3</td>
+      <td>17</td>
+      <td>72</td>
+      <td>81</td>
+      <td>7</td>
+      <td>222</td>
+      <td>129</td>
+      <td>49</td>
+      <td>3</td>
+      <td>2</td>
+      <td>.268</td>
+      <td>.331</td>
+      <td>.437</td>
+      <td>.768</td>
+    </tr>
+ 
+    <tr class="career">
+      <td colspan="2">通算成績</td>
+      <td>489</td>
+      <td>1888</td>
+      <td>1721</td>
+      <td>464</td>
+      <td>86</td>
+      <td>8</td>
+      <td>32</td>
+      <td>166</td>
+      <td>184</td>
+      <td>45</td>
+      <td>662</td>
+      <td>354</td>
+      <td>146</td>
+      <td>15</td>
+      <td>6</td>
+      <td>.270</td>
+      <td>.326</td>
+      <td>.385</td>
+      <td>.711</td>
+    </tr>
+
+      <!-- 成績資料保持原本內容 -->
+      <!-- 這裡略去為簡潔，可直接保留你原本 table 內容 -->
+    </tbody>
+    </table>
+  </div>
+
+  <!-- 個人獎項 -->
+  <div class="section">
+    <h2>個人獎項</h2>
+    （尚無）
+  </div>
+
+  <!-- 特殊事蹟 -->
+  <div class="section">
+    <h2>特殊事蹟</h2>
+    （尚無）
+  </div>
+
+  <!-- 相關新聞 -->
+  <div class="section">
+    <h2>相關新聞</h2>
+    <a href="#"></a><br>
+    <a href="#"></a>
+  </div>
+
+</div>
+
+
+</body>
+</html>
