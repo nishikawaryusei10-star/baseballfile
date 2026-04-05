@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> 球員資料｜棒球維基館 </title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background: #ffffff;
+  color: #111827;
+  line-height: 1.6;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 80px; /* 關鍵 */
+}
+
+html, body {
+  height: auto;
+  overflow-y: auto;
+}
+
+/* ===== 橫幅照片 ===== */
+.banner-photo {
+  width: 100%;
+  height: 320px;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* ===== 頁首 ===== */
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header .sub {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* ===== 主版面 ===== */
+.section {
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-left: 4px solid #111827;
+  padding-left: 8px;
+}
+
+/* ===== 頂部導覽列 ===== */
+.topnav {
+  display: flex;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 3px solid #e5e7eb;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.topnav a {
+  color: #006000;
+  font-weight:450;
+}
+
+.topnav a:hover {
+  color: #1d4ed8;
+}
+
+/* ===== 介紹 ===== */
+.infobox {
+  float: right;
+  width: 290px;
+  border: 1px solid #d1d5db;
+  margin-left: 20px;
+  background: #f9fafb;
+  padding: 10px;
+  font-size: 0.9rem;
+}
+.infobox img {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  background: #fff;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.infobox-title {
+  background: #BEBEBE; /* 可以改成球隊代表色 */
+  color: #FFFFFF;
+  text-align: center;
+  padding: 3.5px;
+  font-weight: bold;
+}
+
+.infobox-title1 {
+  background: #A5D8FF; /* 可以改成球隊代表色 */
+  color: #000000;
+  text-align: center;
+  padding: 3.5px;
+  font-weight: bold;
+}
+
+/* 吉祥物專用圖框 */
+.mascot-box {
+  float: right;
+  width: 300px;
+  margin-left: 20px;
+  margin-bottom: 15px;
+  border: 1px solid #d1d5db;
+  background: #f9fafb;
+  padding: 8px;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.mascot-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* 清除浮動防止影響下一個標題 */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* 手機版適應 */
+@media (max-width: 768px) {
+  .mascot-box {
+    float: none;
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+/* ===== 基本資料 ===== */
+.profile {
+  font-size: 0.95rem;
+}
+
+.profile div {
+  padding: 5px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.profile span {
+  display: inline-block;
+  width: 100px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ===== 經歷 ===== */
+.career a {
+  display: inline-block;
+}
+
+.no-break {
+  white-space: nowrap; /* 括號內文字不換行 */
+}
+
+/* ===== 年表 ===== */
+.timeline {
+  font-size: 0.95rem;
+}
+
+.timeline div {
+  margin-bottom: 6px;
+}
+
+.timeline b {
+  display: inline-block;
+  width: 60px;
+}
+
+/* 維基館風格表格 */
+.wikitable {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #aaa;
+  font-size: 0.95rem;
+  margin-top: 10px;
+}
+
+.wikitable th {
+  background: #f2f2f2;
+  border: 1px solid #aaa;
+  padding: 5px;
+  text-align: center;
+  width: 15%; /* 左側標頭寬度 */
+}
+
+.wikitable td {
+  border: 1px solid #aaa;
+  padding: 8px;
+  background: #ffffff;
+}
+
+/* 讓球員名字之間有間隔 */
+.player-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.player-item {
+  white-space: nowrap;
+}
+
+.player-no {
+  font-weight: bold;
+  color: #444;
+  margin-right: 3px;
+}
+
+/* ===== 表格 ===== */
+table.stats {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats th,
+table.stats td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats th {
+  background: #006000;
+  color: #FFD306;
+  font-weight: 600;
+}
+
+table.stats tbody tr:nth-child(even) td {
+  background: #F0FFF0;
+}
+
+table.stats th:nth-child(2),
+table.stats td:nth-child(2) {
+  white-space: nowrap;
+}
+
+.best {
+  font-weight: bold;       /* 加粗字體 */        
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.test {
+  font-weight: bold;       /* 加粗字體 */
+  color: #FF0000;          /* 改成紅色 */
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+/* ===== Footer ===== */
+.footer {
+  border-top: 1px solid #d1d5db;
+  margin-top: 48px;
+  padding-top: 16px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    
+  <nav class="topnav">
+  <a href="../index.html">首頁</a> ⮕ <a href="teams.html">球隊</a> ⮕  <a href="台灣球隊.html">台灣球隊</a> ⮕  <a href="室內棒球聯盟球隊.html">室內棒球聯盟球隊</a> ⮕ <b>北鐵狼</b> </nav>     
+
+  <!-- 頁首 -->
+  <div class="header">
+    <h1>北鐵狼</h1>
+    <div class="sub"> 球隊｜室內棒球聯盟</div>
+  </div>
+
+  <div class="infobox">
+  <div class="infobox-title">北鐵狼 BR Wolves</div>
+  
+  <div class="profile">
+    <div><span>母企業</span>北斗鐵路股份有限公司</div>
+    <div><span>創隊日期</span>2004年7月5日</div>
+  </div>
+   
+   <div class="infobox-title1">隊徽</div>
+   <img src="https://i.ibb.co/G4fjPR13/Gemini-Generated-Image-leywaqleywaqleyw-Photoroom-1.png" alt="隊徽">
+   
+   <div class="infobox-title">分區</div>
+   <div style="font-size: 0.85rem; padding: 8px 0; line-height: 1.4;">
+      室內棒球聯盟中區
+    </div>
+  
+   <div class="infobox-title1">隊名變更史</div>
+   <div style="font-size: 0.85rem; padding: 8px 0; line-height: 1.4;">
+      ・彰化隼鷹（2004～2010）<br>
+      ・彰化巨鷹（2011～2022）<br>
+      ・紹鴻巨鷹（2023～2033）<br>
+      ・北鐵狼（2034～）
+    </div>
+    
+    <div class="infobox-title">主場</div>
+    <div style="font-size: 0.85rem; padding: 8px 0; line-height: 1.4;">
+    彰化小巨蛋（彰化縣彰化市華陽里）
+    <img src="https://i.ibb.co/TBc7HdZb/Gemini-Generated-Image-74tvyw74tvyw74tv-Photoroom.png" alt="隊徽">
+    容納人數：35000人
+    </div>
+    
+    <div class="infobox-title1">退休背號</div>
+    <div style="font-size: 0.85rem; padding: 8px 0; line-height: 1.4;">
+    尚無
+    </div>
+    
+    <div class="infobox-title">冠軍頭銜</div>
+    <div style="font-size: 0.85rem; padding: 8px 0; line-height: 1.4;">
+    ・年度第一：2034、2051<br>
+    ・總冠軍：2028、2038、2048、2050
+    </div>
+    
+    <div class="infobox-title1">退休背號</div>
+    <div class="profile">
+    <div><span>董事長</span>陳紹鴻</div>
+    <div><span>球團領隊</span>林鎮岳</div>
+    <div><span>球團經理</span>張家豪</div>
+    <div><span>總教練</span><a href="../players/王銀鋒.html">王銀鋒</a></div>
+    <div><span>隊長</span><a href="../players/陳振昌.html">陳振昌</a></div>
+  </div>
+    
+    
+ </div>
+
+
+
+  <!-- 簡介 -->
+  <div class="section">
+<b>北鐵狼</b>（英文：Beidou Railway Wolves）是一支台灣的職業棒球隊伍，所屬聯盟為<a href="../league/室內棒球聯盟.html">室內棒球聯盟</a>。<br>
+<br>
+該隊的所屬城市為彰化縣，主場則是位於彰化縣華陽里的<a href="../stadium/彰化小巨蛋.html">彰化小巨蛋</a>，目前與彰化高中青棒隊共用此球場，二軍農場基地以及比賽主場則是位於該縣的北斗鎮<a href="../stadium/北斗棒球運動公園.html">北斗棒球運動公園</a>。<br>
+<br>
+該隊創立於2004年，由彰化縣政府出資領導，並於2006年正式在一軍出賽。直到2023年企業化浪潮才由紹鴻金控接手經營，目前球隊營運、經營則是由紹鴻集團旗下子公司北斗鐵路股份有限公司負責。<br>
+  
+  </div>
+
+  
+   <!-- 球隊歷史 -->
+  <div class="section">
+    <h2>球隊歷史</h2>
+故事要從2002年說起，那是室內棒球聯盟（IBL）成軍十週年的黃金盛世。當時聯盟的人氣與票房正如日中天，時任會長在春季會議上提議擴張球隊版圖，這項計畫獲得了現有球團的一致認可，於是那年五月，彰化縣正式擁有了屬於自己的職棒種子。<br>
+<br>
+然而，這顆種子的成長之路異常艱辛。時光流轉到2014年，當全台灣各地方政府紛紛將球隊經營權轉讓給大型企業以尋求更專業的資源時，彰化縣政府卻陷入了找不到買家的尷尬境地。當時的彰化並非棒球強權之地，優秀人才不斷外流至其他縣市，更致命的是全縣境內竟然找不到一座像樣的職業等級球場。即便聯盟與其他球團極力協調，那時名為「彰化巨鷹」的隊伍依然無人問津。由於缺乏資金，球團開出的待遇難以留人，戰績逐年滑坡，球隊在風雨中搖搖欲墜，直到2022年7月迎來了轉機。<br>
+<br>
+當時，深耕彰化的紹鴻集團在新一代接班人陳紹河的遠見與支持下，決定接手這支聯盟中最後一個企業化的孤兒。紹鴻集團入主後做的第一件大事，就是解決球場問題。他們選定了彰化高中旁的體育館原址，經過多次協商與校方達成共識，這才有了後來的「彰化小巨蛋」。硬體與資源的注入像是一劑強心針，紹鴻巨鷹的表現突飛猛進，從2025年起便成為季後賽常客，更在2028年，靠著蘇盈佳與王銀鋒等黃金一代的崛起，奪下了隊史第一座總冠軍，讓彰化球迷徹底沸騰。<br>
+<br>
+2032年，隨着集團內部調整，董事長陳紹鴻決定將經營權下放給子企業北斗鐵路股份有限公司。當時為了與南部更名的台鋼巨鷹做出區隔，球隊進行了全面性的品牌重塑。2033年的仲夏，新吉祥物「狼」與新隊名「北鐵狼」正式確立，隨後的記者會也標誌著一個全新時代的開啟。北鐵狼繼承了紹鴻時期的強悍班底，並在 2038 年再度登頂奪冠。<br>
+<br>
+然而，沒有任何王朝能逃過換血的痛楚。隨著老將逐漸隱退，新秀成長速度跟不上聯盟競爭，球隊在2039年遭遇戰績大崩盤，隔年甚至落入分區墊底的慘境。就在此時，球團在2041年做出了一個足以改變歷史的決定——延請傳奇名將王銀鋒接任總教練。王銀鋒組建了一套極重養成的教練團，在隨後幾年的選秀中精準獵才。這批年輕戰力在2047年後徹底成熟，帶領北鐵狼連續五年殺進季後賽，並於2048年與2050年兩度封王，重新建立了屬於鋼鐵狼群的統治。<br>
+<br>
+但在這輝煌背後，挑戰依然如影隨形。由於北鐵狼培養出的主力球員極具市場價值，球團時常面臨留不住人的壓力。到了2052年，隨著經營預算的緊縮，多位自由球員主力相繼離去，這支剛經歷過巔峰的狼群再次站在了命運的十字路口。這座鋼鐵王朝是否能延續下去，全看他們如何在資源有限的情況下，再次磨利狼群的獠牙，在2052年的軌道上續寫傳奇。
+  
+  </div>  
+  
+  <!-- 成員 -->
+  <div class="section">
+  <h2>現役成員</h2>
+  <table class="wikitable">
+    <tr>
+      <th>教練團</th>
+      <td>
+        <div class="player-list">
+          <span class="player-item"><span class="player-no">88</span><a href="#">王銀鋒</a>（總教練）</span>
+          <span class="player-item"><span class="player-no">71</span><a href="#">余信德</a>（內野教練）</span>
+          <span class="player-item"><span class="player-no">99</span>張家豪（投捕教練）</span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th>投手</th>
+      <td>
+        <div class="player-list">
+          <span class="player-item"><span class="player-no">18</span><a href="#">林尚軒</a></span>
+          <span class="player-item"><span class="player-no">19</span>陳大豐</span>
+          <span class="player-item"><span class="player-no">21</span>王小明</span>
+          <span class="player-item"><span class="player-no">58</span>李承祐</span>
+          <span class="player-item"><span class="player-no">44</span>曾峻岳</span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th>捕手</th>
+      <td>
+        <div class="player-list">
+          <span class="player-item"><span class="player-no">02</span><a href="#">陳振昌</a></span>
+          <span class="player-item"><span class="player-no">12</span>張進德</span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th>內野手</th>
+      <td>
+        <div class="player-list">
+          <span class="player-item"><span class="player-no">06</span>岳東華</span>
+          <span class="player-item"><span class="player-no">13</span>孫易磊</span>
+          <span class="player-item"><span class="player-no">24</span>許基宏</span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th>外野手</th>
+      <td>
+        <div class="player-list">
+          <span class="player-item"><span class="player-no">31</span>詹子賢</span>
+          <span class="player-item"><span class="player-no">07</span>陳子豪</span>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+  
+
+  <!-- 應援風格 -->
+  <div class="section">
+    <h2>應援風格</h2>
+應援口號以簡短、低沈、有力量為主，使用以大型工業油桶鼓和金屬打擊樂器為主，因此多數球員應援曲是用唱的，而不是放電子樂。<br>
+<br>
+【藍閃光應援】：在球隊守護者上場時，球迷手上的「靛藍色呼吸燈」會亮起，配合燈光秀，象徵著列車進站前的信號燈，暗示打者「此路不通，準備離場」。<br>
+<br>
+【坦克過境】：當關鍵時刻，全場兩萬名球迷不喊口號，而是隨著大螢幕的燈光節奏，整齊劃一地原地踏步。<br>
+<br>    
+  </div>
+  
+  
+  <!-- 吉祥物 -->
+  <div class="section clearfix">
+    <h2>吉祥物</h2>
+    
+    <div class="mascot-box">
+      <img src="https://i.ibb.co/4wzBnyrG/2026-04-04-9-02-32.png" alt="吉祥物">
+      <div>北鐵狼吉祥物沃夫、阿軌（攝於2048年7月25日）</div>
+    </div>
+    
+    <p>球隊有兩個吉祥物「沃夫」、「阿軌」，沃夫，一隻擁有圓滾滾大眼睛、毛色是淺灰色的Q版小狼。他穿著縮小版的00號北鐵狼深灰色球衣，頭上戴著一頂歪斜的棒球帽，該吉祥物於2034年北鐵狼成立記者會時所公布。</p>
+    
+    <p>阿軌以北鐵軌道為靈感的擬人化精靈。身體像一節圓潤的子彈列車頭，側面有兩隻細細的小手，腳下踩著溜冰鞋般的軌道輪。此吉祥物是軌道主題日特別的吉祥物，首次發表於2041年7月。</p>
+
+
+  <!-- 相關新聞 -->
+  <div class="section">
+    <h2>相關新聞</h2>
+    <a href="#"></a><br>
+    <a href="#"></a>
+  </div>
+
+</div>
+
+
+</body>
+</html>
