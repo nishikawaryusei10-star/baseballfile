@@ -242,20 +242,33 @@ html, body {
   margin-right: 3px;
 }
 
-/* 影片容器：保持 16:9 比例 */
-.video-container {
-  position: relative;
-  width: 100%;
-  max-width: 800px; /* 限制最大寬度，避免在電腦螢幕上過大 */
-  padding-bottom: 56.25%; /* 16:9 比例計算 */
-  height: 0;
-  overflow: hidden;
-  margin: 15px 0;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+/* 影片浮動側邊欄 (模仿維基館圖片框) */
+.video-side-box {
+  float: right;      /* 靠右浮動 */
+  width: 320px;       /* 限制寬度，這大約是原本 infobox 的寬度 */
+  margin-left: 20px;  /* 與左側文字保持距離 */
+  margin-bottom: 15px;
+  border: 1px solid #d1d5db;
+  background: #f9fafb;
+  padding: 8px;
+  font-size: 0.85rem;
+  text-align: center;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-.video-container iframe {
+/* 影片容器：保持 16:9 比例並填滿側邊欄 */
+.video-side-box .video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 比例 */
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 8px; /* 與下方圖說保持距離 */
+  border-radius: 2px;
+}
+
+.video-side-box .video-wrapper iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -264,13 +277,22 @@ html, body {
   border: 0;
 }
 
-/* 影片下方的圖說樣式 */
-.video-caption {
-  font-size: 0.85rem;
+/* 影片下方圖說 */
+.video-side-box .caption {
   color: #6b7280;
-  margin-top: -10px;
-  margin-bottom: 20px;
-  text-align: left;
+  line-height: 1.4;
+  text-align: left; /* 圖說靠左對齊 */
+  padding: 0 4px;
+}
+
+/* 手機版適應：當螢幕太窄時，影片自動變回滿寬並取消浮動 */
+@media (max-width: 768px) {
+  .video-side-box {
+    float: none;
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
 }
 
 /* ===== 表格 ===== */
@@ -573,17 +595,20 @@ table.stats td:nth-child(2) {
       <div>北鐵藍閃光應援（攝於2050年8月14日）</div>
     </div>
 
-    <div class="video-container">
-    <iframe 
-      src="https://www.youtube.com/embed/HxD8YP1EiT4" 
-      title="北鐵狼應援影片" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-      allowfullscreen>
-    </iframe>
+    <div class="video-side-box">
+    <div class="video-wrapper">
+      <iframe 
+        src="https://www.youtube.com/embed/HxD8YP1EiT4?start=211" 
+        title="北鐵狼相關影片" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+    <div class="caption">
+      ▲ 北鐵狼相關賽事精華（從 3:31 處開始）
+    </div>
   </div>
-  <div class="video-caption">▲ 2051年北鐵狼奪冠戰精華：鋼鐵狼群的最後一擊</div>
-</div>
-
+    
 <p>應援口號以簡短、低沈、有力量為主，使用以大型工業油桶鼓和金屬打擊樂器為主，因此多數球員應援曲是用唱的，而不是放電子樂。</p><br>
 <br>
 【藍閃光應援】：在球隊守護者上場時，球迷手上的「靛藍色呼吸燈」會亮起，配合燈光秀，象徵著列車進站前的信號燈，暗示打者「此路不通，準備離場」。<br>
