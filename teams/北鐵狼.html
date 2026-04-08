@@ -242,6 +242,37 @@ html, body {
   margin-right: 3px;
 }
 
+/* 影片容器：保持 16:9 比例 */
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* 限制最大寬度，避免在電腦螢幕上過大 */
+  padding-bottom: 56.25%; /* 16:9 比例計算 */
+  height: 0;
+  overflow: hidden;
+  margin: 15px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* 影片下方的圖說樣式 */
+.video-caption {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-top: -10px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
 /* ===== 表格 ===== */
 table.stats {
   width: 65%;
@@ -541,6 +572,12 @@ table.stats td:nth-child(2) {
       <img src="https://i.ibb.co/gL7hmh8H/2026-04-05-6-24-07.png" alt="應援">
       <div>北鐵藍閃光應援（攝於2050年8月14日）</div>
     </div>
+
+    <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/z-SZbpyThtw?si=1F2JdL04inRmOfVm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+  <div class="video-caption">▲ 2051年北鐵狼奪冠戰精華：鋼鐵狼群的最後一擊</div>
+</div>
 
 <p>應援口號以簡短、低沈、有力量為主，使用以大型工業油桶鼓和金屬打擊樂器為主，因此多數球員應援曲是用唱的，而不是放電子樂。</p><br>
 <br>
