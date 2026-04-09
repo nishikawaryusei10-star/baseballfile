@@ -341,14 +341,70 @@ table.stats td:nth-child(2) {
   padding: 2px 4px;
 }
 
-/* ===== Footer ===== */
+/* ===== 頁腳設計 ===== */
 .footer {
+  margin-top: 60px;
+  padding: 30px 0;
   border-top: 1px solid #d1d5db;
-  margin-top: 48px;
-  padding-top: 16px;
+  background-color: #f9fafb; /* 淺灰色底，區隔主內容 */
+  color: #4b5563;
+  font-size: 0.85rem;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 20px;
+}
+
+.footer-section h4 {
+  color: #111827;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+  border-bottom: 2px solid #e5e7eb;
+  display: inline-block;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 6px;
+}
+
+.footer-links a {
+  color: #4b5563;
+}
+
+.footer-links a:hover {
+  color: #1d4ed8;
+}
+
+.footer-bottom {
   text-align: center;
+  width: 100%;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #e5e7eb;
   font-size: 0.8rem;
-  color: #6b7280;
+}
+
+.cc-logo {
+  vertical-align: middle;
+  height: 20px;
+  margin-right: 5px;
 }
 </style>
 </head>
@@ -662,4 +718,41 @@ table.stats td:nth-child(2) {
 
 
 </body>
+
+<footer class="footer">
+  <div class="footer-content">
+    
+    <div class="footer-section">
+      <h4>關於本站</h4>
+      <p>本頁面為<b>室內棒球聯盟（IBL）</b>官方授權資料庫，收錄北鐵狼隊之詳盡隊史、成員名單與戰績資料。</p>
+    </div>
+
+    <div class="footer-section">
+      <h4>快速導覽</h4>
+      <ul class="footer-links">
+        <li><a href="#">聯盟首頁</a></li>
+        <li><a href="#">最近賽事紀錄</a></li>
+        <li><a href="#">球員註冊規定</a></li>
+        <li><a href="#">球場導覽：彰化小巨蛋</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>內容授權</h4>
+      <p>
+        本站文字內容採用 <br>
+        <b>CC BY-NC-SA 3.0 台灣</b> 授權。 <br>
+        非商業性使用、相同方式分享。
+      </p>
+    </div>
+
+    <div class="footer-bottom">
+      <p>
+        © 2026 棒球維基館 (TwBsBall) ． 所有內容由<b>室內棒球運動愛好者</b>共同維護 <br>
+        本站資料僅供學術研究與棒球運動推廣使用
+      </p>
+    </div>
+  </div>
+</footer>
+    
 </html>
