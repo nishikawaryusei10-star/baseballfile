@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> 彰化小巨蛋 </title>
+
+
+<style>
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background: #ffffff;
+  color: #111827;
+  line-height: 1.6;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 80px; /* 關鍵 */
+}
+
+html, body {
+  height: auto;
+  overflow-y: auto;
+}
+
+/* ===== 橫幅照片 ===== */
+.banner-photo {
+  width: 100%;
+  height: 320px;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* ===== 頁首 ===== */
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header .sub {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* ===== 主版面 ===== */
+.section {
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-left: 4px solid #111827;
+  padding-left: 8px;
+}
+
+/* ===== 頂部導覽列 ===== */
+.topnav {
+  display: flex;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 3px solid #e5e7eb;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.topnav a {
+  color: #006000;
+  font-weight:450;
+}
+
+.topnav a:hover {
+  color: #1d4ed8;
+}
+
+/* ===== 介紹 ===== */
+.infobox {
+  float: right;
+  width: 290px;
+  border: 1px solid #d1d5db;
+  margin-left: 20px;
+  background: #f9fafb;
+  padding: 10px;
+  font-size: 0.9rem;
+}
+.infobox img {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  background: #fff;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.infobox-title {
+  background: #BEBEBE; /* 可以改成球隊代表色 */
+  color: #FFFFFF;
+  text-align: center;
+  padding: 3.5px;
+  font-weight: bold;
+}
+
+.infobox-title1 {
+  background: #A5D8FF; /* 可以改成球隊代表色 */
+  color: #000000;
+  text-align: center;
+  padding: 3.5px;
+  font-weight: bold;
+}
+
+/* 吉祥物專用圖框 */
+.mascot-box {
+  float: right;
+  width: 300px;
+  margin-left: 20px;
+  margin-bottom: 15px;
+  border: 1px solid #d1d5db;
+  background: #f9fafb;
+  padding: 8px;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.mascot-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* 清除浮動防止影響下一個標題 */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* 手機版適應 */
+@media (max-width: 768px) {
+  .mascot-box {
+    float: none;
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+/* ===== 基本資料 ===== */
+.profile {
+  font-size: 0.95rem;
+}
+
+.profile div {
+  padding: 5px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.profile span {
+  display: inline-block;
+  width: 100px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ===== 經歷 ===== */
+.career a {
+  display: inline-block;
+}
+
+.no-break {
+  white-space: nowrap; /* 括號內文字不換行 */
+}
+
+/* ===== 年表 ===== */
+.timeline {
+  font-size: 0.95rem;
+}
+
+.timeline div {
+  margin-bottom: 6px;
+}
+
+.timeline b {
+  display: inline-block;
+  width: 60px;
+}
+
+/* 維基館風格表格 */
+.wikitable {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #aaa;
+  font-size: 0.95rem;
+  margin-top: 10px;
+}
+
+.wikitable th {
+  background: #f2f2f2;
+  border: 1px solid #aaa;
+  padding: 5px;
+  text-align: center;
+  width: 15%; /* 左側標頭寬度 */
+}
+
+.wikitable td {
+  border: 1px solid #aaa;
+  padding: 8px;
+  background: #ffffff;
+}
+
+/* 讓球員名字之間有間隔 */
+.player-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.player-item {
+  white-space: nowrap;
+}
+
+.player-no {
+  font-weight: bold;
+  color: #444;
+  margin-right: 3px;
+}
+
+/* ===== 照片專區網格 ===== */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* 自動填滿，最小280px */
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.photo-item {
+  border: 1px solid #d1d5db;
+  background: #f9fafb;
+  padding: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.photo-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* 讓不同比例的照片都能填滿方框不變形 */
+  display: block;
+  border: 1px solid #e5e7eb;
+}
+
+.photo-caption {
+  padding: 10px 4px 4px 4px;
+  font-size: 0.85rem;
+  color: #374151;
+  line-height: 1.5;
+}
+
+.photo-caption b {
+  display: block;
+  color: #111827;
+  margin-bottom: 4px;
+}
+
+.photo-caption small {
+  color: #6b7280;
+  display: block;
+  margin-top: 5px;
+  border-top: 1px dashed #d1d5db;
+  padding-top: 5px;
+}
+
+/* 影片浮動側邊欄 (模仿維基館圖片框) */
+.video-side-box {
+  float: right;      /* 靠右浮動 */
+  width: 320px;       /* 限制寬度，這大約是原本 infobox 的寬度 */
+  margin-left: 20px;  /* 與左側文字保持距離 */
+  margin-bottom: 15px;
+  border: 1px solid #d1d5db;
+  background: #f9fafb;
+  padding: 8px;
+  font-size: 0.85rem;
+  text-align: center;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* 影片容器：保持 16:9 比例並填滿側邊欄 */
+.video-side-box .video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 比例 */
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 8px; /* 與下方圖說保持距離 */
+  border-radius: 2px;
+}
+
+.video-side-box .video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* 影片下方圖說 */
+.video-side-box .caption {
+  color: #6b7280;
+  line-height: 1.4;
+  text-align: left; /* 圖說靠左對齊 */
+  padding: 0 4px;
+}
+
+/* 手機版適應：當螢幕太窄時，影片自動變回滿寬並取消浮動 */
+@media (max-width: 768px) {
+  .video-side-box {
+    float: none;
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+}
+
+/* ===== 表格 ===== */
+table.stats {
+  width: 65%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats th,
+table.stats td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats th {
+  background: #D0D0D0;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+table.stats tbody tr:nth-child(even) td {
+  background: #F0F0F0;
+}
+
+table.stats th:nth-child(2),
+table.stats td:nth-child(2) {
+  white-space: nowrap;
+}
+
+.best {
+  font-weight: bold;       /* 加粗字體 */        
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.test {
+  font-weight: bold;       /* 加粗字體 */
+  color: #FF0000;          /* 改成紅色 */
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+/* ===== 頁腳設計 ===== */
+.footer {
+  margin-top: 60px;
+  padding: 40px 0 20px 0;
+  border-top: 1px solid #d1d5db;
+  background-color: #f3f4f6; /* 淺灰色底 */
+  color: #4b5563;
+  font-size: 0.85rem;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 25px;
+}
+
+.footer-section h4 {
+  color: #111827;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #e5e7eb;
+  display: inline-block;
+}
+
+/* 列表樣式 */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: #1d4ed8;
+}
+
+.footer-bottom {
+  text-align: center;
+  width: 100%;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #e5e7eb;
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    
+ <nav class="topnav">
+  <a href="../index.html">首頁</a> ⮕ <a href="tadium.html">球場</a> ⮕    <a href="台灣球場一覽表.html">台灣球場一覽表</a> ⮕ <b>彰化小巨蛋</b> </nav>     
+
+  <div class="header">
+    <h1>彰化小巨蛋</h1>
+    <div class="sub"> 主場球場｜室內棒球聯盟 (IBL)</div>
+  </div>
+
+  <div class="infobox">
+    <div class="infobox-title">彰化小巨蛋<br><small>Changhua Dome</small></div>
+    <img src="https://i.ibb.co/Xrbqj0s1/2026-04-10-2-06-55.png" alt="球場外觀">
+    
+    <div class="infobox-title1">基本資料</div>
+    <div class="profile">
+      <div><span>正式名稱</span>彰化小巨蛋</div>
+      <div><span>營運單位</span>北斗鐵路股份有限公司</div>
+      <div><span>所有者</span>北鐵公司、彰化高中</div>
+      <div><span>動工日期</span>2023年4月</div>
+      <div><span>啟用日期</span>2027年7月</div>
+      <div><span>建設費用</span>約新台幣45億元</div>
+      <div><span>設計者</span>阿爾建設公司</div>
+    </div>
+
+    <div class="infobox-title">球場規格</div>
+    <div class="profile">
+      <div><span>容納人數</span>35,000人</div>
+      <div><span>左/右外野</span>375英呎</div>
+      <div><span>中外野</span>405英呎</div>
+      <div><span>草皮種類</span>極光II型人工草皮</div>
+    </div>
+  
+     <div class="infobox-title1">隊伍、比賽</div>
+    <div style="font-size: 0.85rem; padding: 8px 0; line-height: 1.4;">
+      ・<a href="../teams/北鐵狼.html">北鐵狼隊</a><br>
+      ・<a href="../teams/彰化高中青棒隊.html">彰化高中青棒隊</a><br>
+      ・玉山盃全國青棒錦標賽（第22屆至今）<br>
+      ・全台大專院挑戰賽（第1屆至今）<br>
+      ・黑熊旗全國高中棒球聯賽八強賽～決賽（第14屆至今）<br>
+    </div>
+    
+</div>
+
+  <div class="section">
+    <h2>球場簡介</h2>
+<p>
+<b>彰化小巨蛋</b>是位於彰化縣彰化市的棒球場，是彰化縣第一座符合職棒規格的棒球場。目前為室內棒球聯盟<a href="../teams/北鐵狼.html">北鐵狼隊</a>的主場。
+<br>
+<br>
+以其獨特的「半地穴式」建築式計聞名，有效降低了巨型建築對周邊社區的視覺壓迫感
+。
+</p>
+  </div>
+  
+  
+   <div class="section">
+    <h2>球場歷史</h2>
+<p>
+2016年，彰化縣立彰化高級中學（簡稱彰化高中）因校內室內運動空間不足，提出興建一座全功能綜合體育館的計畫。由於當時教育部已撥發相關預算，該計畫被視為學校發展的重要里程碑。然而，該計畫在校務會議上多次被否決，原因包括：校方缺乏經營大型體育場館的經驗與資源、大型體育館營運可能帶來的噪音與交通問題，恐干擾教學，加上校內傳統派老師為保留日式宿舍而反對。由於校務會議遲遲未能通過，該計畫被迫擱置。數億元的預算因長期未能執行而被繳回國庫，而計畫預定地則淪為雜草叢生、荒廢多年的空地。<br>
+<br>
+2022年，紹鴻金控（現更名為紹鴻集團）宣布收購IBL聯盟球隊，並正式更名為「紹鴻巨鷹隊」。為了興建現代化的主場，紹鴻金控將目標瞄準了彰化高中這塊荒廢已久的精華地。面對校務會議根深蒂固的反對聲浪，紹鴻金控董事長陳紹鴻提出了一項前所未有的「共享哲學」談判方案，以BOT模式與校方進行合作，包括承諾無償在校園另一側捐建一座高規格的數位圖書館與藝術中心、球場完工後，非球季期間，場館設施（包括冷氣空調）將無償開放給彰化高中棒球隊練習使用，校慶與畢業典禮等大型活動亦享有優先使用權、成立「體育產業管理」獎學金，為彰化高中學生提供職棒球團的實習機會，並促進在地體育產業發展。在經歷數次激烈的辯論與妥協後，紹鴻金控的誠意終於打動了部分原本持反對意見的教職員與校友。2023年除夕前夕，彰化高中校務會議以微弱票數通過了此項合作案。這塊沉睡六年的土地終於迎來了生機。<br>
+<br>
+彰化小巨蛋的建築設計由紹鴻集團重金禮聘的傳奇建築師——阿爾擔綱。為了應對「環境衝突」的質疑，阿爾採用了多項前衛設計。施工期間，工程團隊面臨了巨大的挑戰，包括下挖工程觸及八卦山礫石層導致的滲水問題。紹鴻集團甚至親自調派北鐵軌道的工程技術團隊介入加固，意外地將軌道鋪設技術應用於球場基座，強化了其抗震與穩定性。2027年，球場正式完工。<br>
+<br>
+2032年，隨著球隊經營權轉交給北鐵軌道公司，球場主管單位正式變更為北鐵公司。為了提升場館價值與便利性，北鐵公司主導了多項硬體進化，最大的改造是北鐵強勢興建了一條名為「小巨蛋支線」的球場支線鐵路，並將其直接引進球場三壘側。這讓球迷能搭乘特裝列車直接抵達球場內部看台，成為全球罕見的「火車停在草皮邊」奇觀。
+<br>
+<br>
+</p>
+  </div>
+
+  <div class="section">
+    <h2>北鐵狼的五月大遷徙</h2>
+<p>
+陳紹河董事長與彰化高中在條款中明確提到：「本場館雖為職棒主場，但本質上仍為彰化高中之教學與體育發展空間；每年五月全國青棒選拔賽（玉山盃）期間，校方擁有場館之絕對優先使用權，球團必須無條件配合外借。」因此ㄧ每年五月，當玉山盃青棒選拔賽的旗幟在彰化小巨蛋升起，這群職業球星就得像遊牧民族一樣，收拾行囊展開長達一個月的客場征途。王銀鋒教練曾開玩笑說，五月的北鐵狼不是在比賽，就是在前往其他城市的路上。當五月底，那聲熟悉的汽笛聲再度於彰化小巨蛋響起，代表「流浪狼群」回歸，那場回家的首戰票房，往往是全年度除了總冠軍賽以外最難搶的一張票。<br>
+<br>
+<del>某不具名財經評論員曾說：北鐵公司利用這一個月的客場征途，正好可以進行
+球場的大規模年度歲修，並將這筆龐大的「場館維護費」與「球員差旅費」集中在五
+月申報，以達成財務操作上的避稅極大化。<del>
+
+</p>
+
+  </div>
+
+  <div class="section">
+    <h2>交通資訊</h2>
+    <table class="wikitable">
+      <tr>
+        <th>鐵路</th>
+        <td>從「彰化車站」或「新烏日站」（高鐵台中站）搭乘北斗鐵路公司特別開行的【藍閃光應援列車】。該列車會駛入專屬的「小巨蛋站」，月台設於球場三壘側二樓，出站即進入球場看台廊道。</td>
+      </tr>
+      
+      <tr>
+        <th>接駁巴士</th>
+        <td>每逢比賽日，球團會於「彰化車站」前站出口設置免費接駁巴士，直達球場正門口</td>
+      </tr>
+      
+      <tr>
+        <th>公車</th>
+        <td>可搭乘彰化客運往「彰化高中」或「彰化縣立體育場」方向之班次，於「彰化高中站」下車，步行約 5 分鐘即可抵達。</td>
+      </tr>
+      
+      <tr>
+        <th>自行開車</th>
+        <td>國道一號彰化交流道下，往彰化市區方向行駛，延著「八卦山風景區」指標即可看見球場巨大的藍色穹頂。球場設有地下停車場，提供約2000個汽車停車位。請注意，由於下挖式設計，停車場入口位於球場北側，且賽前一小時往往會滿位。</td>
+      </tr>
+      
+      <tr>
+        <th>彰中學生教職員專屬</th>
+        <td>彰化高中學生可直接從校園後方的「共享廊道」步行進入球場二樓，該廊道僅開放給持有學生證或教職員證者。</td>
+      </tr>
+      
+      
+    </table>
+  </div>
+  
+  <div class="section">
+  <h2>球場巡禮</h2>
+  <div class="photo-grid">
+    
+    <div class="photo-item">
+      <img src="https://i.ibb.co/nqnQP4Bj/2026-04-10-8-21-25.png" alt="草皮細節">
+      <div class="photo-caption">
+        <b>空拍圖</b>
+        球場外巨蛋空拍圖
+        <small>攝於2049年春訓期間</small>
+      </div>
+    </div>  
+    
+    <div class="photo-item">
+      <img src="https://i.ibb.co/VcBfSHRR/2026-04-10-8-16-15.png" alt="球場內部">
+      <div class="photo-caption">
+        <b>全景視野</b>
+        從本壘後方看台望向中外野，展示了彰化小巨蛋獨特的鋼骨結構天頂。
+        <small>攝影者：王小明（2050/06/23）</small>
+      </div>
+    </div>
+    
+    <div class="photo-item">
+      <img src="https://i.ibb.co/Mk6mJ44w/2026-04-10-2-39-57.png" alt="球場內部">
+      <div class="photo-caption">
+        <b>大廳</b>
+        巨蛋大廳，包含捷運快速通關處、球賽售票處、專賣店
+        <small>來源：北鐵狼球團官方提供</small>
+      </div>
+    </div>
+
+    <div class="photo-item">
+      <img src="https://i.ibb.co/DPP9mJVY/2026-04-10-2-42-07.png" alt="球場座位">
+      <div class="photo-caption">
+        <b>北鐵VIP專屬包廂</b>
+        位於本壘側後方的VIP專屬包廂
+        <small>來源：北鐵狼球團官方提供</small>
+      </div>
+    </div>
+    
+    <div class="photo-item">
+      <img src="https://i.ibb.co/zVRLjcxG/2026-04-10-8-48-41.png" alt="草皮細節">
+      <div class="photo-caption">
+        <b>球場後方</b>
+        彰化高中共享道（快速通關）
+        <small>來源：彰化高中提供</small>
+      </div>
+    </div>  
+
+  </div>
+</div>
+
+
+</div>
+
+
+</body>    
+
+
+<footer class="footer">
+  <div class="footer-content">
+    
+    <div class="footer-section">
+      <h4>關於本站</h4>
+      <p>
+        本頁面為<b>室內棒球聯盟（IBL）</b>官方授權資料庫。<br>
+        收錄彰化小巨蛋及北鐵狼隊之詳盡史料。
+      </p>
+    </div>
+
+    <div class="footer-section">
+      <h4>快速導覽</h4>
+      <ul class="footer-links">
+        <li><a href="#">聯盟首頁</a></li>
+        <li><a href="#">最近賽事紀錄</a></li>
+        <li><a href="#">球場租借規定</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>球場位置</h4>
+      <address style="font-style: normal;">
+        彰化縣彰化市華陽里南郭路一段 <br>
+        電話：(04) 722-01341 <br>
+        電郵：<a href="mailto:service@brwolves.com">service@brwolves.com</a>
+      </address>
+    </div>
+
+    <div class="footer-bottom">
+      <p>
+        <strong>© 2052棒球維基館 (TwBsBall)</strong><br>
+        <small>內容採用CC BY-NC-SA3.0台灣授權。非商業性使用、相同方式分享。</small><br>
+        <i>本站資料僅供學術研究與棒球運動推廣使用，與實際政府機構無關。</i>
+      </p>
+    </div>
+  </div>
+</footer>
+
+</html>
