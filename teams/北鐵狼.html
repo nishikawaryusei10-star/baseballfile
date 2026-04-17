@@ -320,60 +320,55 @@ html, body {
   list-style: none;
 }
 
-/* 十年一格的圓角容器 */
+/* 職業球隊色系：這裡以藍灰色系為例，你可以自行替換隊色 */
+:root {
+  --pro-primary: #334155; /* 職業質感深灰 */
+  --pro-accent: #3b82f6;  /* 亮點藍 */
+  --pro-bg: #f8fafc;
+}
+
 .decade-box {
   max-width: 700px;
-  margin-bottom: 12px;    /* 增加格子間距 */
+  margin-bottom: 5px;
   border: 1px solid #e2e8f0;
-  border-radius: 12px;    /* 設定明顯的圓角 */
-  background-color: #ffffff;
-  overflow: hidden;       /* 重要：確保內容不會超出圓角邊界 */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* 加入淡淡的陰影 */
-  transition: transform 0.2s; /* 增加滑鼠移入的小動畫 */
+  border-radius: 4px;
 }
 
-.decade-box:hover {
-  transform: translateY(-2px); /* 滑鼠移上去稍微浮起來 */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* 摺疊箱標題 */
 .decade-summary {
-  background-color: var(--pro-primary, #334155);
+  background-color: var(--pro-primary);
   color: white;
-  padding: 10px 18px;
-  font-size: 1rem;
+  overflow: hidden;
+  padding: 8px 15px;
+  font-size: 0.95rem;
   font-weight: bold;
   cursor: pointer;
   list-style: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
-/* 自定義展開圖示 */
-.decade-summary::after {
-  content: '＋';
-  font-size: 0.8rem;
-  opacity: 0.7;
-}
-
-details[open] .decade-summary::after {
-  content: '－';
-}
-
-/* 內部的表格排版：同樣維持扁平化 */
+/* 職業賽事專用表格：極致扁平化 */
 .pro-table {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.85rem;
 }
 
-.pro-table td, .pro-table th {
-  padding: 8px;
-  border-bottom: 1px solid #f1f5f9;
+.pro-table th {
+  background: #f1f5f9;
+  padding: 6px;
+  border-bottom: 2px solid #cbd5e1;
+  color: #475569;
 }
 
+.pro-table td {
+  padding: 5px 8px;
+  border-bottom: 1px solid #f1f5f9;
+  text-align: center;
+}
+
+/* 強調年度冠亞軍 */
+.champion { background-color: #fef3c7; font-weight: bold; color: #92400e; }
+.playoffs { color: var(--pro-accent); font-weight: 500; }
+  
 /* ===== 表格 ===== */
 table.stats {
   width: 65%;
