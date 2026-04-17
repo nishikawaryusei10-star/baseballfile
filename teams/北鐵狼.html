@@ -296,6 +296,54 @@ html, body {
   }
 }
 
+/* 職業球隊色系：這裡以藍灰色系為例，你可以自行替換隊色 */
+:root {
+  --pro-primary: #334155; /* 職業質感深灰 */
+  --pro-accent: #3b82f6;  /* 亮點藍 */
+  --pro-bg: #f8fafc;
+}
+
+.decade-box {
+  max-width: 700px;
+  margin-bottom: 5px;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+}
+
+.decade-summary {
+  background-color: var(--pro-primary);
+  color: white;
+  padding: 8px 15px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+  list-style: none;
+}
+
+/* 職業賽事專用表格：極致扁平化 */
+.pro-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.pro-table th {
+  background: #f1f5f9;
+  padding: 6px;
+  border-bottom: 2px solid #cbd5e1;
+  color: #475569;
+}
+
+.pro-table td {
+  padding: 5px 8px;
+  border-bottom: 1px solid #f1f5f9;
+  text-align: center;
+}
+
+/* 強調年度冠亞軍 */
+.champion { background-color: #fef3c7; font-weight: bold; color: #92400e; }
+.playoffs { color: var(--pro-accent); font-weight: 500; }
+
 /* ===== 表格 ===== */
 table.stats {
   width: 65%;
@@ -642,6 +690,61 @@ table.stats td:nth-child(2) {
           
     </tbody>
   </table>
+
+  <!-- 歷年成績-->
+  <div class="section">
+  <h2>隊史歷年成績</h2>
+  
+  <details class="decade-box">
+    <summary class="decade-summary">2021 - 2030 年代</summary>
+    <table class="pro-table">
+      <thead>
+        <tr>
+          <th>年度</th>
+          <th>出賽</th>
+          <th>勝-敗-和</th>
+          <th>勝率</th>
+          <th>排名</th>
+          <th>最終賽果</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="champion">
+          <td>2026</td>
+          <td>120</td>
+          <td>72-45-3</td>
+          <td>.615</td>
+          <td>1</td>
+          <td>年度總冠軍</td>
+        </tr>
+        <tr>
+          <td>2025</td>
+          <td>120</td>
+          <td>60-58-2</td>
+          <td>.508</td>
+          <td>3</td>
+          <td class="playoffs">季後挑戰賽出局</td>
+        </tr>
+        <tr>
+          <td>2024</td>
+          <td>120</td>
+          <td>52-68-0</td>
+          <td>.433</td>
+          <td>5</td>
+          <td>未晉級</td>
+        </tr>
+      </tbody>
+    </table>
+  </details>
+
+  <details class="decade-box">
+    <summary class="decade-summary">2011 - 2020 年代</summary>
+    <div style="padding: 10px; text-align: center; color: #64748b;">
+      在此填入該年代的戰績表格...
+    </div>
+  </details>
+
+  </div>
   
 
   <!-- 應援風格 -->
