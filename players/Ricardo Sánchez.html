@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> 球員資料｜棒球維基館 </title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background: #ffffff;
+  color: #111827;
+  line-height: 1.6;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 80px; /* 關鍵 */
+}
+
+html, body {
+  height: auto;
+  overflow-y: auto;
+}
+
+/* ===== 橫幅照片 ===== */
+.banner-photo {
+  width: 100%;
+  height: 320px;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* ===== 頁首 ===== */
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header .sub {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* ===== 主版面 ===== */
+.section {
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-left: 4px solid #111827;
+  padding-left: 8px;
+}
+
+/* ===== 基本資料 ===== */
+.profile {
+  font-size: 0.95rem;
+}
+
+.profile div {
+  padding: 5px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.profile span {
+  display: inline-block;
+  width: 100px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ===== 頂部導覽列 ===== */
+.topnav {
+  display: flex;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 3px solid #e5e7eb;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.topnav a {
+  color: #006000;
+  font-weight:450;
+}
+
+.topnav a:hover {
+  color: #1d4ed8;
+}
+
+/* ===== 經歷 ===== */
+.career a {
+  display: inline-block;
+}
+
+.no-break {
+  white-space: nowrap; /* 括號內文字不換行 */
+}
+
+/* ===== 年表 ===== */
+.timeline {
+  font-size: 0.95rem;
+}
+
+.timeline div {
+  margin-bottom: 6px;
+}
+
+.timeline b {
+  display: inline-block;
+  width: 60px;
+}
+
+/* ===== 表格 ===== */
+table.stats {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats th,
+table.stats td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats th {
+  background: #a71930;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+table.stats tbody tr:nth-child(even) td {
+  background: #f2d0d4;
+}
+
+table.stats th:nth-child(2),
+table.stats td:nth-child(2) {
+  white-space: nowrap;
+}
+
+/* ===== 表格 ===== */
+table.stats1 {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats1 th,
+table.stats1 td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats1 th {
+  background: #6e95e8;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+table.stats1 tbody tr:nth-child(even) td {
+  background: #e3ecfd;
+}
+
+table.stats1 th:nth-child(2),
+table.stats1 td:nth-child(2) {
+  white-space: nowrap;
+}
+
+/* ===== 表格 ===== */
+table.stats2 {
+  width: 80%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats2 th,
+table.stats2 td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats2 th {
+  background: #FF00FF;
+  color: #FFFF37;
+  font-weight: 600;
+}
+
+table.stats2 tbody tr:nth-child(even) td {
+  background: #FFE6FF;
+}
+
+table.stats2 th:nth-child(2),
+table.stats2 td:nth-child(2) {
+  white-space: nowrap;
+}
+
+.best {
+  font-weight: bold;       /* 加粗字體 */        
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.test {
+  font-weight: bold;       /* 加粗字體 */
+  color: #FF0000;          /* 改成紅色 */
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+/* ===== Footer ===== */
+.footer {
+  border-top: 1px solid #d1d5db;
+  margin-top: 48px;
+  padding-top: 16px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #6e95e8;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  
+  <nav class="topnav">
+  <a href="../index.html">首頁</a> ⮕ <a href="players_overview.html">球員</a> ⮕  <a href="多明尼加球員.html">多明尼加球員</a> ⮕  <b>Ricardo Sánchez</b> </nav>  
+  
+  <!-- 頁首 -->
+  <div class="header">
+    <h1>Ricardo Sánchez</h1>
+    <div class="sub"> Ricardo Sánche｜外野手（CF）</div>
+  </div>
+
+  <!-- 基本資料 -->
+  <div class="section">
+    <h2>基本資料</h2>
+    <div class="profile">
+      <div><span>綽號</span>老桑</div>
+      <div><span>出生日期</span>2001 年 7 月 19 日（51歲）</div>
+      <div><span>身高體重</span>184 公分／79 公斤</div>
+      <div><span>出生地</span>多明尼加・聖多明哥</div>
+      <div><span>投打習慣</span>右投左打</div>
+      <div><span>守備位置</span>外野手 CF RF</div>
+      <div><span>職棒選秀</span>2017年美國職棒亞利桑那響尾蛇隊自由契約球員</div>
+      <div><span>原名</span><b>Ricardo Antonio Sánchez</b></div>
+    </div>
+  </div>
+
+  <!-- 球員經歷 -->
+  <div class="section">
+    <h2>球員經歷</h2>
+    <div class="career">
+      高雄市國立高雄大學棒球隊<br>
+      美國職棒亞利桑那響尾蛇隊（小聯盟～大聯盟，2017/04～2027）<br>
+      美國職棒舊金山巨人隊（小聯盟～大聯盟，2028）<br>
+      <a href="#">室內棒球聯盟</a><a href="#">南亞海神隊</a>（2029～2032）<br>
+      美國職棒亞利桑那響尾蛇隊國際偵查與運科顧問（2037～2041）<br>
+      矽谷科技公司的生物力學算法校對員（2042）<br>
+      <a href="#">室內棒球聯盟</a><a href="#">南投雷霆隊</a>打擊教練（2043）<br>
+      <a href="#">室內棒球聯盟</a><a href="#">南投雷霆隊</a>總教練（2044～2048）<br>
+    </div>
+  </div>
+
+  <!-- 個人年表 -->
+  <div class="section">
+    <h2>個人年表</h2>
+    <div class="timeline">
+      <div><b>2026年</b>以67萬美元加盟美國職棒亞利桑那響尾蛇隊</div>    
+      <div><b>2026年</b>9月12日，對戰道奇隊敲出場內全壘打，僅用13.8秒 內跑完四個壘包，打破了當時大聯盟繞壘最快紀錄，此全壘打亦為生涯首轟。</div>
+      <div><b>2027年</b>5月15日，對戰巨人隊，獲得保送後在三球之內分別完成了盜二壘、盜三壘、甚至趁捕手回傳球稍慢時直接盜本壘。</div>
+      <div><b>2028年</b>12月27日，與海神隊簽下1年110萬美元的合約</div>
+      <div><b>2029年</b>1月5日，與海神隊簽下3年520萬美元的續約</div>
+      <div><b>2032年</b>11月，拒絕球隊續約的提議，隨後便宣布退休</div>
+      <div><b>2034年</b>進入佛羅里達大學攻讀運動表現與生物力學碩士，專攻「高精度生理監測與動態戰術建模」</div>
+      <div><b>2043年</b>受到南投雷霆隊邀請來台擔任打擊教練</div>
+      <div><b>2044年</b>2月，被任命為總教練</div>
+    </div>
+  </div>
+
+  <!-- 生涯成績 -->
+ <!-- 生涯成績 -->
+  <div class="section">
+    <h2>職棒生涯成績</h2>
+<strong>美國職棒大聯盟打擊成績：</strong>
+    <table class="stats">
+    <thead>
+      <tr>
+        <th>年度</th>
+        <th>球隊</th>
+        <th>G</th>
+        <th>PA</th>
+        <th>AB</th>
+        <th>H</th>
+        <th>2B</th>
+        <th>3B</th>
+        <th>HR</th>
+        <th>RBI</th>
+        <th>R</th>
+        <th>SB</th>
+        <th>TB</th>
+        <th>SO</th>
+        <th>BB</th>
+        <th>SAC</th>
+        <th>SF</th>
+        <th>AVG</th>
+        <th>OBP</th>
+        <th>SLG</th>
+        <th>OPS</th>
+      </tr>
+    </thead>
+    <tbody>
+    
+    <tr>
+      <td>2026</td>
+      <td>ARI</td>
+      <td>34</td>
+      <td>42</td>
+      <td>38</td>
+      <td>9</td>
+      <td>1</td>
+      <td>2</td>
+      <td>1</td>
+      <td>4</td>
+      <td>12</td>
+      <td>14</td>
+      <td>17</td>
+      <td>18</td>
+      <td>3</td>
+      <td>1</td>
+      <td>0</td>
+      <td>.237</td>
+      <td>.364</td>
+      <td>.447</td>
+      <td>.811</td>
+    </tr>
+    
+    <tr>
+      <td>2027</td>
+      <td>ARI</td>
+      <td>48</td>
+      <td>86</td>
+      <td>74</td>
+      <td>15</td>
+      <td>2</td>
+      <td>1</td>
+      <td>1</td>
+      <td>7</td>
+      <td>21</td>
+      <td>21</td>
+      <td>22</td>
+      <td>32</td>
+      <td>9</td>
+      <td>2</td>
+      <td>1</td>
+      <td>.203</td>
+      <td>.286</td>
+      <td>.297</td>
+      <td>.583</td>
+    </tr>
+    
+    
+ 
+    <tr class="career">
+      <td colspan="2">通算成績</td>
+      <td>82</td>
+      <td>128</td>
+      <td>112</td>
+      <td>24</td>
+      <td>3</td>
+      <td>3</td>
+      <td>2</td>
+      <td>11</td>
+      <td>33</td>
+      <td>35</td>
+      <td>39</td>
+      <td>50</td>
+      <td>12</td>
+      <td>3</td>
+      <td>1</td>
+      <td>.214</td>
+      <td>.288</td>
+      <td>.348</td>
+      <td>.636</td>
+    </tr>
+
+    </tbody>
+    </table>
+<br>
+    
+    <strong>室內棒球聯盟一軍打擊成績：</strong>
+    <table class="stats1">
+    <thead>
+      <tr>
+        <th>年度</th>
+        <th>球隊</th>
+        <th>G</th>
+        <th>PA</th>
+        <th>AB</th>
+        <th>H</th>
+        <th>2B</th>
+        <th>3B</th>
+        <th>HR</th>
+        <th>RBI</th>
+        <th>R</th>
+        <th>SB</th>
+        <th>TB</th>
+        <th>SO</th>
+        <th>BB</th>
+        <th>SAC</th>
+        <th>SF</th>
+        <th>AVG</th>
+        <th>OBP</th>
+        <th>SLG</th>
+        <th>OPS</th>
+      </tr>
+    </thead>
+    <tbody>
+    
+    <tr>
+      <td>2029</td>
+      <td>南亞海神</td>
+      <td>132</td>
+      <td>588</td>
+      <td>512</td>
+      <td>148</td>
+      <td>22</td>
+      <td><span class="best">11</span></td>
+      <td>12</td>
+      <td>58</td>
+      <td>102</td>
+      <td><span class="best">72</span></td>
+      <td>228</td>
+      <td>112</td>
+      <td>68</td>
+      <td>2</td>
+      <td>6</td>
+      <td>.289</td>
+      <td>.367</td>
+      <td>.445</td>
+      <td>.812</td>
+    </tr>
+    
+    <tr>
+      <td>2030</td>
+      <td>南亞海神</td>
+      <td><span class="best">140</span></td>
+      <td>612</td>
+      <td>520</td>
+      <td>162</td>
+      <td>28</td>
+      <td>9</td>
+      <td>15</td>
+      <td>65</td>
+      <td><span class="best">118</span></td>
+      <td><span class="test">88</span></td>
+      <td>253</td>
+      <td>105</td>
+      <td>82</td>
+      <td>1</td>
+      <td>9</td>
+      <td>.312</td>
+      <td>.399</td>
+      <td>.487</td>
+      <td>.886</td>
+    </tr>
+    
+    <tr>
+      <td>2031</td>
+      <td>南亞海神</td>
+      <td>127</td>
+      <td>575</td>
+      <td>493</td>
+      <td>132</td>
+      <td>19</td>
+      <td>6</td>
+      <td>18</td>
+      <td>72</td>
+      <td>95</td>
+      <td>52</td>
+      <td>217</td>
+      <td>118</td>
+      <td>78</td>
+      <td>0</td>
+      <td>4</td>
+      <td>.268</td>
+      <td>.365</td>
+      <td>.440</td>
+      <td>.805</td>
+    </tr>
+    
+    <tr>
+      <td>2032</td>
+      <td>南亞海神</td>
+      <td>102</td>
+      <td>432</td>
+      <td>387</td>
+      <td>102</td>
+      <td>15</td>
+      <td>2</td>
+      <td>8</td>
+      <td>42</td>
+      <td>73</td>
+      <td>29</td>
+      <td>145</td>
+      <td>85</td>
+      <td>41</td>
+      <td>2</td>
+      <td>2</td>
+      <td>.264</td>
+      <td>.333</td>
+      <td>.375</td>
+      <td>.708</td>
+    </tr>
+    
+    
+ 
+    <tr class="career">
+      <td colspan="2">通算成績</td>
+      <td>501</td>
+      <td>2207</td>
+      <td>1912</td>
+      <td>544</td>
+      <td>84</td>
+      <td>28</td>
+      <td>53</td>
+      <td>237</td>
+      <td>388</td>
+      <td>241</td>
+      <td>843</td>
+      <td>420</td>
+      <td>269</td>
+      <td>5</td>
+      <td>21</td>
+      <td>.285</td>
+      <td>.369</td>
+      <td>.441</td>
+      <td>.810</td>
+    </tr>
+
+    </tbody>
+    </table>
+<br>
+
+    <strong>室內棒球聯盟總教練成績：</strong>
+    <table class="stats2">
+    <thead>
+      <tr>
+        <th>年度</th>
+        <th>球隊</th>
+        <th>場次</th>
+        <th>勝場</th>
+        <th>敗場</th>
+        <th>和局</th>
+        <th>勝率</th>
+        <th>分區排名</th>
+        <th>聯盟排名</th>
+        <th>備註</th>
+      </tr>
+    </thead>
+    <tbody>
+    
+    <tr>
+      <td>2044</td>
+      <td>南投雷霆</td>
+      <td>150</td>
+      <td>62</td>
+      <td>88</td>
+      <td>0</td>
+      <td>.413</td>
+      <td>5</td>
+      <td>17</td>
+      <td>未晉級季後賽</td>
+    </tr>
+    
+    <tr>
+      <td>2045</td>
+      <td>南投雷霆</td>
+      <td>150</td>
+      <td>70</td>
+      <td>79</td>
+      <td>1</td>
+      <td>.467</td>
+      <td>3</td>
+      <td>14</td>
+      <td>未晉級季後賽</td>
+    </tr>
+    
+    <tr>
+      <td>2046</td>
+      <td>南投雷霆</td>
+      <td>150</td>
+      <td>71</td>
+      <td>75</td>
+      <td>4</td>
+      <td>.473</td>
+      <td>3</td>
+      <td>14</td>
+      <td>未晉級季後賽</td>
+    </tr>
+    
+    <tr>
+      <td>2047</td>
+      <td>南投雷霆</td>
+      <td>150</td>
+      <td>74</td>
+      <td>74</td>
+      <td>2</td>
+      <td>.493</td>
+      <td>4</td>
+      <td>12</td>
+      <td>未晉級季後賽</td>
+    </tr>
+    
+    <tr>
+      <td>2048</td>
+      <td>南投雷霆</td>
+      <td>150</td>
+      <td>65</td>
+      <td>82</td>
+      <td>3</td>
+      <td>.433</td>
+      <td>5</td>
+      <td>17</td>
+      <td>未晉級季後賽</td>
+    </tr>
+    
+ 
+    <tr class="career">
+      <td colspan="2">通算成績</td>
+      <td>750</td>
+      <td>342</td>
+      <td>398</td>
+      <td>10</td>
+      <td>.456</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+
+    </tbody>
+    </table>
+    
+  </div>
+
+  <!-- 個人獎項 -->
+  <div class="section">
+    <h2>個人獎項</h2>
+    ・<a href="../term/室內棒球聯盟年度盜壘王.html">室內棒球聯盟年度盜壘王</a>：2029、2030<br>
+    ・<a href="../term/室內棒球聯盟年度金手套.html">室內棒球聯盟年度金手套</a>：2029～2031<br>
+    ・<a href="../term/室內棒球聯盟年度最佳陣容.html">室內棒球聯盟年度最佳十人</a>：2030<br>
+  </div>
+
+  <!-- 特殊事蹟 -->
+  <div class="section">
+    <h2>特殊事蹟</h2>
+    ・從本壘到一壘最快僅需3.77秒<br>
+  </div>
+
+  <!-- 相關新聞 -->
+  <div class="section">
+    <h2>相關新聞</h2>
+    <a href="#"></a><br>
+    <a href="#"></a>
+  </div>
+
+</div>
+
+
+</body>
+</html>
