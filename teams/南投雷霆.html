@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> 南投雷霆 </title>
+<link rel="icon" href="https://i.ibb.co/G4fjPR13/Gemini-Generated-Image-leywaqleywaqleyw-Photoroom-1.png" sizes="180x120" type="image/png">
+
+<style>
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background: #ffffff;
+  color: #111827;
+  line-height: 1.6;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 80px; /* 關鍵 */
+}
+
+html, body {
+  height: auto;
+  overflow-y: auto;
+}
+
+/* ===== 橫幅照片 ===== */
+.banner-photo {
+  width: 100%;
+  height: 320px;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* ===== 頁首 ===== */
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header .sub {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* ===== 主版面 ===== */
+.section {
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-left: 4px solid #111827;
+  padding-left: 8px;
+}
+
+/* ===== 頂部導覽列 ===== */
+.topnav {
+  display: flex;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 3px solid #e5e7eb;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.topnav a {
+  color: #006000;
+  font-weight:450;
+}
+
+.topnav a:hover {
+  color: #1d4ed8;
+}
+
+/* ===== 介紹 ===== */
+.infobox {
+  float: right;
+  width: 420px;
+  border: 1px solid #d1d5db;
+  margin-left: 20px;
+  background: #f9fafb;
+  padding: 10px;
+  font-size: 0.85rem;
+}
+
+.infobox img {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  background: #fff;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.infobox-title {
+  background: #FF00FF; /* 可以改成球隊代表色 */
+  color: #FFFFFF;
+  text-align: center;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.infobox-title1 {
+  background: #00E5FF; /* 可以改成球隊代表色 */
+  color: #FFFFFF;
+  text-align: center;
+  padding: 3.5px;
+  font-weight: bold;
+}
+
+/* 吉祥物專用圖框 */
+.mascot-box {
+  float: right;
+  width: 300px;
+  margin-left: 20px;
+  margin-bottom: 15px;
+  border: 1px solid #d1d5db;
+  background: #f9fafb;
+  padding: 8px;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.mascot-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* 清除浮動防止影響下一個標題 */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* 手機版適應 */
+@media (max-width: 768px) {
+  .mascot-box {
+    float: none;
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+/* ===== 基本資料 ===== */
+.profile {
+  font-size: 0.85rem;
+}
+
+/* ===== 修正後的 Profile 樣式 ===== */
+.profile div {
+  display: flex;          /* 使用 Flex 佈局 */
+  padding: 6px 0;
+  border-bottom: 1px solid #e5e7eb;
+  align-items: flex-start; /* 讓標題與內容頂部對齊 */
+}
+
+/* 讓最後一項不要有底線 */
+.profile div:last-child {
+  border-bottom: none;
+}
+
+.profile span {
+  flex: 0 0 100px;        /* 固定寬度 100px，不縮放 */
+  font-weight: 600;
+  color: #374151;
+  display: block;         /* 確保寬度生效 */
+}
+
+.profile-data {
+  flex: 1;                /* 自動填滿剩餘寬度 */
+  line-height: 1.6;
+  color: #111827;
+}
+
+/* ===== 經歷 ===== */
+.career a {
+  display: inline-block;
+}
+
+.no-break {
+  white-space: nowrap; /* 括號內文字不換行 */
+}
+
+/* ===== 年表 ===== */
+.timeline {
+  font-size: 0.95rem;
+}
+
+.timeline div {
+  margin-bottom: 6px;
+}
+
+.timeline b {
+  display: inline-block;
+  width: 60px;
+}
+
+/* 維基館風格表格 */
+.wikitable {
+  width: 90%;
+  border-collapse: collapse;
+  border: 1px solid #aaa;
+  font-size: 0.95rem;
+  margin-top: 10px;
+  border-radius: 17px;
+}
+
+.wikitable th {
+  background: #FFE6FF;
+  color: #000000;
+  border: 1px solid #aaa;
+  padding: 5px;
+  text-align: center;
+  width: 15%; /* 左側標頭寬度 */
+}
+
+.wikitable td {
+  border: 1px solid #aaa;
+  padding: 8px;
+  background: #ffffff;
+}
+
+/* 讓球員名字之間有間隔 */
+.player-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.player-item {
+  white-space: nowrap;
+}
+
+.player-no {
+  font-weight: bold;
+  color: #444;
+  margin-right: 3px;
+}
+
+/* ===== 專題圖片展示區 ===== */
+.image-feature-section {
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.image-feature-section img {
+  width: 100%;
+  max-width: 600px; /* 限制最大寬度，避免在大螢幕上顯得太大 */
+  height: auto;
+  display: block;
+  margin: 0 auto 12px auto; /* 圖片居中並留白 */
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.image-description {
+  font-size: 0.9rem;
+  color: #4b5563;
+  line-height: 1.6;
+  padding: 0 10px;
+  border-left: 3px solid #002B49; /* 加一個裝飾性的左邊框 */
+}
+
+.image-description b {
+  color: #111827;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* 手機版適應：當螢幕太窄時，影片自動變回滿寬並取消浮動 */
+@media (max-width: 768px) {
+  .video-side-box {
+    float: none;
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+}
+
+/* ===== 節省空間的圖片網格區 ===== */
+.photo-grid {
+  display: flex;
+  flex-wrap: wrap;       /* 允許自動換行 */
+  gap: 15px;             /* 圖片之間的間距 */
+  margin-top: 10px;
+}
+
+.photo-item {
+  /* 電腦版預設：一排 3 張 (扣除 gap 後大約佔 32%) */
+  /* 如果想要一排 4 張，可以改成 calc(25% - 12px) */
+  flex: 0 0 calc(25% - 14px); 
+  border: 1px solid #d1d5db;
+  background: #f9fafb;
+  border-radius: 4px;
+  overflow: hidden;      /* 確保內容不超出邊框 */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+  display: flex;
+  flex-direction: column; /* 讓圖片和文字上下排列 */
+}
+
+.photo-item img {
+  width: 100%;
+  box-sizing: border-box;
+  height: 200px;         /* 設定一個固定高度 */
+  object-fit: cover;     /* 關鍵：圖片會自動填滿且不變形 */
+  object-position: center; /* 確保裁切時保留正中間 */
+  border-bottom: 1px solid #eee;
+}
+
+.photo-caption {
+  padding: 8px 10px;
+  font-size: 0.8rem;     /* 圖說字體小一點，節省空間 */
+  color: #4b5563;
+  line-height: 1.5;
+  text-align: center;    /* 文字居中 */
+  flex-grow: 1;          /* 讓文案區塊自動撐開，保持底部對齊 */
+}
+
+/* ===== 手機版適應 (RWD) ===== */
+@media (max-width: 768px) {
+  .photo-item {
+    /* 手機版：一排 2 張 */
+    flex: 0 0 calc(50% - 8px); 
+  }
+}
+
+@media (max-width: 480px) {
+  .photo-item {
+    /* 超小螢幕：一排 1 張 */
+    flex: 0 0 100%; 
+  }
+}
+
+/* 職業球隊色系：這裡以藍灰色系為例，你可以自行替換隊色 */
+:root {
+  --pro-primary: #FFE6FF; /* 職業質感深灰 */
+  --pro-accent: #3b82f6;  /* 亮點藍 */
+  --pro-bg: #f8fafc;
+}
+
+.decade-box {
+  max-width: 700px;
+  margin-bottom: 5px;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.decade-summary {
+  background-color: var(--pro-primary);
+  color: #000000;
+  overflow: hidden;
+  padding: 8px 15px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+  list-style: none;
+}
+
+/* 職業賽事專用表格：極致扁平化 */
+.pro-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.pro-table th {
+  background: #f1f5f9;
+  padding: 6px;
+  border-bottom: 2px solid #cbd5e1;
+  color: #475569;
+}
+
+.pro-table td {
+  padding: 5px 8px;
+  border-bottom: 1px solid #f1f5f9;
+  text-align: center;
+}
+
+/* 強調年度冠亞軍 */
+.champion { background-color: #fef3c7; font-weight: bold; color: #92400e; }
+.playoffs { color: var(--pro-accent); font-weight: 500; }
+
+/* ===== 表格 ===== */
+table.stats {
+  width: 65%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats th,
+table.stats td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats th {
+  background: #FF00FF;
+  color: #FFFF37;
+  font-weight: 600;
+}
+
+table.stats tbody tr:nth-child(even) td {
+  background: #FFE6FF;
+}
+
+table.stats th:nth-child(2),
+table.stats td:nth-child(2) {
+  white-space: nowrap;
+}
+
+.best {
+  font-weight: bold;       /* 加粗字體 */        
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.test {
+  font-weight: bold;       /* 加粗字體 */
+  color: #FF0000;          /* 改成紅色 */
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+/* ===== 頁腳設計 ===== */
+.footer {
+  margin-top: 60px;
+  padding: 30px 0;
+  border-top: 1px solid #d1d5db;
+  background-color: #f9fafb; /* 淺灰色底，區隔主內容 */
+  color: #4b5563;
+  font-size: 0.85rem;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 20px;
+}
+
+.footer-section h4 {
+  color: #111827;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+  border-bottom: 2px solid #e5e7eb;
+  display: inline-block;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 6px;
+}
+
+.footer-links a {
+  color: #4b5563;
+}
+
+.footer-links a:hover {
+  color: #1d4ed8;
+}
+
+.footer-bottom {
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #e5e7eb;
+  font-size: 0.8rem;
+}
+
+.cc-logo {
+  vertical-align: middle;
+  height: 20px;
+  margin-right: 5px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    
+  <nav class="topnav">
+  <a href="../index.html">首頁</a> ⮕ <a href="teams.html">球隊</a> ⮕  <a href="台灣球隊.html">台灣球隊</a> ⮕  <a href="室內棒球聯盟球隊.html">室內棒球聯盟球隊</a> ⮕ <b>奇醫海燕</b> </nav>     
+
+  <!-- 頁首 -->
+  <div class="header">
+    <h1>南投雷霆</h1>
+    <div class="sub"> 球隊｜室內棒球聯盟</div>
+  </div>
+
+  <div class="infobox">
+  <div class="infobox-title">南投雷霆 NANTOU Thunder</div>
+  
+  <div class="profile">
+    <div><span>創隊日期</span>2009年9月14日</div>
+    <div><span>隊名變更史</span>
+    南投林管開發隊（2012–2019）<br>
+    ⭢水沙連獵人隊（2020～2031）<br>
+    ⭢南投雷電隊（2032～2041）<br>
+    ⭢南投雷霆隊（2042～）<br>
+    </div>
+    <div><span>主場</span>南投雷霆訓練中心</div>
+    <div><span>所屬分區</span>室內棒球聯盟中區</div>
+    <div><span>母企業</span>雷盛重工股份有限公司</div>
+    <div><span>領隊</span>奇雋運動科技股份有限公司</div>
+    <div><span>總教練</span>巴萬・達那</div>
+    <div><span>聯盟冠軍</span>尚無</div>
+    <div><span>年度冠軍</span>尚無</div>
+    <div><span>分區冠軍</span><b>6次</b>&nbsp 2023、2033、2034、2036、2037、2042</div>
+     <div><span>外卡資格</span><b>4次</b>&nbsp 2024、2028、2035、2051</div>
+  </div>
+
+  </div>
+
+  <!-- 簡介 -->
+  <div class="section">
+<b>南投雷霆</b>（英文：NANTOU Thunder）是一支台灣的職業棒球隊伍，所屬聯盟為<a href="../league/室內棒球聯盟.html">室內棒球聯盟</a>。<br>
+<br>
+該隊的所屬城市是南投縣，主場則是位於該縣埔里鎮的<a href="../stadium/南投雷鳴巨蛋.html">南投雷鳴巨蛋</a>。二軍農場基地以及比賽主場則是<a href="../stadium/南投雷影球場.html">南投雷影球場</a>。<br>
+<br>
+該隊創立於2041年，前身可追朔至2011年。目前球隊營運、經營則是由雷盛重工股份有限公司股份有限公司負責。<br>
+  
+  </div>
+
+  
+   <!-- 球隊歷史 -->
+  <div class="section">
+    <h2>球隊歷史</h2>
+南投雷霆隊的前身「南投林管開發隊」成立於2011年，是室內棒球聯盟早期擴編階段的地方型職業球隊之一。當時南投縣並未被視為棒球重點市場，但由於聯盟希望擴展至山區與中部內陸市場，加上地方產業支持，最終由當地林業與工程相關企業共同出資成立球隊。南投雷霆隊的前身「南投林管開發隊」成立於2011年，是室內棒球聯盟早期擴編階段的地方型職業球隊之一。當時南投縣並未被視為棒球重點市場，但由於聯盟希望擴展至山區與中部內陸市場，加上地方產業支持，最終由當地林業與工程相關企業共同出資成立球隊。而林管開發隊的成立並非以競爭冠軍為目標，而是「建立南投地區的職業運動存在感」，除了提升地方職業運動曝光度，也作為聯盟「非都會市場實驗隊」。到了2019年前後，聯盟開始推動第二波市場升級與品牌重塑計畫，南投球隊也被納入改革對象，水沙連開發股份有限公司最後接手球隊。最終在2020年，球隊正式完成改組，更名為：水沙連獵人隊。<br>
+<br>
+此時期強調跑壘、守備範圍與比賽節奏控制，並逐步建立農場體系。2023年奪得中區分區冠軍，2028年以外卡晉級並打入分區決賽，正式確立中區中上游戰力地位。<br>
+<br>
+2030年前後，水沙連開發股份有限公司因觀光產業景氣波動、營收不穩，加上長期投入職業球隊所帶來的財務壓力，逐漸無法支撐球隊經營。此外，球隊戰績雖具競爭力，但未能轉化為穩定商業收益，使企業內部對於持續經營職業球隊的必要性產生質疑。因此，水沙連開發於2030年球季開始後就積極尋找買家，2031年正式啟動球隊出售與經營權轉移計畫，尋求具備長期資本與產業支撐能力的企業接手。經過數輪評估與談判後，最終由當時積極布局山區能源與電力系統的「雷騰能源科技」取得球隊經營權。2032年起，球隊正式更名為「南投雷電隊」，象徵經營體系與戰術方向的全面轉變。雷騰能源科技導入資金與科技資源，推動球隊升級為以長打火力與投手球威為核心的現代化球隊，並逐步建立後續雷霆時代的競爭基礎。<br>
+<br>
+雷電隊時期整體戰力顯著提升，並多次在中區競爭中取得優勢，包括自2033年起連續5年挺進季後賽，球隊逐步擺脫過往中段班定位。2040年球季結束後，南投雷電隊雖已連續多年維持季後賽競爭力，但始終無法突破總冠軍門檻，球隊在關鍵戰的投手失控與戰術僵化問題未能有效改善。此一長期瓶頸，使母企業雷騰能源科技開始重新評估其職業球隊投資策略。<br>
+<br>
+與此同時，雷騰能源科技於2040年前後加速國際布局，將資源集中於大型跨國電網、儲能系統與能源輸出市場，企業經營重心逐步由區域型發展轉向全球市場。在此背景下，職業球隊經營被視為與核心業務關聯性有限，且資源配置效率不佳的投資項目。在內外因素交互影響下，雷騰能源科技於2041年季後正式啟動球隊經營權轉移評估。2041年下半年，雷盛重工內部提出「運動科技應用」計畫，認為職業棒球隊可作為：高強度人體運動數據測試場域與品牌輸出平台，因此主動向雷騰能源表達接手球隊的意願。經過數月談判，雙方達成共識：雷騰能源科技逐步退出球隊經營、雷盛重工全面承接球隊營運與資產、原有球員與農場體系維持不變、教練團與管理層進行階段性重整。2041年11月17日，雷盛重工公布新的名字，球隊正式更名為「南投雷霆隊」。<br>
+<br>
+2042年起南投雷霆隊由雷盛重工接手，進入高度科技化與數據導向的新時代，逐步建立運動科學、AI分析與農場整合體系。球隊例行賽競爭力穩定，但在關鍵戰中仍受投手壓力與進攻爆發力不足影響，始終未能突破季賽軍門檻。自2042以來僅有2次衝擊季後賽。整體而言，這十年是從傳統強隊轉型為系統化職業強權，但仍尋求最後突破的一段過渡與深化期。<br>
+  </div>  
+  
+  
+   <!-- 歷任總教練 -->
+  <div class="section">
+    <h2>總教練</h2>
+<strong>南投雷霆隊歷任總教練一覽表</strong>
+    <table class="stats">
+    <thead>
+      <tr>
+        <th>編號</th>
+        <th>教練名</th>
+        <th>背號</th>
+        <th>接任年份</th>
+        <th>卸任年份</th>
+        <th>分區冠軍</th>
+        <th>年度第一</th>
+        <th>台灣大賽冠軍</th>
+        <th>備註</th>
+      </tr>
+    </thead>
+    <tbody>
+    
+    <tr>
+      <td>1</td>
+      <td>高振宇</td>
+      <td>94</td>
+      <td>2042</td>
+      <td>2043</td>
+      <td>1次 2042</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+    <tr>
+      <td>2</td>
+      <td><a href="../players/Ricardo_Sánchez.html">Ricardo Sánchez</a></td>
+      <td>45</td>
+      <td>2044</td>
+      <td>2048</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+    <tr>
+      <td>3</td>
+      <td>巴萬・達那</td>
+      <td>64</td>
+      <td>2049</td>
+      <td>-</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>現任</td>
+    </tr>
+          
+    </tbody>
+  </table>
+ </div>
+
+  
+  <!-- 歷年成績-->
+  <div class="section">
+  <h2>隊史歷年成績</h2>
+  
+  <details class="decade-box">
+    <summary class="decade-summary">2040年代</summary>
+    <div style="padding: 10px; text-align: center; color: #64748b;">
+      在此填入該年代的戰績表格...
+    </div>
+  </details>
+  
+  <details class="decade-box">
+    <summary class="decade-summary">2050年代</summary>
+    <table class="pro-table">
+      <thead>
+        <tr>
+          <th>年度</th>
+          <th>出賽</th>
+          <th>勝-敗-和</th>
+          <th>勝率</th>
+          <th>分區排名</th>
+          <th>聯盟排名</th>
+          <th>季後賽</th>
+          <th>最終賽果</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr>
+          <td>2050</td>
+          <td>150</td>
+          <td>78-72-0</td>
+          <td>.520</td>
+          <td>3</td>
+          <td>9</td>
+          <td>未晉級</td>
+          <td></td>
+          <td></td>
+        </tr>
+        
+        <tr>
+          <td>2051</td>
+          <td>150</td>
+          <td>89-60-1</td>
+          <td>.593</td>
+          <td>3</td>
+          <td>3</td>
+          <td>外卡晉級</td>
+          <td class="playoffs">分區系列賽（第一輪）出局</td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </details>
+
+  </div>    
+  
+  <!-- 成員 -->
+  <div class="section">
+  <h2>現役成員</h2>
+  <table class="wikitable">
+    <tr>
+      <th>教練團</th>
+      <td>
+        <div class="player-list">
+          <span class="player-item"><span class="player-no">64</span><a href="#">巴萬・達那</a>（總教練）</span>
+          <span class="player-item"><span class="player-no">71</span><a href="#">余信德</a>（內野教練）</span>
+          <span class="player-item"><span class="player-no">99</span>張家豪（投捕教練）</span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th>投手</th>
+      <td>
+        <div class="player-list">
+          <span class="player-item"><span class="player-no"></span></span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th>捕手</th>
+      <td>
+        <div class="player-list">
+          <span class="player-item"><span class="player-no"></span></span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th>內野手</th>
+      <td>
+        <div class="player-list">
+         <span class="player-item"><span class="player-no">14</span><a href="../players/許景成.html">許景成</a></span>
+         <span class="player-item"><span class="player-no">21</span><a href="../players/林澤安.html">林澤安</a></span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th>外野手</th>
+      <td>
+        <div class="player-list">
+          <span class="player-item"><span class="player-no">24</span>陳敬翔</a></span>    
+          <span class="player-item"><span class="player-no">49</span>Rex Valentine</span>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+ 
+ 
+  <div class="section">
+  <h2>球隊設施與活動花絮</h2>
+  
+  <div class="photo-grid">
+    
+    <div class="photo-item">
+      <img src="https://i.ibb.co/FL1TnHZ3/2026-04-19-2-13-08.png" alt="隊徽">
+      <div class="photo-caption">球隊隊徽</div>
+    </div>
+
+    <div class="photo-item">
+      <img src="https://i.ibb.co/cS3tCqJj/56-CB15-D4-C9-F2-42-F4-8-E29-3-B3-BD625-E066.jpg" alt="吉祥物燕博士">
+      <div class="photo-caption">球隊帽徽</div>
+    </div>
+
+    <div class="photo-item">
+      <img src="https://i.ibb.co/KQLXzwW/0-EC987-B7-C0-D1-4-EEF-B31-F-56-F4386-B6477.png" alt="球衣">
+      <div class="photo-caption">南投雷霆新版球衣</div>
+    </div>
+
+  </div> 
+  </div>
+  
+  
+
+
+  <!-- 相關新聞 -->
+  <div class="section">
+    <h2>相關新聞</h2>
+    <a href="#"></a><br>
+    <a href="#"></a>
+  </div>
+
+</div>
+
+
+</body>    
+</html>
