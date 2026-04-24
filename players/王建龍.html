@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> 球員資料｜棒球維基館 </title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background: #ffffff;
+  color: #111827;
+  line-height: 1.6;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 80px; /* 關鍵 */
+}
+
+html, body {
+  height: auto;
+  overflow-y: auto;
+}
+
+/* ===== 橫幅照片 ===== */
+.banner-photo {
+  width: 100%;
+  height: 320px;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* ===== 頁首 ===== */
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header .sub {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* ===== 主版面 ===== */
+.section {
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-left: 4px solid #111827;
+  padding-left: 8px;
+}
+
+/* ===== 基本資料 ===== */
+.profile {
+  font-size: 0.95rem;
+}
+
+.profile div {
+  padding: 5px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.profile span {
+  display: inline-block;
+  width: 100px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ===== 頂部導覽列 ===== */
+.topnav {
+  display: flex;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 3px solid #e5e7eb;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.topnav a {
+  color: #006000;
+  font-weight:450;
+}
+
+.topnav a:hover {
+  color: #1d4ed8;
+}
+
+/* ===== 經歷 ===== */
+.career a {
+  display: inline-block;
+}
+
+.no-break {
+  white-space: nowrap; /* 括號內文字不換行 */
+}
+
+/* ===== 年表 ===== */
+.timeline {
+  font-size: 0.95rem;
+}
+
+.timeline div {
+  margin-bottom: 6px;
+}
+
+.timeline b {
+  display: inline-block;
+  width: 60px;
+}
+
+/* ===== 表格 ===== */
+table.stats {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats th,
+table.stats td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats th {
+  background: #a71930;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+table.stats tbody tr:nth-child(even) td {
+  background: #f2d0d4;
+}
+
+table.stats th:nth-child(2),
+table.stats td:nth-child(2) {
+  white-space: nowrap;
+}
+
+/* ===== 表格 ===== */
+table.stats1 {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats1 th,
+table.stats1 td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats1 th {
+  background: #6e95e8;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+table.stats1 tbody tr:nth-child(even) td {
+  background: #e3ecfd;
+}
+
+table.stats1 th:nth-child(2),
+table.stats1 td:nth-child(2) {
+  white-space: nowrap;
+}
+
+/* ===== 表格 ===== */
+table.stats2 {
+  width: 80%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats2 th,
+table.stats2 td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats2 th {
+  background: #6e95e8;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+table.stats2 tbody tr:nth-child(even) td {
+  background: #e3ecfd;
+}
+
+table.stats2 th:nth-child(2),
+table.stats2 td:nth-child(2) {
+  white-space: nowrap;
+}
+
+.best {
+  font-weight: bold;       /* 加粗字體 */        
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.test {
+  font-weight: bold;       /* 加粗字體 */
+  color: #FF0000;          /* 改成紅色 */
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+/* ===== Footer ===== */
+.footer {
+  border-top: 1px solid #d1d5db;
+  margin-top: 48px;
+  padding-top: 16px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #6e95e8;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  
+  <nav class="topnav">
+  <a href="../index.html">首頁</a> ⮕ <a href="players_overview.html">球員</a> ⮕  <a href="taiwan_players_overview.html">台灣球員</a> ⮕  <b>王建龍</b> </nav>  
+  
+  <!-- 頁首 -->
+  <div class="header">
+    <h1>王建龍</h1>
+    <div class="sub"> WANG,CHIEN-LUNG｜內野手（CF）</div>
+  </div>
+
+  <!-- 基本資料 -->
+  <div class="section">
+    <h2>基本資料</h2>
+    <div class="profile">
+      <div><span>綽號</span>王董</div>
+      <div><span>出生日期</span>1991 年 11 月 22 日（60歲）</div>
+      <div><span>身高體重</span>181 公分／85 公斤</div>
+      <div><span>出生地</span>台灣・屏東縣恆春鎮</div>
+      <div><span>投打習慣</span>右投左打</div>
+      <div><span>守備位置</span>內野手 3B 1B</div>
+      <div><span>職棒選秀</span>2011年室內棒球聯盟選秀會南亞大氣隊第十一指名</div>
+    </div>
+  </div>
+
+  <!-- 球員經歷 -->
+  <div class="section">
+    <h2>球員經歷</h2>
+    <div class="career">
+      屏東縣恆春國小少棒隊<br>
+      屏東縣恆春國中青少棒隊<br>
+      高雄市岡山農工青棒隊<br>
+      <a href="#">室內棒球聯盟</a><a href="../teams/南亞大氣
+      .html">南亞大氣隊</a>（2011～2022）⭢ <a href="../teams
+      /南亞海神.html" >南亞海神隊</a>（2023～2028）<br>
+      室內棒球聯盟南亞海神隊二軍打擊教練（2029～2030）<br>
+      室內棒球聯盟南亞海神隊一軍打擊教練（2031～2032/07）<br>
+      室內棒球聯盟南亞海神隊一軍首席教練（2032）<br>
+      室內棒球聯盟南亞海神隊一軍代理總教練（2032）<br>
+      室內棒球聯盟南亞海神隊一軍總教練（2033～2038）<br>
+      
+      
+    </div>
+  </div>
+
+  <!-- 個人年表 -->
+  <div class="section">
+    <h2>個人年表</h2>
+    <div class="timeline">
+      <div><b>2011年</b>5月，在新人測試會表現不錯，獲得南亞大氣隊推薦而報名選秀</div>
+      <div><b>2011年</b>7月，參加室內棒球聯盟選秀會，被南亞大氣隊於第十一指名，後以簽約金75萬新台幣簽約</div>
+      <div><b>2016年</b>9月19日，達成生涯百轟</div>
+      <div><b>2017年</b>6月3日，達成生涯千安</div>
+      <div><b>2018年</b>8月，與球隊簽下10年共2.4億新台幣的延長合約</div>
+      <div><b>2023年</b>6月23日，達成生涯2000安，為聯盟第九人達成此紀錄</div>
+      <div><b>2028年</b>季初宣布該年球季結束後將引退，9月14日球團舉行引退儀式</div>
+      <div><b>2028年</b>6月19日，達成生涯2800安</div>
+      <div><b>2030年</b>11月，前往日本職棒、美國職棒進行教練實習與運科進修</div>
+      <div><b>2032年</b>季初人事異動安排接任南亞海神隊首席教練。9月因朴鐘勳下課接任「代理總教練」，成功整合休息室氣氛。</div>
+      <div><b>2033年</b>正式被任命為南亞海神隊總教練</div>
+      <div><b>2035年</b>11月26日，與球團簽下3年教練約</div>
+      <div><b>2038年</b>季末婉拒球隊續約總教練，宣布卸下教練身份</div>
+      <div><b>2038年</b>出任球團特約球探</div>
+      <div><b>2043年</b>以99.2%的得票率入選室內棒球聯盟名人堂</div>
+      <div><b>2050年</b>11月，獲頒聯盟卓越貢獻獎</div>
+    </div>
+  </div>
+
+  <!-- 生涯成績 -->
+ <!-- 生涯成績 -->
+  <div class="section">
+    <h2>職棒生涯成績</h2>
+    <strong>室內棒球聯盟一軍打擊成績：</strong>
+    <table class="stats1">
+    <thead>
+        <tr>
+            <th>年份</th><th>隊伍</th><th>G</th><th>PA</th><th>AB</th><th>H</th><th>2B</th><th>3B</th><th>HR</th>
+            <th>RBI</th><th>R</th><th>SB</th><th>TB</th><th>SO</th><th>BB</th><th>SAC</th><th>SF</th>
+            <th>AVG</th><th>OBP</th><th>SLG</th><th>OPS</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>2011</td><td>南亞大氣</td><td>88</td><td>324</td><td>287</td><td>83</td><td>16</td><td>2</td><td>4</td>
+            <td>37</td><td>39</td><td>6</td><td>115</td><td>43</td><td>29</td><td>5</td><td>3</td>
+            <td>.289</td><td>.355</td><td>.401</td><td>.756</td>
+        </tr>
+        <tr>
+            <td>2012</td><td>南亞大氣</td><td>132</td><td>563</td><td>504</td><td>152</td><td>29</td><td>3</td><td>13</td>
+            <td>74</td><td>76</td><td>9</td><td>226</td><td>79</td><td>49</td><td>6</td><td>4</td>
+            <td>.302</td><td>.364</td><td>.448</td><td>.812</td>
+        </tr>
+        <tr>
+            <td>2013</td><td>南亞大氣</td><td class="best">135</td><td>587</td><td>512</td><td>166</td><td>33</td><td>1</td><td>16</td>
+            <td>89</td><td>84</td><td>11</td><td>249</td><td>84</td><td>64</td><td>5</td><td>6</td>
+            <td>.324</td><td>.399</td><td>.486</td><td>.885</td>
+        </tr>
+        <tr>
+            <td>2014</td><td>南亞大氣</td><td class="best">135</td><td>593</td><td>524</td><td>169</td><td>36</td><td>2</td><td>19</td>
+            <td>97</td><td>89</td><td>13</td><td>266</td><td>87</td><td>59</td><td>4</td><td>6</td>
+            <td>.323</td><td>.391</td><td>.508</td><td>.899</td>
+        </tr>
+        <tr>
+            <td>2015</td><td>南亞大氣</td><td class="best">135</td><td>591</td><td>518</td><td>174</td><td>39</td><td>1</td><td>23</td>
+            <td>104</td><td>97</td><td>8</td><td>284</td><td>89</td><td>66</td><td>2</td><td>5</td>
+            <td class="best">.336</td><td>.411</td><td>.548</td><td>.959</td>
+        </tr>
+        <tr>
+            <td>2016</td><td>南亞大氣</td><td>130</td><td>568</td><td>501</td><td>159</td><td>31</td><td>0</td><td>26</td>
+            <td>114</td><td>93</td><td>5</td><td>268</td><td>93</td><td>61</td><td>1</td><td>5</td>
+            <td>.317</td><td>.391</td><td>.535</td><td>.926</td>
+        </tr>
+        
+        <tr>
+            <td>2017</td><td>南亞大氣</td><td class="best">135</td><td>596</td><td>523</td><td>177</td><td class="best">43</td><td>1</td><td>20</td>
+            <td>100</td><td>104</td><td>10</td><td>282</td><td>76</td><td>65</td><td>2</td><td>6</td>
+            <td>.338</td><td>.412</td><td>.539</td><td>.951</td>
+        </tr>
+        
+        <tr>
+            <td>2018</td><td>南亞大氣</td><td>128</td><td>558</td><td>491</td><td>156</td><td>35</td><td>2</td><td>17</td>
+            <td>87</td><td>86</td><td>7</td><td>246</td><td>74</td><td>61</td><td>3</td><td>3</td>
+            <td>.318</td><td>.392</td><td>.501</td><td>.893</td>
+        </tr>
+        
+        <tr>
+            <td>2019</td><td>南亞大氣</td><td class="best">135</td><td>598</td><td>527</td><td>171</td><td>37</td><td>1</td><td>22</td>
+            <td>94</td><td>92</td><td>9</td><td>276</td><td>82</td><td>63</td><td>2</td><td>6</td>
+            <td>.324</td><td>.395</td><td>.524</td><td>.919</td>
+        </tr>
+        
+        <tr>
+            <td>2020</td><td>南亞大氣</td><td>115</td><td>483</td><td>424</td><td>133</td><td>29</td><td>0</td><td>15</td>
+            <td>72</td><td>66</td><td>4</td><td>207</td><td>67</td><td>53</td><td>1</td><td>5</td>
+            <td>.314</td><td>.389</td><td>.488</td><td>.877</td>
+        </tr>
+        
+        <tr>
+            <td>2021</td><td>南亞大氣</td><td class="best">136</td><td>604</td><td>532</td><td>183</td><td class="best">41</td><td>1</td><td>25</td>
+            <td>107</td><td>109</td><td>12</td><td>301</td><td>79</td><td>67</td><td>0</td><td>5</td>
+            <td>.344</td><td class="best">.416</td><td>.566</td><td>.982</td>
+        </tr>
+        
+        <tr>
+            <td>2022</td><td>南亞大氣</td><td class="best">136</td><td>609</td><td>537</td><td class="best">189</td><td class="best">46</td><td>1</td><td>29</td>
+            <td class="best">120</td><td class="best">117</td><td>11</td><td>324</td><td>83</td><td>66</td><td>0</td><td>6</td>
+            <td class="best">.352</td><td class="best">.422</td><td>.603</td><td>1.025</td>
+        </tr>
+        
+        <tr>
+            <td>2023</td><td>南亞海神</td><td class="best">136</td><td>613</td><td>542</td><td class="best">186</td><td class="best">43</td><td>0</td><td>27</td>
+            <td>112</td><td>114</td><td>9</td><td>310</td><td>86</td><td>66</td><td>0</td><td>5</td>
+            <td>.343</td><td>.413</td><td>.572</td><td>.985</td>
+        </tr>
+        
+        <tr>
+            <td>2024</td><td>南亞海神</td><td>132</td><td>594</td><td>527</td><td>176</td><td>39</td><td>1</td><td>23</td>
+            <td>101</td><td>107</td><td>7</td><td>286</td><td>89</td><td>61</td><td>0</td><td>6</td>
+            <td>.334</td><td>.402</td><td>.543</td><td>.945</td>
+        </tr>
+        
+        <tr>
+            <td>2025</td><td>南亞海神</td><td>138</td><td>623</td><td>553</td><td>179</td><td>36</td><td>0</td><td>21</td>
+            <td>94</td><td>101</td><td>6</td><td>278</td><td>93</td><td>66</td><td>0</td><td>4</td>
+            <td>.324</td><td>.394</td><td>.503</td><td>.897</td>
+        </tr>
+        
+        <tr>
+            <td>2026</td><td>南亞海神</td><td class="best">140</td><td>634</td><td>567</td><td>181</td><td>37</td><td>0</td><td>19</td>
+            <td>90</td><td>97</td><td>5</td><td>275</td><td>96</td><td>63</td><td>0</td><td>4</td>
+            <td>.319</td><td>.385</td><td>.485</td><td>.870</td>
+        </tr>
+        
+        <tr>
+            <td>2027</td><td>南亞海神</td><td>125</td><td>547</td><td>487</td><td>149</td><td>26</td><td>0</td><td>13</td>
+            <td>72</td><td>74</td><td>3</td><td>214</td><td>84</td><td>56</td><td>0</td><td>4</td>
+            <td>.306</td><td>.375</td><td>.440</td><td>.815</td>
+        </tr>
+        
+        <tr>
+            <td>2028</td><td>南亞海神</td><td>105</td><td>419</td><td>373</td><td>106</td><td>19</td><td>0</td><td>9</td>
+            <td>50</td><td>47</td><td>2</td><td>152</td><td>71</td><td>43</td><td>0</td><td>3</td>
+            <td>.284</td><td>.356</td><td>.408</td><td>.764</td>
+        </tr>
+
+        <tr>
+            <td colspan="2">生涯總計</td>
+            <td>2269</td><td>9890</td><td>8747</td><td>2852</td><td>623</td><td>18</td><td>342</td>
+            <td>1564</td><td>1602</td><td>145</td><td>4537</td><td>1466</td><td>1050</td><td>35</td><td>87</td>
+            <td>.326</td><td>.396</td><td>.519</td><td>.915</td>
+        </tr>
+</tbody>
+</table>
+<br>
+
+    <strong>室內棒球聯盟總教練成績：</strong>
+    <table class="stats2">
+    <thead>
+      <tr>
+        <th>年度</th>
+        <th>球隊</th>
+        <th>場次</th>
+        <th>勝場</th>
+        <th>敗場</th>
+        <th>和局</th>
+        <th>勝率</th>
+        <th>分區排名</th>
+        <th>聯盟排名</th>
+        <th>備註</th>
+      </tr>
+    </thead>
+    <tbody>
+    
+    <tr>
+      <td>2032</td>
+      <td>南亞海神</td>
+      <td>35</td>
+      <td>22</td>
+      <td>13</td>
+      <td>0</td>
+      <td>.629</td>
+      <td>4</td>
+      <td>15</td>
+      <td>代理總教練</td>
+    </tr>
+    
+    <tr>
+      <td>2033</td>
+      <td>南亞海神</td>
+      <td>140</td>
+      <td>82</td>
+      <td>56</td>
+      <td>2</td>
+      <td>.594</td>
+      <td>2</td>
+      <td>3</td>
+      <td>台灣大賽冠軍（4W-2L）</td>
+    </tr>
+    
+    <tr>
+      <td>2034</td>
+      <td>南亞海神</td>
+      <td>150</td>
+      <td>85</td>
+      <td>63</td>
+      <td>2</td>
+      <td>.574</td>
+      <td>1</td>
+      <td>4</td>
+      <td>台灣大賽惜敗（2W-4L）</td>
+    </tr>
+    
+    <tr>
+      <td>2035</td>
+      <td>南亞海神</td>
+      <td>150</td>
+      <td>79</td>
+      <td>69</td>
+      <td>2</td>
+      <td>.527</td>
+      <td>3</td>
+      <td>9</td>
+      <td>未晉級季後賽</td>
+    </tr>
+    
+    <tr>
+      <td>2036</td>
+      <td>南亞海神</td>
+      <td>150</td>
+      <td>88</td>
+      <td>61</td>
+      <td>1</td>
+      <td>.587</td>
+      <td>1</td>
+      <td>3</td>
+      <td>台灣大賽惜敗（3W-4L）</td>
+    </tr>
+    
+    <tr>
+      <td>2037</td>
+      <td>南亞海神</td>
+      <td>150</td>
+      <td>92</td>
+      <td>57</td>
+      <td>1</td>
+      <td>.613</td>
+      <td>1</td>
+      <td>1</td>
+      <td>台灣大賽冠軍（4W-1L）</td>
+    </tr>
+    
+    <tr>
+      <td>2038</td>
+      <td>南亞海神</td>
+      <td>150</td>
+      <td>81</td>
+      <td>68</td>
+      <td>1</td>
+      <td>.544</td>
+      <td>2</td>
+      <td>9</td>
+      <td>季後挑戰賽止步</td>
+    </tr>
+    
+ 
+    <tr class="career">
+      <td colspan="2">通算成績</td>
+      <td>750</td>
+      <td>342</td>
+      <td>398</td>
+      <td>10</td>
+      <td>.456</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+
+    </tbody>
+    </table>
+    
+  </div>
+
+  <!-- 個人獎項 -->
+  <div class="section">
+    <h2>個人獎項</h2>
+    ・<a href="../term/室內棒球聯盟年度打擊王.html">室內棒球聯盟年度打擊王</a>：2022<br>
+    ・<a href="../term/室內棒球聯盟年度安打王.html">室內棒球聯盟年度安打王</a>：2022、2023<br>
+    ・<a href="../term/室內棒球聯盟年度打點王.html">室內棒球聯盟年度打點王</a>：2022<br>
+    ・<a href="../term/室內棒球聯盟年度上壘率王.html">室內棒球聯盟年度上壘率王</a>：2021、2022<br>
+    ・<a href="../term/室內棒球聯盟年度金手套.html">室內棒球聯盟年度金手套</a>三壘手：2013、2014、2015、2017、2018、2019<br>
+    ・<a href="../term/室內棒球聯盟年度最佳陣容.html">室內棒球聯盟年度最佳十人</a>三壘手：2014、2015、2017、2021、2022、2023<br>
+    ・<a href="../term/室內棒球聯盟年度年度最有價值球員.html">室內棒球聯盟年度最有價值球員</a>：2022<br>
+    ・<a href="../term/室內棒球聯盟年度年度最佳總教練.html">室內棒球聯盟年度最佳總教練獎</a>：2033、2037<br>
+  </div>
+
+  <!-- 特殊事蹟 -->
+  <div class="section">
+    <h2>特殊事蹟</h2>
+    ・<a href="../term/室內棒球聯盟明星賽.html">室內棒球聯盟明星賽</a>：2012～2026<br>
+    ・<a href="../term/世界棒球經典賽.html">世界棒球經典賽</a>：2016、2024<br>
+    ・<a href="../term/世界棒球12強錦標賽.html">世界棒球12強錦標賽</a>：2014、2018、2022、2026<br>
+    
+  </div>
+
+  <!-- 相關新聞 -->
+  <div class="section">
+    <h2>相關新聞</h2>
+    <a href="#"></a><br>
+    <a href="#"></a>
+  </div>
+
+</div>
+
+
+</body>
+</html>
