@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> 南投雷霆 </title>
+<link rel="icon" href="https://i.ibb.co/G4fjPR13/Gemini-Generated-Image-leywaqleywaqleyw-Photoroom-1.png" sizes="180x120" type="image/png">
+
+<style>
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background: #ffffff;
+  color: #111827;
+  line-height: 1.6;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 80px; /* 關鍵 */
+}
+
+html, body {
+  height: auto;
+  overflow-y: auto;
+}
+
+/* ===== 橫幅照片 ===== */
+.banner-photo {
+  width: 100%;
+  height: 320px;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* ===== 頁首 ===== */
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header .sub {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* ===== 主版面 ===== */
+.section {
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-left: 4px solid #111827;
+  padding-left: 8px;
+}
+
+/* ===== 頂部導覽列 ===== */
+.topnav {
+  display: flex;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 3px solid #e5e7eb;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.topnav a {
+  color: #006000;
+  font-weight:450;
+}
+
+.topnav a:hover {
+  color: #1d4ed8;
+}
+
+/* ===== 介紹 ===== */
+.infobox {
+  float: right;
+  width: 420px;
+  border: 1px solid #d1d5db;
+  margin-left: 20px;
+  background: #f9fafb;
+  padding: 10px;
+  font-size: 0.85rem;
+}
+
+.infobox img {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  background: #fff;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.infobox-title {
+  background: #0B4F6C; /* 可以改成球隊代表色 */
+  color: #F26A1B;
+  text-align: center;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.infobox-title1 {
+  background: #00E5FF; /* 可以改成球隊代表色 */
+  color: #FFFFFF;
+  text-align: center;
+  padding: 3.5px;
+  font-weight: bold;
+}
+
+/* 吉祥物專用圖框 */
+.mascot-box {
+  float: right;
+  width: 300px;
+  margin-left: 20px;
+  margin-bottom: 15px;
+  border: 1px solid #d1d5db;
+  background: #f9fafb;
+  padding: 8px;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.mascot-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* 清除浮動防止影響下一個標題 */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* 手機版適應 */
+@media (max-width: 768px) {
+  .mascot-box {
+    float: none;
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+/* ===== 基本資料 ===== */
+.profile {
+  font-size: 0.85rem;
+}
+
+/* ===== 修正後的 Profile 樣式 ===== */
+.profile div {
+  display: flex;          /* 使用 Flex 佈局 */
+  padding: 6px 0;
+  border-bottom: 1px solid #e5e7eb;
+  align-items: flex-start; /* 讓標題與內容頂部對齊 */
+}
+
+/* 讓最後一項不要有底線 */
+.profile div:last-child {
+  border-bottom: none;
+}
+
+.profile span {
+  flex: 0 0 100px;        /* 固定寬度 100px，不縮放 */
+  font-weight: 600;
+  color: #374151;
+  display: block;         /* 確保寬度生效 */
+}
+
+.profile-data {
+  flex: 1;                /* 自動填滿剩餘寬度 */
+  line-height: 1.6;
+  color: #111827;
+}
+
+/* ===== 經歷 ===== */
+.career a {
+  display: inline-block;
+}
+
+.no-break {
+  white-space: nowrap; /* 括號內文字不換行 */
+}
+
+/* ===== 年表 ===== */
+.timeline {
+  font-size: 0.95rem;
+}
+
+.timeline div {
+  margin-bottom: 6px;
+}
+
+.timeline b {
+  display: inline-block;
+  width: 60px;
+}
+
+/* 維基館風格表格 */
+.wikitable {
+  width: 90%;
+  border-collapse: collapse;
+  border: 1px solid #aaa;
+  font-size: 0.95rem;
+  margin-top: 10px;
+  border-radius: 17px;
+}
+
+.wikitable th {
+  background: #D6EEF5;
+  color: #000000;
+  border: 1px solid #aaa;
+  padding: 5px;
+  text-align: center;
+  width: 15%; /* 左側標頭寬度 */
+}
+
+.wikitable td {
+  border: 1px solid #aaa;
+  padding: 8px;
+  background: #ffffff;
+}
+
+/* 讓球員名字之間有間隔 */
+.player-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.player-item {
+  white-space: nowrap;
+}
+
+.player-no {
+  font-weight: bold;
+  color: #444;
+  margin-right: 3px;
+}
+
+/* ===== 專題圖片展示區 ===== */
+.image-feature-section {
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.image-feature-section img {
+  width: 100%;
+  max-width: 600px; /* 限制最大寬度，避免在大螢幕上顯得太大 */
+  height: auto;
+  display: block;
+  margin: 0 auto 12px auto; /* 圖片居中並留白 */
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.image-description {
+  font-size: 0.9rem;
+  color: #4b5563;
+  line-height: 1.6;
+  padding: 0 10px;
+  border-left: 3px solid #002B49; /* 加一個裝飾性的左邊框 */
+}
+
+.image-description b {
+  color: #111827;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* 手機版適應：當螢幕太窄時，影片自動變回滿寬並取消浮動 */
+@media (max-width: 768px) {
+  .video-side-box {
+    float: none;
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+}
+
+/* ===== 節省空間的圖片網格區 ===== */
+.photo-grid {
+  display: flex;
+  flex-wrap: wrap;       /* 允許自動換行 */
+  gap: 15px;             /* 圖片之間的間距 */
+  margin-top: 10px;
+}
+
+.photo-item {
+  /* 電腦版預設：一排 3 張 (扣除 gap 後大約佔 32%) */
+  /* 如果想要一排 4 張，可以改成 calc(25% - 12px) */
+  flex: 0 0 calc(25% - 14px); 
+  border: 1px solid #d1d5db;
+  background: #f9fafb;
+  border-radius: 4px;
+  overflow: hidden;      /* 確保內容不超出邊框 */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+  display: flex;
+  flex-direction: column; /* 讓圖片和文字上下排列 */
+}
+
+.photo-item img {
+  width: 100%;
+  box-sizing: border-box;
+  height: 200px;         /* 設定一個固定高度 */
+  object-fit: cover;     /* 關鍵：圖片會自動填滿且不變形 */
+  object-position: center; /* 確保裁切時保留正中間 */
+  border-bottom: 1px solid #eee;
+}
+
+.photo-caption {
+  padding: 8px 10px;
+  font-size: 0.8rem;     /* 圖說字體小一點，節省空間 */
+  color: #4b5563;
+  line-height: 1.5;
+  text-align: center;    /* 文字居中 */
+  flex-grow: 1;          /* 讓文案區塊自動撐開，保持底部對齊 */
+}
+
+/* ===== 手機版適應 (RWD) ===== */
+@media (max-width: 768px) {
+  .photo-item {
+    /* 手機版：一排 2 張 */
+    flex: 0 0 calc(50% - 8px); 
+  }
+}
+
+@media (max-width: 480px) {
+  .photo-item {
+    /* 超小螢幕：一排 1 張 */
+    flex: 0 0 100%; 
+  }
+}
+
+/* 職業球隊色系：這裡以藍灰色系為例，你可以自行替換隊色 */
+:root {
+  --pro-primary: #D6EEF5; /* 職業質感深灰 */
+  --pro-accent: #3b82f6;  /* 亮點藍 */
+  --pro-bg: #f8fafc;
+}
+
+.decade-box {
+  max-width: 700px;
+  margin-bottom: 5px;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.decade-summary {
+  background-color: var(--pro-primary);
+  color: #000000;
+  overflow: hidden;
+  padding: 8px 15px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+  list-style: none;
+}
+
+/* 職業賽事專用表格：極致扁平化 */
+.pro-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.pro-table th {
+  background: #f1f5f9;
+  padding: 6px;
+  border-bottom: 2px solid #cbd5e1;
+  color: #475569;
+}
+
+.pro-table td {
+  padding: 5px 8px;
+  border-bottom: 1px solid #f1f5f9;
+  text-align: center;
+}
+
+/* 強調年度冠亞軍 */
+.champion { background-color: #fef3c7; font-weight: bold; color: #92400e; }
+.playoffs { color: var(--pro-accent); font-weight: 500; }
+
+/* ===== 表格 ===== */
+table.stats {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats th,
+table.stats td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats th {
+  background: #0B4F6C;
+  color: #F26A1B;
+  font-weight: 600;
+}
+
+table.stats tbody tr:nth-child(even) td {
+  background: #D6EEF5;
+}
+
+table.stats th:nth-child(2),
+table.stats td:nth-child(2) {
+  white-space: nowrap;
+}
+
+.best {
+  font-weight: bold;       /* 加粗字體 */        
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.test {
+  font-weight: bold;       /* 加粗字體 */
+  color: #FF0000;          /* 改成紅色 */
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+/* ===== 頁腳設計 ===== */
+.footer {
+  margin-top: 60px;
+  padding: 30px 0;
+  border-top: 1px solid #d1d5db;
+  background-color: #f9fafb; /* 淺灰色底，區隔主內容 */
+  color: #4b5563;
+  font-size: 0.85rem;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 20px;
+}
+
+.footer-section h4 {
+  color: #111827;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+  border-bottom: 2px solid #e5e7eb;
+  display: inline-block;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 6px;
+}
+
+.footer-links a {
+  color: #4b5563;
+}
+
+.footer-links a:hover {
+  color: #1d4ed8;
+}
+
+.footer-bottom {
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #e5e7eb;
+  font-size: 0.8rem;
+}
+
+.cc-logo {
+  vertical-align: middle;
+  height: 20px;
+  margin-right: 5px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    
+  <nav class="topnav">
+  <a href="../index.html">首頁</a> ⮕ <a href="teams.html">球隊</a> ⮕  <a href="台灣球隊.html">台灣球隊</a> ⮕  <a href="室內棒球聯盟球隊.html">室內棒球聯盟球隊</a> ⮕ <b>南亞旋風</b> </nav>     
+
+  <!-- 頁首 -->
+  <div class="header">
+    <h1>南亞旋風</h1>
+    <div class="sub"> 球隊｜室內棒球聯盟</div>
+  </div>
+
+  <div class="infobox">
+  <div class="infobox-title">南亞旋風 Nanya Cyclone</div>
+  
+  <div class="profile">
+    <div><span>創隊日期</span>2010年7月28日</div>
+    <div><span>隊名變更史</span>
+    南亞石化機械隊（業餘時期，1987–2010）<br>
+    ⭢南亞大氣隊（2011～2023）<br>
+    ⭢南亞海神隊（2024～2038）<br>
+    ⭢南亞旋風隊（2039～）<br>
+    </div>
+    <div><span>主場</span>高雄大巨蛋</div>
+    <div><span>所屬分區</span>室內棒球聯盟南區</div>
+    <div><span>母企業</span>南亞工業股份有限公司</div>
+    <div><span>領隊</span>陳振剛</div>
+    <div><span>總教練</span>Marcus Reynolds</div>
+    <div><span>聯盟冠軍</span><b>4次</b>&nbsp 2024、2026、2033、2037</div>
+    <div><span>年度冠軍</span><b>3次</b>&nbsp 2026、2028、2037</div>
+    <div><span>分區冠軍</span><b>8次</b>&nbsp 2023～2026、2031、2034、2036、2037</div>
+     <div><span>外卡資格</span><b>3次</b>&nbsp 2022、2033、2038</div>
+  </div>
+
+  </div>
+
+  <!-- 簡介 -->
+  <div class="section">
+<b>南亞旋風</b>（英文：Nanya Cyclone）是一支台灣的職業棒球隊伍，所屬聯盟為<a href="../league/室內棒球聯盟.html">室內棒球聯盟</a>。<br>
+<br>
+該隊的所屬城市是高雄市，主場則是位於該市的<a href="../stadium/高雄大巨蛋.html">高雄大巨蛋</a>。二軍農場基地以及比賽主場則是位於<a href="../stadium/高屏棒球場.html">高屏棒球場</a>。<br>
+<br>
+該隊創立於2010年，到目前為止經過兩次的改名。球隊營運、經營皆是由南亞工業股份有限公司負責。<br>
+  
+  </div>
+
+  
+   <!-- 球隊歷史 -->
+  <div class="section">
+    <h2>球隊歷史</h2>
+南亞旋風隊的歷史是一場橫跨半世紀的工業與體育史詩。1982年，南亞集團在高雄廠區的機械維修部門催生下成立了「南亞石化機械隊」，初衷是為了讓承受高度精準工作壓力的技術員能有體力宣洩的出口，這支帶有濃厚「黑手精神」的隊伍最初在業餘乙組默默耕耘，卻憑藉著工業人特有的紀律與耐性，在1990至1994年間寫下全國乙組四連霸的傳奇，最終在1997年正式叩關甲組殿堂，完成了從工廠空地走向標準球場的階級躍升。<br>
+<br>
+2003年起，南亞展現了深耕基層的野心，開始贊助南部基層少棒與青棒，並首創「技術員球員」制度，讓體育系畢業生能在追求職棒夢的同時擁有穩定的經濟來源，這項決策為後來的自家養成體系埋下了厚實的根基。到了2010年，隨著室內棒球聯盟成立十週年帶動的職業化浪潮，南亞集團順應高雄市政府的期待，以「南亞大氣隊」之名正式進軍職棒，讓高雄成為全國首個坐擁兩支職業球隊的城市，並成為當時聯盟中罕見的企業直營球隊。<br>
+<br>
+大氣隊的轉型關鍵點出現在2017年，球團大刀闊斧引進測速雷達與揮棒軌跡追蹤等先進技術，並開始大規模招募運動科學人才，這項投資在五年後結出碩果，球隊成功擺脫後段班的陰影，於2022至2027年連續六年闖入季後賽，並在2024與2026年奪得隊史首兩座總冠軍。2023年，「海神金庫」的重磅加盟為球隊注入了關鍵的40%運營資金，不僅興建了以前衛設計著稱的主場「海神之眼」，球隊也更名為「南亞海神隊」。在海神隊鼎盛時期，球團憑藉雄厚財力瘋狂簽下頂級球星與強力外援，搭配日趨成熟的自家養成系統，讓海神隊在2033與2037年兩度稱霸聯盟，成為南台灣不可撼動的棒球霸權。<br>
+<br>
+然而，隨著2039年南亞集團配合產業結構轉向綠能與高效率渦輪馬達，球隊再度更名為象徵動能的「南亞旋風隊」。這一次的更名卻伴隨著戰力斷層的陰影，海神時期的核心老將集體步入退役期，而新一代球員在缺乏領袖帶領的情況下，難以適應瞬息萬變的聯盟競爭，導致旋風隊從2043年起戰績如同失速的渦輪一路下滑，最終在2046與2047兩年跌落谷底。這支曾經傲視南台灣的傳統強權，在面對戰績與人氣的雙重打擊下，終於宣布將進行徹底的重建，試圖在綠能時代重新找回那股曾經橫掃全台的深藍狂潮。<br>
+  </div>  
+  
+  
+   <!-- 歷任總教練 -->
+  <div class="section">
+    <h2>總教練</h2>
+<strong>南亞旋風隊歷任總教練一覽表</strong>
+    <table class="stats">
+    <thead>
+      <tr>
+        <th>編號</th>
+        <th>教練名</th>
+        <th>背號</th>
+        <th>接任年份</th>
+        <th>卸任年份</th>
+        <th>分區冠軍</th>
+        <th>年度第一</th>
+        <th>台灣大賽冠軍</th>
+        <th>備註</th>
+      </tr>
+    </thead>
+    <tbody>
+    
+    <tr>
+      <td>1</td>
+      <td>高振宇</td>
+      <td>94</td>
+      <td>2042</td>
+      <td>2043</td>
+      <td>1次 2042</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+    <tr>
+      <td>2</td>
+      <td>Ricardo Sánchez</td>
+      <td>45</td>
+      <td>2044</td>
+      <td>2048</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+    <tr>
+      <td>6</td>
+      <td>朴鐘勳</td>
+      <td>36</td>
+      <td>2031</td>
+      <td>2032</td>
+      <td>1次 2031</td>
+      <td></td>
+      <td></td>
+      <td>季中解任</td>
+    </tr>
+    
+    <tr>
+      <td>7</td>
+      <td><a href="../players/王建龍.html">王建龍</a></td>
+      <td>25</td>
+      <td>2032</td>
+      <td>2038</td>
+      <td>2次 2035、2037</td>
+      <td></td>
+      <td>2次 2033、2037</td>
+      <td>季中接任，2038球季結束後自行請辭</td>
+    </tr>
+          
+    </tbody>
+  </table>
+ </div>
+
+  
+  <!-- 歷年成績-->
+  <div class="section">
+  <h2>隊史歷年成績</h2>
+  
+  <details class="decade-box">
+    <summary class="decade-summary">2040年代</summary>
+    <div style="padding: 10px; text-align: center; color: #64748b;">
+      在此填入該年代的戰績表格...
+    </div>
+  </details>
+  
+  <details class="decade-box">
+    <summary class="decade-summary">2050年代</summary>
+    <table class="pro-table">
+      <thead>
+        <tr>
+          <th>年度</th>
+          <th>出賽</th>
+          <th>勝-敗-和</th>
+          <th>勝率</th>
+          <th>分區排名</th>
+          <th>聯盟排名</th>
+          <th>季後賽</th>
+          <th>最終賽果</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr>
+          <td>2050</td>
+          <td>150</td>
+          <td>78-72-0</td>
+          <td>.520</td>
+          <td>3</td>
+          <td>9</td>
+          <td>未晉級</td>
+          <td></td>
+          <td></td>
+        </tr>
+        
+        <tr>
+          <td>2051</td>
+          <td>150</td>
+          <td>61-89-0</td>
+          <td>.407</td>
+          <td>4</td>
+          <td>17</td>
+          <td>未晉級</td>
+          <td></td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </details>
+
+  </div>    
+  
+  <!-- 成員 -->
+  <div class="section">
+  <h2>現役成員</h2>
+  <table class="wikitable">
+    <tr>
+      <th>教練團</th>
+      <td>
+        <div class="player-list">
+          <span class="player-item"><span class="player-no">64</span><a href="#">巴萬・達那</a>（總教練）</span>
+          <span class="player-item"><span class="player-no">71</span><a href="#">余信德</a>（內野教練）</span>
+          <span class="player-item"><span class="player-no">99</span>張家豪（投捕教練）</span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th>投手</th>
+      <td>
+        <div class="player-list">
+          <span class="player-item"><span class="player-no"></span></span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th>捕手</th>
+      <td>
+        <div class="player-list">
+          <span class="player-item"><span class="player-no"></span></span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th>內野手</th>
+      <td>
+        <div class="player-list">
+         <span class="player-item"><span class="player-no">14</span><a href="../players/許景成.html">許景成</a></span>
+         <span class="player-item"><span class="player-no">51</span>張弈辰</span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th>外野手</th>
+      <td>
+        <div class="player-list">
+          <span class="player-item"><span class="player-no">19</span>何仁峻</a></span>    
+          <span class="player-item"><span class="player-no">24</span>林宥辰</span>
+          <span class="player-item"><span class="player-no">37</span>江子雲</span>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+ 
+ 
+  <div class="section">
+  <h2>圖片集</h2>
+  
+  <div class="photo-grid">
+    
+    <div class="photo-item">
+      <img src="https://i.ibb.co/HfGqfCBf/2026-04-28-10-09-11.png" alt="隊徽">
+      <div class="photo-caption">球隊隊徽</div>
+    </div>
+    
+    <div class="photo-item">
+      <img src="https://i.ibb.co/pS2wJzy/E024-FC42-538-F-4-D45-B563-64-D6-ED3-F450-F.png" alt="球衣">
+      <div class="photo-caption">南亞旋風球衣</div>
+    </div>
+
+  </div> 
+  </div>
+  
+  
+
+
+  <!-- 相關新聞 -->
+  <div class="section">
+    <h2>相關新聞</h2>
+    <a href="#"></a><br>
+    <a href="#"></a>
+  </div>
+
+</div>
+
+
+</body>    
+</html>
