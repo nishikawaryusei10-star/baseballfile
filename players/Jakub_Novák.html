@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Jakub Novák </title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background: #ffffff;
+  color: #111827;
+  line-height: 1.6;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ===== 橫幅照片 ===== */
+.banner-photo {
+  width: 100%;
+  height: 320px;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* ===== 頁首 ===== */
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header .sub {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* ===== 主版面 ===== */
+.section {
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-left: 4px solid #111827;
+  padding-left: 8px;
+}
+
+/* ===== 基本資料 ===== */
+.profile {
+  font-size: 0.95rem;
+}
+
+.profile div {
+  padding: 5px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.profile span {
+  display: inline-block;
+  width: 100px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ===== 經歷 ===== */
+.career a {
+  display: inline-block;
+}
+
+.no-break {
+  white-space: nowrap; /* 括號內文字不換行 */
+}
+
+/* ===== 頂部導覽列 ===== */
+.topnav {
+  display: flex;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 3px solid #e5e7eb;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.topnav a {
+  color: #006000;
+  font-weight:450;
+}
+
+.topnav a:hover {
+  color: #1d4ed8;
+}
+
+/* ===== 年表 ===== */
+.timeline {
+  font-size: 0.95rem;
+}
+
+.timeline div {
+  margin-bottom: 6px;
+}
+
+.timeline b {
+  display: inline-block;
+  width: 60px;
+}
+
+/* ===== 表格 ===== */
+table.stats {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats th,
+table.stats td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats th {
+  background: #750000;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+table.stats tbody tr:nth-child(even) td {
+  background: #FFECEC	;
+}
+
+table.stats th:nth-child(2),
+table.stats td:nth-child(2) {
+  white-space: nowrap;
+}
+
+.best {
+  font-weight: bold;       /* 加粗字體 */        
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.test {
+  font-weight: bold;       /* 加粗字體 */
+  color: #FF0000;          /* 改成紅色 */
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+/* ===== Footer ===== */
+.footer {
+  border-top: 1px solid #d1d5db;
+  margin-top: 48px;
+  padding-top: 16px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    
+    <nav class="topnav">
+  <a href="../index.html">首頁</a> ⮕ <a href="players_overview.html">球員</a> ⮕  <a href="捷克球員.html">捷克球員</a> ⮕  <b>Jakub Novák</b> </nav> 
+
+  <!-- 頁首 -->
+  <div class="header">
+    <h1>Jakub Novák</h1>
+    <div class="sub"> Jakub Novák｜內野手（SS）</div>
+  </div>
+
+  <!-- 基本資料 -->
+  <div class="section">
+    <h2>基本資料</h2>
+    <div class="profile">
+      <div><span>出生日期</span>2025 年 4 月 17 日（27歲）</div>
+      <div><span>身高體重</span>186 公分／85 公斤</div>
+      <div><span>出生地</span>捷克・布拉格</div>
+      <div><span>投打習慣</span>右投右打</div>
+      <div><span>守備位置</span>內野手 SS 2B</div>
+      <div><span>職棒選秀</span><a href="../term/2046年室內棒球聯盟選秀會.html">2046年室內棒球聯盟選秀會</a><a href="#">全聯熊隊</a>第三輪指名</div>
+    </div>
+  </div>
+
+  <!-- 球員經歷 -->
+  <div class="section">
+    <h2>球員經歷</h2>
+    <div class="career">
+      <a href="#">新竹市</a><a href="#">東園國小少棒隊</a></br>
+      <a href="#">新竹市</a><a href="#">光武國中青少棒隊</a></br>
+      <a href="#">桃園市</a><a href="#">大溪高中青棒隊</a></br>
+      <a href="#">桃園市</a><a href="#">國立體育大學棒球隊</a></br>
+      <a href="#">室內棒球聯盟</a><a href="#">全聯熊隊</a>（2046/08～2049/06）</br>
+      <a href="#">室內棒球聯盟</a><a href="#">中信子彈隊</a>（2049/06～2050/11）</br>
+       <a href="#">室內棒球聯盟</a><a href="#">樂天桃猿隊</a>（2051～）</br>
+    </div>
+  </div>
+
+  <!-- 球員介紹 -->
+  <div class="section">
+    <h2>球員介紹</h2>
+Jakub Novák是一位來自於捷克的棒球選手，守備位置為游擊手，目前效力於室內棒球聯盟樂天桃猿隊。</br>
+</br>
+出生於布拉格，父親是捷克工程師，母親則是台灣人。八歲那年，全家因父親工作調動搬回台灣定居。那時的Jakub幾乎不會說中文，只知道每天放學後，學校後方那片簡單鋪平的紅土場，總是有人在打棒球。他並不是第一個被注意到的孩子。身材偏偏瘦、動作內斂，語言又不通，更多時候他只是默默站在外野，接球、傳球、不說話。</br>
+</br>
+國小就讀新竹市的普通公立學校，Jakub是班上唯一的外國名字。棒球隊裡，他不靠力量，也不靠速度，而是靠一種很難形容的「準確感」。他擊出的球，總是剛好越過內野，又不會飛得太遠；守備時，他很少撲球，但站位總是對的。國中升上青少棒後，他的中文逐漸流利，卻也開始真正感受到現實的差距。面對體格更成熟的同齡球員，他的長打始終有限，數據不亮眼，始終不是媒體關注的對象。</br>
+</br>
+不過在教練的介紹下，Jakub北上前往桃園讀書，加入大溪高中棒球隊。在教練指導下，他快速進步，尤其是打擊能力，在升上高三後抽高至185cm，搭配本身就很出色的爆發力，使他在高中最後一年如願以償進入到木棒組。在短短的一年中繳出不錯的成績，最後被遠在歐洲的U18球隊看到，2043年的世青賽，Jakub被選為捷克代表隊的一員，也是他首次穿上國家隊的球衣，在賽事中繳出.429/.435/.762，雖然球隊無緣複賽，不過他的好表現讓室內棒球聯盟的球探眼前一亮。</br>
+</br>
+不過Jakub並沒有著急投入選秀，他知道現階段的他還有許多地方還要好好磨練，於是他進入國立體大，希望讓自己成熟度更高，三年間Jakub繳出優異的成績，大專盃三年平均下來繳出4成多打擊率，加上中線防守越來越成熟。此時有捷克聯賽的球探詢問Jakub是否有意回國打球，但Jakub考量許多因素，尤其是雖然捷克聯賽能提供穩定出賽空間，卻難以給他長期競爭的強度；而台灣，早已不是「暫居地」，而是他真正成長、生活、理解棒球的地方。最終，他婉拒返歐邀約，選擇留在國立體大完成學業，也為自己爭取更完整的準備時間。</br>
+</br>
+2046年，Jakub提前在大三休完課正式畢業，他也決定投入該年選秀會，在選秀會上被全聯熊隊在第三輪選進，選秀後以簽約金891萬、4年新人合約加盟，正式挑戰職業殿堂。</br>
+</br>
+2046年賽季後段，Jakub迎來二軍出賽機會，在37場短短出賽繳出OPS+107的成績，其實算是相當不錯了。季末Jakub更是被捷克棒協選進該屆16強的正選名單，繼U18後再度披上國家隊戰袍，從此之後，Jakub便是捷克國家隊常客，幾乎只要國家隊比賽一定會選入Jakub。</br>
+</br>
+不過Jakub的職業生涯並不像國家隊入選一樣相當順利，在球隊內已有主力游擊手下，他只能在替補與輪替角色中等待機會。自2047年二個一軍賽季下來，他的出賽數不低，卻始終無法完全站穩先發。打擊數據不上不下，守備穩定卻缺乏話題性，逐漸被貼上「實用但可取代」的標籤。2049年季中，全聯熊選擇以他作為交易籌碼，將其送往中信子彈隊。</br>
+</br>
+轉隊後，Novák的定位首次明確下來。教練團給予他固定出賽與容錯空間，讓他專注於游擊守備與上壘任務。2050年球季，他完整擔任主戰游擊手，打擊率與得點圈表現同步成長，也逐漸建立「關鍵時刻不慌亂」的信任感。這段時間，他不再只是輪替零件，而是球隊戰術的一部分。2051年休賽季，Novák再度透過交易轉戰樂天桃猿。對這支北區勁旅而言，他並非救世主型球星，而是能補齊內野穩定度的重要拼圖。加盟首季，他在高壓競爭環境下仍維持穩定輸出，得點圈打擊率創下生涯新高，也逐漸成為教練在關鍵局數放心交付的名字。</br>
+</br>
+  </div>
+
+  <!-- 個人年表 -->
+  <div class="section">
+    <h2>個人年表</h2>
+    <div class="timeline">
+      <div><b>2043年</b>8月，考取國立體育大學球類競技學系，以正取9入學</div>
+      <div><b>2046年</b>7月，參加室內棒球聯盟季中選秀，被全聯熊隊在第三輪選進，選秀後以簽約金891萬、4年新人合約加盟</div>
+      <div><b>2047年</b>4月6日，一軍初登場，七局下半替補上場守游擊</div>
+      <div><b>2047年</b>4月12日，對戰味全天龍隊敲出生涯首安</div>
+      <div><b>2047年</b>5月18日，對戰樂天桃猿隊敲出生涯首轟</div>
+      <div><b>2049年</b>6月，被交易至中信子彈隊</div>
+      <div><b>2050年</b>季後，被交易至樂天桃猿隊</div>
+    </div>
+  </div>
+
+  <!-- 生涯成績 -->
+ <!-- 生涯成績 -->
+  <div class="section">
+    <h2>職棒生涯成績</h2>
+<strong>室內棒球聯盟一軍打擊成績</strong>
+    <table class="stats">
+    <thead>
+      <tr>
+        <th>年度</th>
+        <th>球隊</th>
+        <th>G</th>
+        <th>PA</th>
+        <th>AB</th>
+        <th>H</th>
+        <th>2B</th>
+        <th>3B</th>
+        <th>HR</th>
+        <th>RBI</th>
+        <th>R</th>
+        <th>SB</th>
+        <th>TB</th>
+        <th>SO</th>
+        <th>BB</th>
+        <th>SAC</th>
+        <th>SF</th>
+        <th>AVG</th>
+        <th>OBP</th>
+        <th>SLG</th>
+        <th>OPS</th>
+      </tr>
+    </thead>
+    <tbody>
+   
+   <tr>
+      <td>2047</td>
+      <td>全聯熊</td>
+      <td>101</td>
+      <td>352</td>
+      <td>315</td>
+      <td>81</td>
+      <td>14</td>
+      <td>2</td>
+      <td>7</td>
+      <td>39</td>
+      <td>45</td>
+      <td>11</td>
+      <td>120</td>
+      <td>58</td>
+      <td>27</td>
+      <td>6</td>
+      <td>4</td>
+      <td>.257</td>
+      <td>.312</td>
+      <td>.381</td>
+      <td>.693</td>
+    </tr>    
+   
+   <tr>
+      <td>2048</td>
+      <td>全聯熊</td>
+      <td>92</td>
+      <td>318</td>
+      <td>289</td>
+      <td>73</td>
+      <td>11</td>
+      <td>1</td>
+      <td>6</td>
+      <td>31</td>
+      <td>37</td>
+      <td>8</td>
+      <td>104</td>
+      <td>54</td>
+      <td>22</td>
+      <td>6</td>
+      <td>1</td>
+      <td>.253</td>
+      <td>.304</td>
+      <td>.360</td>
+      <td>.664</td>
+    </tr>        
+   
+   <tr>
+      <td>2049</td>
+      <td>中信子彈</td>
+      <td>116</td>
+      <td>402</td>
+      <td>362</td>
+      <td>99</td>
+      <td>18</td>
+      <td>3</td>
+      <td>9</td>
+      <td>39</td>
+      <td>52</td>
+      <td>13</td>
+      <td>150</td>
+      <td>61</td>
+      <td>34</td>
+      <td>4</td>
+      <td>2</td>
+      <td>.273</td>
+      <td>.334</td>
+      <td>.414</td>
+      <td>.748</td>
+    </tr>
+    
+    <tr>
+      <td>2050</td>
+      <td>中信子彈</td>
+      <td>128</td>
+      <td>478</td>
+      <td>431</td>
+      <td>122</td>
+      <td>21</td>
+      <td>4</td>
+      <td>11</td>
+      <td>46</td>
+      <td>69</td>
+      <td>14</td>
+      <td>184</td>
+      <td>66</td>
+      <td>41</td>
+      <td>4</td>
+      <td>2</td>
+      <td>.283</td>
+      <td>.344</td>
+      <td>.427</td>
+      <td>.771</td>
+    </tr>
+    
+    <tr>
+      <td>2051</td>
+      <td>樂天桃猿</td>
+      <td>134</td>
+      <td>512</td>
+      <td>463</td>
+      <td>135</td>
+      <td>24</td>
+      <td>2</td>
+      <td>13</td>
+      <td>52</td>
+      <td>79</td>
+      <td>16</td>
+      <td>202</td>
+      <td>73</td>
+      <td>43</td>
+      <td>5</td>
+      <td>1</td>
+      <td>.292</td>
+      <td>.351</td>
+      <td>.436</td>
+      <td>.787</td>
+    </tr>
+ 
+    <tr class="career">
+      <td colspan="2">通算成績</td>
+      <td>571</td>
+      <td>2062</td>
+      <td>1860</td>
+      <td>510</td>
+      <td>88</td>
+      <td>12</td>
+      <td>46</td>
+      <td>207</td>
+      <td>282</td>
+      <td>62</td>
+      <td>760</td>
+      <td>312</td>
+      <td>167</td>
+      <td>25</td>
+      <td>10</td>
+      <td>.274</td>
+      <td>.332</td>
+      <td>.409</td>
+      <td>.741</td>
+    </tr>
+
+
+  
+    </tbody>
+  </table>
+
+      <!-- 成績資料保持原本內容 -->
+      <!-- 這裡略去為簡潔，可直接保留你原本 table 內容 -->
+    </tbody>
+    </table>
+  </div>
+
+  <!-- 個人獎項 -->
+  <div class="section">
+    <h2>個人獎項</h2>
+    （尚無）
+  </div>
+
+  <!-- 特殊事蹟 -->
+  <div class="section">
+    <h2>特殊事蹟</h2>
+    <a href="#">室內棒球聯盟明星賽</a>：2050</br>
+    <a href="#">2043年U18世界青棒錦標賽</a>捷克代表隊</br>
+    <a href="#">2046年世界棒球16強錦標賽</a>捷克代表隊</br>
+    <a href="#">2048年世界棒球經典賽</a>捷克代表隊</br>
+    <a href="#">2050年世界棒球16強錦標賽</a>捷克代表隊</br>
+  </div>
+
+  <!-- 相關新聞 -->
+  <div class="section">
+    <h2>相關新聞</h2>
+    <a href="#"></a><br>
+    <a href="#"></a>
+  </div>
+
+</div>
+
+
+</body>
+</html>
