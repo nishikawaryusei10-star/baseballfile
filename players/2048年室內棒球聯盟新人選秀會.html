@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2048年室內棒球聯盟新人選秀會</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background: #ffffff;
+  color: #111827;
+  line-height: 1.6;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 80px; /* 關鍵 */
+}
+
+html, body {
+  height: auto;
+  overflow-y: auto;
+}
+
+/* ===== 頂部導覽列 ===== */
+.topnav {
+  display: flex;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 3px solid #e5e7eb;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.topnav a {
+  color: #006000;
+  font-weight:450;
+}
+
+.topnav a:hover {
+  color: #1d4ed8;
+}
+
+/* ===== 頁首 ===== */
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header .sub {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* ===== 區塊 ===== */
+.section {
+  margin-bottom: 28px;
+  overflow: hidden
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-left: 4px solid #111827;
+  padding-left: 8px;
+}
+
+
+
+/* ===== 歷年金手套表格 ===== */
+.award-container {
+  margin: 1em 0;
+}
+
+select, input[type="number"] {
+  padding: 4px 6px;
+  margin-right: 0.5em;
+  font-size: 13px;
+}
+
+/* 1. 修正表格基礎設定，移除 overflow:hidden */
+table.stats {
+  width: 100%;
+  border-collapse: separate; /* 改為 separate 以便讓 sticky 運作 */
+  border-spacing: 0;         /* 間距設為 0，維持原本 collapse 的感覺 */
+  border-radius: 8px;
+  margin-top: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+/* 2. 讓外層容器允許橫向捲軸 */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 8px; /* 圓角改到容器上 */
+}
+
+/* 3. 固定第一欄 (輪次) */
+table.stats th:first-child,
+table.stats td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 5; /* 確保在最上層 */
+  border-right: 1px solid #ddd; /* 增加一條右邊框區隔 */
+}
+
+/* 4. 關鍵：給固定欄位明確的背景色 (否則會變透明) */
+table.stats td:first-child {
+  background-color: #ffffff !important; 
+}
+
+/* 偶數行變色時，固定欄位也要跟著變色 */
+table.stats tbody tr:nth-child(even) td:first-child {
+  background-color: #ECF5FF !important; 
+}
+
+/* 標題固定欄位顏色 */
+table.stats th:first-child {
+  background-color: #46A3FF !important;
+  z-index: 6; /* 標題左上角格子最高層 */
+}
+
+table.stats th,
+table.stats td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  white-space: nowrap;
+}
+
+table.stats th {
+  background: #46A3FF;
+  color: #FFFFFF;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+table.stats tbody tr:nth-child(even) td {
+  background: #ECF5FF;
+}
+
+.best {
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.test {
+  font-weight: bold;
+  color: #FF0000;
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+@media(max-width: 600px) {
+  table.stats th, table.stats td {
+    font-size: 10px;
+    padding: 2px 4px;
+  }
+}
+
+/* ===== 其他獎項連結 ===== */
+.award-summary-wrapper {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: "Noto Sans TC", sans-serif;
+  padding: 0 10px;
+}
+
+.award-summary-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  table-layout: fixed;
+}
+
+.award-summary-table td {
+  padding: 6px 4px; /* 縮小內距 */
+  vertical-align: top;
+  border: 1px solid #ccc;
+  background-color: #fff; /* 白底 */
+}
+
+.award-title {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 0;
+  background: #f4e6f7 !important;
+  border: 1px solid #ccc;
+}
+
+.award-category {
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+  padding: 8px 0;
+  border-radius: 4px;
+}
+
+.award-category.pitcher { background-color: #f4e6f7; } /* 淺藍 */
+.award-category.hitter  { background-color: #f4e6f7; } /* 淺橘 */
+.award-category.other   { background-color: #f4e6f7; } /* 淺灰 */
+.award-category.memorial{ background-color: #f4e6f7; } /* 淺紫 */
+
+.award-item a {
+  display: inline-block;
+  margin: 3px 5px;  /* 空格稍微縮小 */
+  padding: 3px 6px;
+  border-radius: 4px;
+  color: #004b97;
+  text-decoration: none;
+  font-size: 13px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.award-item a:hover {
+  transform: translateY(-1px);
+  background-color: #eef5ff;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto; /* 當寬度不足時，顯示橫向捲軸 */
+  -webkit-overflow-scrolling: touch; /* 讓手機滑動更順暢 */
+  margin-top: 10px;
+  
+  /* 在這裡加上圓角和陰影 */
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+table.stats th:first-child {
+  border-top-left-radius: 7px;
+}
+table.stats th:last-child {
+  border-top-right-radius: 7px;
+}
+
+/* 2. 固定第一欄 (輪次) */
+table.stats th:first-child,
+table.stats td:first-child {
+  position: sticky;
+  left: 0;          /* 固定在左側 0 的位置 */
+  z-index: 10;      /* 確保它在滑動時會蓋在其他文字上面 */
+}
+
+/* 3. 設定固定欄位的背景色，防止後方文字滑過時透出來 */
+table.stats td:first-child {
+  background-color: #ffffff !important; /* 必須給背景色，否則會變透明 */
+}
+
+table.stats th:first-child {
+  background-color: #46A3FF !important; /* 保持原本的藍色標題底色 */
+}
+
+/* 4. (選配) 加入一條細細的右邊框，讓固定感更明顯 */
+table.stats th:first-child,
+table.stats td:first-child {
+  border-right: 2px solid #e5e7eb;
+}
+
+
+@media(max-width: 600px){
+  .award-summary-table td {
+    display: block;
+    width: 100%;
+    margin-bottom: 6px;
+  }
+  .award-item a {
+    font-size: 12px;
+    padding: 2px 4px;
+    margin: 2px 3px;
+  }
+}
+
+.this {
+    font-weight: 600;
+    color: #000000;
+    border-radius: 4px;
+    padding: 2px 4px;
+  }
+  
+/* ===== 資訊框 Infobox ===== */
+.infobox {
+  float: right;
+  width: 420px;
+  margin: 0 0 20px 20px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  font-size: 0.9rem;
+  overflow: hidden;
+}
+
+.infobox-title {
+  background: #46A3FF;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.infobox-image {
+  text-align: center;
+  padding: 15px;
+  background: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.infobox-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.infobox-table th, .infobox-table td {
+  padding: 8px 12px;
+  border-bottom: 1px solid #f3f4f6;
+  text-align: left;
+}
+
+.infobox-table th {
+  background: #f9fafb;
+  width: 35%;
+  font-weight: 600;
+  color: #4b5563;
+  white-space: nowrap;
+}
+
+/* 手機版適應：當螢幕太小時，盒子寬度撐滿並取消右浮動 */
+@media (max-width: 768px) {
+  .infobox {
+    float: none;
+    width: 100%;
+    margin: 0 0 20px 0;
+  }
+}
+
+/* ===== Infobox 年份導航 ===== */
+.infobox-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background: #f9fafb;
+  border-top: 2px solid #e5e7eb; /* 粗一點的線條做出區隔感 */
+  font-size: 0.85rem;
+}
+
+.nav-prev, .nav-next {
+  flex: 1;
+}
+
+.nav-prev {
+  text-align: left;
+}
+
+.nav-next {
+  text-align: right;
+}
+
+.nav-current {
+  flex: 1;
+  text-align: center;
+  font-weight: bold;
+  color: #111827;
+  padding: 0 5px;
+}
+
+.infobox-nav a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+
+.infobox-nav a:hover {
+  text-decoration: underline;
+}
+
+.infobox-caption {
+  padding-top: 8px;      /* 與圖片的間距 */
+  font-size: 0.8rem;     /* 字體小一點 */
+  color: #6b7280;        /* 淺灰色，比較有專業感 */
+  line-height: 1.4;
+  text-align: center;    /* 置中對齊 */
+}
+
+</style>
+</head>
+
+<body>
+<div class="container">
+    
+  <nav class="topnav">
+  <a href="../index.html">首頁</a> ⮕ <a href="專有名詞.html">專有名詞</a> ⮕  <a href="選秀.html">選秀</a> ⮕   <a href="室內棒球聯盟新人選秀會.html">室內棒球聯盟新人選秀會</a> ⮕ <b>2048年室內棒球聯盟新人選秀會</b> </nav> 
+
+  <!-- 頁首 -->
+  <div class="header">
+    <h1>2048年室內棒球聯盟新人選秀會</h1>
+    <div class="sub">2048 IBL Draft
+    </div>
+  </div>
+  
+  <aside class="infobox">
+  <div class="infobox-title">2048年室內棒球聯盟新人選秀會</div>
+  <div class="infobox-image">
+    <img src="https://i.ibb.co/ycfrPZKV/Chat-GPT-Image-2026-5-13-10-32-34.png" style="width:100%">
+  <div class="infobox-caption">
+    2048年選秀狀元莊廷曜（2048年春季大專聯賽）
+  </div>
+  </div>
+  <table class="infobox-table">
+    <tr>
+      <th>贊助商</th>
+      <td>維斯特科技股份有限公司</td>
+    </tr>
+    <tr>
+      <th>日期</th>
+      <td>2048年7月13日</td>
+    </tr>
+    <tr>
+      <th>地點</th>
+      <td>台北流行音樂中心</td>
+    </tr>
+    <tr>
+      <th>參加人數</th>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>指名人數</th>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>簽約人數</th>
+      <td>-（全數簽約）</td>
+    </tr>
+  </table>
+  
+  <!-- 年份導航區塊 -->
+<div class="infobox-nav">
+  <div class="nav-prev">
+    « <a href="2047年室內棒球聯盟新人選秀會.html">2047</a>
+  </div>
+  
+  <div class="nav-current">2048年室內棒球聯盟選秀</div>
+  
+  <div class="nav-next">
+    <a href="2049年室內棒球聯盟新人選秀會.html">2049</a> »
+  </div>
+</div>
+</aside>
+  
+  <div class="section">
+<b>2048年室內棒球聯盟新人選秀會</b>（官方全名：2048 VASTERA Dynamics 室內棒球聯盟新人選秀會）於2048年7月13日在台北流行音樂中心舉行，由VASTERA Dynamics 維斯特科技冠名贊助。該屆選秀會以「READY NOW」作為年度口號，並以「不是等待未來，而是現在上場」作為宣傳主軸，象徵聯盟各隊開始更加重視能立即進入一軍戰力的成熟型球員。
+  </div>
+
+  <!-- 簡介 -->
+  <div class="section">
+    <h2>簡介</h2>
+相較於2042年至2047年間由高中黃金世代主導的選秀年代，2048年高中球員整體天賦與深度明顯不如過往。前幾屆不僅持續出現高天花板的大物球員，各校也累積大量國際賽與黑豹旗經驗，使高中生長期成為各球團建隊核心來源。然而到了2048年，台灣高中棒球也正式進入所謂的「短暫斷層期」。<br>
+<br>
+球探圈普遍認為，造成這波斷層的主因並非基層衰退，而是2042年至2047年間的高中世代實在過於強盛。那幾年間，不只頂尖球員數量驚人，連原本放在其他年份有機會於第三、第四輪被選中的選手，在黃金世代中都可能一路滑落至後段順位，甚至最終選擇不投入職棒。也因此，許多當時評價不差、但尚未成熟完成的高中球員，最終決定先進入大學與業餘體系繼續磨練，希望等待未來更適合自己的選秀年份。到了2048年前後，這批球員也剛好進入大學畢業年，進一步導致該屆選秀的大專球員數量與整體完成度異常突出。<br>
+<br>
+此外，球探圈也認為2048屆高中生在身體素質方面，恰好處於世代交替中的空窗期。雖然仍有部分技術型球員受到關注，但整體爆發力、運動能力與天賦上限，普遍被認為不如下一屆高三生。甚至有不少球探在選秀前便直言：「2048的高中生比較像過渡世代，真正的大物可能在下一屆。」<br>
+<br>
+因此到了2048屆，雖然仍有不少具潛力球員，但整體「天花板型」高中生數量明顯下降，反而大專體系開始受惠。許多原本高中時期不算頂尖的球員，在經過大學四年完整養成後，逐漸成長為更成熟、更穩定的即戰力。<br>
+<br>
+也因為如此，2048年選秀的建隊邏輯與前幾年出現巨大差異。比起需要長時間養成的高中生，各隊更傾向挑選更成熟、更偏向即戰力的大專業餘選手。<br>
+<br>
+也因為如此，該屆選秀出現罕見現象——前兩輪幾乎由大專球員全面主導，許多過往會在首輪被挑中的高中球員，一路滑落至中後段才獲得指名。握有狀元籤的墾丁鯊魚隊，最終選擇來自文化大學的王牌左投莊廷曜<br>
+<br>
+後來回頭來看，2048年雖然缺乏超級高中明星帶來的話題性，但卻誕生了大量穩定的一軍球員，因此也被媒體稱為：<br>
+<br>
+「最不像大年的大年。」<br>
+  </div>
+  
+  <br>
+  <br>
+  
+  <!-- 歷年列表 -->
+  <div class="section">
+    <h2>選秀結果</h2>
+ 
+    <div class="table-responsive">
+    <table class="stats">
+    <thead>
+      <tr>
+        <th>輪次</th>
+        <th>墾丁鯊魚</th>
+        <th>統一猛獅</th>
+        <th>台東鋼鐵人</th>
+        <th>味全天龍</th>
+        <th>富邦守護者</th>
+        <th>樂天桃猿</th>
+        <th>花蓮眼鏡蛇</th>
+        <th>基隆雨都</th>
+        <th>全聯熊</th>
+        <th>南投雷霆</th>
+        <th>離島聯隊</th>
+        <th>阿里山小火車</th>
+        <th>台糖巨人</th>
+        <th>北鐵狼</th>
+        <th>南亞炫風</th>
+        <th>中信子彈</th>
+        <th>竹科工程師</th>
+        <th>台鋼巨鷹</th>
+        <th>苗栗石虎</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+        <td>1</td> 
+        <td>莊廷曜</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>劉昶勳</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      
+      <tr>
+        <td>2</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      
+      <tr>
+        <td>3</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      
+      <tr>
+        <td>4</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      
+     <tr>
+        <td>5</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      
+      <tr>
+        <td>6</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      
+      <tr>
+        <td>7</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      
+      <tr>
+        <td>8</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      
+      </tbody>
+      </table>
+      
+</div>
+</div>
+
+
+  </div>
+
+<script>
+function showYear(){
+  let year = document.getElementById('year-select').value;
+  document.querySelectorAll('#award-tables table').forEach(tbl=>{
+    tbl.style.display = (tbl.id==='award-'+year) ? '' : 'none';
+  });
+  document.getElementById('year-search').value = year;
+}
+
+function searchYear(){
+  let year = document.getElementById('year-search').value;
+  if(year < 2000 || year > 2051){ alert('年份範圍：2000~2051'); return; }
+  document.getElementById('year-select').value = year;
+  showYear();
+}
+
+// 預設顯示最新年份
+showYear();
+</script>
+
+</body>
+</html>
