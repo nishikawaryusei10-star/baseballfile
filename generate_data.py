@@ -1,0 +1,31 @@
+import os
+import json
+
+def generate_json():
+    search_data = []
+    # 定義要掃描的資料夾與對應標籤
+    folders = {
+        "players": "球員",
+        "teams": "球隊",
+        "league": "聯盟",
+        "stadium": "球場",
+        "term": "特殊",
+        "games": "賽事",
+    }
+
+    for folder, tag in folders.items():
+        if os.path.exists(folder):
+            for filename in os.listdir(folder):
+                if filename.endswith(".html") and "_overview" not in filename:
+                    title = filename.replace(".html", "")
+                    search_data.append({
+                        "title": title,
+                        "url": f"{folder}/{filename}",
+                        "tag": tag
+                    })
+
+    with open("data.json", "w", encoding="utf-8") as f:
+        json.dump(search_data, f, ensure_ascii=False, indent=2)
+
+if __name__ == "__main__":
+    generate_json()
