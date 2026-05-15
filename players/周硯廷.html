@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> 周硯廷 </title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background: #ffffff;
+  color: #111827;
+  line-height: 1.6;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 80px; /* 關鍵 */
+}
+
+html, body {
+  height: auto;
+  overflow-y: auto;
+}
+
+/* ===== 橫幅照片 ===== */
+.banner-photo {
+  width: 100%;
+  height: 320px;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* ===== 頁首 ===== */
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header .sub {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* ===== 主版面 ===== */
+.section {
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-left: 4px solid #111827;
+  padding-left: 8px;
+}
+
+/* ===== 基本資料 ===== */
+.profile {
+  font-size: 0.95rem;
+}
+
+.profile div {
+  padding: 5px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.profile span {
+  display: inline-block;
+  width: 100px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ===== 經歷 ===== */
+.career a {
+  display: inline-block;
+}
+
+.no-break {
+  white-space: nowrap; /* 括號內文字不換行 */
+}
+
+/* ===== 年表 ===== */
+.timeline {
+  font-size: 0.95rem;
+}
+
+.timeline div {
+  margin-bottom: 6px;
+}
+
+.timeline b {
+  display: inline-block;
+  width: 60px;
+}
+
+/* ===== 頂部導覽列 ===== */
+.topnav {
+  display: flex;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 3px solid #e5e7eb;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.topnav a {
+  color: #006000;
+  font-weight:450;
+}
+
+.topnav a:hover {
+  color: #1d4ed8;
+}
+
+/* ===== 表格 ===== */
+table.stats {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats th,
+table.stats td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats th {
+  background: #B15BFF;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+table.stats tbody tr:nth-child(even) td {
+  background: #F1E1FF;
+}
+
+table.stats th:nth-child(2),
+table.stats td:nth-child(2) {
+  white-space: nowrap;
+}
+
+.best {
+  font-weight: bold;       /* 加粗字體 */        
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.test {
+  font-weight: bold;       /* 加粗字體 */
+  color: #FF0000;          /* 改成紅色 */
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+/* ===== Footer ===== */
+.footer {
+  border-top: 1px solid #d1d5db;
+  margin-top: 48px;
+  padding-top: 16px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+/* ===== 右側簡潔照片欄 ===== */
+.side-photo-box {
+  float: right;
+  width: 320px; /* 照片寬度 */
+  margin: 0 0 20px 24px;
+  padding: 5px;
+  border: 1px solid #e5e7eb;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.side-photo-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.photo-caption {
+  font-size: 0.8rem;
+  color: #4b5563;
+  padding: 8px 4px 4px 4px;
+  line-height: 1.4;
+  border-top: 1px solid #f3f4f6;
+  margin-top: 5px;
+}
+
+/* 手機版自動置中 */
+@media (max-width: 600px) {
+  .side-photo-box {
+    float: none;
+    margin: 0 auto 20px auto;
+    width: 90%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    
+  <nav class="topnav">
+  <a href="../index.html">首頁</a> ⮕ <a href="players_overview.html">球員</a> ⮕  <a href="taiwan_players_overview.html">台灣球員</a> ⮕  <b>周硯廷</b> </nav>     
+
+  <!-- 頁首 -->
+  <div class="header">
+    <h1>周硯廷</h1>
+    <div class="sub"> CHOU,YEN-TING｜外野手（LF）</div>
+  </div>
+  
+
+  <!-- 基本資料 -->
+  
+  <div class="section">
+    <h2>基本資料</h2>
+    <div class="profile">
+      <div><span>綽號別稱</span>度假村村長</div>
+      <div><span>出生日期</span>2024 年 9 月 26 日（27歲）</div>
+      <div><span>身高體重</span>181 公分／84 公斤</div>
+      <div><span>出生地</span>台灣・臺南市善化區</div>
+      <div><span>投打習慣</span>右投左打</div>
+      <div><span>守備位置</span>外野手 LF RF 內野手1B</div>
+      <div><span>職棒選秀</span><a href="2046年室內棒球聯盟新人選秀會.html">2046年室內棒球聯盟選秀會</a><a href="../teams/墾丁鯊魚.html">墾丁鯊魚隊</a>第一輪指名</div>
+    </div>
+  </div>
+  
+  <!-- 右側照片欄 -->
+  <div class="side-photo-box">
+    <img src="https://i.ibb.co/wNgvJrby/Chat-GPT-Image-2026-5-15-08-11-12.png" alt="周硯廷">
+    <div class="photo-caption">
+      周硯廷（2051年例行賽）
+    </div>
+  </div>
+
+  <!-- 球員經歷 -->
+  <div class="section">
+    <h2>球員經歷</h2>
+    <div class="career">
+      <a href="#">臺南市</a><a href="#">善化國小少棒隊</a></br>
+      <a href="#">臺南市</a><a href="#">善化國中青少棒隊</a></br>
+      <a href="#">高雄市</a><a href="高苑工商青棒隊.html">高苑工商青棒隊</a><br>
+      高雄市國立高雄大學棒球隊<br>
+      <a href="#">室內棒球聯盟</a><a href="../teams/墾丁鯊魚.html">墾丁鯊魚隊</a>（2046/08～）<br>
+    </div>
+  </div>
+
+  <!-- 個人年表 -->
+  <div class="section">
+    <h2>個人年表</h2>
+    <div class="timeline">
+      <div><b>2042年</b>錄取國立高雄大學競技體育學系（棒球隊）</div> 
+      <div><b>2045年</b>大專聯賽期間繳出打擊率.347、OPS1.021、、11支全壘打</div> 
+      <div><b>2046年</b>7月，投入室內棒球聯盟選秀會，被墾丁鯊魚隊在第一輪指名，後以1525萬台幣加盟</div>
+      <div><b>2047年</b>2月13日，在球隊安排下前往國軍鳳凰隊服役</div>
+      <div><b>2047年</b>2月14日，春訓紅白戰撲壘後傷退，後診斷為右肩肩唇撕裂</div>
+      <div><b>2047年</b>因受傷而取消國軍鳳凰隊服役行程</div>
+      <div><b>2047年</b>3月1日，接受手術，預計8個月復健</div>
+      <div><b>2048年</b>4月21日，右大腿肌肉三級拉傷，進入60日傷兵名單</div>
+      <div><b>2049年</b>右手伸肌群肌腱發炎，採取保守治療PRP注射、減少實戰、控制揮棒量</div>
+      <div><b>2050年</b>慢性下背與核心失衡問題，導致該季大多在二軍度過</div>
+      <div><b>2051年</b>該季在球隊保護下逐步增加比賽場次，並增加輪休時間</div>
+    </div>
+  </div>
+
+  <!-- 生涯成績 -->
+ <!-- 生涯成績 -->
+  <div class="section">
+    <h2>職棒生涯成績</h2>
+    室內棒球聯盟一軍打擊成績：
+    <table class="stats">
+    <thead>
+      <tr>
+        <th>年度</th>
+        <th>球隊</th><th>G</th><th>PA</th><th>AB</th><th>H</th>
+        <th>2B</th><th>3B</th><th>HR</th>
+        <th>RBI</th><th>R</th><th>SB</th><th>TB</th><th>SO</th><th>BB</th><th>SAC</th><th>SF</th>
+        <th>AVG</th><th>OBP</th><th>SLG</th><th>OPS</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+      <td>2048</td>
+      <td>墾丁鯊魚</td>
+      <td>21</td>
+      <td>67</td>
+      <td>58</td>
+      <td>13</td>
+      <td>2</td>
+      <td>0</td>
+      <td>2</td>
+      <td>8</td>
+      <td>7</td>
+      <td>1</td>
+      <td>21</td>
+      <td>19</td>
+      <td>7</td>
+      <td>1</td>
+      <td>1</td>
+      <td>.224</td>
+      <td>.303</td>
+      <td>.362</td>
+      <td>.665</td>
+    </tr>
+    
+    <tr>
+      <td>2049</td>
+      <td>墾丁鯊魚</td>
+      <td>32</td>
+      <td>103</td>
+      <td>90</td>
+      <td>22</td>
+      <td>5</td>
+      <td>0</td>
+      <td>3</td>
+      <td>14</td>
+      <td>11</td>
+      <td>1</td>
+      <td>36</td>
+      <td>28</td>
+      <td>10</td>
+      <td>2</td>
+      <td>1</td>
+      <td>.244</td>
+      <td>.317</td>
+      <td>.400</td>
+      <td>.717</td>
+    </tr>
+    
+    <tr>
+      <td>2050</td>
+      <td>墾丁鯊魚</td>
+      <td>13</td>
+      <td>36</td>
+      <td>31</td>
+      <td>5</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>9</td>
+      <td>11</td>
+      <td>4</td>
+      <td>0</td>
+      <td>1</td>
+      <td>.161</td>
+      <td>.250</td>
+      <td>.290</td>
+      <td>.540</td>
+    </tr>
+    
+    <tr>
+      <td>2051</td>
+      <td>墾丁鯊魚</td>
+      <td>98</td>
+      <td>344</td>
+      <td>302</td>
+      <td>86</td>
+      <td>19</td>
+      <td>3</td>
+      <td>9</td>
+      <td>41</td>
+      <td>38</td>
+      <td>7</td>
+      <td>138</td>
+      <td>61</td>
+      <td>34</td>
+      <td>5</td>
+      <td>3</td>
+      <td>.273</td>
+      <td>.354</td>
+      <td>.457</td>
+      <td>.811</td>
+    </tr>
+       
+    <tr class="career">
+      <td colspan="2">通算成績</td>
+      <td>164</td>
+      <td>550</td>
+      <td>481</td>
+      <td>126</td>
+      <td>27</td>
+      <td>3</td>
+      <td>15</td>
+      <td>66</td>
+      <td>58</td>
+      <td>9</td>
+      <td>204</td>
+      <td>119</td>
+      <td>55</td>
+      <td>8</td>
+      <td>6</td>
+      <td>.262</td>
+      <td>.334</td>
+      <td>.424</td>
+      <td>.758</td>
+    </tr>
+
+
+  
+    </tbody>
+  </table>
+  </div>
+
+  <!-- 個人獎項 -->
+  <div class="section">
+    <h2>個人獎項</h2>
+    ・2045年大專聯賽全壘打獎、最佳外野手<br>
+  </div>
+
+  <!-- 特殊事蹟 -->
+  <div class="section">
+    <h2>特殊事蹟</h2>
+    ・2045年U23世界盃棒球錦標賽中華代表隊<br>
+  </div>
+
+  <!-- 相關新聞 -->
+  <div class="section">
+    <h2>相關新聞</h2>
+
+    </div>
+
+</div>
+
+
+</body>
+</html>
