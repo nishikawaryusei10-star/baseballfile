@@ -182,6 +182,42 @@ table.stats td:nth-child(2) {
   font-size: 0.8rem;
   color: #6b7280;
 }
+
+/* ===== 右側簡潔照片欄 ===== */
+.side-photo-box {
+  float: right;
+  width: 320px; /* 照片寬度 */
+  margin: 0 0 20px 24px;
+  padding: 5px;
+  border: 1px solid #e5e7eb;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.side-photo-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.photo-caption {
+  font-size: 0.8rem;
+  color: #4b5563;
+  padding: 8px 4px 4px 4px;
+  line-height: 1.4;
+  border-top: 1px solid #f3f4f6;
+  margin-top: 5px;
+}
+
+/* 手機版自動置中 */
+@media (max-width: 600px) {
+  .side-photo-box {
+    float: none;
+    margin: 0 auto 20px auto;
+    width: 90%;
+  }
+}
+
 </style>
 </head>
 
@@ -209,6 +245,14 @@ table.stats td:nth-child(2) {
       <div><span>守備位置</span>外野手 CF</div>
       <div><span>職棒選秀</span><a href="#">2041年韓國職棒選秀會</a><a href="#">樂天巨人隊</a>第三輪指名</div>
       <div><span>原文姓名</span><b>김재훈（Kim Jae-hoon）</b></div>
+    </div>
+  </div>
+  
+  <!-- 右側照片欄 -->
+  <div class="side-photo-box">
+    <img src="https://i.ibb.co/fY3q7zyH/626-A3-B28-FA37-4328-A794-3-B075-AB5-A155.png" alt="金在勳">
+    <div class="photo-caption">
+      金在勳（2051年例行賽/澄清湖棒球場）
     </div>
   </div>
 
