@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> 林聖杰 </title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background: #ffffff;
+  color: #111827;－
+  line-height: 1.6;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ===== 橫幅照片 ===== */
+.banner-photo {
+  width: 100%;
+  height: 320px;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* ===== 頁首 ===== */
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header .sub {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* ===== 主版面 ===== */
+.section {
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-left: 4px solid #111827;
+  padding-left: 8px;
+}
+
+/* ===== 基本資料 ===== */
+.profile {
+  font-size: 0.95rem;
+}
+
+.profile div {
+  padding: 5px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.profile span {
+  display: inline-block;
+  width: 100px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ===== 經歷 ===== */
+.career a {
+  display: inline-block;
+
+}
+
+.no-break {
+  white-space: nowrap; /* 括號內文字不換行 */
+}
+
+/* ===== 年表 ===== */
+.timeline {
+  font-size: 0.95rem;
+}
+
+.timeline div {
+  margin-bottom: 6px;
+}
+
+.timeline b {
+  display: inline-block;
+  width: 60px;
+}
+
+/* ===== 頂部導覽列 ===== */
+.topnav {
+  display: flex;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 3px solid #e5e7eb;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.topnav a {
+  color: #006000;
+  font-weight:450;
+}
+
+.topnav a:hover {
+  color: #1d4ed8;
+}
+
+/* ===== 表格 ===== */
+table.stats {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats th,
+table.stats td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats th {
+  background: #000000;
+  color: #FF8000;
+  font-weight: 600;
+}
+
+table.stats tbody tr:nth-child(even) td {
+  background: #FFEEDD;
+}
+
+
+
+table.stats th:nth-child(2),
+table.stats td:nth-child(2) {
+  white-space: nowrap;
+}
+
+.best {
+  font-weight: bold;       /* 加粗字體 */        
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.test {
+  font-weight: bold;       /* 加粗字體 */
+  color: #FF0000;          /* 改成紅色 */
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+/* ===== Footer ===== */
+.footer {
+  border-top: 1px solid #d1d5db;
+  margin-top: 48px;
+  padding-top: 16px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+/* ===== 右側簡潔照片欄 ===== */
+.side-photo-box {
+  float: right;
+  width: 320px; /* 照片寬度 */
+  margin: 0 0 20px 24px;
+  padding: 5px;
+  border: 1px solid #e5e7eb;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.side-photo-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.photo-caption {
+  font-size: 0.8rem;
+  color: #4b5563;
+  padding: 8px 4px 4px 4px;
+  line-height: 1.4;
+  border-top: 1px solid #f3f4f6;
+  margin-top: 5px;
+}
+
+/* 手機版自動置中 */
+@media (max-width: 600px) {
+  .side-photo-box {
+    float: none;
+    margin: 0 auto 20px auto;
+    width: 90%;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  
+   <nav class="topnav">
+  <a href="../index.html">首頁</a> ⮕ <a href="players_overview.html">球員</a> ⮕  <a href="taiwan_players_overview.html">台灣球員</a> ⮕  <b>林聖杰</b> </nav>     
+  
+  <!-- 頁首 -->
+  <div class="header">
+    <h1>林聖杰</h1>
+    <div class="sub"> LIN,SHENG-CHIEH｜外野手（RF）</div>
+  </div>
+
+  <!-- 基本資料 -->
+  <div class="section">
+    <h2>基本資料</h2>
+    <div class="profile">
+      <div><span>出生日期</span>2013 年 3 月 29 日（39歲）</div>
+      <div><span>身高體重</span>183 公分／88 公斤</div>
+      <div><span>出生地</span>台灣・苗栗縣竹南鎮</div>
+      <div><span>投打習慣</span>右投左打</div>
+      <div><span>守備位置</span>外野手 RF LF</div>
+      <div><span>職棒選秀</span><a href="../term/2035年室內棒球聯盟新人選秀會.html">2035年室內棒球聯盟選秀會</a><a href="../teams/統一猛獅隊.html">統一猛獅隊</a>第二輪指名</div>
+    </div>
+  </div>
+  
+  <!-- 右側照片欄 -->
+  <div class="side-photo-box">
+    <img src="https://i.ibb.co/9385BF9K/Chat-GPT-Image-2026-5-18-01-15-30.png" alt="蔡承彥">
+    <div class="photo-caption">
+      林聖杰（2049年一軍例行賽/台南棒球場）
+    </div>
+  </div>
+
+  <!-- 球員經歷 -->
+  <div class="section">
+    <h2>球員經歷</h2>
+    <div class="career">
+      苗栗縣竹南國小少棒隊<br>
+      桃園市新民國中青少棒隊<br>
+      桃園市大溪高中青棒隊<br>
+      桃園市國立體育大學棒球隊<br>
+      <a href="#">室內棒球聯盟</a><a href="#">統一猛獅隊</a><span class="no-break">（2047/08~）</span><br>
+      <a href="#">室內棒球聯盟</a><a href="#">國軍鳳凰隊</a><span class="no-break">（2048）</span>
+    </div>
+  </div>
+
+  <!-- 個人年表 -->
+  <div class="section">
+    <h2>個人年表</h2>
+    <div class="timeline">
+    <div><b>2031年</b>8月，錄取國立體育大學競技運動學系</div>
+    <div><b>2035年</b>7月，參加室內棒球聯盟季中選秀，被統一猛獅隊在第二輪選進，選秀後以簽約金958萬新台幣加盟</div>
+    <div><b>2039年</b>9月4日，敲出第14支高飛犧牲打，與高知遠並列室內棒球聯盟單季最多犧牲飛球紀錄</div>
+     <div><b>2039年</b>該季敲出188支安打，與隊友吳桀恩並列為聯盟最多，最後因打數較少而獲得安打王</div>
+     <div><b>2040年</b>9月6日，敲出第19支高飛犧牲打，與Carlos Morales並列單季最多犧牲飛球紀錄</div>
+     <div><b>2040年</b>9月9日，敲出第20支高飛犧牲打，成為單季最多犧牲飛球世界新紀錄，後來該紀錄在例行賽結束時被刷新到24支犧牲飛球</div>
+     <div><b>2042年</b>5月27日，面對花蓮眼鏡蛇隊投手敲出生涯1000安</div>
+     <div><b>2042年</b>6月18日，面對基隆雨都隊投手敲出生涯百轟</div>
+     <div><b>2043年</b>7月19日，達成生涯百盜，完成生涯千安百轟百盜</div>
+     <div><b>2043年</b>8月16日，為了沒收全壘打重重撞擊外野護墊，導致右肩旋轉肌群輕微撕裂，進入十日傷兵名單，直到8月底才回到一軍</div>
+     <div><b>2045年</b>10月28日，台灣大賽G2面對味全天龍時因滑壘而傷退，後續診斷為左腳踝高位韌帶輕微扭傷，伴隨部分撕裂</div>
+     <div><b>2045年</b>10月28日，台灣大賽G7面對味全天龍陳峻瑋敲出再見滿貫全壘打，創造經典名場面「經典跛腳再見轟」</div>
+     <div><b>2045年</b>11月1日，在球隊安排下進行左腳踝韌帶重建手術</div>
+     <div><b>2049年</b>7月24日，達成生涯2000安</div>
+     <div><b>2050年</b>8月26日，達成生涯200轟</div>
+    </div>
+  </div>
+
+  <!-- 生涯成績 -->
+ <!-- 生涯成績 -->
+  <div class="section">
+    <h2>歷年職棒生涯成績</h2>
+    <b>室內棒球聯盟一軍打擊成績：</b>
+    <table class="stats">
+    <thead>
+      <tr>
+        <th>年度</th>
+        <th>球隊</th><th>G</th><th>PA</th><th>AB</th><th>H</th>
+        <th>2B</th><th>3B</th><th>HR</th>
+        <th>RBI</th><th>R</th><th>SB</th><th>TB</th><th>SO</th><th>BB</th><th>SAC</th><th>SF</th>
+        <th>AVG</th><th>OBP</th><th>SLG</th><th>OPS</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+      <td>2036</td>
+      <td>統一猛獅</td>
+      <td>92</td>
+      <td>315</td>
+      <td>285</td>
+      <td>78</td>
+      <td>12</td>
+      <td>2</td>
+      <td>4</td>
+      <td>31</td>
+      <td>35</td>
+      <td>8</td>
+      <td>106</td>
+      <td>52</td>
+      <td>24</td>
+      <td>4</td>
+      <td>2</td>
+      <td>.274</td>
+      <td>.328</td>
+      <td>.372</td>
+      <td>.700</td>
+    </tr>
+    
+    <tr>
+      <td>2037</td>
+      <td>統一猛獅</td>
+      <td>135</td>
+      <td>562</td>
+      <td>498</td>
+      <td>145</td>
+      <td>28</td>
+      <td>4</td>
+      <td>11</td>
+      <td>68</td>
+      <td>72</td>
+      <td>15</td>
+      <td>214</td>
+      <td>78</td>
+      <td>51</td>
+      <td>8</td>
+      <td>5</td>
+      <td>.291</td>
+      <td>.354</td>
+      <td>.430</td>
+      <td>.784</td>
+    </tr>
+    
+    <tr>
+      <td>2038</td>
+      <td>統一猛獅</td>
+      <td>148</td>
+      <td>645</td>
+      <td>560</td>
+      <td>178</td>
+      <td>35</td>
+      <td>5</td>
+      <td>15</td>
+      <td>82</td>
+      <td>90</td>
+      <td>21</td>
+      <td>268</td>
+      <td>82</td>
+      <td>68</td>
+      <td>5</td>
+      <td>12</td>
+      <td>.318</td>
+      <td>.387</td>
+      <td>.479</td>
+      <td>.866</td>
+    </tr>
+    
+    <tr>
+      <td>2039</td>
+      <td>統一猛獅</td>
+      <td><span class="best">150</span></td>
+      <td>672</td>
+      <td>585</td>
+      <td><span class="best">188</span></td>
+      <td>38</td>
+      <td>3</td>
+      <td>18</td>
+      <td>95</td>
+      <td>98</td>
+      <td>18</td>
+      <td>286</td>
+      <td>75</td>
+      <td>72</td>
+      <td>2</td>
+      <td><span class="best">15</span></td>
+      <td>.321</td>
+      <td>.389</td>
+      <td>.489</td>
+      <td>.878</td>
+    </tr>
+    
+    <tr>
+      <td>2040</td>
+      <td>統一猛獅</td>
+      <td>145</td>
+      <td>632</td>
+      <td>542</td>
+      <td>165</td>
+      <td>32</td>
+      <td>1</td>
+      <td>22</td>
+      <td>102</td>
+      <td>88</td>
+      <td>12</td>
+      <td>265</td>
+      <td>90</td>
+      <td>65</td>
+      <td>1</td>
+      <td><span class="test">24</span></td>
+      <td>.304</td>
+      <td>.371</td>
+      <td>.489</td>
+      <td>.860</td>
+    </tr>
+    
+    <tr>
+      <td>2041</td>
+      <td>統一猛獅</td>
+      <td>142</td>
+      <td>620</td>
+      <td>535</td>
+      <td>172</td>
+      <td>41</td>
+      <td>2</td>
+      <td>19</td>
+      <td>88</td>
+      <td>92</td>
+      <td>14</td>
+      <td>274</td>
+      <td>68</td>
+      <td>75</td>
+      <td>0</td>
+      <td>10</td>
+      <td>.321</td>
+      <td>.398</td>
+      <td>.512</td>
+      <td>.910</td>
+    </tr>
+    
+    <tr>
+      <td>2042</td>
+      <td>統一猛獅</td>
+      <td>149</td>
+      <td>658</td>
+      <td>562</td>
+      <td>195</td>
+      <td>44</td>
+      <td>4</td>
+      <td>25</td>
+      <td>115</td>
+      <td>105</td>
+      <td>10</td>
+      <td>322</td>
+      <td>72</td>
+      <td>82</td>
+      <td>1</td>
+      <td>13</td>
+      <td>.347</td>
+      <td><span class="best">.423</span></td>
+      <td>.573</td>
+      <td>.996</td>
+    </tr>
+    
+    <tr>
+      <td>2043</td>
+      <td>統一猛獅</td>
+      <td>130</td>
+      <td>558</td>
+      <td>480</td>
+      <td>152</td>
+      <td>30</td>
+      <td>1</td>
+      <td>16</td>
+      <td>76</td>
+      <td>78</td>
+      <td>6</td>
+      <td>232</td>
+      <td>65</td>
+      <td>68</td>
+      <td>2</td>
+      <td>8</td>
+      <td>.317</td>
+      <td>.396</td>
+      <td>.483</td>
+      <td>.879</td>
+    </tr>
+    
+    <tr>
+      <td>2044</td>
+      <td>統一猛獅</td>
+      <td>144</td>
+      <td>622</td>
+      <td>532</td>
+      <td>166</td>
+      <td>34</td>
+      <td>0</td>
+      <td>20</td>
+      <td>91</td>
+      <td>85</td>
+      <td>5</td>
+      <td>260</td>
+      <td>78</td>
+      <td>81</td>
+      <td>0</td>
+      <td>9</td>
+      <td>.312</td>
+      <td>.395</td>
+      <td>.489</td>
+      <td>.884</td>
+    </tr>
+    
+    <tr>
+      <td>2045</td>
+      <td>統一猛獅</td>
+      <td>138</td>
+      <td>585</td>
+      <td>502</td>
+      <td>150</td>
+      <td>28</td>
+      <td>1</td>
+      <td>14</td>
+      <td>80</td>
+      <td>70</td>
+      <td>4</td>
+      <td>222</td>
+      <td>72</td>
+      <td>74</td>
+      <td>1</td>
+      <td>8</td>
+      <td>.299</td>
+      <td>.382</td>
+      <td>.442</td>
+      <td>.824</td>
+    </tr>
+    
+    <tr>
+      <td>2046</td>
+      <td>統一猛獅</td>
+      <td>125</td>
+      <td>510</td>
+      <td>445</td>
+      <td>128</td>
+      <td>22</td>
+      <td>0</td>
+      <td>12</td>
+      <td>65</td>
+      <td>58</td>
+      <td>0</td>
+      <td>186</td>
+      <td>64</td>
+      <td>55</td>
+      <td>3</td>
+      <td>7</td>
+      <td>.288</td>
+      <td>.361</td>
+      <td>.418</td>
+      <td>.779</td>
+    </tr>
+    
+    <tr>
+      <td>2047</td>
+      <td>統一猛獅</td>
+      <td>118</td>
+      <td>465</td>
+      <td>410</td>
+      <td>116</td>
+      <td>20</td>
+      <td>1</td>
+      <td>9</td>
+      <td>58</td>
+      <td>48</td>
+      <td>0</td>
+      <td>165</td>
+      <td>58</td>
+      <td>49</td>
+      <td>2</td>
+      <td>4</td>
+      <td>.283</td>
+      <td>.356</td>
+      <td>.402</td>
+      <td>.758</td>
+    </tr>
+    
+    <tr>
+      <td>2048</td>
+      <td>統一猛獅</td>
+      <td>110</td>
+      <td>420</td>
+      <td>372</td>
+      <td>102</td>
+      <td>18</td>
+      <td>0</td>
+      <td>7</td>
+      <td>46</td>
+      <td>40</td>
+      <td>0</td>
+      <td>141</td>
+      <td>51</td>
+      <td>42</td>
+      <td>1</td>
+      <td>5</td>
+      <td>.274</td>
+      <td>.344</td>
+      <td>.379</td>
+      <td>.723</td>
+    </tr>
+    
+    <tr>
+      <td>2049</td>
+      <td>統一猛獅</td>
+      <td>95</td>
+      <td>342</td>
+      <td>302</td>
+      <td>85</td>
+      <td>15</td>
+      <td>0</td>
+      <td>5</td>
+      <td>38</td>
+      <td>32</td>
+      <td>0</td>
+      <td>115</td>
+      <td>42</td>
+      <td>36</td>
+      <td>0</td>
+      <td>4</td>
+      <td>.281</td>
+      <td>.354</td>
+      <td>.381</td>
+      <td>.735</td>
+    </tr>
+    
+    <tr>
+      <td>2050</td>
+      <td>統一猛獅</td>
+      <td>78</td>
+      <td>265</td>
+      <td>230</td>
+      <td>66</td>
+      <td>12</td>
+      <td>0</td>
+      <td>4</td>
+      <td>32</td>
+      <td>25</td>
+      <td>0</td>
+      <td>90</td>
+      <td>31</td>
+      <td>32</td>
+      <td>0</td>
+      <td>3</td>
+      <td>.287</td>
+      <td>.368</td>
+      <td>.391</td>
+      <td>.759</td>
+    </tr>
+    
+    <tr>
+      <td>2051</td>
+      <td>統一猛獅</td>
+      <td>62</td>
+      <td>185</td>
+      <td>160</td>
+      <td>46</td>
+      <td>9</td>
+      <td>0</td>
+      <td>2</td>
+      <td>24</td>
+      <td>14</td>
+      <td>0</td>
+      <td>61</td>
+      <td>22</td>
+      <td>22</td>
+      <td>0</td>
+      <td>3</td>
+      <td>.288</td>
+      <td>.368</td>
+      <td>.381</td>
+      <td>.749</td>
+    </tr>
+
+      <tr>      
+        <td colspan="2">通算成績</td>  
+        <td>1961</td>
+        <td>8056</td>
+        <td>7000</td>
+        <td>2132</td>
+        <td>418</td>
+        <td>24</td>
+        <td>203</td>
+        <td>1091</td>
+        <td>1030</td>
+        <td>113</td>
+        <td>3207</td>
+        <td>1000</td>
+        <td>896</td>
+        <td>30</td>
+        <td>132</td>
+        <td>.305</td>
+        <td>.377</td>
+        <td>.456</td>
+        <td>.835</td>
+      </tr>
+
+
+  
+    </tbody>
+  </table>
+
+      <!-- 成績資料保持原本內容 -->
+      <!-- 這裡略去為簡潔，可直接保留你原本 table 內容 -->
+    </tbody>
+    </table>
+  </div>
+
+  <!-- 個人獎項 -->
+  <div class="section">
+    <h2>個人獎項</h2>
+    ・2033年大專聯賽公開一級組全壘打王、打擊王、最佳外野手獎<br>
+    ・2034年大專聯賽公開一級組安打王、全壘打王、打擊王、最佳外野手獎、賽會MVP<br>
+    ・<a href="../term/室內棒球聯盟年度安打王.html">室內棒球聯盟年度安打王</a>：2038<br>
+    ・<a href="../term/室內棒球聯盟年度上壘率王.html">室內棒球聯盟年度上壘率王</a>：2042<br>
+    ・<a href="../term/台灣大賽MVP.html">台灣大賽MVP</a>：2045<br>
+    ・<a href="../term/室內棒球聯盟年度最佳陣容.html">室內棒球聯盟年度最佳陣容</a>第一隊外野手：2039、2041～2044<br>
+    ・<a href="../term/室內棒球聯盟年度最佳陣容.html">室內棒球聯盟年度最佳陣容</a>第二隊外野手：2040、2045<br>
+  </div>
+
+  <!-- 特殊事蹟 -->
+  <div class="section">
+    <h2>特殊事蹟</h2>
+    ・2033年U23世界盃棒球錦標賽中華代表隊<br>
+    ・2034年U23世界盃棒球錦標賽中華代表隊<br>
+    ・2040年世界棒球經典賽中華代表隊<br>
+    ・2042年WBSC世界棒球16強賽中華代表隊<br>
+    ・2044年世界棒球經典賽中華代表隊<br>
+  </div>
+
+  <!-- 相關新聞 -->
+  <div class="section">
+    <h2>相關新聞</h2>
+    <a href="#"></a><br>
+    <a href="#"></a>
+  </div>
+
+</div>
+
+
+</body>
+</html>
