@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> 蔡承彥 </title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background: #ffffff;
+  color: #111827;－
+  line-height: 1.6;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ===== 橫幅照片 ===== */
+.banner-photo {
+  width: 100%;
+  height: 320px;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* ===== 頁首 ===== */
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header .sub {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* ===== 主版面 ===== */
+.section {
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-left: 4px solid #111827;
+  padding-left: 8px;
+}
+
+/* ===== 基本資料 ===== */
+.profile {
+  font-size: 0.95rem;
+}
+
+.profile div {
+  padding: 5px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.profile span {
+  display: inline-block;
+  width: 100px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ===== 經歷 ===== */
+.career a {
+  display: inline-block;
+
+}
+
+.no-break {
+  white-space: nowrap; /* 括號內文字不換行 */
+}
+
+/* ===== 年表 ===== */
+.timeline {
+  font-size: 0.95rem;
+}
+
+.timeline div {
+  margin-bottom: 6px;
+}
+
+.timeline b {
+  display: inline-block;
+  width: 60px;
+}
+
+/* ===== 頂部導覽列 ===== */
+.topnav {
+  display: flex;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 3px solid #e5e7eb;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.topnav a {
+  color: #006000;
+  font-weight:450;
+}
+
+.topnav a:hover {
+  color: #1d4ed8;
+}
+
+/* ===== 表格 ===== */
+table.stats {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats th,
+table.stats td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats th {
+  background: #000000;
+  color: #FF8000;
+  font-weight: 600;
+}
+
+table.stats tbody tr:nth-child(even) td {
+  background: #FFEEDD;
+}
+
+
+
+table.stats th:nth-child(2),
+table.stats td:nth-child(2) {
+  white-space: nowrap;
+}
+
+.best {
+  font-weight: bold;       /* 加粗字體 */        
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.test {
+  font-weight: bold;       /* 加粗字體 */
+  color: #FF0000;          /* 改成紅色 */
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+/* ===== Footer ===== */
+.footer {
+  border-top: 1px solid #d1d5db;
+  margin-top: 48px;
+  padding-top: 16px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+/* ===== 右側簡潔照片欄 ===== */
+.side-photo-box {
+  float: right;
+  width: 320px; /* 照片寬度 */
+  margin: 0 0 20px 24px;
+  padding: 5px;
+  border: 1px solid #e5e7eb;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.side-photo-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.photo-caption {
+  font-size: 0.8rem;
+  color: #4b5563;
+  padding: 8px 4px 4px 4px;
+  line-height: 1.4;
+  border-top: 1px solid #f3f4f6;
+  margin-top: 5px;
+}
+
+/* 手機版自動置中 */
+@media (max-width: 600px) {
+  .side-photo-box {
+    float: none;
+    margin: 0 auto 20px auto;
+    width: 90%;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  
+   <nav class="topnav">
+  <a href="../index.html">首頁</a> ⮕ <a href="players_overview.html">球員</a> ⮕  <a href="taiwan_players_overview.html">台灣球員</a> ⮕  <b>陳柏安</b> </nav>     
+  
+  <!-- 頁首 -->
+  <div class="header">
+    <h1>陳柏安</h1>
+    <div class="sub"> CHANG,WEI-LUN｜投手（RHP）</div>
+  </div>
+
+  <!-- 基本資料 -->
+  <div class="section">
+    <h2>基本資料</h2>
+    <div class="profile">
+      <div><span>出生日期</span>2023 年 4 月 23 日（29歲）</div>
+      <div><span>身高體重</span>182 公分／84 公斤</div>
+      <div><span>出生地</span>台灣・高雄市鼓山區</div>
+      <div><span>投打習慣</span>右投右打</div>
+      <div><span>守備位置</span>投手 RHP </div>
+      <div><span>最快球速</span>152 km/h（室內棒球聯盟/2051年） </div>
+      <div><span>職棒選秀</span><a href="../term/2045年室內棒球聯盟新人選秀會.html">2045年室內棒球聯盟選秀會</a><a href="../teams/統一猛獅隊.html">統一猛獅隊</a>第二輪指名</div>
+    </div>
+  </div>
+  
+  <!-- 右側照片欄 -->
+  <div class="side-photo-box">
+    <img src="https://i.ibb.co/Xk2BbqmP/Chat-GPT-Image-2026-5-20-11-05-48.png" alt="張瑋倫">
+    <div class="photo-caption">
+      陳柏安（2051年一軍例行賽/台南小巨蛋）
+    </div>
+  </div>
+
+  <!-- 球員經歷 -->
+  <div class="section">
+    <h2>球員經歷</h2>
+    <div class="career">
+      高雄市七賢國小少棒隊<br>
+      高雄市七賢國中青少棒隊<br>
+      高雄市高苑工商青棒隊<br>
+      桃園市國立體育大學棒球隊<br>
+      <a href="#">室內棒球聯盟</a><a href="#">統一猛獅隊</a><span class="no-break">（2045/08~）</span><br>
+      <a href="#">室內棒球聯盟</a><a href="#">國軍鳳凰隊</a><span class="no-break">（2048）</span>
+    </div>
+  </div>
+
+  <!-- 個人年表 -->
+  <div class="section">
+    <h2>個人年表</h2>
+    <div class="timeline">
+     <div><b>2041年</b>6月，錄取國立體育大學</div>
+     <div><b>2044年</b> 穩坐國立體大頭號王牌先發，以九宮格神準控球名震成棒界，寫下BB/9低於1.2的恐怖紀錄，吸引多位職棒球探密切追蹤。</div>
+     <div><b>2045年</b>3月，在大專棒球聯賽四強賽與冠軍賽中，寫下單週「燃燒 15 局、0保送、僅掉1分」的史詩級表現</div>
+     <div><b>2045年</b>7月，參加室內棒球聯盟季中選秀，被統一猛獅隊在第二輪選進，選秀後以簽約金1361萬新台幣加盟，並披上36號橘色戰袍</div>
+     <div><b>2048年</b>季前，球隊正式定為為中繼投手</div>
+     <div><b>2051年</b>7月，首度入選明星賽</div>
+    </div>
+  </div>
+
+  <!-- 生涯成績 -->
+ <!-- 生涯成績 -->
+  <div class="section">
+    <h2>歷年職棒生涯成績</h2>
+    <b>室內棒球聯盟一軍投球成績：</b>
+    <table class="stats">
+    <thead>
+      <tr>
+      <th>年度</th>
+      <th>球隊</th>
+      <th>G</th>
+      <th>GS</th>
+      <th>W</th>
+      <th>L</th>
+      <th>HLD</th>
+      <th>SV</th>
+      <th>IP</th>
+      <th>QS</th>
+      <th>BF</th>
+      <th>BH</th>
+      <th>BHR</th>
+      <th>OAVG</th>
+      <th>SO</th>
+      <th>BB</th>
+      <th>R</th>
+      <th>ER</th>
+      <th>ERA</th>
+      <th>WHIP</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+      <td>2046</td>
+      <td>統一猛獅</td>
+      <td>12</td>
+      <td>8</td>
+      <td>3</td>
+      <td>4</td>
+      <td>1</td>
+      <td>0</td>
+      <td>46.2</td>
+      <td>2</td>
+      <td>206</td>
+      <td>51</td>
+      <td>6</td>
+      <td>.277</td>
+      <td>34</td>
+      <td>16</td>
+      <td>28</td>
+      <td>25</td>
+      <td>4.82</td>
+      <td>1.44</td>
+    </tr>
+    
+    <tr>
+      <td>2047</td>
+      <td>統一猛獅</td>
+      <td>18</td>
+      <td>4</td>
+      <td>2</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>43.1</td>
+      <td>1</td>
+      <td>188</td>
+      <td>46</td>
+      <td>4</td>
+      <td>.269</td>
+      <td>31</td>
+      <td>14</td>
+      <td>23</td>
+      <td>20</td>
+      <td>4.15</td>
+      <td>1.38</td>
+    </tr>
+    
+    <tr>
+      <td>2048</td>
+      <td>統一猛獅</td>
+      <td>52</td>
+      <td>0</td>
+      <td>4</td>
+      <td>2</td>
+      <td>14</td>
+      <td>1</td>
+      <td>57.2</td>
+      <td>0</td>
+      <td>240</td>
+      <td>54</td>
+      <td>3</td>
+      <td>.248</td>
+      <td>58</td>
+      <td>16</td>
+      <td>22</td>
+      <td>20</td>
+      <td>3.12</td>
+      <td>1.21</td>
+    </tr>
+    
+    <tr>
+      <td>2049</td>
+      <td>統一猛獅</td>
+      <td>48</td>
+      <td>0</td>
+      <td>3</td>
+      <td>1</td>
+      <td>11</td>
+      <td>2</td>
+      <td>52.1</td>
+      <td>0</td>
+      <td>221</td>
+      <td>51</td>
+      <td>4</td>
+      <td>.254</td>
+      <td>49</td>
+      <td>14</td>
+      <td>21</td>
+      <td>20</td>
+      <td>3.45</td>
+      <td>1.24</td>
+    </tr>
+    
+    <tr>
+      <td>2050</td>
+      <td>統一猛獅</td>
+      <td>56</td>
+      <td>0</td>
+      <td>5</td>
+      <td>3</td>
+      <td>18</td>
+      <td>4</td>
+      <td>60.0</td>
+      <td>0</td>
+      <td>244</td>
+      <td>52</td>
+      <td>2</td>
+      <td>.231</td>
+      <td>62</td>
+      <td>16</td>
+      <td>21</td>
+      <td>19</td>
+      <td>2.85</td>
+      <td>1.13</td>
+    </tr>
+    
+    <tr>
+      <td>2051</td>
+      <td>統一猛獅</td>
+      <td>61</td>
+      <td>0</td>
+      <td>6</td>
+      <td>2</td>
+      <td>23</td>
+      <td>3</td>
+      <td>65.1</td>
+      <td>0</td>
+      <td>258</td>
+      <td>56</td>
+      <td>3</td>
+      <td>.229</td>
+      <td>71</td>
+      <td>14</td>
+      <td>22</td>
+      <td>19</td>
+      <td>2.61</td>
+      <td>1.07</td>
+    </tr>
+
+      <tr>      
+      <td colspan="2">通算成績</td>  
+      <td>247</td>
+      <td>12</td>
+      <td>23</td>
+      <td>15</td>
+      <td>69</td>
+      <td>10</td>
+      <td>325.1</td>
+      <td>3</td>
+      <td>1357</td>
+      <td>310</td>
+      <td>22</td>
+      <td>.249</td>
+      <td>305</td>
+      <td>90</td>
+      <td>137</td>
+      <td>123</td>
+      <td>3.40</td>
+      <td>1.23</td>
+      </tr>
+
+
+  
+    </tbody>
+  </table>
+
+      <!-- 成績資料保持原本內容 -->
+      <!-- 這裡略去為簡潔，可直接保留你原本 table 內容 -->
+    </tbody>
+    </table>
+  </div>
+
+  <!-- 個人獎項 -->
+  <div class="section">
+    <h2>個人獎項</h2>
+    ・2045年大專棒球聯賽公開一級組最佳投手獎、最有價值球員
+  </div>
+
+  <!-- 特殊事蹟 -->
+  <div class="section">
+    <h2>特殊事蹟</h2>
+    室內棒球聯盟明星賽：2051
+  </div>
+
+  <!-- 相關新聞 -->
+  <div class="section">
+    <h2>相關新聞</h2>
+    <a href="#"></a><br>
+    <a href="#"></a>
+  </div>
+
+</div>
+
+
+</body>
+</html>
