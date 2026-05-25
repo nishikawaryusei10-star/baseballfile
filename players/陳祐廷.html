@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> 陳祐廷 </title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background: #ffffff;
+  color: #111827;－
+  line-height: 1.6;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ===== 橫幅照片 ===== */
+.banner-photo {
+  width: 100%;
+  height: 320px;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* ===== 頁首 ===== */
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header .sub {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* ===== 主版面 ===== */
+.section {
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-left: 4px solid #111827;
+  padding-left: 8px;
+}
+
+/* ===== 基本資料 ===== */
+.profile {
+  font-size: 0.95rem;
+}
+
+.profile div {
+  padding: 5px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.profile span {
+  display: inline-block;
+  width: 100px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ===== 經歷 ===== */
+.career a {
+  display: inline-block;
+
+}
+
+.no-break {
+  white-space: nowrap; /* 括號內文字不換行 */
+}
+
+/* ===== 年表 ===== */
+.timeline {
+  font-size: 0.95rem;
+}
+
+.timeline div {
+  margin-bottom: 6px;
+}
+
+.timeline b {
+  display: inline-block;
+  width: 60px;
+}
+
+/* ===== 頂部導覽列 ===== */
+.topnav {
+  display: flex;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 3px solid #e5e7eb;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.topnav a {
+  color: #006000;
+  font-weight:450;
+}
+
+.topnav a:hover {
+  color: #1d4ed8;
+}
+
+/* ===== 表格 ===== */
+table.stats {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats th,
+table.stats td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats th {
+  background: #0000E3;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+table.stats tbody tr:nth-child(even) td {
+  background: #ECF5FF;
+}
+
+
+table.stats th:nth-child(2),
+table.stats td:nth-child(2) {
+  white-space: nowrap;
+}
+
+.best {
+  font-weight: bold;       /* 加粗字體 */        
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.test {
+  font-weight: bold;       /* 加粗字體 */
+  color: #FF0000;          /* 改成紅色 */
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+/* ===== Footer ===== */
+.footer {
+  border-top: 1px solid #d1d5db;
+  margin-top: 48px;
+  padding-top: 16px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+/* ===== 右側簡潔照片欄 ===== */
+.side-photo-box {
+  float: right;
+  width: 320px; /* 照片寬度 */
+  margin: 0 0 20px 24px;
+  padding: 5px;
+  border: 1px solid #e5e7eb;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.side-photo-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.photo-caption {
+  font-size: 0.8rem;
+  color: #4b5563;
+  padding: 8px 4px 4px 4px;
+  line-height: 1.4;
+  border-top: 1px solid #f3f4f6;
+  margin-top: 5px;
+}
+
+/* 手機版自動置中 */
+@media (max-width: 600px) {
+  .side-photo-box {
+    float: none;
+    margin: 0 auto 20px auto;
+    width: 90%;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  
+   <nav class="topnav">
+  <a href="../index.html">首頁</a> ⮕ <a href="players_overview.html">球員</a> ⮕  <a href="taiwan_players_overview.html">台灣球員</a> ⮕  <b>陳祐廷</b> </nav>     
+  
+  <!-- 頁首 -->
+  <div class="header">
+    <h1>陳祐廷</h1>
+    <div class="sub"> CHEN,YU-TING｜內野手（2B）</div>
+  </div>
+
+  <!-- 基本資料 -->
+  <div class="section">
+    <h2>基本資料</h2>
+    <div class="profile">
+      <div><span>出生日期</span>2029 年 4 月 28 日（23歲）</div>
+      <div><span>身高體重</span>178 公分／83 公斤</div>
+      <div><span>出生地</span>台灣・台中市西區</div>
+      <div><span>投打習慣</span>右投右打</div>
+      <div><span>守備位置</span>內野手 2B 3B</div>
+      <div><span>職棒選秀</span><a href="../term/2050年室內棒球聯盟新人選秀會.html">2050年室內棒球聯盟選秀會</a><a href="../teams/富邦守護者隊.html">富邦守護者隊</a>第一輪指名</div>
+    </div>
+  </div>
+  
+  <!-- 右側照片欄 -->
+  <div class="side-photo-box">
+    <img src="https://i.ibb.co/b5RHYBp1/Chat-GPT-Image-2026-5-25-12-42-30.png" alt="陳祐廷">
+    <div class="photo-caption">
+      陳祐廷（2051年一軍例行賽/新莊球場）
+    </div>
+  </div>
+
+  <!-- 球員經歷 -->
+  <div class="section">
+    <h2>球員經歷</h2>
+    <div class="career">
+     台中市何厝國小少棒隊<br>
+     台中市立人國中青少棒隊<br>
+     台中市惠文高中青棒隊<br>
+     <a href="#">室內棒球聯盟</a><a href="#">富邦守護者隊</a><span class="no-break">（2050/08～）</span><br>
+    </div>
+  </div>
+
+  <!-- 個人年表 -->
+  <div class="section">
+    <h2>個人年表</h2>
+    <div class="timeline">
+    <div><b>2046年</b>9月，入選U18世界青棒錦標賽名單，成為惠文高中校史第一人入選棒球國家隊的紀錄</div>
+     <div><b>2047年</b>8月，以分科測驗的成績錄取國立彰化師範大學化學系</div>
+     <div><b>2049年</b>5月，入選未來之星交流賽大專代表隊</div>
+     <div><b>2049年</b>未來之星交流賽出賽27場繳出.271/.338/.419，2轟，17盜的好成績</div>
+     <div><b>2050年</b>5月，入選未來之星交流賽大專代表隊</div>
+     <div><b>2050年</b>7月，參加室內棒球聯盟季中選秀，被富邦守護者在第一輪選進，選秀後以簽約金1876萬新台幣加盟</div>
+     <div><b>2051年</b>9月8日，面對花蓮眼鏡蛇隊張凱倫敲出中外野二安，為生涯首安</div>
+     <div><b>2051年</b>4月21日，面對全聯熊隊Leak敲出左外野全壘打，為生涯首轟</div>
+    </div>
+  </div>
+
+  <!-- 生涯成績 -->
+ <!-- 生涯成績 -->
+  <div class="section">
+    <h2>歷年職棒生涯成績</h2>
+    <b>室內棒球聯盟一軍打擊成績：</b>
+    <table class="stats">
+    <thead>
+      <tr>
+        <th>年度</th>
+        <th>球隊</th><th>G</th><th>PA</th><th>AB</th><th>H</th>
+        <th>2B</th><th>3B</th><th>HR</th>
+        <th>RBI</th><th>R</th><th>TB</th><th>SB</th><th>SO</th><th>BB</th><th>SAC</th><th>SF</th>
+        <th>AVG</th><th>OBP</th><th>SLG</th><th>OPS</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+    
+    <tr>
+      <td>2051</td>
+      <td>富邦守護者隊</td>
+      <td>12</td>
+      <td>46</td>
+      <td>40</td>
+      <td>14</td>
+      <td>5</td>
+      <td>0</td>
+      <td>0</td>
+      <td>5</td>
+      <td>4</td>
+      <td>19</td>
+      <td>1</td>
+      <td>6</td>
+      <td>5</td>
+      <td>0</td>
+      <td>1</td>
+      <td>.350</td>
+      <td>.413</td>
+      <td>.475</td>
+      <td>.888</td>
+    </tr>
+    
+    <tr>
+      <td colspan="2">通算成績</td>  
+      <td>12</td>
+      <td>46</td>
+      <td>40</td>
+      <td>14</td>
+      <td>5</td>
+      <td>0</td>
+      <td>0</td>
+      <td>5</td>
+      <td>4</td>
+      <td>19</td>
+      <td>1</td>
+      <td>6</td>
+      <td>5</td>
+      <td>0</td>
+      <td>1</td>
+      <td>.350</td>
+      <td>.413</td>
+      <td>.475</td>
+      <td>.888</td>
+    </tr>
+
+
+  
+    </tbody>
+  </table>
+
+      <!-- 成績資料保持原本內容 -->
+      <!-- 這裡略去為簡潔，可直接保留你原本 table 內容 -->
+    </tbody>
+    </table>
+  </div>
+
+  <!-- 個人獎項 -->
+  <div class="section">
+    <h2>個人獎項</h2>
+    2049年未來之星交流賽盜壘王
+  </div>
+
+  <!-- 特殊事蹟 -->
+  <div class="section">
+    <h2>特殊事蹟</h2>
+    室內棒球聯盟未來之星明星賽：2051<br>
+    2047年U18世界青棒錦標賽中華代表隊
+  </div>
+
+  <!-- 相關新聞 -->
+  <div class="section">
+    <h2>相關新聞</h2>
+    <a href="#"></a><br>
+    <a href="#"></a>
+  </div>
+
+</div>
+
+
+</body>
+</html>
