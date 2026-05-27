@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> 林聖宇 </title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background: #ffffff;
+  color: #111827;－
+  line-height: 1.6;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ===== 橫幅照片 ===== */
+.banner-photo {
+  width: 100%;
+  height: 320px;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* ===== 頁首 ===== */
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header .sub {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* ===== 主版面 ===== */
+.section {
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-left: 4px solid #111827;
+  padding-left: 8px;
+}
+
+/* ===== 基本資料 ===== */
+.profile {
+  font-size: 0.95rem;
+}
+
+.profile div {
+  padding: 5px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.profile span {
+  display: inline-block;
+  width: 100px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ===== 經歷 ===== */
+.career a {
+  display: inline-block;
+
+}
+
+.no-break {
+  white-space: nowrap; /* 括號內文字不換行 */
+}
+
+/* ===== 年表 ===== */
+.timeline {
+  font-size: 0.95rem;
+}
+
+.timeline div {
+  margin-bottom: 6px;
+}
+
+.timeline b {
+  display: inline-block;
+  width: 60px;
+}
+
+/* ===== 頂部導覽列 ===== */
+.topnav {
+  display: flex;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 3px solid #e5e7eb;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.topnav a {
+  color: #006000;
+  font-weight:450;
+}
+
+.topnav a:hover {
+  color: #1d4ed8;
+}
+
+/* ===== 表格 ===== */
+table.stats {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats th,
+table.stats td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats th {
+  background: #FFFF37;
+  color: #000000;
+  font-weight: 600;
+}
+
+table.stats tbody tr:nth-child(even) td {
+  background: #FFFFDF;
+}
+
+
+table.stats th:nth-child(2),
+table.stats td:nth-child(2) {
+  white-space: nowrap;
+}
+
+.best {
+  font-weight: bold;       /* 加粗字體 */        
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.test {
+  font-weight: bold;       /* 加粗字體 */
+  color: #FF0000;          /* 改成紅色 */
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+/* ===== Footer ===== */
+.footer {
+  border-top: 1px solid #d1d5db;
+  margin-top: 48px;
+  padding-top: 16px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+/* ===== 右側簡潔照片欄 ===== */
+.side-photo-box {
+  float: right;
+  width: 320px; /* 照片寬度 */
+  margin: 0 0 20px 24px;
+  padding: 5px;
+  border: 1px solid #e5e7eb;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.side-photo-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.photo-caption {
+  font-size: 0.8rem;
+  color: #4b5563;
+  padding: 8px 4px 4px 4px;
+  line-height: 1.4;
+  border-top: 1px solid #f3f4f6;
+  margin-top: 5px;
+}
+
+/* 手機版自動置中 */
+@media (max-width: 600px) {
+  .side-photo-box {
+    float: none;
+    margin: 0 auto 20px auto;
+    width: 90%;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  
+   <nav class="topnav">
+  <a href="../index.html">首頁</a> ⮕ <a href="players_overview.html">球員</a> ⮕  <a href="taiwan_players_overview.html">韓國球員</a> ⮕  <b>金智勳</b> </nav>     
+  
+  <!-- 頁首 -->
+  <div class="header">
+    <h1>金智勳</h1>
+    <div class="sub"> Kim Ji-Hoon｜內野手（SS）</div>
+  </div>
+
+  <!-- 基本資料 -->
+  <div class="section">
+    <h2>基本資料</h2>
+    <div class="profile">
+      <div><span>出生日期</span>2021 年 8 月 14 日（30歲）</div>
+      <div><span>身高體重</span>178 公分／76 公斤</div>
+      <div><span>出生地</span>南韓・首爾特別市</div>
+      <div><span>投打習慣</span>右投左打</div>
+      <div><span>守備位置</span>內野手 SS 2B</div>
+      <div><span>職棒選秀</span>2040年室內棒球聯盟樂天桃猿隊自由契約球員</div>
+      <div><span>原文姓名</span><b>김지훈（Kim Ji-Hoon）</b></div>
+    </div>
+  </div>
+  
+  <!-- 右側照片欄 -->
+  <div class="side-photo-box">
+    <img src="https://i.ibb.co/sdgc3CVg/Chat-GPT-Image-2026-5-27-10-30-24.png" alt="金智勳">
+    <div class="photo-caption">
+      金智勳（2051年一軍例行賽/澄清湖球場）
+    </div>
+  </div>
+
+  <!-- 球員經歷 -->
+  <div class="section">
+    <h2>球員經歷</h2>
+    <div class="career">
+     🇰🇷 首爾沖岩高等學校<br>
+     <a href="#">室內棒球聯盟</a><a href="#">樂天桃猿隊</a><span class="no-break">（2040/04～2049）</span><br>
+     <a href="#">室內棒球聯盟</a><a href="#">中信子彈隊</a><span class="no-break">（2050～）</span><br>
+    </div>
+  </div>
+
+  <!-- 個人年表 -->
+  <div class="section">
+    <h2>個人年表</h2>
+    <div class="timeline">
+     <div><b>2039年</b>9月，參加韓國職棒選秀會，未被球隊指名，落選。</div> 
+     <div><b>2040年</b>4月，金智勳以育成洋將身份與樂天桃猿簽約，合約內容為簽約金765萬新台幣，附帶20萬台幣的獎學金，並挑選背號「023」。</div>
+     <div><b>2040年</b>該年在二軍出賽99場，繳出118支安打、.349打擊率皆在聯盟排名前段</div>
+     <div><b>2041年</b>4月28日，因樂天桃猿洋將丕客家裡有事離隊，登錄為正式球員，挑選背號「23」，並於2日後升上一軍</div>
+     <div><b>2041年</b>5月2日，對戰統一猛獅隊隊高誠遠敲出左半邊安打，為生涯首安</div>
+     <div><b>2046年</b>該年出賽150場，拿到714打席皆為聯盟之最，該年也達成7年年資，成為不受外籍註冊限制的外籍球員。</div>
+     <div><b>2047年</b>1月，與母對樂天簽下一紙3年5000萬新台幣的大合約。</div>
+     <div><b>2047年</b>4月23日，面對基隆雨都隊敲出生涯千安。</div>
+     <div><b>2049年</b>12月，成為自由球員，後與中信子彈簽下3年總額7400萬新台幣，轉披黃色戰袍。</div>
+    </div>
+  </div>
+
+  <!-- 生涯成績 -->
+ <!-- 生涯成績 -->
+  <div class="section">
+    <h2>歷年職棒生涯成績</h2>
+    <b>室內棒球聯盟一軍打擊成績：</b>
+    <table class="stats">
+    <thead>
+      <tr>
+        <th>年度</th>
+        <th>球隊</th><th>G</th><th>PA</th><th>AB</th><th>H</th>
+        <th>2B</th><th>3B</th><th>HR</th>
+        <th>RBI</th><th>R</th><th>TB</th><th>SB</th><th>SO</th><th>BB</th><th>SAC</th><th>SF</th>
+        <th>AVG</th><th>OBP</th><th>SLG</th><th>OPS</th>
+      </tr>
+    </thead>
+    <tbody>
+   
+    <tr>
+      <td>2041</td>
+      <td>樂天桃猿</td>
+      <td>102</td>
+      <td>412</td>
+      <td>358</td>
+      <td>96</td>
+      <td>12</td>
+      <td>3</td>
+      <td>1</td>
+      <td>32</td>
+      <td>62</td>
+      <td>117</td>
+      <td>22</td>
+      <td>46</td>
+      <td>44</td>
+      <td>7</td>
+      <td>3</td>
+      <td>.268</td>
+      <td>.347</td>
+      <td>.327</td>
+      <td>.674</td>
+    </tr>
+    
+    <tr>
+      <td>2042</td>
+      <td>樂天桃猿</td>
+      <td>144</td>
+      <td>652</td>
+      <td>561</td>
+      <td>165</td>
+      <td>18</td>
+      <td>6</td>
+      <td>2</td>
+      <td>58</td>
+      <td>115</td>
+      <td>201</td>
+      <td>50</td>
+      <td>54</td>
+      <td>69</td>
+      <td>16</td>
+      <td>6</td>
+      <td>.294</td>
+      <td>.369</td>
+      <td>.358</td>
+      <td>.727</td>
+    </tr>
+    
+    <tr>
+      <td>2043</td>
+      <td>樂天桃猿</td>
+      <td>148</td>
+      <td>698</td>
+      <td>597</td>
+      <td>183</td>
+      <td>24</td>
+      <td>5</td>
+      <td>4</td>
+      <td>65</td>
+      <td>122</td>
+      <td>229</td>
+      <td>41</td>
+      <td>55</td>
+      <td>81</td>
+      <td>10</td>
+      <td>5</td>
+      <td>.307</td>
+      <td>.388</td>
+      <td>.384</td>
+      <td>.772</td>
+    </tr>
+    
+    <tr>
+      <td>2044</td>
+      <td>樂天桃猿</td>
+      <td>135</td>
+      <td>601</td>
+      <td>522</td>
+      <td>151</td>
+      <td>17</td>
+      <td>4</td>
+      <td>0</td>
+      <td>49</td>
+      <td>94</td>
+      <td>176</td>
+      <td>31</td>
+      <td>49</td>
+      <td>68</td>
+      <td>9</td>
+      <td>3</td>
+      <td>.289</td>
+      <td>.370</td>
+      <td>.337</td>
+      <td>.707</td>
+    </tr>
+    
+    <tr>
+      <td>2045</td>
+      <td>樂天桃猿</td>
+      <td>146</td>
+      <td>686</td>
+      <td>581</td>
+      <td>182</td>
+      <td>28</td>
+      <td>8</td>
+      <td>5</td>
+      <td>75</td>
+      <td><b>132</b></td>
+      <td>241</td>
+      <td><b>54</b></td>
+      <td>58</td>
+      <td>87</td>
+      <td>9</td>
+      <td>7</td>
+      <td>.313</td>
+      <td>.400</td>
+      <td>.415</td>
+      <td>.815</td>
+    </tr>
+    
+    <tr>
+      <td>2046</td>
+      <td>樂天桃猿</td>
+      <td><span class="test">150</span></td>
+      <td><span class="test">714</span></td>
+      <td>610</td>
+      <td>196</td>
+      <td>32</td>
+      <td>5</td>
+      <td>6</td>
+      <td>80</td>
+      <td><b>139</b></td>
+      <td>256</td>
+      <td>45</td>
+      <td>51</td>
+      <td>93</td>
+      <td>5</td>
+      <td>5</td>
+      <td>.321</td>
+      <td>.409</td>
+      <td>.420</td>
+      <td>.829</td>
+    </tr>
+    
+    <tr>
+      <td>2047</td>
+      <td>樂天桃猿</td>
+      <td>138</td>
+      <td>627</td>
+      <td>541</td>
+      <td>159</td>
+      <td>21</td>
+      <td>3</td>
+      <td>2</td>
+      <td>53</td>
+      <td>101</td>
+      <td>192</td>
+      <td>36</td>
+      <td>50</td>
+      <td>69</td>
+      <td>13</td>
+      <td>4</td>
+      <td>.294</td>
+      <td>.371</td>
+      <td>.355</td>
+      <td>.726</td>
+    </tr>
+    
+    <tr>
+      <td>2048</td>
+      <td>樂天桃猿</td>
+      <td>131</td>
+      <td>571</td>
+      <td>497</td>
+      <td>143</td>
+      <td>19</td>
+      <td>4</td>
+      <td>1</td>
+      <td>45</td>
+      <td>88</td>
+      <td>173</td>
+      <td>27</td>
+      <td>45</td>
+      <td>62</td>
+      <td>9</td>
+      <td>3</td>
+      <td>.288</td>
+      <td>.365</td>
+      <td>.348</td>
+      <td>.713</td>
+    </tr>
+    
+    <tr>
+      <td>2049</td>
+      <td>樂天桃猿</td>
+      <td>142</td>
+      <td>641</td>
+      <td>560</td>
+      <td>167</td>
+      <td>23</td>
+      <td>1</td>
+      <td>4</td>
+      <td>62</td>
+      <td>98</td>
+      <td>204</td>
+      <td>23</td>
+      <td>54</td>
+      <td>68</td>
+      <td>10</td>
+      <td>4</td>
+      <td>.298</td>
+      <td>.372</td>
+      <td>.364</td>
+      <td>.736</td>
+    </tr>
+    
+    <!-- 中信子彈時期 -->
+    
+    <tr>
+      <td>2050</td>
+      <td>中信子彈</td>
+      <td>145</td>
+      <td>649</td>
+      <td>565</td>
+      <td>170</td>
+      <td>27</td>
+      <td>3</td>
+      <td>3</td>
+      <td>68</td>
+      <td>95</td>
+      <td>212</td>
+      <td>18</td>
+      <td>59</td>
+      <td>71</td>
+      <td>8</td>
+      <td>5</td>
+      <td>.301</td>
+      <td>.377</td>
+      <td>.375</td>
+      <td>.752</td>
+    </tr>
+    <tr>
+      <td>2051</td>
+      <td>中信子彈</td>
+      <td>136</td>
+      <td>593</td>
+      <td>521</td>
+      <td>152</td>
+      <td>18</td>
+      <td>1</td>
+      <td>1</td>
+      <td>55</td>
+      <td>79</td>
+      <td>175</td>
+      <td>14</td>
+      <td>49</td>
+      <td>63</td>
+      <td>6</td>
+      <td>4</td>
+      <td>.292</td>
+      <td>.366</td>
+      <td>.336</td>
+      <td>.702</td>
+    </tr>
+    
+    <tr>
+      <td colspan="2">通算成績</td>  
+      <td>1487</td>
+      <td>6856</td>
+      <td>5913</td>
+      <td>1737</td>
+      <td>239</td>
+      <td>48</td>
+      <td>28</td>
+      <td>647</td>
+      <td>1125</td>
+      <td>2156</td>
+      <td>382</td>
+      <td>571</td>
+      <td>779</td>
+      <td>102</td>
+      <td>49</td>
+      <td>.294</td>
+      <td>.373</td>
+      <td>.365</td>
+      <td>.738</td>
+    </tr>
+
+
+  
+    </tbody>
+  </table>
+
+      <!-- 成績資料保持原本內容 -->
+      <!-- 這裡略去為簡潔，可直接保留你原本 table 內容 -->
+    </tbody>
+    </table>
+  </div>
+
+  <!-- 個人獎項 -->
+  <div class="section">
+    <h2>個人獎項</h2>
+    室內棒球聯盟年度盜壘王：2045<br>
+    室內棒球聯盟年度金手套外野手：2043、2045、2046<br>
+  </div>
+
+  <!-- 特殊事蹟 -->
+  <div class="section">
+    <h2>特殊事蹟</h2>
+    2047年U18亞洲青棒錦標賽中華代表隊<br>
+    2049年U-23世界盃棒球賽中華代表隊
+  </div>
+
+  <!-- 相關新聞 -->
+  <div class="section">
+    <h2>相關新聞</h2>
+    <a href="#"></a><br>
+    <a href="#"></a>
+  </div>
+
+</div>
+
+
+</body>
+</html>
