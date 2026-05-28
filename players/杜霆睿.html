@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> 杜霆睿 </title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background: #ffffff;
+  color: #111827;－
+  line-height: 1.6;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ===== 橫幅照片 ===== */
+.banner-photo {
+  width: 100%;
+  height: 320px;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* ===== 頁首 ===== */
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header .sub {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* ===== 主版面 ===== */
+.section {
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-left: 4px solid #111827;
+  padding-left: 8px;
+}
+
+/* ===== 基本資料 ===== */
+.profile {
+  font-size: 0.95rem;
+}
+
+.profile div {
+  padding: 5px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.profile span {
+  display: inline-block;
+  width: 100px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ===== 經歷 ===== */
+.career a {
+  display: inline-block;
+
+}
+
+.no-break {
+  white-space: nowrap; /* 括號內文字不換行 */
+}
+
+/* ===== 年表 ===== */
+.timeline {
+  font-size: 0.95rem;
+}
+
+.timeline div {
+  margin-bottom: 6px;
+}
+
+.timeline b {
+  display: inline-block;
+  width: 60px;
+}
+
+/* ===== 頂部導覽列 ===== */
+.topnav {
+  display: flex;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 3px solid #e5e7eb;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.topnav a {
+  color: #006000;
+  font-weight:450;
+}
+
+.topnav a:hover {
+  color: #1d4ed8;
+}
+
+/* ===== 表格 ===== */
+table.stats {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats th,
+table.stats td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats th {
+  background: #FFFF37;
+  color: #000000;
+  font-weight: 600;
+}
+
+table.stats tbody tr:nth-child(even) td {
+  background: #FFFFDF;
+}
+
+
+table.stats th:nth-child(2),
+table.stats td:nth-child(2) {
+  white-space: nowrap;
+}
+
+.best {
+  font-weight: bold;       /* 加粗字體 */        
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.test {
+  font-weight: bold;       /* 加粗字體 */
+  color: #FF0000;          /* 改成紅色 */
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+/* ===== Footer ===== */
+.footer {
+  border-top: 1px solid #d1d5db;
+  margin-top: 48px;
+  padding-top: 16px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+/* ===== 右側簡潔照片欄 ===== */
+.side-photo-box {
+  float: right;
+  width: 320px; /* 照片寬度 */
+  margin: 0 0 20px 24px;
+  padding: 5px;
+  border: 1px solid #e5e7eb;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.side-photo-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.photo-caption {
+  font-size: 0.8rem;
+  color: #4b5563;
+  padding: 8px 4px 4px 4px;
+  line-height: 1.4;
+  border-top: 1px solid #f3f4f6;
+  margin-top: 5px;
+}
+
+/* 手機版自動置中 */
+@media (max-width: 600px) {
+  .side-photo-box {
+    float: none;
+    margin: 0 auto 20px auto;
+    width: 90%;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  
+   <nav class="topnav">
+  <a href="../index.html">首頁</a> ⮕ <a href="players_overview.html">球員</a> ⮕  <a href="taiwan_players_overview.html">台灣球員</a> ⮕  <b>杜霆睿</b> </nav>     
+  
+  <!-- 頁首 -->
+  <div class="header">
+    <h1>杜霆睿</h1>
+    <div class="sub"> DU,TING-RUEI｜外野手（LF）</div>
+  </div>
+
+  <!-- 基本資料 -->
+  <div class="section">
+    <h2>基本資料</h2>
+    <div class="profile">
+      <div><span>出生日期</span>2024 年 3 月 1 日（28歲）</div>
+      <div><span>身高體重</span>178 公分／91 公斤</div>
+      <div><span>出生地</span>台灣・高雄市鳳山區</div>
+      <div><span>投打習慣</span>右投右打</div>
+      <div><span>守備位置</span>外野手 LF RF</div>
+      <div><span>職棒選秀</span><a href="2042年室內棒球聯盟新人選秀會.html">2042年室內棒球聯盟選秀會</a><a href="../teams/全聯熊.html">全聯熊隊</a>第四輪指名</div>
+    </div>
+  </div>
+  
+  <!-- 右側照片欄 -->
+  <div class="side-photo-box">
+    <img src="https://i.ibb.co/yccTtMbS/Chat-GPT-Image-2026-5-28-02-22-16.png" alt="杜霆睿">
+    <div class="photo-caption">
+      杜霆睿（2049年一軍例行賽/台中洲際球場）
+    </div>
+  </div>
+
+  <!-- 球員經歷 -->
+  <div class="section">
+    <h2>球員經歷</h2>
+    <div class="career">
+     高雄市中正國小少棒隊<br>
+     桃園市新民國中青少棒隊<br>
+     桃園市平鎮高中青棒隊<br>
+     <a href="#">室內棒球聯盟</a><a href="#">全聯熊隊</a><span class="no-break">（2042/08～2048/11）</span><br>
+     <a href="#">室內棒球聯盟</a><a href="#">中信子彈隊</a><span class="no-break">（2048/11～）</span><br>
+    </div>
+  </div>
+
+  <!-- 個人年表 -->
+  <div class="section">
+    <h2>個人年表</h2>
+    <div class="timeline">
+     <div><b>2042年</b>7月，投入室內棒球聯盟選秀會，被全聯熊隊在第四輪指名，後以485萬新台幣加盟，並選擇背號「31」</div>
+     <div><b>2044年</b>8月22日，對戰離島聯隊敲出生涯首安</div>
+     <div><b>2046年</b>全季皆未升上一軍，在二軍繳出.246/.294/.397，9轟，39打點的成績</div>
+     <div><b>2048年</b>11月，於室內棒球聯盟現役選秀會被中信子彈隊選中</div>
+     <div><b>2049年</b>4月2日，對戰台東鋼鐵人隊敲出生涯首轟</div>
+     <div><b>2049年</b>全季出賽150場，繳出.272/.315/.435，24轟，79打點優異的表現，並得到該年度最佳進步獎</div>
+    </div>
+  </div>
+
+  <!-- 生涯成績 -->
+ <!-- 生涯成績 -->
+  <div class="section">
+    <h2>歷年職棒生涯成績</h2>
+    <b>室內棒球聯盟一軍打擊成績：</b>
+    <table class="stats">
+    <thead>
+      <tr>
+        <th>年度</th>
+        <th>球隊</th><th>G</th><th>PA</th><th>AB</th><th>H</th>
+        <th>2B</th><th>3B</th><th>HR</th>
+        <th>RBI</th><th>R</th><th>TB</th><th>SB</th><th>SO</th><th>BB</th><th>SAC</th><th>SF</th>
+        <th>AVG</th><th>OBP</th><th>SLG</th><th>OPS</th>
+      </tr>
+    </thead>
+    <tbody>
+    
+    <tr>
+      <td>2044</td>
+      <td>全聯熊</td>
+      <td>17</td>
+      <td>39</td>
+      <td>33</td>
+      <td>4</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>6</td>
+      <td>0</td>
+      <td>11</td>
+      <td>4</td>
+      <td>2</td>
+      <td>0</td>
+      <td>.121</td>
+      <td>.216</td>
+      <td>.182</td>
+      <td>.398</td>
+    </tr>
+    
+    <tr>
+      <td>2045</td>
+      <td>全聯熊</td>
+      <td>6</td>
+      <td>4</td>
+      <td>4</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>3</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>.000</td>
+      <td>.000</td>
+      <td>.000</td>
+      <td>.000</td>
+    </tr>
+    
+    <tr>
+      <td>2047</td>
+      <td>全聯熊</td>
+      <td>13</td>
+      <td>37</td>
+      <td>35</td>
+      <td>5</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>4</td>
+      <td>7</td>
+      <td>0</td>
+      <td>12</td>
+      <td>2</td>
+      <td>0</td>
+      <td>8</td>
+      <td>.143</td>
+      <td>.189</td>
+      <td>.200</td>
+      <td>.389</td>
+    </tr>
+    
+    <tr>
+      <td>2048</td>
+      <td>全聯熊</td>
+      <td>7</td>
+      <td>11</td>
+      <td>11</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>5</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>.182</td>
+      <td>.182</td>
+      <td>.182</td>
+      <td>.364</td>
+    </tr>
+   
+    <tr>
+      <td>2049</td>
+      <td>中信子彈</td>
+      <td><span class="test">150</span></td>
+      <td>664</td>
+      <td>618</td>
+      <td>168</td>
+      <td>25</td>
+      <td>2</td>
+      <td>24</td>
+      <td>79</td>
+      <td>61</td>
+      <td>269</td>
+      <td>3</td>
+      <td>109</td>
+      <td>41</td>
+      <td>1</td>
+      <td>4</td>
+      <td>.272</td>
+      <td>.315</td>
+      <td>.435</td>
+      <td>.750</td>
+    </tr>
+   
+    <tr>
+      <td>2050</td>
+      <td>中信子彈</td>
+      <td>127</td>
+      <td>491</td>
+      <td>425</td>
+      <td>139</td>
+      <td>33</td>
+      <td>0</td>
+      <td>25</td>
+      <td>81</td>
+      <td>79</td>
+      <td>247</td>
+      <td>5</td>
+      <td>71</td>
+      <td>58</td>
+      <td>3</td>
+      <td>5</td>
+      <td>.327</td>
+      <td>.404</td>
+      <td>.581</td>
+      <td>.985</td>
+    </tr>
+    
+    <tr>
+      <td>2051</td>
+      <td>中信子彈</td>
+      <td>141</td>
+      <td>594</td>
+      <td>549</td>
+      <td>162</td>
+      <td>29</td>
+      <td>2</td>
+      <td>21</td>
+      <td>84</td>
+      <td>88</td>
+      <td>258</td>
+      <td>5</td>
+      <td>112</td>
+      <td>42</td>
+      <td>0</td>
+      <td>4</td>
+      <td>.296</td>
+      <td>.343</td>
+      <td>.471</td>
+      <td>.814</td>
+    </tr>
+    
+    <tr>
+      <td colspan="2">通算成績</td>  
+      <td>453</td>
+      <td>1480</td>
+      <td>1674</td>
+      <td>480</td>
+      <td>91</td>
+      <td>4</td>
+      <td>70</td>
+      <td>246</td>
+      <td>233</td>
+      <td>789</td>
+      <td>14</td>
+      <td>324</td>
+      <td>147</td>
+      <td>6</td>
+      <td>13</td>
+      <td>.287</td>
+      <td>.342</td>
+      <td>.471</td>
+      <td>.813</td>
+    </tr>
+
+
+  
+    </tbody>
+  </table>
+
+      <!-- 成績資料保持原本內容 -->
+      <!-- 這裡略去為簡潔，可直接保留你原本 table 內容 -->
+    </tbody>
+    </table>
+  </div>
+
+  <!-- 個人獎項 -->
+  <div class="section">
+    <h2>個人獎項</h2>
+    室內棒球聯盟最佳進步獎：2049<br>
+    室內棒球聯盟最佳陣容第一隊外野手：2049<br>
+    室內棒球聯盟單月MVP：2049/07<br>
+  </div>
+
+  <!-- 特殊事蹟 -->
+  <div class="section">
+    <h2>特殊事蹟</h2>
+    2042年U18世界青棒錦標賽中華代表隊<br>
+  </div>
+
+  <!-- 相關新聞 -->
+  <div class="section">
+    <h2>相關新聞</h2>
+    <a href="#"></a><br>
+    <a href="#"></a>
+  </div>
+
+</div>
+
+
+</body>
+</html>
