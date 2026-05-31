@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> 蘇勻翔 </title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background: #ffffff;
+  color: #111827;－
+  line-height: 1.6;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ===== 橫幅照片 ===== */
+.banner-photo {
+  width: 100%;
+  height: 320px;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* ===== 頁首 ===== */
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header .sub {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* ===== 主版面 ===== */
+.section {
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-left: 4px solid #111827;
+  padding-left: 8px;
+}
+
+/* ===== 基本資料 ===== */
+.profile {
+  font-size: 0.95rem;
+}
+
+.profile div {
+  padding: 5px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.profile span {
+  display: inline-block;
+  width: 100px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ===== 經歷 ===== */
+.career a {
+  display: inline-block;
+
+}
+
+.no-break {
+  white-space: nowrap; /* 括號內文字不換行 */
+}
+
+/* ===== 年表 ===== */
+.timeline {
+  font-size: 0.95rem;
+}
+
+.timeline div {
+  margin-bottom: 6px;
+}
+
+.timeline b {
+  display: inline-block;
+  width: 60px;
+}
+
+/* ===== 頂部導覽列 ===== */
+.topnav {
+  display: flex;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 3px solid #e5e7eb;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.topnav a {
+  color: #006000;
+  font-weight:450;
+}
+
+.topnav a:hover {
+  color: #1d4ed8;
+}
+
+/* ===== 表格 ===== */
+table.stats {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats th,
+table.stats td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats th {
+  background: #D94600;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+table.stats tbody tr:nth-child(even) td {
+  background: #FFE6D9;
+}
+
+
+table.stats th:nth-child(2),
+table.stats td:nth-child(2) {
+  white-space: nowrap;
+}
+
+.best {
+  font-weight: bold;       /* 加粗字體 */        
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.test {
+  font-weight: bold;       /* 加粗字體 */
+  color: #FF0000;          /* 改成紅色 */
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.champion { background-color: #fef3c7; font-weight: bold; color: #92400e; }
+
+/* ===== Footer ===== */
+.footer {
+  border-top: 1px solid #d1d5db;
+  margin-top: 48px;
+  padding-top: 16px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+/* ===== 右側簡潔照片欄 ===== */
+.side-photo-box {
+  float: right;
+  width: 320px; /* 照片寬度 */
+  margin: 0 0 20px 24px;
+  padding: 5px;
+  border: 1px solid #e5e7eb;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.side-photo-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.photo-caption {
+  font-size: 0.8rem;
+  color: #4b5563;
+  padding: 8px 4px 4px 4px;
+  line-height: 1.4;
+  border-top: 1px solid #f3f4f6;
+  margin-top: 5px;
+}
+
+/* 手機版自動置中 */
+@media (max-width: 600px) {
+  .side-photo-box {
+    float: none;
+    margin: 0 auto 20px auto;
+    width: 90%;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  
+   <nav class="topnav">
+  <a href="../index.html">首頁</a> ⮕ <a href="players_overview.html">球員</a> ⮕  <a href="taiwan_players_overview.html">台灣球員</a> ⮕  <b>林進勳</b> </nav>     
+  
+  <!-- 頁首 -->
+  <div class="header">
+    <h1>林進勳</h1>
+    <div class="sub"> LIN,CHIN-HSUN｜內野手（3B）</div>
+  </div>
+
+  <!-- 基本資料 -->
+  <div class="section">
+    <h2>基本資料</h2>
+    <div class="profile">
+      <div><span>出生日期</span>2004 年 8 月 14 日（47歲）</div>
+      <div><span>身高體重</span>182 公分／84 公斤</div>
+      <div><span>出生地</span>台灣・高雄市美濃區</div>
+      <div><span>投打習慣</span>右投右打</div>
+      <div><span>守備位置</span>內野手 3B</div>
+      <div><span>職棒選秀</span><a href="../term/2024年室內棒球聯盟新人選秀會.html">2024年室內棒球聯盟選秀會</a><a href="../teams/墾丁鯊魚.html">墾丁鯊魚隊</a>第二輪指名</div>
+    </div>
+  </div>
+  
+  <!-- 右側照片欄 -->
+  <div class="side-photo-box">
+    <img src="https://i.ibb.co/TBXCkVTG/Chat-GPT-Image-2026-5-31-01-57-17.png" alt="林進勳">
+    <div class="photo-caption">
+      林進勳（2051年一軍例行賽/阿里山森林棒球場）
+    </div>
+  </div>
+
+  <!-- 球員經歷 -->
+  <div class="section">
+    <h2>球員經歷</h2>
+    <div class="career">
+     高雄市美濃國小少棒隊<br>
+     高雄市橋頭國中青少棒隊<br>
+     高雄市高苑工商青棒隊<br>
+     台灣電力棒球隊<br>
+     <a href="#">室內棒球聯盟</a><a href="#">墾丁鯊魚隊</a><span class="no-break">（2025/08～2033）</span><br>
+     <a href="#">室內棒球聯盟</a><a href="#">阿里山小火車隊</a><span class="no-break">（2034～2037）</span><br>
+     <a href="#">室內棒球聯盟</a><a href="#">阿里山小火車隊</a><span class="no-break">一軍內野守備教練（2041～2044）</span><br>
+     <a href="#">室內棒球聯盟</a><a href="#">阿里山小火車隊</a><span class="no-break">一軍首席教練（2045～2047）</span><br>
+     <a href="#">室內棒球聯盟</a><a href="#">阿里山小火車隊</a><span class="no-break">一軍總教練（2048～）</span><br>
+    </div>
+  </div>
+
+  <!-- 個人年表 -->
+  <div class="section">
+    <h2>個人年表</h2>
+    <div class="timeline">
+     <div><b>2023年</b>高中畢業後未立刻投身職棒，選擇進入社會甲組名門台灣電力棒球隊</div> 
+     <div><b>2024年</b>7月，投入室內棒球聯盟選秀會，被墾丁鯊魚隊在第二輪指名，後以476萬新台幣加盟</div>
+     <div><b>2028年</b>該季締造連續 400 局守備無失誤的聯盟紀錄（至今仍是三壘手紀錄保持人），以全票通過蟬聯金手套。</div>
+     <div><b>2031年</b>8月16日，面對南亞海神隊達成生涯千安</div>
+     <div><b>2031年</b>在總冠軍賽七戰中繳出.385的得點圈打擊率，並上演多次關鍵守備，率隊奪下第二座總冠軍，獲頒總冠軍賽優秀球員獎。</div>
+     <div><b>2033年</b>面臨慢性膝蓋傷勢折磨，打擊與移動爆發力下滑，季末合約到期，因與球團在定位與薪資上未達共識，因此進入自由球員市場。</div>
+     <div><b>2034年</b>1月13日，與阿里山小火車達成合約共識，簽署了一紙3年、總額高達4,350萬新台幣的合約，並選擇背號「7」</div>
+     <div><b>2035年</b>6月19日，達成生涯1500安里程碑</div>
+     <div><b>2037年</b>2月23日，決定該季打完後引退，阿里山小火車與其簽下1年1300萬新台幣的合約</div>
+     <div><b>2038年</b>由小火車球團全額資助赴美，於 MLB 亞利桑那秋季聯盟與西雅圖科學實驗室深造，專攻美式進階數據戰術、內野守備路徑效能及運動心理學。</div>
+     <div><b>2045年</b>因防守改造功勳顯著，被拔擢為一軍首席教練，成為球隊的戰術大腦，全面掌控團隊推進與跑壘戰術。</div>
+     <div><b>2048年</b>小火車隊季前更換教頭，林進勳接掌帥印，正式升任一軍總教練。背號「77」。</div>
+    </div>
+  </div>
+
+  <!-- 生涯成績 -->
+ <!-- 生涯成績 -->
+  <div class="section">
+    <h2>歷年職棒生涯成績</h2>
+    <b>室內棒球聯盟一軍打擊成績：</b>
+    <table class="stats">
+    <thead>
+      <tr>
+        <th>年度</th>
+        <th>球隊</th><th>G</th><th>PA</th><th>AB</th><th>H</th>
+        <th>2B</th><th>3B</th><th>HR</th>
+        <th>RBI</th><th>R</th><th>TB</th><th>SB</th><th>SO</th><th>BB</th><th>SAC</th><th>SF</th>
+        <th>AVG</th><th>OBP</th><th>SLG</th><th>OPS</th>
+      </tr>
+    </thead>
+    <tbody>
+    
+    <tr>
+      <td>2025</td>
+      <td>墾丁鯊魚</td>
+      <td>132</td>
+      <td>512</td>
+      <td>455</td>
+      <td>132</td>
+      <td>24</td>
+      <td>2</td>
+      <td>5</td>
+      <td>52</td>
+      <td>61</td>
+      <td>175</td>
+      <td>8</td>
+      <td>45</td>
+      <td>42</td>
+      <td>6</td>
+      <td>7</td>
+      <td>.290</td>
+      <td>.346</td>
+      <td>.385</td>
+      <td>.731</td>
+    </tr>
+    <tr>
+      <td>2026</td>
+      <td>墾丁鯊魚</td>
+      <td>135</td>
+      <td>535</td>
+      <td>468</td>
+      <td>141</td>
+      <td>28</td>
+      <td>1</td>
+      <td>8</td>
+      <td>61</td>
+      <td>68</td>
+      <td>195</td>
+      <td>11</td>
+      <td>42</td>
+      <td>48</td>
+      <td>5</td>
+      <td>6</td>
+      <td>.301</td>
+      <td>.362</td>
+      <td>.417</td>
+      <td>.779</td>
+    </tr>
+    <tr>
+      <td>2027</td>
+      <td>墾丁鯊魚</td>
+      <td>138</td>
+      <td>562</td>
+      <td>486</td>
+      <td>153</td>
+      <td>32</td>
+      <td>3</td>
+      <td>11</td>
+      <td>72</td>
+      <td>75</td>
+      <td>224</td>
+      <td>12</td>
+      <td>38</td>
+      <td>55</td>
+      <td>4</td>
+      <td>7</td>
+      <td>.315</td>
+      <td>.380</td>
+      <td>.461</td>
+      <td>.841</td>
+    </tr>
+    <tr>
+      <td>2028</td>
+      <td>墾丁鯊魚</td>
+      <td><b>140</b></td>
+      <td>582</td>
+      <td>502</td>
+      <td>165</td>
+      <td>35</td>
+      <td>2</td>
+      <td>12</td>
+      <td>81</td>
+      <td>88</td>
+      <td>240</td>
+      <td>15</td>
+      <td>31</td>
+      <td>62</td>
+      <td>3</td>
+      <td>8</td>
+      <td>.329</td>
+      <td>.398</td>
+      <td>.478</td>
+      <td>.876</td>
+    </tr>
+    <tr>
+      <td>2029</td>
+      <td>墾丁鯊魚</td>
+      <td>136</td>
+      <td>558</td>
+      <td>482</td>
+      <td>150</td>
+      <td>30</td>
+      <td>1</td>
+      <td>7</td>
+      <td>65</td>
+      <td>72</td>
+      <td>203</td>
+      <td>9</td>
+      <td>35</td>
+      <td>51</td>
+      <td>5</td>
+      <td>7</td>
+      <td>.311</td>
+      <td>.373</td>
+      <td>.421</td>
+      <td>.794</td>
+    </tr>
+    <tr>
+      <td>2030</td>
+      <td>墾丁鯊魚</td>
+      <td>139</td>
+      <td>571</td>
+      <td>490</td>
+      <td>156</td>
+      <td>33</td>
+      <td>2</td>
+      <td>10</td>
+      <td>78</td>
+      <td>80</td>
+      <td>223</td>
+      <td>10</td>
+      <td>33</td>
+      <td>58</td>
+      <td>4</td>
+      <td>9</td>
+      <td>.318</td>
+      <td>.385</td>
+      <td>.455</td>
+      <td>.840</td>
+    </tr>
+    <tr>
+      <td>2031</td>
+      <td>墾丁鯊魚</td>
+      <td>134</td>
+      <td>545</td>
+      <td>465</td>
+      <td>142</td>
+      <td>26</td>
+      <td>0</td>
+      <td>6</td>
+      <td>59</td>
+      <td>65</td>
+      <td>186</td>
+      <td>6</td>
+      <td>40</td>
+      <td>52</td>
+      <td>7</td>
+      <td>6</td>
+      <td>.305</td>
+      <td>.371</td>
+      <td>.400</td>
+      <td>.771</td>
+    </tr>
+    <tr>
+      <td>2032</td>
+      <td>墾丁鯊魚</td>
+      <td>128</td>
+      <td>508</td>
+      <td>438</td>
+      <td>126</td>
+      <td>22</td>
+      <td>1</td>
+      <td>4</td>
+      <td>48</td>
+      <td>52</td>
+      <td>162</td>
+      <td>4</td>
+      <td>48</td>
+      <td>44</td>
+      <td>6</td>
+      <td>4</td>
+      <td>.288</td>
+      <td>.350</td>
+      <td>.370</td>
+      <td>.720</td>
+    </tr>
+    <tr>
+      <td>2033</td>
+      <td>墾丁鯊魚</td>
+      <td>122</td>
+      <td>485</td>
+      <td>419</td>
+      <td>118</td>
+      <td>20</td>
+      <td>0</td>
+      <td>3</td>
+      <td>42</td>
+      <td>45</td>
+      <td>147</td>
+      <td>3</td>
+      <td>52</td>
+      <td>40</td>
+      <td>8</td>
+      <td>4</td>
+      <td>.282</td>
+      <td>.341</td>
+      <td>.351</td>
+      <td>.692</td>
+    </tr>
+    <!-- 2034-2037：150場賽制（轉隊阿里山小火車時期 - 運用突襲短打維持高打擊率與推進） -->
+    <tr>
+      <td>2034</td>
+      <td>阿里山小火車</td>
+      <td>145</td>
+      <td>605</td>
+      <td>512</td>
+      <td>155</td>
+      <td>28</td>
+      <td>1</td>
+      <td>5</td>
+      <td>66</td>
+      <td>70</td>
+      <td>200</td>
+      <td>5</td>
+      <td>55</td>
+      <td>65</td>
+      <td>7</td>
+      <td>6</td>
+      <td>.303</td>
+      <td>.377</td>
+      <td>.391</td>
+      <td>.768</td>
+    </tr>
+    <tr>
+      <td>2035</td>
+      <td>阿里山小火車</td>
+      <td>138</td>
+      <td>568</td>
+      <td>478</td>
+      <td>142</td>
+      <td>24</td>
+      <td>0</td>
+      <td>4</td>
+      <td>58</td>
+      <td>58</td>
+      <td>178</td>
+      <td>2</td>
+      <td>58</td>
+      <td>58</td>
+      <td>8</td>
+      <td>6</td>
+      <td>.297</td>
+      <td>.369</td>
+      <td>.372</td>
+      <td>.741</td>
+    </tr>
+    <tr>
+      <td>2036</td>
+      <td>阿里山小火車</td>
+      <td>115</td>
+      <td>442</td>
+      <td>368</td>
+      <td>106</td>
+      <td>18</td>
+      <td>0</td>
+      <td>2</td>
+      <td>39</td>
+      <td>41</td>
+      <td>130</td>
+      <td>1</td>
+      <td>46</td>
+      <td>44</td>
+      <td>6</td>
+      <td>4</td>
+      <td>.288</td>
+      <td>.360</td>
+      <td>.353</td>
+      <td>.713</td>
+    </tr>
+    
+    <tr>
+      <td>2037</td>
+      <td>阿里山小火車</td>
+      <td>96</td>
+      <td>345</td>
+      <td>288</td>
+      <td>81</td>
+      <td>15</td>
+      <td>0</td>
+      <td>1</td>
+      <td>31</td>
+      <td>33</td>
+      <td>99</td>
+      <td>0</td>
+      <td>38</td>
+      <td>35</td>
+      <td>5</td>
+      <td>3</td>
+      <td>.281</td>
+      <td>.356</td>
+      <td>.344</td>
+      <td>.700</td>
+    </tr>
+    
+    <tr>
+      <td colspan="2">通算成績</td>  
+      <td>1692</td>
+      <td>6858</td>
+      <td>5813</td>
+      <td>1787</td>
+      <td>346</td>
+      <td>15</td>
+      <td>92</td>
+      <td>833</td>
+      <td>836</td>
+      <td>2439</td>
+      <td>99</td>
+      <td>561</td>
+      <td>658</td>
+      <td>74</td>
+      <td>84</td>
+      <td>.307</td>
+      <td>.373</td>
+      <td>.420</td>
+      <td>.793</td>
+    </tr>
+  
+    </tbody>
+  </table>
+
+      <!-- 成績資料保持原本內容 -->
+      <!-- 這裡略去為簡潔，可直接保留你原本 table 內容 -->
+   <br>
+
+    <strong>室內棒球聯盟總教練成績：</strong>
+    <table class="stats">
+    <thead>
+      <tr>
+        <th>年度</th>
+        <th>球隊</th>
+        <th>場次</th>
+        <th>勝場</th>
+        <th>敗場</th>
+        <th>和局</th>
+        <th>勝率</th>
+        <th>分區排名</th>
+        <th>聯盟排名</th>
+        <th>備註</th>
+      </tr>
+    </thead>
+    <tbody>
+    
+    <tr>
+      <td>2048</td>
+      <td>阿里山小火車</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+    <tr>
+      <td>2049</td>
+      <td>阿里山小火車</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+    <tr>
+      <td>2050</td>
+      <td>阿里山小火車</td>
+      <td>150</td>
+      <td>64</td>
+      <td>86</td>
+      <td>0</td>
+      <td>.427</td>
+      <td>4</td>
+      <td>15</td>
+      <td>未晉級季後賽</td>
+    </tr>
+    
+    <tr>
+      <td>2051</td>
+      <td>阿里山小火車</td>
+      <td>150</td>
+      <td>86</td>
+      <td>63</td>
+      <td>1</td>
+      <td>.573</td>
+      <td>2</td>
+      <td>6</td>
+      <td class="champion">年度總冠軍</td>
+    </tr>
+    
+ 
+    <tr class="career">
+      <td colspan="2">通算成績</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+
+    </tbody>
+    </table>
+    
+  </div>
+
+  <!-- 個人獎項 -->
+  <div class="section">
+    <h2>個人獎項</h2>
+    室內棒球聯盟年度金手套獎三壘手：2025、2027、2028、2030、2031<br>
+    室內棒球聯盟年度最佳十人三壘手：2027、2028、2030<br>
+    台灣大賽MVP：2031<br>
+    室內棒球聯盟年度最佳總教練：2051<br>
+    
+  </div>
+
+  <!-- 特殊事蹟 -->
+  <div class="section">
+    <h2>特殊事蹟</h2>
+    室內棒球聯盟明星賽：2025～2031、2034
+  </div>
+
+  <!-- 相關新聞 -->
+  <div class="section">
+    <h2>相關新聞</h2>
+    <a href="#"></a><br>
+    <a href="#"></a>
+  </div>
+
+</div>
+
+
+</body>
+</html>
