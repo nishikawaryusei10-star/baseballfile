@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> 鍾宇霖 </title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background: #ffffff;
+  color: #111827;
+  line-height: 1.6;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 80px; /* 關鍵 */
+}
+
+html, body {
+  height: auto;
+  overflow-y: auto;
+}
+
+/* ===== 橫幅照片 ===== */
+.banner-photo {
+  width: 100%;
+  height: 320px;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* ===== 頁首 ===== */
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header .sub {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* ===== 主版面 ===== */
+.section {
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-left: 4px solid #111827;
+  padding-left: 8px;
+}
+
+/* ===== 基本資料 ===== */
+.profile {
+  font-size: 0.95rem;
+}
+
+.profile div {
+  padding: 5px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.profile span {
+  display: inline-block;
+  width: 100px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ===== 經歷 ===== */
+.career a {
+  display: inline-block;
+}
+
+.no-break {
+  white-space: nowrap; /* 括號內文字不換行 */
+}
+
+/* ===== 年表 ===== */
+.timeline {
+  font-size: 0.95rem;
+}
+
+.timeline div {
+  margin-bottom: 6px;
+}
+
+.timeline b {
+  display: inline-block;
+  width: 60px;
+}
+
+/* ===== 頂部導覽列 ===== */
+.topnav {
+  display: flex;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 3px solid #e5e7eb;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.topnav a {
+  color: #006000;
+  font-weight:450;
+}
+
+.topnav a:hover {
+  color: #1d4ed8;
+}
+
+/* ===== 表格 ===== */
+table.stats {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats th,
+table.stats td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats th {
+  background: #46A3FF;
+  color: #FFFF37;
+  font-weight: 600;
+}
+
+table.stats tbody tr:nth-child(even) td {
+  background: #ECF5FF;
+}
+
+table.stats th:nth-child(2),
+table.stats td:nth-child(2) {
+  white-space: nowrap;
+}
+
+.best {
+  font-weight: bold;       /* 加粗字體 */        
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.test {
+  font-weight: bold;       /* 加粗字體 */
+  color: #FF0000;          /* 改成紅色 */
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+/* ===== Footer ===== */
+.footer {
+  border-top: 1px solid #d1d5db;
+  margin-top: 48px;
+  padding-top: 16px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+/* ===== 右側簡潔照片欄 ===== */
+.side-photo-box {
+  float: right;
+  width: 250px; /* 照片寬度 */
+  margin: 0 0 20px 20px;
+  padding: 5px;
+  border: 1px solid #e5e7eb;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.side-photo-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.photo-caption {
+  font-size: 0.8rem;
+  color: #4b5563;
+  padding: 8px 4px 4px 4px;
+  line-height: 1.4;
+  border-top: 1px solid #f3f4f6;
+  margin-top: 5px;
+}
+
+/* 手機版自動置中 */
+@media (max-width: 600px) {
+  .side-photo-box {
+    float: none;
+    margin: 0 auto 20px auto;
+    width: 90%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    
+  <nav class="topnav">
+  <a href="../index.html">首頁</a> ⮕ <a href="players_overview.html">球員</a> ⮕  <a href="taiwan_players_overview.html">台灣球員</a> ⮕  <b>鍾宇霖</b> </nav>     
+
+  <!-- 頁首 -->
+  <div class="header">
+    <h1>鍾宇霖</h1>
+    <div class="sub"> CHUNG,YU-LIN｜內野手（3B）</div>
+  </div>
+  
+
+  <!-- 基本資料 -->
+  
+  <div class="section">
+    <h2>基本資料</h2>
+    <div class="profile">
+      <div><span>出生日期</span>2026 年 5 月 14 日（26歲）</div>
+      <div><span>身高體重</span>180 公分／78 公斤</div>
+      <div><span>出生地</span>台灣・高雄市前金區</div>
+      <div><span>投打習慣</span>右投左打</div>
+      <div><span>守備位置</span>內野手 3B 1B</div>
+      <div><span>職棒選秀</span><a href="../term/2048年室內棒球聯盟新人選秀會.html">2048年室內棒球聯盟選秀會</a><a href="#">離島聯隊</a>第二輪指名</div>
+    </div>
+  </div>
+
+  <!-- 球員經歷 -->
+  <div class="section">
+    <h2>球員經歷</h2>
+    <div class="career">
+      <a href="#">高雄市</a><a href="#">復興國小少棒隊</a><br>
+      <a href="#">高雄市</a><a href="#">五福國中青少棒隊</a><br>
+      <a href="#">桃園市</a><a href="#">平鎮高中青棒隊</a><br>
+      桃園市國立體育大學棒球隊<br>
+      <a href="#">室內棒球聯盟</a><a href="../teams/離島聯隊.html">離島聯隊</a> → <a href="../teams/奇醫海燕.html">奇醫海燕隊</a>（2052～）</br>
+    </div>
+  </div>
+
+  
+
+  <!-- 個人年表 -->
+  <div class="section">
+    <h2>個人年表</h2>
+    <div class="timeline">
+      <div><b>2047年</b>7月，分科測驗錄取中國醫藥大學運動醫學系，不過最後未就讀</div>
+      <div><b>2044年</b>9月，進入國立體育大學就讀</div>
+      <div><b>2048年</b>7月，投入室內棒球聯盟選秀會，被離島聯隊在第二輪指名，後以1385萬新台幣加盟，選擇背號「14」</div>
+      <div><b>2049年</b>4月12日，於奇醫海燕主場對戰花蓮眼鏡蛇隊。他在7局上半接替防守三壘，並在 8 局下半迎來生涯一軍首個打席，面對時速 148 公里直球遭到三振。</div>
+      <div><b>2049年</b>4月19日，五局下半，面對中信子彈隊投手高品睿敲出生涯首安</div>
+      <div><b>2050年</b>5月2日，四局上半，面對富邦守護者隊周煜軒敲出生涯首轟</div>
+    </div>
+  </div>
+
+  <!-- 生涯成績 -->
+ <!-- 生涯成績 -->
+  <div class="section">
+    <h2>職棒生涯成績</h2>
+    室內棒球聯盟一軍打擊成績：
+    <table class="stats">
+    <thead>
+      <tr>
+        <th>年度</th>
+        <th>球隊</th><th>G</th><th>PA</th><th>AB</th><th>H</th>
+        <th>2B</th><th>3B</th><th>HR</th>
+        <th>RBI</th><th>R</th><th>TB</th><th>SB</th><th>SO</th><th>BB</th><th>SAC</th><th>SF</th>
+        <th>AVG</th><th>OBP</th><th>SLG</th><th>OPS</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+      <td>2049</td>
+      <td>奇醫海燕</td>
+      <td>35</td>
+      <td>112</td>
+      <td>98</td>
+      <td>25</td>
+      <td>4</td>
+      <td>0</td>
+      <td>0</td>
+      <td>8</td>
+      <td>11</td>
+      <td>29</td>
+      <td>1</td>
+      <td>18</td>
+      <td>12</td>
+      <td>1</td>
+      <td>1</td>
+      <td>.255</td>
+      <td>.333</td>
+      <td>.296</td>
+      <td>.629</td>
+    </tr>
+    <tr>
+      <td>2050</td>
+      <td>奇醫海燕</td>
+      <td>98</td>
+      <td>365</td>
+      <td>320</td>
+      <td>84</td>
+      <td>15</td>
+      <td>1</td>
+      <td>2</td>
+      <td>31</td>
+      <td>38</td>
+      <td>107</td>
+      <td>3</td>
+      <td>52</td>
+      <td>38</td>
+      <td>2</td>
+      <td>5</td>
+      <td>.263</td>
+      <td>.337</td>
+      <td>.334</td>
+      <td>.671</td>
+    </tr>
+    <tr>
+      <td>2051</td>
+      <td>奇醫海燕</td>
+      <td>115</td>
+      <td>442</td>
+      <td>388</td>
+      <td>103</td>
+      <td>18</td>
+      <td>2</td>
+      <td>4</td>
+      <td>42</td>
+      <td>51</td>
+      <td>137</td>
+      <td>5</td>
+      <td>58</td>
+      <td>46</td>
+      <td>3</td>
+      <td>5</td>
+      <td>.265</td>
+      <td>.342</td>
+      <td>.353</td>
+      <td>.695</td>
+    </tr>
+    
+    <tr class="career">
+      <td colspan="2">通算成績</td>
+      <td>248</td>
+      <td>919</td>
+      <td>806</td>
+      <td>212</td>
+      <td>37</td>
+      <td>3</td>
+      <td>6</td>
+      <td>81</td>
+      <td>100</td>
+      <td>273</td>
+      <td>9</td>
+      <td>128</td>
+      <td>96</td>
+      <td>6</td>
+      <td>11</td>
+      <td>.263</td>
+      <td>.339</td>
+      <td>.339</td>
+      <td>.678</td>
+    </tr>
+
+
+  
+    </tbody>
+  </table>
+  </div>
+
+  <!-- 個人獎項 -->
+  <div class="section">
+    <h2>個人獎項</h2>
+    ・2046年大專棒球聯賽打擊獎第三名（.475）<br>
+    ・2047年大專棒球聯賽最佳十人三壘手<br>
+    ・2048年大專棒球聯賽最佳十人三壘手<br>
+    
+  </div>
+
+  <!-- 特殊事蹟 -->
+  <div class="section">
+    <h2>特殊事蹟</h2>
+    ・2044年U18世界青棒錦標賽中華培訓隊<br>
+    ・2048年U23世界盃棒球錦標賽中華代表隊<br>
+  </div>
+
+  <!-- 相關新聞 -->
+  <div class="section">
+    <h2>相關新聞</h2>
+  </div>
+
+</div>
+
+
+</body>
+</html>

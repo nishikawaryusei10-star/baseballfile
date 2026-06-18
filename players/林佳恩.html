@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> 林佳恩 </title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background: #ffffff;
+  color: #111827;
+  line-height: 1.6;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ===== 橫幅照片 ===== */
+.banner-photo {
+  width: 100%;
+  height: 320px;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* ===== 頁首 ===== */
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header .sub {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* ===== 主版面 ===== */
+.section {
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-left: 4px solid #111827;
+  padding-left: 8px;
+}
+
+/* ===== 頂部導覽列 ===== */
+.topnav {
+  display: flex;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 3px solid #e5e7eb;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.topnav a {
+  color: #006000;
+  font-weight:450;
+}
+
+.topnav a:hover {
+  color: #1d4ed8;
+}
+
+/* ===== 基本資料 ===== */
+.profile {
+  font-size: 0.95rem;
+}
+
+.profile div {
+  padding: 5px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.profile span {
+  display: inline-block;
+  width: 100px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ===== 經歷 ===== */
+.career a {
+  display: inline-block;
+}
+
+.no-break {
+  white-space: nowrap; /* 括號內文字不換行 */
+}
+
+/* ===== 年表 ===== */
+.timeline {
+  font-size: 0.95rem;
+}
+
+.timeline div {
+  margin-bottom: 6px;
+}
+
+.timeline b {
+  display: inline-block;
+  width: 60px;
+}
+
+/* ===== 表格 ===== */
+table.stats {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats th,
+table.stats td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats th {
+  background: #BEBEBE;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+table.stats tbody tr:nth-child(even) td {
+  background: #F0F0F0;
+}
+
+table.stats th:nth-child(2),
+table.stats td:nth-child(2) {
+  white-space: nowrap;
+}
+
+.best {
+  font-weight: bold;       /* 加粗字體 */        
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.test {
+  font-weight: bold;       /* 加粗字體 */
+  color: #FF0000;          /* 改成紅色 */
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+/* ===== 新增：可點擊年度與分項列樣式 ===== */
+.clickable-year {
+  cursor: pointer;
+}
+.clickable-year:hover {
+  text-decoration: underline;
+  background-color: #eff6ff !important;
+}
+
+.sub-row {
+  display: none; /* 預設隱藏 */
+}
+.sub-row td {
+  background-color: #f9fafb !important; /* 分項使用淡灰色區隔 */
+  color: #4b5563;
+  font-size: 0.8em;
+}
+
+/* ===== Footer ===== */
+.footer {
+  border-top: 1px solid #d1d5db;
+  margin-top: 48px;
+  padding-top: 16px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  
+  <nav class="topnav">
+  <a href="../index.html">首頁</a> ⮕ <a href="players_overview.html">球員</a> ⮕  <a href="taiwan_players_overview.html">台灣球員</a> ⮕  <b>林佳恩</b> </nav> 
+  
+  <div class="header">
+    <h1>林佳恩</h1>
+    <div class="sub"> LIN,CHIA-EN｜內野手（2B）</div>
+  </div>
+
+  <div class="section">
+    <h2>基本資料</h2>
+    <div class="profile">
+      <div><span>出生日期</span>2023 年 5 月 22 日（29歲）</div>
+      <div><span>身高體重</span>186 公分／87 公斤</div>
+      <div><span>出生地</span>台灣・桃園市龜山區</div>
+      <div><span>投打習慣</span>右投右打</div>
+      <div><span>守備位置</span>內野手 2B</div>
+      <div><span>職棒選秀</span><a href="#">2041年室內棒球聯盟選秀會</a><a href="#">統一猛獅隊</a>第一輪指名</div>
+    </div>
+  </div>
+
+  <!-- 球員經歷 -->
+  <div class="section">
+    <h2>球員經歷</h2>
+    <div class="career">
+      <a href="#">桃園市</a><a href="#">中平國小少棒隊</a></br>
+      <a href="#">桃園市</a><a href="#">大園國中青少棒隊</a></br>
+      <a href="#">桃園市</a><a href="#">平鎮高中青棒隊</a></br>
+      <a href="#">室內棒球聯盟</a><a href="#">統一猛獅隊</a>（2041/08～2044/06）</br>
+      <a href="#">室內棒球聯盟</a><a href="#">富邦守護者隊</a>（2044/06～2051）</br>
+      <a href="#">室內棒球聯盟</a><a href="#">北鐵狼隊</a>（2052～）</br>
+    </div>
+  </div>
+
+  
+  <!-- 球員介紹 -->
+  <div class="section">
+    <h2>球員介紹</h2>
+林佳恩是出生自桃園的棒球選手，守備位置為二壘手，曾經效力統一猛獅隊、富邦守護者隊，目前效力於北鐵狼隊。</br>
+</br>
+<strong>學生棒球時期</strong></br> 
+林佳恩出生於桃園市，三級棒球皆在桃園完成。他的棒球之路起源於國小時期，受到父親與地方棒球風氣影響，自小加入社區少棒隊。由於協調性與反應能力出色，他在少棒階段便被教練定位為內野手，並逐漸往二壘方向培養。</br>
+</br>
+進入國中後，林佳恩就讀桃園當地青少棒名校，攻守表現迅速成長，成為校隊主力二壘手。穩定的擊球能力與成熟的比賽態度，使他在國中畢業後，獲得推薦進入全國頂尖青棒強權——平鎮高中就讀。</br> 
+</br> 
+高中初期，林佳恩即進入輪替名單，並在高一賽季逐步累積出賽經驗。升上高二後，他正式站穩先發二壘手位置，無論守備範圍、雙殺配合或跑壘判斷，皆展現超齡成熟度。進入高三後，他的評價持續攀升。2041年初的木棒聯賽中，林佳恩在關鍵場次屢次建功，打擊穩定、長打與速度兼具，獲得多支職業與旅外球探高度肯定。</br> 
+</br> 
+當時曾傳出美國職棒白襪隊、費城人隊對其有高度興趣，但林佳恩對旅美發展意願不高，加上報價未達預期，他最終決定留在台灣發展，並於畢業前確定投入該屆室內棒球聯盟選秀，正式提交報名表。</br>
+</br>
+<strong>選秀與統一猛獅時期</strong></br> 
+在高中評價極高的情況下，林佳恩於選秀會中被統一猛獅隊以第一輪第四順位指名，並以1969萬新台幣、4年新人合約正式加盟。猛獅球團期望他能接替吳桀恩旅外後留下的二壘空缺，成為中線新核心。</br>
+</br>
+林佳恩於2042年季中迅速登上一軍，並立即繳出優於新人水準的成績，攻守兩端皆有亮眼表現。該季季後入圍新人王票選，最終排名第三，仍被視為當屆最成功的新秀之一。</br>
+</br>
+<strong>轉隊富邦守護者與巔峰期</strong></br> 
+2044年6月23日，統一猛獅與富邦守護者完成一筆重大交易：富邦送出鄭原裴＋林志成＋700萬現金，換回林佳恩。</br> 
+</br>
+轉隊後，林佳恩迅速站穩富邦二壘先發位置，成為球隊中線支柱。儘管距離成為完全自由球員仍有三年，富邦球團選擇提前佈局。2045年季初，雙方達成共識，簽下5＋2 年延長合約，後兩年為球員選擇權，另含多項激勵條款，合約總值高達1.5億新台幣。</br>
+</br>
+2045至2048年間，林佳恩年年繳出穩定成績，連續四季達成雙位數全壘打與盜壘，並於2047年完成20轟、20盜的里程碑賽季，正式躋身聯盟頂級內野手行列。</br>
+</br>
+<strong>傷病、回歸與自由市場</strong></br> 
+2049年8月，林佳恩在一次滑壘中不慎造成右腳第五蹠骨骨折，經診斷需休養6–8 週，等同該季提前報銷。該傷勢使他中斷連續四年「15轟、15盜」紀錄，單季OPS僅.735。
+儘管如此，富邦球團評估其復原狀況良好，加上合約期間整體表現優異，於2049年季後選擇執行後兩年球隊選擇權，確定林佳恩於2050、2051年續留富邦。在完全復原後，林佳恩於 2050、2051兩季連續繳出20轟、20盜的全面數據，OPS皆突破 .800，並連續兩年榮獲金手套二壘手與最佳陣容第一隊二壘手，再度證明自己仍是聯盟最頂尖的中線戰力。</br>
+</br>
+<strong>加盟北鐵狼隊</strong></br>
+2051年季末，林佳恩合約到期，正式成為完全自由球員。憑藉多座金手套、數次 20–20 賽季的實績，他成為自由市場上最搶手的內野手之一。經過多輪談判後，林佳恩最終與 北鐵狼隊達成共識，簽下一筆7年、總值4.05億新台幣的重量級合約。合約內容包含球員選擇權、旅外入札保障條款等，被視為聯盟近年最具指標性的自由球員簽約之一。
+  </div>
+  
+
+  <!-- 個人年表 -->
+  <div class="section">
+    <h2>個人年表</h2>
+    <div class="timeline">
+      <div><b>2041年</b>參加室內棒球聯盟季中選秀，林佳恩被統一猛獅隊在第一輪選進（榜眼），選秀後以簽約金1969萬、4年新人合約加盟統一猛獅隊</div>
+      <div><b>2042年</b>4月18日，球隊對戰南投雷霆隊時，林佳恩生涯首次以代跑亮相</div>
+      <div><b>2042年</b>季後，林佳恩入圍年度新人王票選，最後排行第三</div>
+      <div><b>2044年</b>07月22日，統一獅與富邦守護者進行交易，統一獅送出林佳恩，並獲得鄭原裴＋林志成＋700萬現金</div>
+      <div><b>2045年</b>季初，富邦守護者提出以7年8000萬提前續約林佳恩，在經過多次談判後，最後以5+2年最高1.5億合約與富邦守護者續約，合約從2045年球季開始實行</div>
+      <div><b>2049年</b>07月31日，林佳恩對戰北鐵狼的比賽中達成千安，完成生涯千安、百轟、百盜</div>
+      <div><b>2049年</b>08月03日，林佳恩對戰中信子彈的比賽中滑壘導致右腳第五蹠骨骨折，需休養至少6-8周，等同於剩下球季幾乎報銷</div>
+       <div><b>2049年</b>球季結束後，球團選擇執行球隊選擇權，合計2年</div>
+        <div><b>2051年</b>季末取得完全自由球員資格，後以7年總額4.05億新台幣，包含第四年球員選擇權與多項激勵條款，總額最高可達4.6億新台幣的大合約加盟北鐵狼隊</div>
+
+    </div>
+  </div>
+
+<!-- 生涯成績 -->
+ <!-- 生涯成績 -->
+  <div class="section">
+    <h2>職棒生涯成績</h2>
+    <b>室內棒球聯盟一軍打擊成績：</b>
+    <table class="stats">
+    <thead>
+      <tr>
+        <th>年度</th>
+        <th>球隊</th><th>G</th><th>PA</th><th>AB</th><th>H</th>
+        <th>2B</th><th>3B</th><th>HR</th>
+        <th>RBI</th><th>R</th><th>SB</th><th>TB</th><th>SO</th><th>BB</th><th>SAC</th><th>SF</th>
+        <th>AVG</th><th>OBP</th><th>SLG</th><th>OPS</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+      <td>2042</td>
+      <td>統一猛獅</td>
+      <td>102</td>
+      <td>391</td>
+      <td>364</td>
+      <td>104</td>
+      <td>19</td>
+      <td>4</td>
+      <td>7</td>
+      <td>38</td>
+      <td>44</td>
+      <td>18</td>
+      <td>152</td>
+      <td>76</td>
+      <td>21</td>
+      <td>4</td>
+      <td>2</td>
+      <td>.286</td>
+      <td>.323</td>
+      <td>.418</td>
+      <td>.741</td>
+    </tr>
+
+    <tr>
+      <td>2043</td>
+      <td>統一猛獅</td>
+      <td>96</td>
+      <td>377</td>
+      <td>341</td>
+      <td>88</td>
+      <td>16</td>
+      <td>3</td>
+      <td>11</td>
+      <td>34</td>
+      <td>37</td>
+      <td>11</td>
+      <td>143</td>
+      <td>69</td>
+      <td>28</td>
+      <td>6</td>
+      <td>2</td>
+      <td>.258</td>
+      <td>.313</td>
+      <td>.419</td>
+      <td>.732</td>
+    </tr>
+
+    <tr onclick="toggleRows('row-2042')" class="clickable-year" title="點擊展開/收合分項成績">
+      <td>2044 ▾</td>
+      <td>2 teams</td>
+      <td>117</td>
+      <td>328</td>
+      <td>298</td>
+      <td>97</td>
+      <td>15</td>
+      <td>3</td>
+      <td>13</td>
+      <td>42</td>
+      <td>41</td>
+      <td>19</td>
+      <td>157</td>
+      <td>73</td>
+      <td>23</td>
+      <td>3</td>
+      <td>4</td>
+      <td>.326</td>
+      <td>.369</td>
+      <td>.527</td>
+      <td>.896</td>
+    </tr>
+    
+    <tr class="sub-row row-2042">
+      <td>-</td>
+      <td>└ 統一猛獅</td>
+      <td>79</td>
+      <td>193</td>
+      <td>177</td>
+      <td>51</td>
+      <td>5</td>
+      <td>2</td>
+      <td>2</td>
+      <td>16</td>
+      <td>11</td>
+      <td>5</td>
+      <td>66</td>
+      <td>38</td>
+      <td>12</td>
+      <td>2</td>
+      <td>2</td>
+      <td>.288</td>
+      <td>.330</td>
+      <td>.373</td>
+      <td>.703</td>
+    </tr>
+    
+    <tr class="sub-row row-2042">
+      <td>-</td>
+      <td>└ 富邦守護者</td>
+      <td>38</td>
+      <td>135</td>
+      <td>121</td>
+      <td>46</td>
+      <td>10</td>
+      <td>1</td>
+      <td>11</td>
+      <td>26</td>
+      <td>30</td>
+      <td>14</td>
+      <td>91</td>
+      <td>35</td>
+      <td>11</td>
+      <td>1</td>
+      <td>2</td>
+      <td>.380</td>
+      <td>.425</td>
+      <td>.752</td>
+      <td>1.177</td>
+    </tr>
+    
+    <tr>
+      <td>2045</td>
+      <td>富邦守護者</td>
+      <td>139</td>
+      <td>594</td>
+      <td>514</td>
+      <td>144</td>
+      <td>29</td>
+      <td>4</td>
+      <td>18</td>
+      <td>77</td>
+      <td>74</td>
+      <td>24</td>
+      <td>235</td>
+      <td>109</td>
+      <td>71</td>
+      <td>6</td>
+      <td>3</td>
+      <td>.280</td>
+      <td>.366</td>
+      <td>.457</td>
+      <td>.823</td>
+    </tr>
+    
+    <tr>
+      <td>2046</td>
+      <td>富邦守護者</td>
+      <td>138</td>
+      <td>553</td>
+      <td>506</td>
+      <td>138</td>
+      <td>24</td>
+      <td>2</td>
+      <td>16</td>
+      <td>69</td>
+      <td>57</td>
+      <td>21</td>
+      <td>214</td>
+      <td>86</td>
+      <td>42</td>
+      <td>2</td>
+      <td>3</td>
+      <td>.273</td>
+      <td>.327</td>
+      <td>.423</td>
+      <td>.750</td>
+    </tr>
+    
+    <tr>
+      <td>2047</td>
+      <td>富邦守護者</td>
+      <td>143</td>
+      <td>648</td>
+      <td>601</td>
+      <td>178</td>
+      <td>31</td>
+      <td>0</td>
+      <td>21</td>
+      <td>75</td>
+      <td>71</td>
+      <td>23</td>
+      <td>272</td>
+      <td>99</td>
+      <td>42</td>
+      <td>0</td>
+      <td>5</td>
+      <td>.296</td>
+      <td>.340</td>
+      <td>.453</td>
+      <td>.793</td>
+    </tr>
+    
+    <tr>
+      <td>2048</td>
+      <td>富邦守護者</td>
+      <td>141</td>
+      <td>596</td>
+      <td>548</td>
+      <td>167</td>
+      <td>28</td>
+      <td>2</td>
+      <td>19</td>
+      <td>63</td>
+      <td>69</td>
+      <td>15</td>
+      <td>256</td>
+      <td>87</td>
+      <td>41</td>
+      <td>1</td>
+      <td>6</td>
+      <td>.305</td>
+      <td>.350</td>
+      <td>.467</td>
+      <td>.817</td>
+    </tr>
+        
+  <tr>
+      <td>2049</td>
+      <td>富邦守護者</td>
+      <td>113</td>
+      <td>408</td>
+      <td>375</td>
+      <td>107</td>
+      <td>16</td>
+      <td>0</td>
+      <td>9</td>
+      <td>42</td>
+      <td>41</td>
+      <td>9</td>
+      <td>150</td>
+      <td>54</td>
+      <td>29</td>
+      <td>2</td>
+      <td>2</td>
+      <td>.285</td>
+      <td>.335</td>
+      <td>.400</td>
+      <td>.735</td>
+    </tr>
+    
+    <tr>
+      <td>2050</td>
+      <td>富邦守護者</td>
+      <td>146</td>
+      <td>639</td>
+      <td>596</td>
+      <td>175</td>
+      <td>32</td>
+      <td>1</td>
+      <td>23</td>
+      <td>83</td>
+      <td>77</td>
+      <td>27</td>
+      <td>278</td>
+      <td>84</td>
+      <td>39</td>
+      <td>1</td>
+      <td>3</td>
+      <td>.294</td>
+      <td>.335</td>
+      <td>.466</td>
+      <td>.801</td>
+    </tr>
+    
+    <tr>
+      <td>2051</td>
+      <td>富邦守護者</td>
+      <td>147</td>
+      <td>653</td>
+      <td>597</td>
+      <td>182</td>
+      <td>34</td>
+      <td>8</td>
+      <td>23</td>
+      <td>83</td>
+      <td>92</td>
+      <td>29</td>
+      <td>301</td>
+      <td>96</td>
+      <td>48</td>
+      <td>1</td>
+      <td>7</td>
+      <td>.305</td>
+      <td>.353</td>
+      <td>.504</td>
+      <td>.857</td>
+    </tr>
+    
+    <tr>
+      <td>2052</td>
+      <td>北鐵狼</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr class="career">
+      <td colspan="2">通算成績</td>
+      <td>1282</td>
+      <td>5187</td>
+      <td>4740</td>
+      <td>1380</td>
+      <td>244</td>
+      <td>27</td>
+      <td>160</td>
+      <td>606</td>
+      <td>603</td>
+      <td>196</td>
+      <td>2158</td>
+      <td>833</td>
+      <td>384</td>
+      <td>26</td>
+      <td>37</td>
+      <td>.291</td>
+      <td>.342</td>
+      <td>.455</td>
+      <td>.797</td>
+    </tr>
+
+    </tbody>
+    </table>
+  </div>
+
+  <!-- 個人獎項 -->
+  <div class="section">
+    <h2>個人獎項</h2>
+    ・<a href="#">室內棒球聯盟年度最佳陣容</a>第一隊二壘手：2045、2050、2051</br>
+    ・<a href="#">室內棒球聯盟年度金手套</a>二壘手：2048、2050、2051</br>
+  </div>
+
+  <!-- 特殊事蹟 -->
+  <div class="section">
+    <h2>特殊事蹟</h2>
+    ・<a href="#">室內棒球聯盟明星賽</a>：2045、2047、2050～2051</br>
+    ・<a href="#">2041年U18世界青棒錦標賽</a>中華代表隊</br>
+  </div>
+
+  <div class="section">
+    <h2>相關新聞</h2>
+    <a href="#"></a><br>
+    <a href="#"></a>
+  </div>
+
+</div>
+
+<script>
+function toggleRows(className) {
+  const rows = document.getElementsByClassName(className);
+  for (let i = 0; i < rows.length; i++) {
+    if (rows[i].style.display === "table-row") {
+      rows[i].style.display = "none";
+    } else {
+      rows[i].style.display = "table-row";
+    }
+  }
+}
+</script>
+
+</body>
+</html>

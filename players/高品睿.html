@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> 高品睿 </title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background: #ffffff;
+  color: #111827;
+  line-height: 1.6;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 80px; /* 關鍵 */
+}
+
+html, body {
+  height: auto;
+  overflow-y: auto;
+}
+
+/* ===== 橫幅照片 ===== */
+.banner-photo {
+  width: 100%;
+  height: 320px;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* ===== 頁首 ===== */
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header .sub {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* ===== 主版面 ===== */
+.section {
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-left: 4px solid #111827;
+  padding-left: 8px;
+}
+
+/* ===== 基本資料 ===== */
+.profile {
+  font-size: 0.95rem;
+}
+
+.profile div {
+  padding: 5px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.profile span {
+  display: inline-block;
+  width: 100px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ===== 經歷 ===== */
+.career a {
+  display: inline-block;
+}
+
+.no-break {
+  white-space: nowrap; /* 括號內文字不換行 */
+}
+
+/* ===== 年表 ===== */
+.timeline {
+  font-size: 0.95rem;
+}
+
+.timeline div {
+  margin-bottom: 6px;
+}
+
+.timeline b {
+  display: inline-block;
+  width: 60px;
+}
+
+/* ===== 頂部導覽列 ===== */
+.topnav {
+  display: flex;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 3px solid #e5e7eb;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.topnav a {
+  color: #006000;
+  font-weight:450;
+}
+
+.topnav a:hover {
+  color: #1d4ed8;
+}
+
+/* ===== 表格 ===== */
+table.stats {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats th,
+table.stats td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats th {
+  background: #F9F900;
+  color: #000000;
+  font-weight: 600;
+}
+
+table.stats tbody tr:nth-child(even) td {
+  background: #FFFFDF;
+}
+
+
+table.stats th:nth-child(2),
+table.stats td:nth-child(2) {
+  white-space: nowrap;
+}
+
+.best {
+  font-weight: bold;       /* 加粗字體 */        
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.test {
+  font-weight: bold;       /* 加粗字體 */
+  color: #FF0000;          /* 改成紅色 */
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+/* ===== Footer ===== */
+.footer {
+  border-top: 1px solid #d1d5db;
+  margin-top: 48px;
+  padding-top: 16px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+/* ===== 右側簡潔照片欄 ===== */
+.side-photo-box {
+  float: right;
+  width: 320px; /* 照片寬度 */
+  margin: 0 0 20px 24px;
+  padding: 5px;
+  border: 1px solid #e5e7eb;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.side-photo-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.photo-caption {
+  font-size: 0.8rem;
+  color: #4b5563;
+  padding: 8px 4px 4px 4px;
+  line-height: 1.4;
+  border-top: 1px solid #f3f4f6;
+  margin-top: 5px;
+}
+
+/* 手機版自動置中 */
+@media (max-width: 600px) {
+  .side-photo-box {
+    float: none;
+    margin: 0 auto 20px auto;
+    width: 90%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    
+  <nav class="topnav">
+  <a href="../index.html">首頁</a> ⮕ <a href="players_overview.html">球員</a> ⮕  <a href="taiwan_players_overview.html">台灣球員</a> ⮕  <b>高品睿</b> </nav>     
+
+  <!-- 頁首 -->
+  <div class="header">
+    <h1>高品睿</h1>
+    <div class="sub"> KAO,PIN-JUI｜投手（RHP）</div>
+  </div>
+  
+
+  <!-- 基本資料 -->
+  
+  <div class="section">
+    <h2>基本資料</h2>
+    <div class="profile">
+      <div><span>出生日期</span>2023 年 11 月 3 日（27歲）</div>
+      <div><span>身高體重</span>185 公分／83 公斤</div>
+      <div><span>出生地</span>台灣・新北市板橋區</div>
+      <div><span>投打習慣</span>右投右打</div>
+      <div><span>守備位置</span>投手 RHP</div>
+      <div><span>最快球速</span>151 km/h（2052年例行賽）</div>
+      <div><span>職棒選秀</span><a href="2045年室內棒球聯盟新人選秀會.html">2045年室內棒球聯盟選秀會</a><a href="../teams/中信子彈.html">中信子彈隊</a>第一輪指名</div>
+    </div>
+  </div>
+
+  <!-- 球員經歷 -->
+  <div class="section">
+    <h2>球員經歷</h2>
+    <div class="career">
+      <a href="#">新北市</a><a href="#">新埔國小少棒隊</a><br>
+      <a href="#">新北市</a><a href="#">二重國中青少棒隊</a><br>
+      <a href="#">新北市</a><a href="穀保家商青棒隊.html">穀保家商青棒隊</a><br>
+      新北市私立輔仁大學棒球隊<br>
+      <a href="#">室內棒球聯盟</a><a href="../teams/中信子彈.html">中信子彈隊</a>（2049/08～）<br>
+    </div>
+  </div>
+
+  <!-- 個人年表 -->
+  <div class="section">
+    <h2>個人年表</h2>
+    <div class="timeline">
+      <div><b>2045年</b>7月，投入室內棒球聯盟選秀會，被中信子彈隊在第一輪指名，後以1985萬台幣加盟，選擇背號「18」</div>
+      <div><b>2046年</b>8月24日，面對味全天龍隊於七局登板，為生涯初登場，主投1局無安打，送出 1 次三振，收下中繼成功</div>
+      <div><b>2046年</b>9月11日，面對富邦守護者隊於七局登板，主投1.1局無失分，後續在隊友火力掩護下，成功逆轉比數收下生涯首次勝投</div>
+      <div><b>2047年</b>4月6日，面對基隆雨都隊先發主投6局失1分的優質先發，送出5次三振，順利拿下生涯首次先發勝</div>
+    </div>
+  </div>
+
+  <!-- 生涯成績 -->
+ <!-- 生涯成績 -->
+  <div class="section">
+    <h2>職棒生涯成績</h2>
+    室內棒球聯盟一軍投球成績：
+    <table class="stats">
+    <thead>
+      <tr>
+      <th>年度</th>
+      <th>球隊</th>
+      <th>G</th>
+      <th>GS</th>
+      <th>W</th>
+      <th>L</th>
+      <th>HLD</th>
+      <th>SV</th>
+      <th>IP</th>
+      <th>QS</th>
+      <th>BF</th>
+      <th>BH</th>
+      <th>BHR</th>
+      <th>OAVG</th>
+      <th>SO</th>
+      <th>BB</th>
+      <th>R</th>
+      <th>ER</th>
+      <th>ERA</th>
+      <th>WHIP</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+      <td>2046</td>
+      <td>中信子彈</td>
+      <td>15</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>4</td>
+      <td>0</td>
+      <td>18.1</td>
+      <td>0</td>
+      <td>74</td>
+      <td>14</td>
+      <td>1</td>
+      <td>.212</td>
+      <td>16</td>
+      <td>5</td>
+      <td>5</td>
+      <td>4</td>
+      <td>1.96</td>
+      <td>1.04</td>
+    </tr>
+    <tr>
+      <td>2047</td>
+      <td>中信子彈</td>
+      <td>28</td>
+      <td>12</td>
+      <td>6</td>
+      <td>5</td>
+      <td>2</td>
+      <td>0</td>
+      <td>92.0</td>
+      <td>5</td>
+      <td>392</td>
+      <td>88</td>
+      <td>6</td>
+      <td>.251</td>
+      <td>68</td>
+      <td>24</td>
+      <td>42</td>
+      <td>38</td>
+      <td>3.72</td>
+      <td>1.22</td>
+    </tr>
+    <tr>
+      <td>2048</td>
+      <td>中信子彈</td>
+      <td>24</td>
+      <td>22</td>
+      <td>9</td>
+      <td>8</td>
+      <td>0</td>
+      <td>0</td>
+      <td>134.2</td>
+      <td>12</td>
+      <td>565</td>
+      <td>126</td>
+      <td>9</td>
+      <td>.246</td>
+      <td>95</td>
+      <td>31</td>
+      <td>58</td>
+      <td>51</td>
+      <td>3.41</td>
+      <td>1.17</td>
+    </tr>
+    
+    <tr>
+      <td>2049</td>
+      <td>中信子彈</td>
+      <td>26</td>
+      <td>25</td>
+      <td>14</td>
+      <td>5</td>
+      <td>0</td>
+      <td>0</td>
+      <td>165.1</td>
+      <td>19</td>
+      <td>672</td>
+      <td>141</td>
+      <td>7</td>
+      <td>.230</td>
+      <td>122</td>
+      <td>35</td>
+      <td>53</td>
+      <td>46</td>
+      <td>2.50</td>
+      <td>1.06</td>
+    </tr>
+    
+    <tr>
+      <td>2050</td>
+      <td>中信子彈</td>
+      <td>23</td>
+      <td>20</td>
+      <td>8</td>
+      <td>9</td>
+      <td>0</td>
+      <td>0</td>
+      <td>118.0</td>
+      <td>8</td>
+      <td>513</td>
+      <td>128</td>
+      <td>12</td>
+      <td>.271</td>
+      <td>81</td>
+      <td>33</td>
+      <td>62</td>
+      <td>55</td>
+      <td>4.19</td>
+      <td>1.36</td>
+    </tr>
+    
+    <tr>
+      <td>2051</td>
+      <td>中信子彈</td>
+      <td>35</td>
+      <td>8</td>
+      <td>5</td>
+      <td>6</td>
+      <td>8</td>
+      <td>1</td>
+      <td>76.2</td>
+      <td>3</td>
+      <td>334</td>
+      <td>82</td>
+      <td>8</td>
+      <td>.273</td>
+      <td>54</td>
+      <td>20</td>
+      <td>41</td>
+      <td>38</td>
+      <td>4.46</td>
+      <td>1.33</td>
+    </tr>
+    
+    <tr class="career">
+      <td colspan="2">通算成績</td>
+      <td>154</td>
+      <td>62</td>
+      <td>43</td>
+      <td>33</td>
+      <td>14</td>
+      <td>1</td>
+      <td>603.1</td>
+      <td>47</td>
+      <td>2550</td>
+      <td>579</td>
+      <td>44</td>
+      <td>.252</td>
+      <td>434</td>
+      <td>148</td>
+      <td>261</td>
+      <td>232</td>
+      <td>3.46</td>
+      <td>1.21</td>
+    </tr>
+
+
+  
+    </tbody>
+  </table>
+  </div>
+
+  <!-- 個人獎項 -->
+  <div class="section">
+    <h2>個人獎項</h2>
+    ・2044年全國大專棒球聯賽公開組一級防禦率王<br>
+    ・2045年全國大專棒球聯賽公開組一級防禦率王<br>
+    ・2045年梅花旗大學棒球錦標賽MVP<br>
+    ・單月投手MVP：2049/05<br>
+  </div>
+
+  <!-- 特殊事蹟 -->
+  <div class="section">
+    <h2>特殊事蹟</h2>
+    ・2044年哈連盃棒球邀請賽中華代表隊<br>
+    ・2044年U23世界盃棒球錦標賽中華代表隊<br>
+  </div>
+
+  <!-- 相關新聞 -->
+  <div class="section">
+    <h2>相關新聞</h2>
+    </div>
+
+</div>
+
+
+</body>
+</html>
