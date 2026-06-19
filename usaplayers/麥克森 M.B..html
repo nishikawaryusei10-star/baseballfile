@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> 周煜軒 </title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background: #ffffff;
+  color: #111827;
+  line-height: 1.6;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 80px; /* 關鍵 */
+}
+
+html, body {
+  height: auto;
+  overflow-y: auto;
+}
+
+/* ===== 橫幅照片 ===== */
+.banner-photo {
+  width: 100%;
+  height: 320px;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* ===== 頁首 ===== */
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header .sub {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* ===== 主版面 ===== */
+.section {
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-left: 4px solid #111827;
+  padding-left: 8px;
+}
+
+/* ===== 基本資料 ===== */
+.profile {
+  font-size: 0.95rem;
+}
+
+.profile div {
+  padding: 5px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.profile span {
+  display: inline-block;
+  width: 100px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ===== 經歷 ===== */
+.career a {
+  display: inline-block;
+}
+
+.no-break {
+  white-space: nowrap; /* 括號內文字不換行 */
+}
+
+/* ===== 年表 ===== */
+.timeline {
+  font-size: 0.95rem;
+}
+
+.timeline div {
+  margin-bottom: 6px;
+}
+
+.timeline b {
+  display: inline-block;
+  width: 60px;
+}
+
+/* ===== 頂部導覽列 ===== */
+.topnav {
+  display: flex;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 3px solid #e5e7eb;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.topnav a {
+  color: #006000;
+  font-weight:450;
+}
+
+.topnav a:hover {
+  color: #1d4ed8;
+}
+
+/* ===== 表格 ===== */
+table.stats {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats th,
+table.stats td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats th {
+  background: #4DFFFF;
+  color: #000000;
+  font-weight: 600;
+}
+
+table.stats tbody tr:nth-child(even) td {
+  background: #ECFFFF;
+}
+
+
+table.stats th:nth-child(2),
+table.stats td:nth-child(2) {
+  white-space: nowrap;
+}
+
+
+/* ===== 表格2 ===== */
+table.stats1 {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats1 th,
+table.stats1 td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats1 th {
+  background: #A27B0A;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+table.stats1 tbody tr:nth-child(even) td {
+  background: #F2E3B5;
+}
+
+
+table.stats1 th:nth-child(2),
+table.stats1 td:nth-child(2) {
+  white-space: nowrap;
+}
+
+
+/* ===== 表格3 ===== */
+table.stats2 {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats2 th,
+table.stats2 td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats2 th {
+  background: #000000;
+  color: #FA4616;
+  font-weight: 600;
+}
+
+table.stats2 tbody tr:nth-child(even) td {
+  background: #FEE4DC;
+}
+
+
+table.stats2 th:nth-child(2),
+table.stats2 td:nth-child(2) {
+  white-space: nowrap;
+}
+
+.best {
+  font-weight: bold;       /* 加粗字體 */        
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.test {
+  font-weight: bold;       /* 加粗字體 */
+  color: #FF0000;          /* 改成紅色 */
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+/* ===== Footer ===== */
+.footer {
+  border-top: 1px solid #d1d5db;
+  margin-top: 48px;
+  padding-top: 16px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+/* ===== 右側簡潔照片欄 ===== */
+.side-photo-box {
+  float: right;
+  width: 320px; /* 照片寬度 */
+  margin: 0 0 20px 24px;
+  padding: 5px;
+  border: 1px solid #e5e7eb;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.side-photo-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.photo-caption {
+  font-size: 0.8rem;
+  color: #4b5563;
+  padding: 8px 4px 4px 4px;
+  line-height: 1.4;
+  border-top: 1px solid #f3f4f6;
+  margin-top: 5px;
+}
+
+/* 手機版自動置中 */
+@media (max-width: 600px) {
+  .side-photo-box {
+    float: none;
+    margin: 0 auto 20px auto;
+    width: 90%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    
+  <nav class="topnav">
+  <a href="../index.html">首頁</a> ⮕ <a href="players_overview.html">球員</a> ⮕  <a href="taiwan_players_overview.html">台灣球員</a> ⮕  <b>周煜軒</b> </nav>     
+
+  <!-- 頁首 -->
+  <div class="header">
+    <h1>麥克森 M.B.</h1>
+    <div class="sub"> Maxson Bird｜投手（RHP）</div>
+  </div>
+  
+
+  <!-- 基本資料 -->
+  
+  <div class="section">
+    <h2>基本資料</h2>
+    <div class="profile">
+      <div><span>綽號別稱</span>鳥哥</div>
+      <div><span>出生日期</span>2018 年 9 月 14 日（33歲）</div>
+      <div><span>身高體重</span>195 公分／102 公斤</div>
+      <div><span>出生地</span>美國・加州聖塔羅莎</div>
+      <div><span>投打習慣</span>右投右打</div>
+      <div><span>守備位置</span>投手 RHP</div>
+      <div><span>最快球速</span>155 km/h（2046年美職例行賽/運動家時期）</div>
+      <div><span>職棒選秀</span>2039年美國職棒選秀會聖地牙哥教士隊第五輪第148順位</div>
+    </div>
+  </div>
+
+  <!-- 球員經歷 -->
+  <div class="section">
+    <h2>球員經歷</h2>
+    <div class="career">
+      Yorba Linda High School<br>
+      🇺🇸 Oregon State University<br>
+      <a href="#">美國職棒</a><a href="../teams/聖地牙哥教士.html">聖地牙哥教士隊</a>（小聯盟～大聯盟，2039/08～2045）<br>
+      <a href="#">美國職棒</a><a href="../teams/奧克蘭運動家.html">奧克蘭運動家隊</a>（小聯盟～大聯盟，2046～2047）<br>
+      <a href="#">美國職棒</a><a href="../teams/科羅拉多洛磯.html">科羅拉多洛磯隊</a>（小聯盟，2048）<br>
+      <a href="#">室內棒球聯盟</a><a href="../teams/全聯熊.html">全聯熊隊</a>（2049～2050）<br>
+      <a href="#">室內棒球聯盟</a><a href="../teams/歐力士猛牛.html">歐力士猛牛隊</a>（2051）<br>
+      <a href="#">美國職棒</a><a href="../teams/舊金山巨人.html">舊金山巨人隊</a>（大聯盟，2052～）<br>
+    </div>
+  </div>
+
+  <!-- 個人年表 -->
+  <div class="section">
+    <h2>個人年表</h2>
+    <div class="timeline">
+      <div><b>2039年</b>7月，投入美國職棒選秀會，被聖地牙哥教士隊在第五輪、總順位第148 順位指名，簽約金48萬美元</div>
+      <div><b>2046年</b>7月15日，與在2A的隊友Jerrick Garcia被交易到奧克蘭運動家隊，教士隊獲得Bradley Vance和150萬美元</div>
+      <div><b>2047年</b>年底未獲續約，成為自由球員。</div>
+      <div><b>2048年</b>1月17日，與與科羅拉多洛磯隊簽下小聯盟合約加上大聯盟春訓邀請</div>
+      <div><b>2049年</b>與室內棒球聯盟全聯熊隊簽下1年102萬美元的合約，正式挑戰亞洲職棒</div>
+      <div><b>2049年</b>4月11日，面對台鋼巨鷹隊先發7局無失分，投出 5 次三振無保送，順利摘下室內棒球聯盟首勝</div>
+      <div><b>2049年</b>11月，與全聯熊隊續簽1年114萬美元的合約</div>
+      <div><b>2051年</b>1月，婉拒全聯熊隊開出的複數年合約</div>
+      <div><b>2051年</b>1月，與歐力士猛牛隊達成合約共識，以1年145萬美元轉戰日本職棒</div>
+      <div><b>2051年</b>1月12日，與舊金山巨人隊簽下1年350萬美金的大聯盟合約</div>
+      <div><b>2052年</b>5月4日，對戰科羅拉多洛磯隊主投6局失2分拿下勝投，睽違1782天後再度於大聯盟拿勝投，同時也是大聯盟首場先發勝投</div>
+    </div>
+  </div>
+
+
+ <!-- 生涯成績 -->
+  <div class="section">
+    <h2>職棒生涯成績</h2>
+    
+    <b>美國職棒大聯盟投球成績：</b>
+    <table class="stats2">
+    <thead>
+      <tr>
+      <th>年度</th>
+      <th>球隊</th>
+      <th>G</th>
+      <th>GS</th>
+      <th>W</th>
+      <th>L</th>
+      <th>HLD</th>
+      <th>SV</th>
+      <th>IP</th>
+      <th>QS</th>
+      <th>BF</th>
+      <th>BH</th>
+      <th>BHR</th>
+      <th>OAVG</th>
+      <th>SO</th>
+      <th>BB</th>
+      <th>R</th>
+      <th>ER</th>
+      <th>ERA</th>
+      <th>WHIP</th>
+      </tr>
+    </thead>
+    <tbody>
+        
+      <tr>
+      <td>2045</td>
+      <td>聖地牙哥教士</td>
+      <td>12</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>18.0</td>
+      <td>0</td>
+      <td>78</td>
+      <td>19</td>
+      <td>2</td>
+      <td>.264</td>
+      <td>15</td>
+      <td>7</td>
+      <td>9</td>
+      <td>8</td>
+      <td>4.00</td>
+      <td>1.44</td>
+    </tr>
+    
+    <tr>
+      <td>2046</td>
+      <td>奧克蘭運動家</td>
+      <td>25</td>
+      <td>4</td>
+      <td>2</td>
+      <td>4</td>
+      <td>4</td>
+      <td>1</td>
+      <td>44.2</td>
+      <td>1</td>
+      <td>198</td>
+      <td>48</td>
+      <td>6</td>
+      <td>.274</td>
+      <td>32</td>
+      <td>18</td>
+      <td>27</td>
+      <td>25</td>
+      <td>5.04</td>
+      <td>1.48</td>
+    </tr>    
+      
+    <tr>
+      <td>2047</td>
+      <td>奧克蘭運動家</td>
+      <td>21</td>
+      <td>2</td>
+      <td>1</td>
+      <td>2</td>
+      <td>1</td>
+      <td>0</td>
+      <td>30.1</td>
+      <td>0</td>
+      <td>137</td>
+      <td>33</td>
+      <td>5</td>
+      <td>.284</td>
+      <td>21</td>
+      <td>13</td>
+      <td>18</td>
+      <td>17</td>
+      <td>5.04</td>
+      <td>1.52</td>
+    </tr>
+    
+    <tr>
+      <td>2052</td>
+      <td>舊金山巨人</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    
+    
+    <tr class="career">
+      <td colspan="2">通算成績</td>
+      <td>58</td>
+      <td>6</td>
+      <td>4</td>
+      <td>6</td>
+      <td>7</td>
+      <td>1</td>
+      <td>93.0</td>
+      <td>1</td>
+      <td>413</td>
+      <td>100</td>
+      <td>13</td>
+      <td>.275</td>
+      <td>68</td>
+      <td>38</td>
+      <td>54</td>
+      <td>50</td>
+      <td>4.84</td>
+      <td>1.48</td>
+    </tr>
+
+
+  
+    </tbody>
+  </table>
+    
+    <br>
+    
+    <b>日本職棒一軍投球成績：</b>
+    <table class="stats1">
+    <thead>
+      <tr>
+      <th>年度</th>
+      <th>球隊</th>
+      <th>G</th>
+      <th>GS</th>
+      <th>W</th>
+      <th>L</th>
+      <th>HLD</th>
+      <th>SV</th>
+      <th>IP</th>
+      <th>QS</th>
+      <th>BF</th>
+      <th>BH</th>
+      <th>BHR</th>
+      <th>OAVG</th>
+      <th>SO</th>
+      <th>BB</th>
+      <th>R</th>
+      <th>ER</th>
+      <th>ERA</th>
+      <th>WHIP</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+      <td>2051</td>
+      <td>歐力士猛牛</td>
+      <td>24</td>
+      <td>24</td>
+      <td>11</td>
+      <td>5</td>
+      <td>0</td>
+      <td>0</td>
+      <td>163.2</td>
+      <td>19</td>
+      <td>665</td>
+      <td>142</td>
+      <td>8</td>
+      <td>.231</td>
+      <td>114</td>
+      <td>35</td>
+      <td>49</td>
+      <td>44</td>
+      <td>2.42</td>
+      <td>1.08</td>
+    </tr>
+    
+    <tr class="career">
+      <td colspan="2">通算成績</td>
+      <td>24</td>
+      <td>24</td>
+      <td>11</td>
+      <td>5</td>
+      <td>0</td>
+      <td>0</td>
+      <td>163.2</td>
+      <td>19</td>
+      <td>665</td>
+      <td>142</td>
+      <td>8</td>
+      <td>.231</td>
+      <td>114</td>
+      <td>35</td>
+      <td>49</td>
+      <td>44</td>
+      <td>2.42</td>
+      <td>1.08</td>
+    </tr>
+
+
+  
+    </tbody>
+  </table>
+    
+    <br>
+  
+    <b>室內棒球聯盟一軍投球成績：</b>
+    <table class="stats">
+    <thead>
+      <tr>
+      <th>年度</th>
+      <th>球隊</th>
+      <th>G</th>
+      <th>GS</th>
+      <th>W</th>
+      <th>L</th>
+      <th>HLD</th>
+      <th>SV</th>
+      <th>IP</th>
+      <th>QS</th>
+      <th>BF</th>
+      <th>BH</th>
+      <th>BHR</th>
+      <th>OAVG</th>
+      <th>SO</th>
+      <th>BB</th>
+      <th>R</th>
+      <th>ER</th>
+      <th>ERA</th>
+      <th>WHIP</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+    <tr>
+      <td>2049</td>
+      <td>全聯熊</td>
+      <td>27</td>
+      <td>27</td>
+      <td>14</td>
+      <td>4</td>
+      <td>0</td>
+      <td>0</td>
+      <td>185.1</td>
+      <td>22</td>
+      <td>748</td>
+      <td>151</td>
+      <td>6</td>
+      <td>.225</td>
+      <td>132</td>
+      <td>41</td>
+      <td>52</td>
+      <td>44</td>
+      <td><b>2.14</b></td>
+      <td>1.04</td>
+    </tr>
+    
+    <tr>
+      <td>2050</td>
+      <td>全聯熊</td>
+      <td>26</td>
+      <td>26</td>
+      <td>11</td>
+      <td>7</td>
+      <td>0</td>
+      <td>0</td>
+      <td>173.2</td>
+      <td>18</td>
+      <td>712</td>
+      <td>158</td>
+      <td>9</td>
+      <td>.242</td>
+      <td>118</td>
+      <td>46</td>
+      <td>65</td>
+      <td>57</td>
+      <td>2.95</td>
+      <td>1.17</td>
+    </tr>
+    
+    <tr class="career">
+      <td colspan="2">通算成績</td>
+      <td>53</td>
+      <td>53</td>
+      <td>25</td>
+      <td>11</td>
+      <td>0</td>
+      <td>0</td>
+      <td>359.0</td>
+      <td>40</td>
+      <td>1460</td>
+      <td>309</td>
+      <td>15</td>
+      <td>.233</td>
+      <td>250</td>
+      <td>87</td>
+      <td>117</td>
+      <td>101</td>
+      <td>2.53</td>
+      <td>1.10</td>
+    </tr>
+
+
+  
+    </tbody>
+  </table>
+  </div>
+
+  <!-- 個人獎項 -->
+  <div class="section">
+    <h2>個人獎項</h2>
+    ・室內棒球聯盟年度防禦率王：2049<br>
+    ・室內棒球聯盟年度最佳陣容第一隊投手獎：2049<br>
+    ・單月投手MVP：2049/08<br>
+    ・洋聯投手最佳十人：2051<br>
+  </div>
+
+  <!-- 特殊事蹟 -->
+  <div class="section">
+    <h2>特殊事蹟</h2>
+    ・室內棒球聯盟明星賽：2049、2050<br>
+    ・日本職棒明星賽：2051<br>
+  </div>
+
+  <!-- 相關新聞 -->
+  <div class="section">
+    <h2>相關新聞</h2>
+    <b>室內棒球聯盟時期</b><br>
+    ・<a href="../news/麥克森1">熊隊最高薪洋投起飛！195公分巨投麥克森抵台：目標是把球留在內野草皮</a><br>
+    ・<a href="../news/麥克森2">麥克森7局封鎖巨鷹終迎首勝　全聯熊5比0完封奪勝</a><br>
+    ・<a href="../news/麥克森3">防禦率王到手卻擦身史華特獎！麥克森：有點遺憾，但不會否定這一年</a><br>
+    ・<a href="../news/麥克森4">防禦率王確定留隊！全聯熊與麥克森續簽1年114萬美元合約</a><br>
+    ・<a href="../news/麥克森5">開幕戰火力對轟！麥克森7.1局失4分無關勝敗　全聯熊牛棚崩盤遭逆轉</a><br>
+    ・<a href="../news/麥克森6">再度成為休賽季焦點！全聯熊積極續約麥克森　11勝王牌投出穩定一季</a><br>
+    <b>日職時期</b><br>
+    ・<a href="../news/麥克森7">麥克森婉拒全聯熊複數年合約　轉戰日職歐力士猛牛　1年145萬美元加盟</a><br>
+    <b>美職時期</b><br>
+    ・<a href="../news/麥克森8">睽違4年半重返大聯盟！麥克森加盟巨人　「能回到這裡真的很開心」</a><br>
+    
+    </div>
+
+</div>
+
+
+</body>
+</html>
