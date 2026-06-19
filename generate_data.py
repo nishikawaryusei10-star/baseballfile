@@ -5,7 +5,7 @@ def generate_json():
     search_data = []
     # 定義要掃描的資料夾與對應標籤
     folders = {
-        "players": "球員",
+        "players": "台灣球員",
         "teams": "球隊",
         "league": "聯盟",
         "stadium": "球場",
