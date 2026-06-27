@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> 陳睦謙 </title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background: #ffffff;
+  color: #111827;－
+  line-height: 1.6;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ===== 橫幅照片 ===== */
+.banner-photo {
+  width: 100%;
+  height: 320px;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* ===== 頁首 ===== */
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header .sub {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* ===== 主版面 ===== */
+.section {
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-left: 4px solid #111827;
+  padding-left: 8px;
+}
+
+/* ===== 基本資料 ===== */
+.profile {
+  font-size: 0.95rem;
+}
+
+.profile div {
+  padding: 5px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.profile span {
+  display: inline-block;
+  width: 100px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ===== 經歷 ===== */
+.career a {
+  display: inline-block;
+
+}
+
+.no-break {
+  white-space: nowrap; /* 括號內文字不換行 */
+}
+
+/* ===== 年表 ===== */
+.timeline {
+  font-size: 0.95rem;
+}
+
+.timeline div {
+  margin-bottom: 6px;
+}
+
+.timeline b {
+  display: inline-block;
+  width: 60px;
+}
+
+/* ===== 頂部導覽列 ===== */
+.topnav {
+  display: flex;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 3px solid #e5e7eb;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.topnav a {
+  color: #006000;
+  font-weight:450;
+}
+
+.topnav a:hover {
+  color: #1d4ed8;
+}
+
+/* ===== 表格 ===== */
+table.stats {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats th,
+table.stats td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats th {
+  background: #000000;
+  color: #FF8000;
+  font-weight: 600;
+}
+
+table.stats tbody tr:nth-child(even) td {
+  background: #FFEEDD;
+}
+
+
+
+table.stats th:nth-child(2),
+table.stats td:nth-child(2) {
+  white-space: nowrap;
+}
+
+.best {
+  font-weight: bold;       /* 加粗字體 */        
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.test {
+  font-weight: bold;       /* 加粗字體 */
+  color: #FF0000;          /* 改成紅色 */
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+/* ===== Footer ===== */
+.footer {
+  border-top: 1px solid #d1d5db;
+  margin-top: 48px;
+  padding-top: 16px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+/* ===== 右側簡潔照片欄 ===== */
+.side-photo-box {
+  float: right;
+  width: 320px; /* 照片寬度 */
+  margin: 0 0 20px 24px;
+  padding: 5px;
+  border: 1px solid #e5e7eb;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.side-photo-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.photo-caption {
+  font-size: 0.8rem;
+  color: #4b5563;
+  padding: 8px 4px 4px 4px;
+  line-height: 1.4;
+  border-top: 1px solid #f3f4f6;
+  margin-top: 5px;
+}
+
+/* 手機版自動置中 */
+@media (max-width: 600px) {
+  .side-photo-box {
+    float: none;
+    margin: 0 auto 20px auto;
+    width: 90%;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  
+   <nav class="topnav">
+  <a href="../index.html">首頁</a> ⮕ <a href="players_overview.html">球員</a> ⮕  <a href="taiwan_players_overview.html">台灣球員</a> ⮕  <b>陳睦謙</b> </nav>     
+  
+  <!-- 頁首 -->
+  <div class="header">
+    <h1>陳睦謙</h1>
+    <div class="sub"> Chen,Mu-Chian｜外野手（CF）</div>
+  </div>
+
+  <!-- 基本資料 -->
+  <div class="section">
+    <h2>基本資料</h2>
+    <div class="profile">
+      <div><span>出生日期</span>2017 年 11 月 5 日（34歲）</div>
+      <div><span>身高體重</span>175 公分／70 公斤</div>
+      <div><span>出生地</span>台灣・高雄市鼓山區</div>
+      <div><span>投打習慣</span>左投左打</div>
+      <div><span>守備位置</span>外野手 CF  </div>
+      <div><span>職棒選秀</span><a href="../term/2039年室內棒球聯盟新人選秀會.html">2039年室內棒球聯盟選秀會</a><a href="../teams/統一猛獅隊.html">統一猛獅隊</a>第二輪指名</div>
+    </div>
+  </div>
+
+
+  <!-- 球員經歷 -->
+  <div class="section">
+    <h2>球員經歷</h2>
+    <div class="career">
+      高雄市七賢國小少棒隊<br>
+      高雄市七賢國中青少棒隊<br>
+      高雄市高苑工商青棒隊<br>
+      <a href="#">室內棒球聯盟</a><a href="#">統一猛獅隊</a><span class="no-break">（2039/08～2047）</span><br>
+      <a href="#">室內棒球聯盟</a><a href="#">花蓮眼鏡蛇隊</a><span class="no-break">（2048～）</span>
+    </div>
+  </div>
+
+  <!-- 個人年表 -->
+  <div class="section">
+    <h2>個人年表</h2>
+    <div class="timeline">
+     <div><b>2045年</b>6月，錄取國立台灣科技大學機械工程學系，最後並未就讀</div>
+     <div><b>2039年</b>7月，參加室內棒球聯盟季中選秀，被統一猛獅隊在第二輪選進，選秀後以簽約金1105萬新台幣加盟</div>
+     <div><b>2040年</b>4月12日，面對花蓮眼鏡蛇隊投手林尚儒生涯首安</div>
+     <div><b>2041年</b>6月15日，面對味全天龍隊投手江奕宸敲出生涯首轟</div>
+     <div><b>2043年</b>4月24日，面對中信子彈隊達成生涯百盜</div>
+     <div><b>2048年</b>1月15日，花蓮眼鏡蛇隊在花蓮德興棒球場召開陳睦謙加盟記者會，陳睦謙以3年1900萬新台幣轉投眼鏡蛇隊</div>
+     <div><b>2048年</b>5月19日，面對全聯熊隊達成生涯千安</div>
+     <div><b>2050年</b>12月17日，以1年400萬新台幣續留眼鏡蛇隊</div>
+    </div>
+  </div>
+
+  <!-- 生涯成績 -->
+ <!-- 生涯成績 -->
+  <div class="section">
+    <h2>歷年職棒生涯成績</h2>
+    <b>室內棒球聯盟一軍打擊成績：</b>
+    <table class="stats">
+    <thead>
+      <tr>
+        <th>年度</th>
+        <th>球隊</th><th>G</th><th>PA</th><th>AB</th><th>H</th>
+        <th>2B</th><th>3B</th><th>HR</th>
+        <th>RBI</th><th>R</th><th>SB</th><th>TB</th><th>SO</th><th>BB</th><th>SAC</th><th>SF</th>
+        <th>AVG</th><th>OBP</th><th>SLG</th><th>OPS</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+    <td>2040</td>
+    <td>統一猛獅</td>
+    <td>45</td>
+    <td>92</td>
+    <td>81</td>
+    <td>22</td>
+    <td>2</td>
+    <td>1</td>
+    <td>0</td>
+    <td>5</td>
+    <td>19</td>
+    <td>18</td>
+    <td>26</td>
+    <td>12</td>
+    <td>9</td>
+    <td>2</td>
+    <td>0</td>
+    <td>.272</td>
+    <td>.344</td>
+    <td>.321</td>
+    <td>.665</td>
+  </tr>
+  <tr>
+    <td>2041</td>
+    <td>統一猛獅</td>
+    <td>115</td>
+    <td>468</td>
+    <td>412</td>
+    <td>118</td>
+    <td>14</td>
+    <td>4</td>
+    <td>1</td>
+    <td>32</td>
+    <td>78</td>
+    <td>35</td>
+    <td>143</td>
+    <td>58</td>
+    <td>44</td>
+    <td>9</td>
+    <td>3</td>
+    <td>.286</td>
+    <td>.353</td>
+    <td>.347</td>
+    <td>.700</td>
+  </tr>
+  <tr>
+    <td>2042</td>
+    <td>統一猛獅</td>
+    <td>122</td>
+    <td>512</td>
+    <td>444</td>
+    <td>131</td>
+    <td>16</td>
+    <td>5</td>
+    <td>2</td>
+    <td>38</td>
+    <td>85</td>
+    <td>38</td>
+    <td>163</td>
+    <td>62</td>
+    <td>52</td>
+    <td>11</td>
+    <td>5</td>
+    <td>.295</td>
+    <td>.366</td>
+    <td>.367</td>
+    <td>.733</td>
+  </tr>
+  <tr>
+    <td>2043</td>
+    <td>統一猛獅</td>
+    <td>128</td>
+    <td>554</td>
+    <td>482</td>
+    <td>146</td>
+    <td>18</td>
+    <td>3</td>
+    <td>3</td>
+    <td>42</td>
+    <td>92</td>
+    <td>42</td>
+    <td>179</td>
+    <td>65</td>
+    <td>58</td>
+    <td>10</td>
+    <td>4</td>
+    <td>.303</td>
+    <td>.375</td>
+    <td>.371</td>
+    <td>.746</td>
+  </tr>
+  <tr>
+    <td>2044</td>
+    <td>統一猛獅</td>
+    <td>130</td>
+    <td>562</td>
+    <td>490</td>
+    <td>142</td>
+    <td>15</td>
+    <td>6</td>
+    <td>1</td>
+    <td>35</td>
+    <td>96</td>
+    <td>39</td>
+    <td>172</td>
+    <td>70</td>
+    <td>55</td>
+    <td>14</td>
+    <td>3</td>
+    <td>.290</td>
+    <td>.359</td>
+    <td>.351</td>
+    <td>.710</td>
+  </tr>
+  <tr>
+    <td>2045</td>
+    <td>統一猛獅</td>
+    <td>126</td>
+    <td>540</td>
+    <td>465</td>
+    <td>138</td>
+    <td>17</td>
+    <td>4</td>
+    <td>2</td>
+    <td>39</td>
+    <td>88</td>
+    <td>31</td>
+    <td>169</td>
+    <td>59</td>
+    <td>61</td>
+    <td>12</td>
+    <td>2</td>
+    <td>.297</td>
+    <td>.377</td>
+    <td>.363</td>
+    <td>.740</td>
+  </tr>
+  <tr>
+    <td>2046</td>
+    <td>統一猛獅</td>
+    <td>135</td>
+    <td>595</td>
+    <td>514</td>
+    <td>153</td>
+    <td>21</td>
+    <td>5</td>
+    <td>4</td>
+    <td>48</td>
+    <td>105</td>
+    <td><span class="best">54</span></td>
+    <td>196</td>
+    <td>78</td>
+    <td>62</td>
+    <td>15</td>
+    <td>4</td>
+    <td>.298</td>
+    <td>.371</td>
+    <td>.381</td>
+    <td>.752</td>
+  </tr>
+  <tr>
+    <td>2047</td>
+    <td>統一猛獅</td>
+    <td>62</td>
+    <td>235</td>
+    <td>203</td>
+    <td>49</td>
+    <td>6</td>
+    <td>1</td>
+    <td>0</td>
+    <td>14</td>
+    <td>32</td>
+    <td>15</td>
+    <td>57</td>
+    <td>35</td>
+    <td>25</td>
+    <td>6</td>
+    <td>1</td>
+    <td>.241</td>
+    <td>.323</td>
+    <td>.281</td>
+    <td>.604</td>
+  </tr>
+  <tr>
+    <td>2048</td>
+    <td>花蓮眼鏡蛇</td>
+    <td>112</td>
+    <td>458</td>
+    <td>403</td>
+    <td>108</td>
+    <td>12</td>
+    <td>3</td>
+    <td>2</td>
+    <td>28</td>
+    <td>64</td>
+    <td>28</td>
+    <td>132</td>
+    <td>64</td>
+    <td>43</td>
+    <td>10</td>
+    <td>2</td>
+    <td>.268</td>
+    <td>.337</td>
+    <td>.328</td>
+    <td>.665</td>
+  </tr>
+  <tr>
+    <td>2049</td>
+    <td>花蓮眼鏡蛇</td>
+    <td>85</td>
+    <td>324</td>
+    <td>282</td>
+    <td>71</td>
+    <td>8</td>
+    <td>2</td>
+    <td>0</td>
+    <td>18</td>
+    <td>41</td>
+    <td>18</td>
+    <td>83</td>
+    <td>42</td>
+    <td>32</td>
+    <td>8</td>
+    <td>2</td>
+    <td>.252</td>
+    <td>.326</td>
+    <td>.294</td>
+    <td>.620</td>
+  </tr>
+  <tr>
+    <td>2050</td>
+    <td>花蓮眼鏡蛇</td>
+    <td>42</td>
+    <td>118</td>
+    <td>102</td>
+    <td>24</td>
+    <td>3</td>
+    <td>0</td>
+    <td>0</td>
+    <td>6</td>
+    <td>15</td>
+    <td>8</td>
+    <td>27</td>
+    <td>18</td>
+    <td>13</td>
+    <td>3</td>
+    <td>0</td>
+    <td>.235</td>
+    <td>.322</td>
+    <td>.265</td>
+    <td>.587</td>
+  </tr>
+  <tr>
+    <td>2051</td>
+    <td>花蓮眼鏡蛇</td>
+    <td>35</td>
+    <td>74</td>
+    <td>64</td>
+    <td>14</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>3</td>
+    <td>11</td>
+    <td>5</td>
+    <td>15</td>
+    <td>13</td>
+    <td>8</td>
+    <td>2</td>
+    <td>0</td>
+    <td>.219</td>
+    <td>.306</td>
+    <td>.234</td>
+    <td>.540</td>
+  </tr>
+
+      <tr>      
+        <td colspan="2">通算成績</td>  
+        <td>1095</td>
+    <td>4424</td>
+    <td>3882</td>
+    <td>1118</td>
+    <td>133</td>
+    <td>34</td>
+    <td>15</td>
+    <td>328</td>
+    <td>728</td>
+    <td>331</td>
+    <td>1364</td>
+    <td>592</td>
+    <td>463</td>
+    <td>113</td>
+    <td>26</td>
+    <td>.288</td>
+    <td>.361</td>
+    <td>.351</td>
+    <td>.712</td>
+      </tr>
+
+
+  
+    </tbody>
+  </table>
+
+      <!-- 成績資料保持原本內容 -->
+      <!-- 這裡略去為簡潔，可直接保留你原本 table 內容 -->
+    </tbody>
+    </table>
+  </div>
+
+  <!-- 個人獎項 -->
+  <div class="section">
+    <h2>個人獎項</h2>
+    ・2034年高中棒球聯賽木棒組最佳九人外野手<br>
+    ・2035年黑豹旗全國高中棒球大賽最佳九人外野手<br>
+    ・2038年大專棒球聯賽公開一級組最佳九人外野手<br>
+    ・2038年大專棒球聯賽打擊獎第二名（.412）<br>
+    ・<a href="../term/室內棒球聯盟盜壘王.html">室內棒球聯盟盜壘王</a>：2046<br>
+    ・<a href="../term/室內棒球聯盟金手套.html">室內棒球聯盟金手套獎外野手</a>：2043、2046<br>
+  </div>
+
+  <!-- 特殊事蹟 -->
+  <div class="section">
+    <h2>特殊事蹟</h2>
+    ・2035年U18亞洲青棒錦標賽中華代表隊<br>
+    ・2038年U23世界盃棒球錦標賽中華代表隊<br>
+    ・室內棒球聯盟明星賽：2043、2045、2046
+  </div>
+
+  <!-- 相關新聞 -->
+  <div class="section">
+    <h2>相關新聞</h2>
+    <a href="#"></a><br>
+    <a href="#"></a>
+  </div>
+
+</div>
+
+
+</body>
+</html>
