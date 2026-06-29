@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>室內棒球聯盟年度盜壘王</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background: #ffffff;
+  color: #111827;
+  line-height: 1.6;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 80px; /* 關鍵 */
+}
+
+html, body {
+  height: auto;
+  overflow-y: auto;
+}
+
+/* ===== 頂部導覽列 ===== */
+.topnav {
+  display: flex;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 3px solid #e5e7eb;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.topnav a {
+  color: #006000;
+  font-weight:450;
+}
+
+.topnav a:hover {
+  color: #1d4ed8;
+}
+
+/* ===== 頁首 ===== */
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header .sub {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* ===== 區塊 ===== */
+.section {
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-left: 4px solid #111827;
+  padding-left: 8px;
+}
+
+
+
+/* ===== 歷年金手套表格 ===== */
+.award-container {
+  margin: 1em 0;
+}
+
+select, input[type="number"] {
+  padding: 4px 6px;
+  margin-right: 0.5em;
+  font-size: 13px;
+}
+
+table.stats {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats th,
+table.stats td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats th {
+  background: #46A3FF;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+table.stats tbody tr:nth-child(even) td {
+  background: #ECF5FF;
+}
+
+.best {
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.test {
+  font-weight: bold;
+  color: #FF0000;
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+@media(max-width: 600px) {
+  table.stats th, table.stats td {
+    font-size: 10px;
+    padding: 2px 4px;
+  }
+}
+
+/* ===== 其他獎項連結 ===== */
+.award-summary-wrapper {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: "Noto Sans TC", sans-serif;
+  padding: 0 10px;
+}
+
+.award-summary-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  table-layout: fixed;
+}
+
+.award-summary-table td {
+  padding: 6px 4px; /* 縮小內距 */
+  vertical-align: top;
+  border: 1px solid #ccc;
+  background-color: #fff; /* 白底 */
+}
+
+.award-title {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 0;
+  background: #f4e6f7 !important;
+  border: 1px solid #ccc;
+}
+
+.award-category {
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+  padding: 8px 0;
+  border-radius: 4px;
+}
+
+.award-category.pitcher { background-color: #f4e6f7; } /* 淺藍 */
+.award-category.hitter  { background-color: #f4e6f7; } /* 淺橘 */
+.award-category.other   { background-color: #f4e6f7; } /* 淺灰 */
+.award-category.memorial{ background-color: #f4e6f7; } /* 淺紫 */
+
+.award-item a {
+  display: inline-block;
+  margin: 3px 5px;  /* 空格稍微縮小 */
+  padding: 3px 6px;
+  border-radius: 4px;
+  color: #004b97;
+  text-decoration: none;
+  font-size: 13px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.award-item a:hover {
+  transform: translateY(-1px);
+  background-color: #eef5ff;
+}
+
+@media(max-width: 600px){
+  .award-summary-table td {
+    display: block;
+    width: 100%;
+    margin-bottom: 6px;
+  }
+  .award-item a {
+    font-size: 12px;
+    padding: 2px 4px;
+    margin: 2px 3px;
+  }
+}
+
+.this {
+    font-weight: 600;
+    color: #000000;
+    border-radius: 4px;
+    padding: 2px 4px;
+  }
+
+</style>
+</head>
+
+<body>
+<div class="container">
+    
+  <nav class="topnav">
+  <a href="../index.html">首頁</a> ⮕ <a href="專有名詞.html">專有名詞</a> ⮕  <a href="獎項.html">獎項</a> ⮕   <a href="安打王.html">安打王</a> ⮕ <b>室內棒球聯盟年度盜壘王</b> </nav> 
+
+  <!-- 頁首 -->
+  <div class="header">
+    <h1>室內棒球聯盟年度盜壘王</h1>
+    <div class="sub">Stolen Base leader｜室內棒球聯盟</div>
+  </div>
+
+  <!-- 簡介 -->
+  <div class="section">
+    <h2>獎項簡介</h2>
+    本頁面紀錄室內棒球聯盟歷年賽季盜壘數最多的球員，即獲得「盜壘王」頭銜。若遇有複數球員盜壘數相同，則並列獲獎。
+  </div>
+  
+  <!-- 歷年列表 -->
+  <div class="section">
+    <h2>歷年安打王</h2>
+
+    <table class="stats">
+    <thead>
+      <tr>
+        <th>年度</th>
+        <th>球員</th>
+        <th>球隊</th>
+        <th>盜壘數</th>
+        <th>嘗試次數</th>
+        <th>盜壘成功率</th>
+      </tr>
+    </thead>
+    <tbody>
+        
+      <tr>
+        <td>2029</td> 
+        <td><a href="../players/Ricardo Sánchez.html">Ricardo Sánchez</a></td>
+        <td><a href="../teams/南亞海神.html">南亞海神</a></td> 
+        <td>72</td>
+        <td>79</td>
+        <td>91.14 %</td>   
+      </tr>
+      
+      <tr>
+        <td>2030</td> 
+        <td><a href="../players/Ricardo Sánchez.html">Ricardo Sánchez</a></td>
+        <td><a href="../teams/南亞海神.html">南亞海神</a></td> 
+        <td><span class="test">88</span></td>
+        <td><span class="test">97</span></td>
+        <td>90.72 %</td>   
+      </tr>
+      
+      <tr>
+        <td>2040</td> 
+        <td><a href="../players/沈雲驍.html">沈雲驍</a></td>
+        <td><a href="../teams/基隆雨都.html">基隆雨都</a></td> 
+        <td>62</td>
+        <td>70</td>
+        <td>88.57 %</td>
+      </tr>
+      
+      <tr>
+        <td>2041</td> 
+        <td><a href="../players/沈雲驍.html">沈雲驍</a></td>
+        <td><a href="../teams/基隆雨都.html">基隆雨都</a></td> 
+        <td>58</td>
+        <td>69</td>
+        <td>89.86 %</td>
+      </tr>
+      
+      <tr>
+        <td>2042</td> 
+        <td><a href="../players/沈雲驍.html">沈雲驍</a></td>
+        <td><a href="../teams/基隆雨都.html">基隆雨都</a></td> 
+        <td>67</td>
+        <td>81</td>
+        <td>82.72 %</td>
+      </tr>
+      
+      <tr>
+        <td>2043</td> 
+        <td><a href="../players/沈雲驍.html">沈雲驍</a></td>
+        <td><a href="../teams/基隆雨都.html">基隆雨都</a></td> 
+        <td>71</td>
+        <td>86</td>
+        <td>82.56 %</td>
+      </tr>
+      
+      <tr>
+        <td>2044</td> 
+        <td><a href="../players/沈雲驍.html">沈雲驍</a></td>
+        <td><a href="../teams/基隆雨都.html">基隆雨都</a></td> 
+        <td>62</td>
+        <td>69</td>
+        <td>89.86 %</td>
+      </tr>
+      
+      <tr>
+        <td>2045</td> 
+        <td><a href="../players/林星宇.html">林星宇</a></td>
+        <td><a href="../teams/竹科工程師.html">竹科工程師</a></td> 
+        <td>61</td>
+        <td>67</td>
+        <td>91.04 %</td>
+      </tr>
+      
+      <tr>
+        <td>2046</td> 
+        <td><a href="../players/陳睦謙.html">陳睦謙</a></td>
+        <td><a href="../teams/統一猛獅.html">統一猛獅</a></td> 
+        <td>54</td>
+        <td>64</td>
+        <td>84.38 %</td>
+      </tr>
+      
+      <tr>
+        <td>2047</td> 
+        <td><a href="../players/周啟宏.html">周啟宏</a></td>
+        <td><a href="../teams/苗栗石虎.html">苗栗石虎</a></td> 
+        <td>49</td>
+        <td>56</td>
+        <td>87.50 %</td>
+      </tr>
+      
+      <tr>
+        <td>2048</td> 
+        <td><a href="../players/林宥辰.html">林宥辰</a></td>
+        <td><a href="../teams/南亞炫風.html">南亞炫風</a></td> 
+        <td>52</td>
+        <td>61</td>
+        <td>85.25 %</td>
+      </tr>
+      
+      <tr>
+        <td>2049</td> 
+        <td><a href="../players/余宥達.html">余宥達</a></td>
+        <td><a href="../teams/北鐵狼.html">北鐵狼</a></td> 
+        <td>65</td>
+        <td>77</td>
+        <td>84.42 %</td>
+      </tr>
+      
+      <tr>
+        <td>2050</td> 
+        <td><a href="../players/余宥達.html">余宥達</a></td>
+        <td><a href="../teams/北鐵狼.html">北鐵狼</a></td> 
+        <td>57</td>
+        <td>68</td>
+        <td>83.82 %</td>
+      </tr>
+      
+      <tr>
+        <td>2051</td> 
+        <td><a href="../players/林聖哲.html">林聖哲</a></td>
+        <td><a href="../teams/台東鋼鐵人.html">台東鋼鐵人</a></td> 
+        <td>60</td>
+        <td>73</td>
+        <td>82.19 %</td>
+      </tr>
+      
+      </tbody>
+      </table>
+      
+</div>
+
+  
+  <br>
+  
+  
+  <div class="award-summary-wrapper">
+  <table class="award-summary-table">
+    <tbody>
+
+      <!-- ★ 新增的標題列 ★ -->
+      <tr>
+        <td class="award-title" colspan="2">室內棒球聯盟年度獎項一覽表</td>
+      </tr>
+
+      <!-- 投手 / 打者 -->
+      <tr>
+        <td class="award-category pitcher">投手</td>
+        <td class="award-category hitter">打者</td>
+      </tr>
+
+      <tr>
+        <td class="award-item">
+           <a href="室內棒球聯盟年度勝投王.html">勝投王</a>
+           <a href="室內棒球聯盟年度三振王.html">三振王</a>
+           <a href="室內棒球聯盟年度防禦率王.html">防禦率王</a>
+           <a href="室內棒球聯盟年度中繼王.html">中繼王</a>
+           <a href="室內棒球聯盟年度救援王.html">救援王</a>
+           <a href="室內棒球聯盟年度史華特獎.html">史華特獎</a>
+        </td>
+        <td class="award-item">
+          <a href="室內棒球聯盟年度打擊王.html">打擊王</a>
+          <a href="室內棒球聯盟年度安打王.html">安打王</a>
+          <a href="室內棒球聯盟年度全壘打王.html">全壘打王</a>
+          <a href="室內棒球聯盟年度打點.html王">打點王</a>
+          <a href="室內棒球聯盟年度上壘率王.html">上壘率王</a>
+          <a><span class="this">盜壘王</span></a>
+        </td>
+      </tr>
+
+      <!-- 其他 / 紀念 -->
+      <tr>
+        <td class="award-category other">其他</td>
+        <td class="award-category memorial">紀念</td>
+      </tr>
+
+      <tr>
+        <td class="award-item">
+          <a href="室內棒球聯盟年度最佳陣容.html">最佳陣容獎</a>
+          <a href="室內棒球聯盟年度金手套.html">金手套獎</a>
+          <a href="室內棒球聯盟年度新人王.html">新人王</a>
+          <a href="室內棒球聯盟每月MVP.html">每月MVP</a>
+          <a href="室內棒球聯盟年度MVP.html">年度MVP</a>
+          <a href="室內棒球聯盟年度最佳進步獎.html">最佳進步獎</a>
+          <a href="室內棒球聯盟年度東山再起獎.html">東山再起獎</a>
+        </td>
+        
+        <td class="award-item">
+          <a href="室內棒球聯盟年度美技獎.html">年度美技獎</a>
+          <a href="TSAN年度最佳球員.html">TSAN年度最佳球員</a>
+          <a href="室內棒球聯盟年度最佳總教練獎.html">年度最佳總教練獎</a>
+          <a href="台灣年度最佳青棒選手獎.html">年度最佳青棒選手獎</a>
+          <a href="YM年度最佳選手獎.html">YM最佳選手獎</a>
+        </td>
+        
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+
+
+  </div>
+
+<script>
+function showYear(){
+  let year = document.getElementById('year-select').value;
+  document.querySelectorAll('#award-tables table').forEach(tbl=>{
+    tbl.style.display = (tbl.id==='award-'+year) ? '' : 'none';
+  });
+  document.getElementById('year-search').value = year;
+}
+
+function searchYear(){
+  let year = document.getElementById('year-search').value;
+  if(year < 2000 || year > 2051){ alert('年份範圍：2000~2051'); return; }
+  document.getElementById('year-select').value = year;
+  showYear();
+}
+
+// 預設顯示最新年份
+showYear();
+</script>
+
+</body>
+</html>
