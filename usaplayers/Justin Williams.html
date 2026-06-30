@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Justin Williams </title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background: #ffffff;
+  color: #111827;
+  line-height: 1.6;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 80px;
+}
+
+html, body {
+  height: auto;
+  overflow-y: auto;
+}
+
+/* ===== 橫幅照片 ===== */
+.banner-photo {
+  width: 100%;
+  height: 320px;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* ===== 頁首 ===== */
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header .sub {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* ===== 主版面 ===== */
+.section {
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-left: 4px solid #111827;
+  padding-left: 8px;
+}
+
+/* ===== 基本資料 ===== */
+.profile {
+  font-size: 0.95rem;
+}
+
+.profile div {
+  padding: 5px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.profile span {
+  display: inline-block;
+  width: 100px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ===== 經歷 ===== */
+.career a {
+  display: inline-block;
+}
+
+.no-break {
+  white-space: nowrap; /* 括號內文字不換行 */
+}
+
+/* ===== 年表 ===== */
+.timeline {
+  font-size: 0.95rem;
+}
+
+.timeline div {
+  margin-bottom: 6px;
+}
+
+.timeline b {
+  display: inline-block;
+  width: 60px;
+}
+
+/* ===== 頂部導覽列 ===== */
+.topnav {
+  display: flex;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 3px solid #e5e7eb;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.topnav a {
+  color: #006000;
+  font-weight:450;
+}
+
+.topnav a:hover {
+  color: #1d4ed8;
+}
+
+/* ===== 表格 ===== */
+table.stats1 {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats1 th,
+table.stats1 td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats1 th {
+  background: #003279;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+table.stats1 tbody tr:nth-child(even) td {
+  background: #E6EBF2;
+}
+
+table.stats1 th:nth-child(2),
+table.stats1 td:nth-child(2) {
+  white-space: nowrap;
+}
+
+/* ===== 表格 ===== */
+table.stats {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats th,
+table.stats td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats th {
+  background: #0000E3;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+table.stats tbody tr:nth-child(even) td {
+  background: #ECF5FF;
+}
+
+table.stats th:nth-child(2),
+table.stats td:nth-child(2) {
+  white-space: nowrap;
+}
+
+.best {
+  font-weight: bold;       /* 加粗字體 */        
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.test {
+  font-weight: bold;       /* 加粗字體 */
+  color: #FF0000;          /* 改成紅色 */
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+/* ===== Footer ===== */
+.footer {
+  border-top: 1px solid #d1d5db;
+  margin-top: 48px;
+  padding-top: 16px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+   
+   <nav class="topnav">
+  <a href="../index.html">首頁</a> ⮕ <a href="players_overview.html">球員</a> ⮕  <a href="usa_players_overall.html">美國球員</a> ⮕  <b>Justin Williams</b> </nav>    
+
+  <!-- 頁首 -->
+  <div class="header">
+    <h1>Justin Williams</h1>
+    <div class="sub"> Justin DeWitt Williams｜投手（RHP）</div>
+  </div>
+
+  <!-- 基本資料 -->
+  <div class="section">
+    <h2>基本資料</h2>
+    <div class="profile">
+      <div><span>出生日期</span>2016 年 8 月 9 日（35歲）</div>
+      <div><span>身高體重</span>188 公分／87 公斤</div>
+      <div><span>出生地</span>美國・阿肯色州溫泉城</div>
+      <div><span>投打習慣</span>右投右打</div>
+      <div><span>守備位置</span>投手 RHP</div>
+      <div><span>最快球速</span>157 km/h（室內棒球聯盟／2048年）</div>
+      <div><span>職棒選秀</span>2038年美國職棒選秀會德州遊騎兵第四輪指名</div>
+      <div><span>原文姓名</span>Justin DeWitt Williams</div>
+    </div>
+  </div>
+
+  <!-- 球員經歷 -->
+  <div class="section">
+    <h2>球員經歷</h2>
+    <div class="career">
+      德州農工大學<br>
+      美國職棒德州遊騎兵（小聯盟～大聯盟，2038～2045）<br>
+      <a href="#">室內棒球聯盟</a><a href="../teams/富邦守護者.html">富邦守護者隊</a>（2046～2049）<br>
+      大西洋聯盟高點搖椅隊（2050）<br>
+      美國協會凱恩郡美洲獅隊兼任投手教練（2051/03～）
+    </div>
+  </div>
+
+  <!-- 個人年表 -->
+  <div class="section">
+    <h2>個人年表</h2>
+    <div class="timeline">
+<div><b>2038年</b>參加大聯盟選秀會，在第四輪被德州遊騎兵選中，簽約金59萬美元</div>       
+<div><b>2046年</b>1月15日，與富邦守護者隊簽下一年95萬新台幣的合約，正式來台發展</div>
+<div><b>2046年</b>11月15日，與富邦守護者隊簽下2年235萬美元的合約</div>
+<div><b>2049年</b>1月02日，與富邦守護者隊簽下1年117萬美元的續約</div>
+<div><b>2049年</b>11月14日，合約到期後富邦守護者未續簽</div>
+<div><b>2050年</b>5月，加盟美國大西洋獨立聯盟高點搖椅隊</div>
+<div><b>2051年</b>為了離家近一點，轉投美國協會獨立聯盟兼任了球員與助理投手教練</div>
+</div>
+  </div>
+
+  <!-- 生涯成績 -->
+ <!-- 生涯成績 -->
+  <div class="section">
+    <h2>職棒生涯成績</h2>
+    <b>美國職棒大聯盟投球成績：</b>
+    <table class="stats1">
+    <thead>
+     <tr>
+        <th>年度</th>
+        <th>球隊</th>
+        <th>G</th>
+        <th>GS</th>
+        <th>W</th>
+        <th>L</th>
+        <th>HLD</th>
+        <th>SV</th>
+        <th>IP</th>
+        <th>QS</th>
+        <th>BF</th>
+        <th>BH</th>
+        <th>BHR</th>
+        <th>OAVG</th>
+        <th>SO</th>
+        <th>BB</th>
+        <th>R</th>
+        <th>ER</th>
+        <th>WHIP</th>
+        <th>ERA</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>2044</td>
+      <td>德州遊騎兵</td>
+      <td>5</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>7.0</td>
+      <td>0</td>
+      <td>28</td>
+      <td>6</td>
+      <td>1</td>
+      <td>.231</td>
+      <td>8</td>
+      <td>2</td>
+      <td>3</td>
+      <td>3</td>
+      <td>1.14</td>
+      <td>3.86</td>
+    </tr>
+    <tr>
+      <td>2045</td>
+      <td>德州遊騎兵</td>
+      <td>3</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>5.2</td>
+      <td>0</td>
+      <td>29</td>
+      <td>8</td>
+      <td>2</td>
+      <td>.320</td>
+      <td>4</td>
+      <td>4</td>
+      <td>6</td>
+      <td>6</td>
+      <td>2.12</td>
+      <td>9.53</td>
+    </tr>
+
+     <tr>
+      <td colspan="2">通算成績</td>
+      <td>8</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>12.2</td>
+      <td>0</td>
+      <td>57</td>
+      <td>14</td>
+      <td>3</td>
+      <td>.280</td>
+      <td>12</td>
+      <td>6</td>
+      <td>9</td>
+      <td>9</td>
+      <td>1.58</td>
+      <td>6.39</td>
+     </tr>
+    
+    </tbody>
+    </table>
+    
+    <br>
+    
+    <b>室內棒球聯盟一軍投球成績：</b>
+    <table class="stats">
+    <thead>
+     <tr>
+        <th>年度</th>
+        <th>球隊</th>
+        <th>G</th>
+        <th>GS</th>
+        <th>W</th>
+        <th>L</th>
+        <th>HLD</th>
+        <th>SV</th>
+        <th>IP</th>
+        <th>QS</th>
+        <th>BF</th>
+        <th>BH</th>
+        <th>BHR</th>
+        <th>OAVG</th>
+        <th>SO</th>
+        <th>BB</th>
+        <th>R</th>
+        <th>ER</th>
+        <th>WHIP</th>
+        <th>ERA</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>2046</td>
+      <td>富邦守護者</td>
+      <td>28</td>
+      <td>28</td>
+      <td>14</td>
+      <td>6</td>
+      <td>0</td>
+      <td>0</td>
+      <td>185.0</td>
+      <td>20</td>
+      <td>752</td>
+      <td>162</td>
+      <td>8</td>
+      <td>.238</td>
+      <td>165</td>
+      <td>42</td>
+      <td>65</td>
+      <td>58</td>
+      <td>1.10</td>
+      <td>2.82</td>
+    </tr>
+    <tr>
+      <td>2047</td>
+      <td>富邦守護者</td>
+      <td>30</td>
+      <td>30</td>
+      <td>16</td>
+      <td>5</td>
+      <td>0</td>
+      <td>0</td>
+      <td>202.1</td>
+      <td>24</td>
+      <td><soan class="best">815</span></td>
+      <td>170</td>
+      <td>6</td>
+      <td>.226</td>
+      <td>188</td>
+      <td>38</td>
+      <td>62</td>
+      <td>52</td>
+      <td>1.03</td>
+      <td>2.31</td>
+    </tr>
+    <tr>
+      <td>2048</td>
+      <td>富邦守護者</td>
+      <td>29</td>
+      <td>29</td>
+      <td>15</td>
+      <td>7</td>
+      <td>0</td>
+      <td>0</td>
+      <td>198.2</td>
+      <td>22</td>
+      <td>798</td>
+      <td>175</td>
+      <td>9</td>
+      <td>.234</td>
+      <td>172</td>
+      <td>45</td>
+      <td>68</td>
+      <td>60</td>
+      <td>1.11</td>
+      <td>2.72</td>
+    </tr>
+    <tr>
+      <td>2049</td>
+      <td>富邦守護者</td>
+      <td>22</td>
+      <td>22</td>
+      <td>9</td>
+      <td>8</td>
+      <td>0</td>
+      <td>0</td>
+      <td>135.0</td>
+      <td>12</td>
+      <td>580</td>
+      <td>142</td>
+      <td>12</td>
+      <td>.268</td>
+      <td>105</td>
+      <td>35</td>
+      <td>72</td>
+      <td>65</td>
+      <td>1.31</td>
+      <td>4.33</td>
+    </tr>
+
+     <tr>
+      <td colspan="2">通算成績</td>
+      <td>109</td>
+      <td>109</td>
+      <td>54</td>
+      <td>26</td>
+      <td>0</td>
+      <td>0</td>
+      <td>721.0</td>
+      <td>78</td>
+      <td>2945</td>
+      <td>649</td>
+      <td>35</td>
+      <td>.240</td>
+      <td>630</td>
+      <td>160</td>
+      <td>267</td>
+      <td>235</td>
+      <td>1.12</td>
+      <td>2.93</td>
+     </tr>
+    
+    </tbody>
+    </table>
+    
+  </div>
+
+  <!-- 個人獎項 -->
+  <div class="section">
+    <h2>個人獎項</h2>
+    （尚無）
+    </div>
+
+  <!-- 特殊事蹟 -->
+  <div class="section">
+    <h2>特殊事蹟</h2>
+    （尚無）
+  </div>
+
+  <!-- 相關新聞 -->
+  <div class="section">
+    <h2>相關新聞</h2>
+    <a href="#"></a><br>
+    <a href="#"></a>
+  </div>
+  
+  
+</div>
+
+  
+
+
+</body>
+</html>
