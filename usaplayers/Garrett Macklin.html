@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Garrett Macklin </title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background: #ffffff;
+  color: #111827;
+  line-height: 1.6;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 80px;
+}
+
+html, body {
+  height: auto;
+  overflow-y: auto;
+}
+
+/* ===== 橫幅照片 ===== */
+.banner-photo {
+  width: 100%;
+  height: 320px;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* ===== 頁首 ===== */
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header .sub {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* ===== 主版面 ===== */
+.section {
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-left: 4px solid #111827;
+  padding-left: 8px;
+}
+
+/* ===== 基本資料 ===== */
+.profile {
+  font-size: 0.95rem;
+}
+
+.profile div {
+  padding: 5px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.profile span {
+  display: inline-block;
+  width: 100px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ===== 經歷 ===== */
+.career a {
+  display: inline-block;
+}
+
+.no-break {
+  white-space: nowrap; /* 括號內文字不換行 */
+}
+
+/* ===== 年表 ===== */
+.timeline {
+  font-size: 0.95rem;
+}
+
+.timeline div {
+  margin-bottom: 6px;
+}
+
+.timeline b {
+  display: inline-block;
+  width: 60px;
+}
+
+/* ===== 頂部導覽列 ===== */
+.topnav {
+  display: flex;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 3px solid #e5e7eb;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.topnav a {
+  color: #006000;
+  font-weight:450;
+}
+
+.topnav a:hover {
+  color: #1d4ed8;
+}
+
+/* ===== 表格 ===== */
+table.stats1 {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats1 th,
+table.stats1 td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats1 th {
+  background: #003279;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+table.stats1 tbody tr:nth-child(even) td {
+  background: #E6EBF2;
+}
+
+table.stats1 th:nth-child(2),
+table.stats1 td:nth-child(2) {
+  white-space: nowrap;
+}
+
+/* ===== 表格 ===== */
+table.stats {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats th,
+table.stats td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats th {
+  background: #FF0000;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+table.stats tbody tr:nth-child(even) td {
+  background: #FFECEC;
+}
+
+table.stats th:nth-child(2),
+table.stats td:nth-child(2) {
+  white-space: nowrap;
+}
+
+.best {
+  font-weight: bold;       /* 加粗字體 */        
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.test {
+  font-weight: bold;       /* 加粗字體 */
+  color: #FF0000;          /* 改成紅色 */
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+/* ===== 新增：可點擊年度與分項列樣式 ===== */
+.clickable-year {
+  cursor: pointer;
+}
+.clickable-year:hover {
+  text-decoration: underline;
+  background-color: #eff6ff !important;
+}
+
+.sub-row {
+  display: none; /* 預設隱藏 */
+}
+.sub-row td {
+  background-color: #f9fafb !important; /* 分項使用淡灰色區隔 */
+  color: #4b5563;
+  font-size: 0.8em;
+}
+
+
+/* ===== Footer ===== */
+.footer {
+  border-top: 1px solid #d1d5db;
+  margin-top: 48px;
+  padding-top: 16px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+   
+   <nav class="topnav">
+  <a href="../index.html">首頁</a> ⮕ <a href="players_overview.html">球員</a> ⮕  <a href="usa_players_overall.html">美國球員</a> ⮕  <b>Garrett Macklin </b> </nav>    
+
+  <!-- 頁首 -->
+  <div class="header">
+    <h1>Garrett Macklin</h1>
+    <div class="sub"> Garrett Taylor Macklin｜投手（LHP）</div>
+  </div>
+
+  <!-- 基本資料 -->
+  <div class="section">
+    <h2>基本資料</h2>
+    <div class="profile">
+      <div><span>出生日期</span>2022 年 10 月 12 日（29歲）</div>
+      <div><span>身高體重</span>191 公分／94 公斤</div>
+      <div><span>出生地</span>🇺🇸 美國・田納西州納許維爾</div>
+      <div><span>投打習慣</span>右投右打</div>
+      <div><span>守備位置</span>投手 LHP</div>
+      <div><span>最快球速</span>154 km/h（室內棒球聯盟／2052年）</div>
+      <div><span>職棒選秀</span>2044年美國職棒選秀會巴爾地摩金鶯隊第四輪指名</div>
+      <div><span>原文姓名</span>Garrett Taylor Macklin</div>
+    </div>
+  </div>
+
+  <!-- 球員經歷 -->
+  <div class="section">
+    <h2>球員經歷</h2>
+    <div class="career">
+      🇺🇸 范德堡大學<br>
+      美國職棒巴爾地摩金鶯隊（小聯盟～大聯盟，2044～2051）<br>
+      美國職棒運動家隊（大聯盟，2051）<br>
+      美國職棒克里夫蘭守護者隊（小聯盟～大聯盟，2051）<br>
+      <a href="#">室內棒球聯盟</a><a href="../teams/味全天龍.html">味全天龍隊</a>（2052～）<br>
+    </div>
+  </div>
+
+  <!-- 個人年表 -->
+  <div class="section">
+    <h2>個人年表</h2>
+    <div class="timeline">
+<div><b>2044年</b>參加大聯盟選秀會，在第四輪被巴爾地摩金鶯隊選中，簽約金64萬美元</div> 
+<div><b>2045年</b>8月1日，升上2A</div>
+<div><b>2046年</b>4月15日，左手肘關節囊疲勞性發炎，被放入30日傷兵名單，後休息了兩個月才回到球場</div>
+<div><b>2046年</b>開季被分發至3A</div>
+<div><b>2048年</b>11月18日，為了避免被規則五選秀選走，巴爾的摩金鶯隊正式將他列入大聯盟40人名單</div>
+<div><b>2049年</b>5月14日，生涯初登場，對戰多倫多藍鳥隊，主投2局無失分，還送出3次三振</div>
+<div><b>2051年</b>5月2日，遭巴爾地摩金鶯隊放入指定讓渡名單，後於5月6日被運動家隊選走。</div>
+<div><b>2051年</b>5月29日，遭運動家隊放入指定讓渡名單，後於6月3日被克里夫蘭守護者隊選走。</div>
+<div><b>2051年</b>7月4日，遭克里夫蘭守護者隊放入指定讓渡名單，後於7月9日通過讓渡程序移出40人名單，並下放至3A</div>
+<div><b>2051年</b>11月2日，遭克里夫蘭守護者隊釋出</div>
+<div><b>2052年</b>1月5日，與味全天龍簽下1年104萬美元的合約</div>
+</div>
+  </div>
+
+  <!-- 生涯成績 -->
+ <!-- 生涯成績 -->
+  <div class="section">
+    <h2>職棒生涯成績</h2>
+    <b>美國職棒大聯盟投球成績：</b>
+    <table class="stats1">
+    <thead>
+     <tr>
+        <th>年度</th>
+        <th>球隊</th>
+        <th>G</th>
+        <th>GS</th>
+        <th>W</th>
+        <th>L</th>
+        <th>HLD</th>
+        <th>SV</th>
+        <th>IP</th>
+        <th>QS</th>
+        <th>BF</th>
+        <th>BH</th>
+        <th>BHR</th>
+        <th>OAVG</th>
+        <th>SO</th>
+        <th>BB</th>
+        <th>R</th>
+        <th>ER</th>
+        <th>WHIP</th>
+        <th>ERA</th>
+    </tr>
+    </thead>
+    <tbody>
+        
+    <tr>
+      <td>2049</td>
+      <td>BAL</td>
+      <td>14</td>
+      <td>3</td>
+      <td>2</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>38.1</td>
+      <td>1</td>
+      <td>162</td>
+      <td>34</td>
+      <td>5</td>
+      <td>.210</td>
+      <td>35</td>
+      <td>14</td>
+      <td>19</td>
+      <td>18</td>
+      <td>1.25</td>
+      <td>4.23</td>
+    </tr>
+    
+    <tr>
+      <td>2050</td>
+      <td>BAL</td>
+      <td>42</td>
+      <td>8</td>
+      <td>6</td>
+      <td>2</td>
+      <td>11</td>
+      <td>0</td>
+      <td>88.2</td>
+      <td>4</td>
+      <td>365</td>
+      <td>76</td>
+      <td>8</td>
+      <td>.208</td>
+      <td>92</td>
+      <td>27</td>
+      <td>36</td>
+      <td>34</td>
+      <td>1.16</td>
+      <td>3.45</td>
+    </tr>
+    
+    <tr onclick="toggleRows('row-2051')" class="clickable-year" title="點擊展開/收合分項成績">
+      <td>2051 ▾</td>
+      <td>3 teams</td>
+      <td>19</td>
+      <td>2</td>
+      <td>0</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>26.0</td>
+      <td>0</td>
+      <td>127</td>
+      <td>36</td>
+      <td>8</td>
+      <td>.283</td>
+      <td>22</td>
+      <td>14</td>
+      <td>22</td>
+      <td>20</td>
+      <td>1.92</td>
+      <td>6.92</td>
+    </tr>
+    
+    <tr class="sub-row row-2051">
+      <td>-</td>
+      <td>└ BAL</td>
+      <td>6</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>7.1</td>
+      <td>0</td>
+      <td>37</td>
+      <td>10</td>
+      <td>2</td>
+      <td>.313</td>
+      <td>6</td>
+      <td>5</td>
+      <td>6</td>
+      <td>5</td>
+      <td>2.05</td>
+      <td>6.14</td>
+    </tr>
+    
+    <tr class="sub-row row-2051">
+      <td>-</td>
+      <td>└ ATH</td>
+      <td>4</td>
+      <td>2</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>10.2</td>
+      <td>0</td>
+      <td>52</td>
+      <td>15</td>
+      <td>4</td>
+      <td>.326</td>
+      <td>9</td>
+      <td>6</td>
+      <td>9</td>
+      <td>8</td>
+      <td>1.97</td>
+      <td>6.75</td>
+    </tr>
+    
+    <tr class="sub-row row-2051">
+      <td>-</td>
+      <td>└ CLE</td>
+      <td>9</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>8.0</td>
+      <td>0</td>
+      <td>38</td>
+      <td>11</td>
+      <td>2</td>
+      <td>.314</td>
+      <td>7</td>
+      <td>3</td>
+      <td>7</td>
+      <td>7</td>
+      <td>1.75</td>
+      <td>7.88</td>
+    </tr>
+
+     <tr>
+      <td colspan="2">通算成績</td>
+      <td>75</td>
+      <td>13</td>
+      <td>8</td>
+      <td>6</td>
+      <td>14</td>
+      <td>0</td>
+      <td>153.0</td>
+      <td>5</td>
+      <td>654</td>
+      <td>146</td>
+      <td>21</td>
+      <td>.223</td>
+      <td>149</td>
+      <td>55</td>
+      <td>77</td>
+      <td>72</td>
+      <td>1.31</td>
+      <td>4.24</td>
+     </tr>
+    
+    </tbody>
+    </table>
+    
+    <br>
+    
+    <b>室內棒球聯盟一軍投球成績：</b>
+    <table class="stats">
+    <thead>
+     <tr>
+        <th>年度</th>
+        <th>球隊</th>
+        <th>G</th>
+        <th>GS</th>
+        <th>W</th>
+        <th>L</th>
+        <th>HLD</th>
+        <th>SV</th>
+        <th>IP</th>
+        <th>QS</th>
+        <th>BF</th>
+        <th>BH</th>
+        <th>BHR</th>
+        <th>OAVG</th>
+        <th>SO</th>
+        <th>BB</th>
+        <th>R</th>
+        <th>ER</th>
+        <th>WHIP</th>
+        <th>ERA</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>2052</td>
+      <td>味全天龍</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    
+     <tr>
+      <td colspan="2">通算成績</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+     </tr>
+    
+    </tbody>
+    </table>
+    
+  </div>
+
+  <!-- 個人獎項 -->
+  <div class="section">
+    <h2>個人獎項</h2>
+    室內棒球聯盟投手單月MVP：2052/05
+    </div>
+
+  <!-- 特殊事蹟 -->
+  <div class="section">
+    <h2>特殊事蹟</h2>
+    （尚無）
+  </div>
+
+  <!-- 相關新聞 -->
+  <div class="section">
+    <h2>相關新聞</h2>
+    <a href="../news/麥克林正式加盟.html">【室內棒球聯盟快訊】天龍軍團投下自由市場震撼彈！前金鶯大聯盟左投麥克林正式加盟</a><br>
+    <a href="../news/2052五月投打MVP.html">室內棒球聯盟》五月投打MVP出爐！台鋼巨鷹李俊熙「點石成金」單月10轟、味全龍新洋投麥克林5戰全勝傲視群雄</a>
+  </div>
+  
+  
+</div>
+
+<script>
+function toggleRows(className) {
+  const rows = document.getElementsByClassName(className);
+  for (let i = 0; i < rows.length; i++) {
+    if (rows[i].style.display === "table-row") {
+      rows[i].style.display = "none";
+    } else {
+      rows[i].style.display = "table-row";
+    }
+  }
+}
+</script>
+  
+
+
+</body>
+</html>
