@@ -12,6 +12,7 @@ def generate_json():
         "term": "特殊",
         "games": "賽事",
         "usaplayers": "美國球員",
+        "japanplayers": "日本球員",
     }
 
     for folder, tag in folders.items():
