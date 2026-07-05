@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Marcus Valdez </title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background: #ffffff;
+  color: #111827;
+  line-height: 1.6;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 80px;
+}
+
+html, body {
+  height: auto;
+  overflow-y: auto;
+}
+
+/* ===== 橫幅照片 ===== */
+.banner-photo {
+  width: 100%;
+  height: 320px;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* ===== 頁首 ===== */
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header .sub {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* ===== 主版面 ===== */
+.section {
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-left: 4px solid #111827;
+  padding-left: 8px;
+}
+
+/* ===== 基本資料 ===== */
+.profile {
+  font-size: 0.95rem;
+}
+
+.profile div {
+  padding: 5px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.profile span {
+  display: inline-block;
+  width: 100px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ===== 經歷 ===== */
+.career a {
+  display: inline-block;
+}
+
+.no-break {
+  white-space: nowrap; /* 括號內文字不換行 */
+}
+
+/* ===== 年表 ===== */
+.timeline {
+  font-size: 0.95rem;
+}
+
+.timeline div {
+  margin-bottom: 6px;
+}
+
+.timeline b {
+  display: inline-block;
+  width: 60px;
+}
+
+/* ===== 頂部導覽列 ===== */
+.topnav {
+  display: flex;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 3px solid #e5e7eb;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.topnav a {
+  color: #006000;
+  font-weight:450;
+}
+
+.topnav a:hover {
+  color: #1d4ed8;
+}
+
+/* ===== 表格 ===== */
+table.stats1 {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats1 th,
+table.stats1 td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats1 th {
+  background: #df4601;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+table.stats1 tbody tr:nth-child(even) td {
+  background: #FEE7DD;
+}
+
+table.stats1 th:nth-child(2),
+table.stats1 td:nth-child(2) {
+  white-space: nowrap;
+}
+
+/* ===== 表格 ===== */
+table.stats {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats th,
+table.stats td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats th {
+  background: #FF0000;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+table.stats tbody tr:nth-child(even) td {
+  background: #FFECEC;
+}
+
+table.stats th:nth-child(2),
+table.stats td:nth-child(2) {
+  white-space: nowrap;
+}
+
+.best {
+  font-weight: bold;       /* 加粗字體 */        
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.test {
+  font-weight: bold;       /* 加粗字體 */
+  color: #FF0000;          /* 改成紅色 */
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+/* ===== 新增：可點擊年度與分項列樣式 ===== */
+.clickable-year {
+  cursor: pointer;
+}
+.clickable-year:hover {
+  text-decoration: underline;
+  background-color: #eff6ff !important;
+}
+
+.sub-row {
+  display: none; /* 預設隱藏 */
+}
+.sub-row td {
+  background-color: #f9fafb !important; /* 分項使用淡灰色區隔 */
+  color: #4b5563;
+  font-size: 0.8em;
+}
+
+
+/* ===== Footer ===== */
+.footer {
+  border-top: 1px solid #d1d5db;
+  margin-top: 48px;
+  padding-top: 16px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+   
+   <nav class="topnav">
+  <a href="../index.html">首頁</a> ⮕ <a href="players_overview.html">球員</a> ⮕  <a href="usa_players_overall.html">美國球員</a> ⮕  <b>Marcus Valdez </b> </nav>    
+
+  <!-- 頁首 -->
+  <div class="header">
+    <h1>Marcus Valdez</h1>
+    <div class="sub"> Marcus Alexander Valdez｜內野手（SS）</div>
+  </div>
+
+  <!-- 基本資料 -->
+  <div class="section">
+    <h2>基本資料</h2>
+    <div class="profile">
+      <div><span>出生日期</span>2013 年 3 月 22 日（39歲）</div>
+      <div><span>身高體重</span>191 公分／98 公斤</div>
+      <div><span>出生地</span>🇺🇸 美國・佛羅里達州邁阿密</div>
+      <div><span>投打習慣</span>右投右打</div>
+      <div><span>守備位置</span>內野手 SS 2B</div>
+      <div><span>職棒選秀</span>2031年美國職棒選秀會休士頓太空人隊第一輪指名</div>
+      <div><span>原文姓名</span>Marcus Alexander Valdez</div>
+    </div>
+  </div>
+
+  <!-- 球員經歷 -->
+  <div class="section">
+    <h2>球員經歷</h2>
+    <div class="career">
+      🇺🇸 休士頓拉馬爾高中<br>
+      美國職棒休士頓太空人隊（小聯盟～大聯盟，2031～～）<br>
+      美國職棒巴爾地摩金鶯隊（大聯盟，20～2051）<br>
+    </div>
+  </div>
+
+  <!-- 個人年表 -->
+  <div class="section">
+    <h2>個人年表</h2>
+    <div class="timeline">
+<div><b>2031年</b>參加大聯盟選秀會，在第一輪被休士頓太空人隊選中，簽約金580萬美元</div> 
+<div><b>2033年</b>開季被分發至2A</div>
+<div><b>2033年</b>6月20日，升上3A</div>
+<div><b>2033年</b>11月15日，為了避免被規則五選秀選走，巴爾的摩金鶯隊正式將他列入大聯盟40人名單</div>
+<div><b>2034年</b>首度參加大聯盟春訓，不過整季皆在3A度過，繳出打擊率.318、21轟、99打點好成績</div>
+<div><b>2035年</b>5月1日，被升上大聯盟</div>
+<div><b>2035年</b>5月5日，面對西雅圖水手隊Rex Fowler敲出生涯首安</div>
+<div><b>2035年</b>5月20日，面對洛杉磯天使隊Charlie Vance敲出生涯首轟</div>
+<div><b>2045年</b>12月12日，以6年1.2億美元加盟金鶯隊</div>
+<div><b>2047年</b>5月6日，面對坦帕灣光芒隊比賽中受傷，左膝前十字韌帶完全斷裂，宣告整季報銷</div>
+<div><b>2051年</b>10月7日，宣佈退休</div>
+
+</div>
+  </div>
+
+  <!-- 生涯成績 -->
+ <!-- 生涯成績 -->
+  <div class="section">
+    <h2>職棒生涯成績</h2>
+    <b>美國職棒大聯盟打擊成績：</b>
+    <table class="stats1">
+    <thead>
+     <tr>
+        <th>年度</th>
+        <th>球隊</th>
+        <th>G</th>
+        <th>PA</th>
+        <th>AB</th>
+        <th>H</th>
+        <th>2B</th>
+        <th>3B</th>
+        <th>HR</th>
+        <th>RBI</th>
+        <th>R</th>
+        <th>SB</th>
+        <th>TB</th>
+        <th>SO</th>
+        <th>BB</th>
+        <th>SAC</th>
+        <th>SF</th>
+        <th>AVG</th>
+        <th>OBP</th>
+        <th>SLG</th>
+        <th>OPS</th>
+      </tr>
+    </thead>
+    <tbody>
+        
+    <tr>
+      <td>2035</td>
+      <td>HOU</td>
+      <td>118</td>
+      <td>485</td>
+      <td>432</td>
+      <td>112</td>
+      <td>21</td>
+      <td>2</td>
+      <td>16</td>
+      <td>62</td>
+      <td>58</td>
+      <td>12</td>
+      <td>185</td>
+      <td>112</td>
+      <td>45</td>
+      <td>2</td>
+      <td>6</td>
+      <td>.259</td>
+      <td>.326</td>
+      <td>.428</td>
+      <td>.754</td>
+    </tr>
+    <!-- 2036年：站穩主力，火力開始全面爆發 -->
+    <tr>
+      <td>2036</td>
+      <td>HOU</td>
+      <td>152</td>
+      <td>648</td>
+      <td>575</td>
+      <td>160</td>
+      <td>32</td>
+      <td>4</td>
+      <td>24</td>
+      <td>85</td>
+      <td>90</td>
+      <td>18</td>
+      <td>272</td>
+      <td>128</td>
+      <td>63</td>
+      <td>1</td>
+      <td>9</td>
+      <td>.278</td>
+      <td>.346</td>
+      <td>.473</td>
+      <td>.819</td>
+    </tr>
+    <!-- 2037年：維持全明星級攻守數據 -->
+    <tr>
+      <td>2037</td>
+      <td>HOU</td>
+      <td>158</td>
+      <td>682</td>
+      <td>598</td>
+      <td>171</td>
+      <td>35</td>
+      <td>3</td>
+      <td>28</td>
+      <td>92</td>
+      <td>102</td>
+      <td>22</td>
+      <td>296</td>
+      <td>130</td>
+      <td>76</td>
+      <td>0</td>
+      <td>8</td>
+      <td>.286</td>
+      <td>.364</td>
+      <td>.495</td>
+      <td>.859</td>
+    </tr>
+    <!-- 2038年：生涯首度達成 30-30 俱樂部 -->
+    <tr>
+      <td>2038</td>
+      <td>HOU</td>
+      <td>160</td>
+      <td>704</td>
+      <td>614</td>
+      <td>181</td>
+      <td>38</td>
+      <td>5</td>
+      <td>32</td>
+      <td>101</td>
+      <td>115</td>
+      <td>31</td>
+      <td>325</td>
+      <td>121</td>
+      <td>82</td>
+      <td>0</td>
+      <td>8</td>
+      <td>.295</td>
+      <td>.375</td>
+      <td>.529</td>
+      <td>.904</td>
+    </tr>
+    <!-- 2039年：持續穩定輸出大砲火力 -->
+    <tr>
+      <td>2039</td>
+      <td>HOU</td>
+      <td>155</td>
+      <td>678</td>
+      <td>588</td>
+      <td>169</td>
+      <td>33</td>
+      <td>2</td>
+      <td>29</td>
+      <td>96</td>
+      <td>98</td>
+      <td>25</td>
+      <td>293</td>
+      <td>118</td>
+      <td>84</td>
+      <td>0</td>
+      <td>6</td>
+      <td>.287</td>
+      <td>.373</td>
+      <td>.498</td>
+      <td>.871</td>
+    </tr>
+    <!-- 2040年：打擊率首度突破三成，成熟期降臨 -->
+    <tr>
+      <td>2040</td>
+      <td>HOU</td>
+      <td>157</td>
+      <td>688</td>
+      <td>596</td>
+      <td>182</td>
+      <td>41</td>
+      <td>3</td>
+      <td>31</td>
+      <td>105</td>
+      <td>110</td>
+      <td>27</td>
+      <td>322</td>
+      <td>105</td>
+      <td>85</td>
+      <td>0</td>
+      <td>7</td>
+      <td>.305</td>
+      <td>.389</td>
+      <td>.540</td>
+      <td>.929</td>
+    </tr>
+    <!-- 2041年：生涯年！35轟-35盜，勇奪漢克阿倫獎，全美野獸狂潮 -->
+    <tr>
+      <td>2041</td>
+      <td>HOU</td>
+      <td>162</td>
+      <td>722</td>
+      <td>620</td>
+      <td>194</td>
+      <td>44</td>
+      <td>4</td>
+      <td>38</td>
+      <td>115</td>
+      <td>128</td>
+      <td>35</td>
+      <td>360</td>
+      <td>98</td>
+      <td>95</td>
+      <td>0</td>
+      <td>7</td>
+      <td>.313</td>
+      <td>.402</td>
+      <td>.581</td>
+      <td>.983</td>
+    </tr>
+    <!-- 2042年：維持高檔的頂級五拍子游擊手身手 -->
+    <tr>
+      <td>2042</td>
+      <td>HOU</td>
+      <td>154</td>
+      <td>675</td>
+      <td>582</td>
+      <td>173</td>
+      <td>36</td>
+      <td>1</td>
+      <td>27</td>
+      <td>89</td>
+      <td>99</td>
+      <td>20</td>
+      <td>292</td>
+      <td>110</td>
+      <td>86</td>
+      <td>0</td>
+      <td>7</td>
+      <td>.297</td>
+      <td>.385</td>
+      <td>.502</td>
+      <td>.887</td>
+    </tr>
+    <!-- 2043年：休士頓後期的穩定王牌長打核心 -->
+    <tr>
+      <td>2043</td>
+      <td>HOU</td>
+      <td>156</td>
+      <td>680</td>
+      <td>590</td>
+      <td>172</td>
+      <td>32</td>
+      <td>2</td>
+      <td>26</td>
+      <td>91</td>
+      <td>94</td>
+      <td>16</td>
+      <td>286</td>
+      <td>115</td>
+      <td>83</td>
+      <td>0</td>
+      <td>7</td>
+      <td>.292</td>
+      <td>.376</td>
+      <td>.485</td>
+      <td>.861</td>
+    </tr>
+    <!-- 2044年：長打率微幅下滑，但靠選球維持頂尖上壘率 -->
+    <tr>
+      <td>2044</td>
+      <td>HOU</td>
+      <td>148</td>
+      <td>638</td>
+      <td>540</td>
+      <td>150</td>
+      <td>28</td>
+      <td>1</td>
+      <td>21</td>
+      <td>78</td>
+      <td>85</td>
+      <td>14</td>
+      <td>243</td>
+      <td>102</td>
+      <td>91</td>
+      <td>0</td>
+      <td>7</td>
+      <td>.278</td>
+      <td>.378</td>
+      <td>.450</td>
+      <td>.828</td>
+    </tr>
+    <!-- 2045年：太空人最後一季，身價依然高昂，帶領球隊打入季後賽 -->
+    <tr>
+      <td>2045</td>
+      <td>HOU</td>
+      <td>151</td>
+      <td>650</td>
+      <td>563</td>
+      <td>161</td>
+      <td>30</td>
+      <td>2</td>
+      <td>25</td>
+      <td>88</td>
+      <td>89</td>
+      <td>11</td>
+      <td>270</td>
+      <td>108</td>
+      <td>79</td>
+      <td>0</td>
+      <td>8</td>
+      <td>.286</td>
+      <td>.370</td>
+      <td>.480</td>
+      <td>.850</td>
+    </tr>
+    <!-- 2046年：6年1.2億天價轉戰巴爾的摩金鶯，首年展現老練長打實力 -->
+    <tr>
+      <td>2046</td>
+      <td>BAL</td>
+      <td>147</td>
+      <td>625</td>
+      <td>548</td>
+      <td>149</td>
+      <td>25</td>
+      <td>0</td>
+      <td>22</td>
+      <td>80</td>
+      <td>76</td>
+      <td>8</td>
+      <td>240</td>
+      <td>112</td>
+      <td>71</td>
+      <td>0</td>
+      <td>6</td>
+      <td>.272</td>
+      <td>.352</td>
+      <td>.438</td>
+      <td>.790</td>
+    </tr>
+    <!-- 2047年：慘劇之年！5月6日發生ACL斷裂毀滅性傷勢，賽季直接報銷 -->
+    <tr>
+      <td>2047</td>
+      <td>BAL</td>
+      <td>28</td>
+      <td>118</td>
+      <td>104</td>
+      <td>28</td>
+      <td>6</td>
+      <td>0</td>
+      <td>3</td>
+      <td>14</td>
+      <td>15</td>
+      <td>2</td>
+      <td>43</td>
+      <td>19</td>
+      <td>13</td>
+      <td>0</td>
+      <td>1</td>
+      <td>.269</td>
+      <td>.347</td>
+      <td>.413</td>
+      <td>.760</td>
+    </tr>
+    <!-- 2048年：整季因左膝重大手術與繁瑣復健，完全未能出賽 -->
+    
+    <!-- 2049年：不死鳥奇蹟復出！移防一壘與擔任DH，轉型純擊球技巧與長打 -->
+    <tr>
+      <td>2049</td>
+      <td>BAL</td>
+      <td>112</td>
+      <td>442</td>
+      <td>385</td>
+      <td>101</td>
+      <td>19</td>
+      <td>0</td>
+      <td>14</td>
+      <td>55</td>
+      <td>42</td>
+      <td>0</td>
+      <td>162</td>
+      <td>78</td>
+      <td>52</td>
+      <td>0</td>
+      <td>5</td>
+      <td>.262</td>
+      <td>.346</td>
+      <td>.421</td>
+      <td>.767</td>
+    </tr>
+    <!-- 2050年：擔任精神領袖，重拾重砲手感，完美掩護打擊王李俊軒與阿布卡里安 -->
+    <tr>
+      <td>2050</td>
+      <td>BAL</td>
+      <td>126</td>
+      <td>512</td>
+      <td>446</td>
+      <td>118</td>
+      <td>22</td>
+      <td>0</td>
+      <td>18</td>
+      <td>65</td>
+      <td>50</td>
+      <td>1</td>
+      <td>194</td>
+      <td>84</td>
+      <td>61</td>
+      <td>0</td>
+      <td>5</td>
+      <td>.265</td>
+      <td>.350</td>
+      <td>.435</td>
+      <td>.785</td>
+    </tr>
+    <!-- 2051年：生涯最終章，飽受膝傷後遺症困擾，季末受新世代擁戴光榮退休 -->
+    <tr>
+      <td>2051</td>
+      <td>BAL</td>
+      <td>85</td>
+      <td>315</td>
+      <td>276</td>
+      <td>68</td>
+      <td>11</td>
+      <td>0</td>
+      <td>8</td>
+      <td>35</td>
+      <td>25</td>
+      <td>0</td>
+      <td>103</td>
+      <td>59</td>
+      <td>36</td>
+      <td>0</td>
+      <td>3</td>
+      <td>.246</td>
+      <td>.330</td>
+      <td>.373</td>
+      <td>.703</td>
+    </tr>
+
+     <tr>
+      <td colspan="2">通算成績</td>
+      <td>2320</td>
+      <td>9904</td>
+      <td>8661</td>
+      <td>2481</td>
+      <td>489</td>
+      <td>28</td>
+      <td>388</td>
+      <td>1371</td>
+      <td>1445</td>
+      <td>265</td>
+      <td>4191</td>
+      <td>1772</td>
+      <td>1139</td>
+      <td>4</td>
+      <td>100</td>
+      <td>.286</td>
+      <td>.368</td>
+      <td>.484</td>
+      <td>.852</td>
+     </tr>
+    
+    </tbody>
+    </table>
+    
+  </div>
+
+  <!-- 個人獎項 -->
+  <div class="section">
+    <h2>個人獎項</h2>
+    美國職棒漢克阿倫獎：2041<br>
+    美國職棒年度第一隊游擊手：2038、2040、2041<br>
+    美國職棒銀棒獎游擊手：2038、2040、2041、2043<br>
+    美聯金手套獎游擊手：2041、2042<br>
+    美國職棒單月最有價值球員：2038/08、2041/06、2041/09<br>
+    </div>
+
+  <!-- 特殊事蹟 -->
+  <div class="section">
+    <h2>特殊事蹟</h2>
+    美國職棒明星賽：2038～2044<br>
+    2031年U-18美洲青棒錦標賽美國代表隊<br>
+    2040年WBC世界棒球經典賽美國代表隊<br>
+    2044年WBC世界棒球經典賽美國代表隊<br>
+  </div>
+
+  <!-- 相關新聞 -->
+  <div class="section">
+    <h2>相關新聞</h2>
+    
+  </div>
+  
+  
+</div>
+
+<script>
+function toggleRows(className) {
+  const rows = document.getElementsByClassName(className);
+  for (let i = 0; i < rows.length; i++) {
+    if (rows[i].style.display === "table-row") {
+      rows[i].style.display = "none";
+    } else {
+      rows[i].style.display = "table-row";
+    }
+  }
+}
+</script>
+  
+
+
+</body>
+</html>
