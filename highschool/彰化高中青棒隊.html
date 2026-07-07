@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彰化縣彰化高中青棒隊</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background: #ffffff;
+  color: #111827;
+  line-height: 1.6;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 80px; /* 關鍵 */
+}
+
+html, body {
+  height: auto;
+  overflow-y: auto;
+}
+
+/* ===== 頂部導覽列 ===== */
+.topnav {
+  display: flex;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 3px solid #e5e7eb;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.topnav a {
+  color: #006000;
+  font-weight:450;
+}
+
+.topnav a:hover {
+  color: #1d4ed8;
+}
+
+/* ===== 頁首 ===== */
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header .sub {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* ===== 區塊 ===== */
+.section {
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-left: 4px solid #111827;
+  padding-left: 8px;
+}
+
+
+
+/* ===== 歷年金手套表格 ===== */
+.award-container {
+  margin: 1em 0;
+}
+
+select, input[type="number"] {
+  padding: 4px 6px;
+  margin-right: 0.5em;
+  font-size: 13px;
+}
+
+table.stats {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats th,
+table.stats td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats th {
+  background: #46A3FF;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+table.stats tbody tr:nth-child(even) td {
+  background: #ECF5FF;
+}
+
+.best {
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.test {
+  font-weight: bold;
+  color: #FF0000;
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+@media(max-width: 600px) {
+  table.stats th, table.stats td {
+    font-size: 10px;
+    padding: 2px 4px;
+  }
+}
+
+/* ===== 其他獎項連結 ===== */
+.award-summary-wrapper {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: "Noto Sans TC", sans-serif;
+  padding: 0 10px;
+}
+
+.award-summary-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  table-layout: fixed;
+}
+
+.award-summary-table td {
+  padding: 6px 4px; /* 縮小內距 */
+  vertical-align: top;
+  border: 1px solid #ccc;
+  background-color: #fff; /* 白底 */
+}
+
+.award-title {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 0;
+  background: #f4e6f7 !important;
+  border: 1px solid #ccc;
+}
+
+.award-category {
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+  padding: 8px 0;
+  border-radius: 4px;
+}
+
+.award-category.pitcher { background-color: #f4e6f7; } /* 淺藍 */
+.award-category.hitter  { background-color: #f4e6f7; } /* 淺橘 */
+.award-category.other   { background-color: #f4e6f7; } /* 淺灰 */
+.award-category.memorial{ background-color: #f4e6f7; } /* 淺紫 */
+
+.award-item a {
+  display: inline-block;
+  margin: 3px 5px;  /* 空格稍微縮小 */
+  padding: 3px 6px;
+  border-radius: 4px;
+  color: #004b97;
+  text-decoration: none;
+  font-size: 13px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.award-item a:hover {
+  transform: translateY(-1px);
+  background-color: #eef5ff;
+}
+
+@media(max-width: 600px){
+  .award-summary-table td {
+    display: block;
+    width: 100%;
+    margin-bottom: 6px;
+  }
+  .award-item a {
+    font-size: 12px;
+    padding: 2px 4px;
+    margin: 2px 3px;
+  }
+}
+
+.this {
+    font-weight: 600;
+    color: #000000;
+    border-radius: 4px;
+    padding: 2px 4px;
+  }
+
+</style>
+</head>
+
+<body>
+<div class="container">
+    
+  <nav class="topnav">
+  <a href="../index.html">首頁</a> ⮕ <a href=“team.html">隊伍</a>  ⮕   <a href="../國內球隊.html">國內球隊</a> ⮕  <a href=“../city/彰化縣.html">彰化縣</a> ⮕ <b>彰化縣彰化高中青棒隊</b> </nav> 
+
+  <!-- 頁首 -->
+  <div class="header">
+    <h1>彰化縣彰化高中青棒隊</h1>
+    <div class="sub">CHSH｜高中棒球隊</div>
+  </div>
+
+  <!-- 簡介 -->
+  <div class="section">
+    <h2>球隊簡介</h2>
+    <p>彰化高中青棒隊成立於2011年，是彰化縣歷史最悠久、也最具代表性的高中棒球隊之一，也是台灣社團棒球發展的重要象徵。球隊自創立以來始終以學生社團形式運作，雖然校方曾於2022年至2028年間多次評估成立正式體育班，甚至提出體保招生制度的可行性，但經過校內師生及校友討論後，最終仍決定維持非體育班、無體保生名額的制度，堅持「課業優先、運動並進」的辦學理念。</p>
+    
+    <p>因此，所有球員皆須與一般學生相同，透過國中教育會考錄取彰化高中，才能加入棒球隊。也因為沒有體保生制度，彰中球員除了具備一定的棒球實力外，也普遍擁有良好的學業能力、自律性與學習態度，使彰化高中成為全國少數能在學術與棒球層面同時維持高水準的傳統名校。</p>
+    
+    <p>創隊初期，球隊規模不大，訓練資源有限，主要參與地方性社團棒球賽事。隨著台灣棒球風氣日漸興盛，以及彰化縣社區棒球的快速發展，球隊逐步建立完整的訓練制度、重量訓練課程與科學化管理，整體實力於2010年代後期開始明顯提升。</p>
+    
+    <p>2023年，學校聘請具有職業球員資歷的前職棒選手林國軒擔任總教練，成為球隊發展的重要轉捩點。林國軒導入現代化訓練理念，重視守備基本功、戰術執行、投手養成及數據分析，並根據社團球隊每日訓練時間有限的特性，建立高效率訓練模式，使球隊戰力迅速成長，逐漸在全國高中棒球聯賽及地方賽事嶄露頭角。</p>
+    
+    <p>球隊始終秉持<b>「先是彰中人，再是棒球員」</b>的精神，球員白天與一般學生共同上課，放學後才進行訓練，沒有特殊課程安排，也沒有因棒球而降低學業要求。長期下來，彰中的球員普遍具有優異的時間管理能力與成熟的比賽判斷能力，球風以紀律、守備、戰術執行及團隊合作聞名，是全國失誤率最低的高中球隊之一。</p>
+
+     <p>自2030年代起，彰化高中開始穩定培育出具職業潛力的選手。2031年室內棒球聯盟選秀會中，陳永杰成為校史首位獲得職棒指名的球員，象徵彰中正式踏入全國青棒強權之列。2040年代更迎來人才輩出的黃金時期，陸續培養出投打二刀流名將王鈞霆、聯盟打擊王余宥達，以及2049年室內棒球聯盟選秀狀元許景成等知名球星，成功奠定彰化高中「非體育班青棒強權」的地位。</p>
+    
+    <p></p>
+    
+    <p></p>
+  </div>
+  
+  <!-- 歷年列表 -->
+  <div class="section">
+    <h2>畢業校友後成為職業球員</h2>
+
+    <table class="stats">
+    <thead>
+      <tr>
+        <th>球員</th>
+        <th>起始年份</th>
+        <th>最初所屬</th>
+        <th>最終所屬</th>
+        <th>現/退役</th>
+        <th>備註</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <td colspan="6">2043年畢業</td>
+      
+      <tr>
+        <td><a href="../players/何仁峻.html">何仁峻</a></td> 
+        <td>2043</td>
+        <td><a href="../teams/北鐵狼.html">北鐵狼隊</a></td> 
+        <td><a href="../teams/南亞炫風.html">南亞炫風隊</a></td>
+        <td>🟢️</td>
+        <td></td>
+      </tr>
+      
+      <td colspan="6">2044年畢業</td>
+      
+      <tr>
+        <td><a href="../players/蘇信威.html">蘇信威</a></td> 
+        <td>2044</td>
+        <td><a href="../teams/台東鋼鐵人.html">台東鋼鐵人隊</a></td> 
+        <td><a href="../teams/台東鋼鐵人.html">台東鋼鐵人隊</a></td>
+        <td>❌️</td>
+        <td>目前為歌手</td>
+      </tr>
+        
+      <td colspan="6">2045年畢業</td>
+      
+      <tr>
+        <td><a href="../players/何俊廷.html">何俊廷</a></td> 
+        <td>2045</td>
+        <td><a href="../teams/阪神虎.html">阪神虎隊</a></td> 
+        <td><a href="../teams/聖地牙哥教士.html">聖地牙哥教士隊</a></td>
+        <td>🟢️</td>
+        <td></td>
+      </tr>
+      
+      <tr>
+        <td><a href="../players/王鈞霆.html">王鈞霆</a></td> 
+        <td>2045</td>
+        <td><a href="../teams/北鐵狼.html">北鐵狼隊</a></td> 
+        <td><a href="../teams/歐力士猛牛.html">歐力士猛牛隊</a></td>
+        <td>🟢️</td>
+        <td></td>
+      </tr>
+      
+      <tr>
+        <td><a href="../players/張益勳.html">張益勳</a></td> 
+        <td>2045</td>
+        <td><a href="../teams/北鐵狼.html">北鐵狼隊</a></td> 
+        <td><a href="../teams/北鐵狼.html">北鐵狼隊</a></td>
+        <td>🟢️</td>
+        <td></td>
+      </tr>
+      
+      <tr>
+        <td><a href="../players/王亮程.html">王亮程</a></td> 
+        <td>2048</td>
+        <td><a href="../teams/台鋼巨鷹.html">台鋼巨鷹隊</a></td> 
+        <td><a href="../teams/台鋼巨鷹.html">台鋼巨鷹隊</a></td>
+        <td>🟢️</td>
+        <td></td>
+      </tr>
+      
+      
+      <td colspan="6">2046年畢業</td>
+      
+      <tr>
+        <td><a href="../players/王凱霆.html">王凱霆</a></td> 
+        <td>2046</td>
+        <td><a href="../teams/全聯熊.html">全聯熊隊</a></td> 
+        <td><a href="../teams/全聯熊.html">全聯熊隊</a></td>
+        <td>🟢️</td>
+        <td></td>
+      </tr>
+      
+      <tr>
+        <td><a href="../players/葉達仁.html">葉達仁</a></td> 
+        <td>2046</td>
+        <td>穆爾黑德紅鷹隊（美國獨立聯盟）</td> 
+        <td>萊克桑德伐木工隊（歐聯）</td>
+        <td>🟢️</td>
+        <td></td>
+      </tr>
+        
+      <td colspan="6">2047年畢業</td>
+      
+      <tr>
+        <td><a href="../players/余宥達.html">余宥達</a></td> 
+        <td>2047</td>
+        <td><a href="../teams/北鐵狼.html">北鐵狼隊</a></td> 
+        <td><a href="../teams/奇醫海燕.html">奇醫海燕隊</a></td>
+        <td>🟢️</td>
+        <td></td>
+      </tr>
+      
+      <tr>
+        <td><a href="../players/劉子睿.html">劉子睿</a></td> 
+        <td>2047</td>
+        <td><a href="../teams/味全天龍.html">味全天龍隊</a></td> 
+        <td><a href="../teams/味全天龍.html">味全天龍隊</a></td>
+        <td>🟢️</td>
+        <td></td>
+      </tr>
+
+      <td colspan="6">2049年畢業</td>
+      
+      <tr>
+        <td><a href="../players/劉子睿.html">許景成</a></td> 
+        <td>2049</td>
+        <td><a href="../teams/南投雷霆.html">南投雷霆隊</a></td> 
+        <td><a href="../teams/南投雷霆.html">南投雷霆隊</a></td>
+        <td>🟢️</td>
+        <td>狀元</td>
+      </tr>
+     
+      
+      </tbody>
+      </table>
+      
+</div>
+
+  
+
+
+
+  </div>
+
+<script>
+function showYear(){
+  let year = document.getElementById('year-select').value;
+  document.querySelectorAll('#award-tables table').forEach(tbl=>{
+    tbl.style.display = (tbl.id==='award-'+year) ? '' : 'none';
+  });
+  document.getElementById('year-search').value = year;
+}
+
+function searchYear(){
+  let year = document.getElementById('year-search').value;
+  if(year < 2000 || year > 2051){ alert('年份範圍：2000~2051'); return; }
+  document.getElementById('year-select').value = year;
+  showYear();
+}
+
+// 預設顯示最新年份
+showYear();
+</script>
+
+</body>
+</html>
