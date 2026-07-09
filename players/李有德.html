@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> 李有德 </title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background: #ffffff;
+  color: #111827;
+  line-height: 1.6;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 80px;
+}
+
+html, body {
+  height: auto;
+  overflow-y: auto;
+}
+
+/* ===== 橫幅照片 ===== */
+.banner-photo {
+  width: 100%;
+  height: 320px;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* ===== 頁首 ===== */
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header .sub {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* ===== 主版面 ===== */
+.section {
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-left: 4px solid #111827;
+  padding-left: 8px;
+}
+
+/* ===== 基本資料 ===== */
+.profile {
+  font-size: 0.95rem;
+}
+
+.profile div {
+  padding: 5px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.profile span {
+  display: inline-block;
+  width: 100px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ===== 經歷 ===== */
+.career a {
+  display: inline-block;
+}
+
+.no-break {
+  white-space: nowrap; /* 括號內文字不換行 */
+}
+
+/* ===== 年表 ===== */
+.timeline {
+  font-size: 0.95rem;
+}
+
+.timeline div {
+  margin-bottom: 6px;
+}
+
+.timeline b {
+  display: inline-block;
+  width: 60px;
+}
+
+/* ===== 頂部導覽列 ===== */
+.topnav {
+  display: flex;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 3px solid #e5e7eb;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.topnav a {
+  color: #006000;
+  font-weight:450;
+}
+
+.topnav a:hover {
+  color: #1d4ed8;
+}
+
+/* ===== 表格 ===== */
+table.stats1 {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats1 th,
+table.stats1 td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats1 th {
+  background: #003279;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+table.stats1 tbody tr:nth-child(even) td {
+  background: #E6EBF2;
+}
+
+table.stats1 th:nth-child(2),
+table.stats1 td:nth-child(2) {
+  white-space: nowrap;
+}
+
+/* ===== 表格 ===== */
+table.stats {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
+}
+
+table.stats th,
+table.stats td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.stats th {
+   background: #E6C39A;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+table.stats tbody tr:nth-child(even) td {
+  background: #F6EBDD;
+}
+
+table.stats th:nth-child(2),
+table.stats td:nth-child(2) {
+  white-space: nowrap;
+}
+
+.best {
+  font-weight: bold;       /* 加粗字體 */        
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.test {
+  font-weight: bold;       /* 加粗字體 */
+  color: #FF0000;          /* 改成紅色 */
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+/* ===== Footer ===== */
+.footer {
+  border-top: 1px solid #d1d5db;
+  margin-top: 48px;
+  padding-top: 16px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+   
+   <nav class="topnav">
+  <a href="../index.html">首頁</a> ⮕ <a href="players_overview.html">球員</a> ⮕  <a href="taiwan_players_overall.html">台灣球員</a> ⮕  <b>李有德</b> </nav>    
+
+  <!-- 頁首 -->
+  <div class="header">
+    <h1>李有德</h1>
+    <div class="sub"> LI,YU-TE｜外野手（CF）</div>
+  </div>
+
+  <!-- 基本資料 -->
+  <div class="section">
+    <h2>基本資料</h2>
+    <div class="profile">
+      <div><span>出生日期</span>2026 年 8 月 18 日（25歲）</div>
+      <div><span>身高體重</span>183 公分／79 公斤</div>
+      <div><span>出生地</span>台灣・台中市北屯區</div>
+      <div><span>投打習慣</span>右投左打</div>
+      <div><span>守備位置</span>內野手 2B ⮕ 外野手 CF LF</div>
+      <div><span>職棒選秀</span>2044年室內棒球聯盟選秀會苗栗石虎隊第一指名</div>
+    </div>
+  </div>
+
+  <!-- 球員經歷 -->
+  <div class="section">
+    <h2>球員經歷</h2>
+    <div class="career">
+      臺中市忠孝國小少棒隊<br>
+      臺中市居仁國中青少棒隊<br>
+      臺中市臺中一中青棒隊<br>
+      <a href="#">室內棒球聯盟</a><a href="../teams/苗栗石虎.html">苗栗石虎隊</a>（2044/08～）<br>
+    </div>
+  </div>
+
+  <!-- 個人年表 -->
+  <div class="section">
+    <h2>個人年表</h2>
+    <div class="timeline">
+<div><b>2044年</b>8月，以申請入學錄取國立臺灣大學物理學系，不過最後未就讀</div>
+<div><b>2044年</b>7月，參加室內棒球聯盟選秀會，在第四輪被苗栗石虎隊選中，以簽約金1876萬新台幣，背號「27」加盟</div> 
+<div><b>2042年</b>9月13日，生涯初登場，面對中信子彈隊先發第九棒中外野手</div>
+<div><b>2045年</b>9月13日，3局上，對戰中信子彈陳正豪敲出生涯首安</div>
+<div><b>2045年</b>10月3日，5局上，對戰樂天桃猿隊Max Mendoza敲出兩分打點全壘打，為生涯首轟</div>
+
+</div>
+  </div>
+
+  <!-- 生涯成績 -->
+ <!-- 生涯成績 -->
+  <div class="section">
+    <h2>職棒生涯成績</h2>
+    <b>室內棒球聯盟一軍投球成績：</b>
+    <table class="stats">
+    <thead>
+     <tr>
+       <th>年度</th>
+      <th>球隊</th>
+      <th>G</th>
+      <th>PA</th>
+      <th>AB</th>
+      <th>H</th>
+      <th>2B</th>
+      <th>3B</th>
+      <th>HR</th>
+      <th>RBI</th>
+      <th>R</th>
+      <th>SB</th>
+      <th>TB</th>
+      <th>SO</th>
+      <th>BB</th>
+      <th>SAC</th>
+      <th>SF</th>
+      <th>AVG</th>
+      <th>OBP</th>
+      <th>SLG</th>
+      <th>OPS</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>2045</td>
+      <td>苗栗石虎</td>
+      <td>35</td>
+      <td>112</td>
+      <td>98</td>
+      <td>23</td>
+      <td>4</td>
+      <td>1</td>
+      <td>2</td>
+      <td>10</td>
+      <td>15</td>
+      <td>3</td>
+      <td>35</td>
+      <td>28</td>
+      <td>12</td>
+      <td>1</td>
+      <td>1</td>
+      <td>.235</td>
+      <td>.315</td>
+      <td>.357</td>
+      <td>.672</td>
+    </tr>
+    <!-- 2046年：出賽機會仍不固定，遭遇二年級生撞牆期，contact不佳 -->
+    <tr>
+      <td>2046</td>
+      <td>苗栗石虎</td>
+      <td>52</td>
+      <td>168</td>
+      <td>145</td>
+      <td>32</td>
+      <td>6</td>
+      <td>0</td>
+      <td>4</td>
+      <td>18</td>
+      <td>22</td>
+      <td>5</td>
+      <td>50</td>
+      <td>45</td>
+      <td>19</td>
+      <td>3</td>
+      <td>1</td>
+      <td>.221</td>
+      <td>.309</td>
+      <td>.345</td>
+      <td>.654</td>
+    </tr>
+    <!-- 2047年：微幅進步，展現選球眼與速度，依舊在4-50場徘徊 -->
+    <tr>
+      <td>2047</td>
+      <td>苗栗石虎</td>
+      <td>48</td>
+      <td>155</td>
+      <td>132</td>
+      <td>33</td>
+      <td>7</td>
+      <td>2</td>
+      <td>3</td>
+      <td>15</td>
+      <td>25</td>
+      <td>7</td>
+      <td>53</td>
+      <td>33</td>
+      <td>20</td>
+      <td>1</td>
+      <td>0</td>
+      <td>.250</td>
+      <td>.346</td>
+      <td>.402</td>
+      <td>.748</td>
+    </tr>
+    <!-- 2048年：外野學長受傷得到較多機會，但季中也陷入低潮，開始修正打擊機制 -->
+    <tr>
+      <td>2048</td>
+      <td>苗栗石虎</td>
+      <td>58</td>
+      <td>210</td>
+      <td>184</td>
+      <td>43</td>
+      <td>9</td>
+      <td>1</td>
+      <td>6</td>
+      <td>24</td>
+      <td>31</td>
+      <td>8</td>
+      <td>72</td>
+      <td>48</td>
+      <td>23</td>
+      <td>2</td>
+      <td>1</td>
+      <td>.234</td>
+      <td>.317</td>
+      <td>.391</td>
+      <td>.708</td>
+    </tr>
+    <!-- 2049年：真正站穩先發的一年，雖然 contact 依舊普通，但長打力與速度完全釋放 -->
+    <tr>
+      <td>2049</td>
+      <td>苗栗石虎</td>
+      <td>118</td>
+      <td>475</td>
+      <td>412</td>
+      <td>105</td>
+      <td>22</td>
+      <td>4</td>
+      <td>11</td>
+      <td>52</td>
+      <td>68</td>
+      <td>14</td>
+      <td>168</td>
+      <td>95</td>
+      <td>56</td>
+      <td>4</td>
+      <td>3</td>
+      <td>.255</td>
+      <td>.342</td>
+      <td>.408</td>
+      <td>.750</td>
+    </tr>
+    <!-- 2050年：全勤出賽，達成14轟、12盜，OPS超越聯盟平均（設定此時聯盟平均OPS約.720） -->
+    <tr>
+      <td>2050</td>
+      <td>苗栗石虎</td>
+      <td>135</td>
+      <td>560</td>
+      <td>485</td>
+      <td>127</td>
+      <td>26</td>
+      <td>3</td>
+      <td>14</td>
+      <td>61</td>
+      <td>82</td>
+      <td>12</td>
+      <td>201</td>
+      <td>112</td>
+      <td>68</td>
+      <td>2</td>
+      <td>5</td>
+      <td>.262</td>
+      <td>.350</td>
+      <td>.414</td>
+      <td>.764</td>
+    </tr>
+    <!-- 2051年：維持穩定產出，雖然打擊率有波動，但依舊完成「雙十」低標 -->
+    <tr>
+      <td>2051</td>
+      <td>苗栗石虎</td>
+      <td>126</td>
+      <td>518</td>
+      <td>450</td>
+      <td>112</td>
+      <td>20</td>
+      <td>2</td>
+      <td>12</td>
+      <td>48</td>
+      <td>71</td>
+      <td>11</td>
+      <td>172</td>
+      <td>104</td>
+      <td>61</td>
+      <td>3</td>
+      <td>4</td>
+      <td>.249</td>
+      <td>.336</td>
+      <td>.382</td>
+      <td>.718</td>
+    </tr>
+
+     <tr>
+      <td colspan="2">通算成績</td>
+    <td>572</td>
+      <td>2198</td>
+      <td>1906</td>
+      <td>475</td>
+      <td>94</td>
+      <td>13</td>
+      <td>52</td>
+      <td>228</td>
+      <td>314</td>
+      <td>53</td>
+      <td>751</td>
+      <td>465</td>
+      <td>259</td>
+      <td>16</td>
+      <td>15</td>
+      <td>.249</td>
+      <td>.337</td>
+      <td>.394</td>
+      <td>.731</td>
+     </tr>
+    
+    </tbody>
+    </table>
+    
+  </div>
+
+  <!-- 個人獎項 -->
+  <div class="section">
+    <h2>個人獎項</h2>
+    ・2043年黑豹旗全國高中棒球大賽打擊獎第三名（.478）<br>
+    ・2044年王貞治盃全國青棒錦標賽最佳守備獎<br>
+    ・2044年雪山盃全國青棒錦標賽賽會MVP、最佳十人二壘手<br>
+    </div>
+
+  <!-- 特殊事蹟 -->
+  <div class="section">
+    <h2>特殊事蹟</h2>
+    ・2044年U-18世界青棒錦標賽中華代表隊
+  </div>
+
+  <!-- 相關新聞 -->
+  <div class="section">
+    <h2>相關新聞</h2>
+    <a href="#"></a>
+  </div>
+  
+  
+</div>
+
+  
+
+
+</body>
+</html>
