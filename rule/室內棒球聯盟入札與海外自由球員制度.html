@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>室內棒球聯盟入札與海外自由球員制度</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background: #ffffff;
+  color: #111827;
+  line-height: 1.6;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 80px; /* 關鍵 */
+}
+
+html, body {
+  height: auto;
+  overflow-y: auto;
+}
+
+/* ===== 頂部導覽列 ===== */
+.topnav {
+  display: flex;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 3px solid #e5e7eb;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.topnav a {
+  color: #006000;
+  font-weight:450;
+}
+
+.topnav a:hover {
+  color: #1d4ed8;
+}
+
+/* ===== 頁首 ===== */
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header .sub {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* ===== 區塊 ===== */
+.section {
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-left: 4px solid #111827;
+  padding-left: 8px;
+}
+
+
+
+/* ===== 歷年金手套表格 ===== */
+.award-container {
+  margin: 1em 0;
+}
+
+select, input[type="number"] {
+  padding: 4px 6px;
+  margin-right: 0.5em;
+  font-size: 13px;
+}
+
+table.stats {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.76em;
+}
+
+table.stats th,
+table.stats td {
+  padding: 6px 8px;
+  text-align: center;
+  border: 1px solid #ddd; /* 改這裡 */
+}
+
+table.stats th {
+  background: #46A3FF;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.best {
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.test {
+  font-weight: bold;
+  color: #FF0000;
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+@media(max-width: 600px) {
+  table.stats th, table.stats td {
+    font-size: 10px;
+    padding: 2px 4px;
+  }
+}
+
+/* ===== 其他獎項連結 ===== */
+.award-summary-wrapper {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: "Noto Sans TC", sans-serif;
+  padding: 0 10px;
+}
+
+.award-summary-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  table-layout: fixed;
+}
+
+.award-summary-table td {
+  padding: 6px 4px; /* 縮小內距 */
+  vertical-align: top;
+  border: 1px solid #ccc;
+  background-color: #fff; /* 白底 */
+}
+
+.award-title {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 0;
+  background: #f4e6f7 !important;
+  border: 1px solid #ccc;
+}
+
+.award-category {
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+  padding: 8px 0;
+  border-radius: 4px;
+}
+
+.award-category.pitcher { background-color: #f4e6f7; } /* 淺藍 */
+.award-category.hitter  { background-color: #f4e6f7; } /* 淺橘 */
+.award-category.other   { background-color: #f4e6f7; } /* 淺灰 */
+.award-category.memorial{ background-color: #f4e6f7; } /* 淺紫 */
+
+.award-item a {
+  display: inline-block;
+  margin: 3px 5px;  /* 空格稍微縮小 */
+  padding: 3px 6px;
+  border-radius: 4px;
+  color: #004b97;
+  text-decoration: none;
+  font-size: 13px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.award-item a:hover {
+  transform: translateY(-1px);
+  background-color: #eef5ff;
+}
+
+@media(max-width: 600px){
+  .award-summary-table td {
+    display: block;
+    width: 100%;
+    margin-bottom: 6px;
+  }
+  .award-item a {
+    font-size: 12px;
+    padding: 2px 4px;
+    margin: 2px 3px;
+  }
+}
+
+.this {
+    font-weight: 600;
+    color: #000000;
+    border-radius: 4px;
+    padding: 2px 4px;
+  }
+
+
+/* 色號1 */
+.hl-123 {
+  background: linear-gradient(transparent 60%, #9DC1FA 60%); 
+  font-weight: bold;
+  padding: 0 2px;
+}
+
+
+.hl-123-content {
+  position: relative;
+  padding-left: 15px;         
+  color: #374151;             
+  font-size: 0.95rem;         
+}
+
+.hl-123-content::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;                   
+  width: 6px;
+  height: 14px;
+  background-color: #9DC1FA;  
+  border-radius: 2px;
+}
+
+/* 色號2 */
+.hl-full-free {
+  background: linear-gradient(transparent 60%, #E99AF0 60%); 
+  font-weight: bold;
+  padding: 0 2px;
+}
+
+.hl-full-free-content {
+  position: relative;
+  padding-left: 15px;
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+.hl-full-free-content::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 6px;
+  height: 14px;
+  background-color: #E99AF0;  
+  border-radius: 2px;
+}
+
+/* 色號3 */
+.hl-abc {
+  background: linear-gradient(transparent 60%, #9ABF5A 60%); 
+  font-weight: bold;
+  padding: 0 2px;
+}
+
+.hl-abc-content {
+  position: relative;
+  padding-left: 15px;
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+.hl-abc-content::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 6px;
+  height: 14px;
+  background-color: #9ABF5A;  
+  border-radius: 2px;
+}
+
+/* 色號4 */
+.hl-abcd {
+  background: linear-gradient(transparent 60%, #E58AA3 60%); 
+  font-weight: bold;
+  padding: 0 2px;
+}
+
+.hl-abcd-content {
+  position: relative;
+  padding-left: 15px;
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+.hl-abcd-content::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 6px;
+  height: 14px;
+  background-color: #E58AA3;  
+  border-radius: 2px;
+}
+
+/* 色號5 */
+.hl-abcde {
+  background: linear-gradient(transparent 60%, #D08AD3 60%); 
+  font-weight: bold;
+  padding: 0 2px;
+}
+
+.hl-abcde-content {
+  position: relative;
+  padding-left: 15px;
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+.hl-abcde-content::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 6px;
+  height: 14px;
+  background-color: #D08AD3;  
+  border-radius: 2px;
+}
+
+
+
+
+
+
+</style>
+</head>
+
+<body>
+<div class="container">
+    
+  <nav class="topnav">
+  <a href="../index.html">首頁</a> ⮕ <a href="../rule/室內棒球聯盟制度一覽表.html">室內棒球聯盟制度一覽表</a>  ⮕ <b>室內棒球聯盟室內棒球聯盟入札與海外自由球員制度</b> </nav> 
+
+  <!-- 頁首 -->
+  <div class="header">
+    <h1>室內棒球聯盟室內棒球聯盟入札與海外自由球員制度</h1>
+    <div class="sub">制度｜室內棒球聯盟</div>
+  </div>
+  
+  <p><b>室內棒球聯盟入札及海外自由球員制度</b>，是規範室內棒球聯盟球員轉往海外職業棒球聯盟效力的制度，主要分為入札制度（Posting System）及海外自由球員制度（Overseas Free Agent，OFA）兩種方式。</p>
+
+  <!-- 自由球員資格 -->
+  <div class="section">
+    <h2>入札制度</h2>
+    
+    <p>室內棒球聯盟入札制度，是提供尚未取得海外自由球員資格之球員，前往海外職業聯盟發展的球員流動制度。球員須在室內棒球聯盟累積至少4年年資，始具備入札申請資格。</p>
+    
+    <p><span class="hl-123">入札資格</span><br></p>
+    <p class="hl-123-content">一、球員主動提出海外挑戰意願：球員須向所屬球團表達希望前往海外聯盟發展。<br>二、取得原球團同意：由於球員尚未取得海外自由球員資格，其合約權仍屬原球團所有，因此是否同意球員進行入札，由原所屬球團決定。</p>
+    
+    <p><span class="hl-123">入札制度申請期間</span><br></p>
+    <p class="hl-123-content">入札制度於每年球季結束後開放。球員得於球季結束翌日起至12月31日止，向所屬球團提出入札申請。經原所屬球團同意後，由室內棒球聯盟公告入札球員名單，海外球團得依規定取得該球員之談約權。取得談約權之海外球團，須於30日內完成與球員之合約協商；談約期限最晚不得超過隔年1月31日，若海外球團未能於期限內與球員完成簽約，則該次入札程序失效，球員返回原所屬球團效力。</p>
+    
+    <p><span class="hl-123">海外球團談約權</span><br></p>
+    <p class="hl-123-content">入札制度採「取得談約權」制度。海外球團須向IBL聯盟提出申請，並支付規定之談約金（象徵性，金額不高），取得與該球員協商合約的權利。取得談約權後海外球團可與球員進行合約談判、球員可選擇是否接受合約，並且原球團不得介入球員合約內容。</p>
+    
+    <p><span class="hl-123">入札金制度</span><br></p>
+    <p class="hl-123-content">海外球團成功簽下透過入札制度開放之IBL球員時，須支付入札金予原所屬球團。入札金金額依球員與海外球團簽訂之合約總值計算。<br><br>若海外合約總值未滿1億新台幣，入札金為合約總值 × 20%；海外合約總值達1億以上、未滿5億，入札金為新台幣2,000萬元 + 超過1億部分 × 15%；海外合約總值達5億以上、未滿10億新台幣，入札金為8,000萬元 + 超過5億部分 × 10%；若海外合約總值達10億新台幣以上，入札金為1.3億新台幣 + 超過10億部分 × 5%<br><br>
+    
+     支付之入札金，80%歸原所屬球團所有，而20%納入室內棒球聯盟發展基金。
+    
+    </p>
+    
+    <p><span class="hl-123">入札失敗</span><br></p>
+    <p class="hl-123-content">以下情況視為入札失敗：無海外球團取得談約權（或是沒有海外球團願意申請談約）、球員與海外球團未達成合約、球員拒絕所有海外合約。球員將返回原球團且原球團保有完整合約權。</p>
+    
+    
+  </div>
+  
+  <!-- 自由球員資格分類 -->
+  <div class="section">
+    <h2>海外自由球員制度</h2>
+    
+    <p>室內棒球聯盟海外自由球員制度，是規範球員前往海外職業棒球聯盟發展的球員流動制度。球員累積取得9年自由球員年資後，將自動取得海外自由球員資格。</p>
+    
+    <p><span class="hl-full-free">取得資格</span><br></p>
+    <p class="hl-free-content">球員累積取得9年自由球員年資後，將自動取得海外自由球員（OFA）資格，由聯盟統一認定並公告，無須由球員或球團另行提出申請。</p>
+    
+    <p><span class="hl-full-free">行使資格</span><br></p>
+    <p class="hl-full-free-content">取得海外自由球員資格之球員，得於球季結束後與海外職業球團自由進行合約協商及簽約，不受原所屬球團合約權限制。球員與海外球團完成簽約後，即完成海外移籍程序，原所屬球團不得拒絕或限制其轉隊。</p>
+    
+    
+    <p><span class="hl-full-free">沒有補償制度</span><br></p>
+    <p class="hl-full-free-content">海外自由球員屬球員依法取得之自由球員資格，因此海外球團無須支付入札金或任何形式之轉會補償予原所屬球團。球員與原球團間之球員契約，自完成海外簽約程序後終止。</p>
+    
+    <p><span class="hl-full-free">申請時間</span><br></p>
+    <p class="hl-full-free-content">海外自由球員市場期間截止日期為球季結束後翌年2月28日止，逾期未完成簽約者，該年度海外自由球員程序終止。</p>
+    
+  </div>
+  
+    <!-- 相關頁面 -->
+  <div class="section">
+    <h2>相關頁面</h2>
+    <a href="室內棒球聯盟自由球員制度.html">室內棒球聯盟自由球員制度</a><br>
+    
+  </div>
+  
+
+
+
+  </div>
+
+<script>
+function showYear(){
+  let year = document.getElementById('year-select').value;
+  document.querySelectorAll('#award-tables table').forEach(tbl=>{
+    tbl.style.display = (tbl.id==='award-'+year) ? '' : 'none';
+  });
+  document.getElementById('year-search').value = year;
+}
+
+function searchYear(){
+  let year = document.getElementById('year-search').value;
+  if(year < 2000 || year > 2051){ alert('年份範圍：2000~2051'); return; }
+  document.getElementById('year-select').value = year;
+  showYear();
+}
+
+// 預設顯示最新年份
+showYear();
+</script>
+
+</body>
+</html>
