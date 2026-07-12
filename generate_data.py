@@ -9,7 +9,7 @@ def generate_json():
         "teams": "球隊",
         "league": "聯盟",
         "stadium": "球場",
-        "term": "特殊",
+        "term": "選秀/獎項",
         "games": "賽事",
         "usaplayers": "美國球員",
         "japanplayers": "日本球員",
