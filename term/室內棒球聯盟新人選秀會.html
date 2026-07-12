@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>室內棒球聯盟新人選秀會</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background: #ffffff;
+  color: #111827;
+  line-height: 1.6;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 80px; /* 關鍵 */
+}
+
+html, body {
+  height: auto;
+  overflow-y: auto;
+}
+
+/* ===== 頂部導覽列 ===== */
+.topnav {
+  display: flex;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 3px solid #e5e7eb;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.topnav a {
+  color: #006000;
+  font-weight:450;
+}
+
+.topnav a:hover {
+  color: #1d4ed8;
+}
+
+/* ===== 頁首 ===== */
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header .sub {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* ===== 區塊 ===== */
+.section {
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-left: 4px solid #111827;
+  padding-left: 8px;
+}
+
+
+
+/* ===== 歷年金手套表格 ===== */
+
+table.stats {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.76em;
+}
+
+table.stats th,
+table.stats td {
+  padding: 6px 8px;
+  text-align: center;
+  border: 1px solid #ddd; /* 改這裡 */
+}
+
+table.stats th {
+  background: #46A3FF;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.best {
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.test {
+  font-weight: bold;
+  color: #FF0000;
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+@media(max-width: 600px) {
+  table.stats th, table.stats td {
+    font-size: 10px;
+    padding: 2px 4px;
+  }
+}
+
+/* ===== 其他獎項連結 ===== */
+.award-summary-wrapper {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: "Noto Sans TC", sans-serif;
+  padding: 0 10px;
+}
+
+.award-summary-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  table-layout: fixed;
+}
+
+.award-summary-table td {
+  padding: 6px 4px; /* 縮小內距 */
+  vertical-align: top;
+  border: 1px solid #ccc;
+  background-color: #fff; /* 白底 */
+}
+
+.award-title {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 0;
+  background: #f4e6f7 !important;
+  border: 1px solid #ccc;
+}
+
+.award-category {
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+  padding: 8px 0;
+  border-radius: 4px;
+}
+
+.award-category.pitcher { background-color: #f4e6f7; } /* 淺藍 */
+.award-category.hitter  { background-color: #f4e6f7; } /* 淺橘 */
+.award-category.other   { background-color: #f4e6f7; } /* 淺灰 */
+.award-category.memorial{ background-color: #f4e6f7; } /* 淺紫 */
+
+.award-item a {
+  display: inline-block;
+  margin: 3px 5px;  /* 空格稍微縮小 */
+  padding: 3px 6px;
+  border-radius: 4px;
+  color: #004b97;
+  text-decoration: none;
+  font-size: 13px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.award-item a:hover {
+  transform: translateY(-1px);
+  background-color: #eef5ff;
+}
+
+@media(max-width: 600px){
+  .award-summary-table td {
+    display: block;
+    width: 100%;
+    margin-bottom: 6px;
+  }
+  .award-item a {
+    font-size: 12px;
+    padding: 2px 4px;
+    margin: 2px 3px;
+  }
+}
+
+.this {
+    font-weight: 600;
+    color: #000000;
+    border-radius: 4px;
+    padding: 2px 4px;
+  }
+
+
+/* 色號1 */
+.hl-123 {
+  background: linear-gradient(transparent 60%, #8ADBD5 60%); 
+  font-weight: bold;
+  padding: 0 2px;
+}
+
+
+.hl-123-content {
+  position: relative;
+  padding-left: 15px;         
+  color: #374151;             
+  font-size: 0.95rem;         
+}
+
+.hl-123-content::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;                   
+  width: 6px;
+  height: 14px;
+  background-color: #8ADBD5;  
+  border-radius: 2px;
+}
+
+/* 色號2 */
+.hl-full-free {
+  background: linear-gradient(transparent 60%, #E99AF0 60%); 
+  font-weight: bold;
+  padding: 0 2px;
+}
+
+.hl-full-free-content {
+  position: relative;
+  padding-left: 15px;
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+.hl-full-free-content::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 6px;
+  height: 14px;
+  background-color: #E99AF0;  
+  border-radius: 2px;
+}
+
+/* 色號3 */
+.hl-abc {
+  background: linear-gradient(transparent 60%, #9ABF5A 60%); 
+  font-weight: bold;
+  padding: 0 2px;
+}
+
+.hl-abc-content {
+  position: relative;
+  padding-left: 15px;
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+.hl-abc-content::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 6px;
+  height: 14px;
+  background-color: #9ABF5A;  
+  border-radius: 2px;
+}
+
+/* 色號4 */
+.hl-abcd {
+  background: linear-gradient(transparent 60%, #E58AA3 60%); 
+  font-weight: bold;
+  padding: 0 2px;
+}
+
+.hl-abcd-content {
+  position: relative;
+  padding-left: 15px;
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+.hl-abcd-content::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 6px;
+  height: 14px;
+  background-color: #E58AA3;  
+  border-radius: 2px;
+}
+
+/* 色號5 */
+.hl-abcde {
+  background: linear-gradient(transparent 60%, #D08AD3 60%); 
+  font-weight: bold;
+  padding: 0 2px;
+}
+
+.hl-abcde-content {
+  position: relative;
+  padding-left: 15px;
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+.hl-abcde-content::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 6px;
+  height: 14px;
+  background-color: #D08AD3;  
+  border-radius: 2px;
+}
+
+/* 職業球隊色系：這裡以藍灰色系為例，你可以自行替換隊色 */
+:root {
+  --pro-primary: #46A3FF; 
+  --pro-accent: #F0F8FF;  /* 亮點藍 */
+  --pro-bg: #F0F8FF;
+}
+
+.decade-box {
+  max-width: 700px;
+  margin-bottom: 5px;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  text-align:center;
+}
+
+.decade-summary {
+  background-color: var(--pro-primary);
+  color: white;
+  overflow: hidden;
+  padding: 5px 7px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+  list-style: none;
+}
+
+/* 職業賽事專用表格：極致扁平化 */
+.pro-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.80rem;
+}
+
+.pro-table th {
+  background: #F0F8FF;
+  padding: 6px;
+  border-bottom: 2px solid #cbd5e1;
+  color: #2D8EF0;
+}
+
+.pro-table td {
+  padding: 5px 8px;
+  border-bottom: 1px solid #f1f5f9;
+  text-align: center;
+}
+
+/* ===== 新增：文章內快速導覽列樣式 ===== */
+.quick-nav {
+  background: #f3f4f6;
+  padding: 10px 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+.quick-nav span {
+  font-weight: bold;
+  margin-right: 10px;
+}
+.quick-nav a {
+  margin-right: 15px;
+  color: #1d4ed8;
+}
+
+</style>
+</head>
+
+<body>
+<div class="container">
+    
+  <nav class="topnav">
+  <a href="../index.html">首頁</a> ⮕ <a href="../term/選秀大會.html">選秀大會</a>  ⮕ <b>室內棒球聯盟新人選秀會</b> </nav> 
+
+  <!-- 頁首 -->
+  <div class="header">
+    <h1>室內棒球聯盟新人選秀會</h1>
+    <div class="sub">選秀｜室內棒球聯盟</div>
+  </div>
+  
+  <div class="quick-nav">
+    <span>快速目錄：</span>
+    <a href="#123">▶ 選秀資格</a>
+    <a href="#1234">▶ 新人測試會</a>
+    <a href="#12345">▶ 選秀相關規範</a>
+    <a href="#234">▶ 選秀籤</a>
+    <a href="#2345">▶ 歷年選秀資訊一覽表</a>
+    <a href="#345">▶ 聯盟目前贊助商</a>
+    <a href="#3456">▶ 相關頁面</a>
+    <a href="#456">▶ 新聞</a>
+  </div>
+  
+  <p><b>室內棒球聯盟新人選秀會</b>，簡稱室內棒球聯盟選秀會，室內棒球聯盟為各球團補充新生代球員所設立的人才分配制度，也是高中、大學及業餘球員進入職業棒球的重要途徑。</p>
+  
+  <p>自聯盟成立以來，新人選秀制度便扮演維持球隊戰力平衡與促進球員流動的重要角色。所有符合資格且希望投入職業棒球的新人球員，皆須透過新人選秀由球團選中後，方可加入室內棒球聯盟一軍體系。</p>
+
+  <!-- 選秀資格 -->
+  <div class="section">
+    <h2 id="123">選秀資格</h2>
+    
+    <p>室內棒球聯盟新人選秀開放符合資格之球員申請參加。由於2040年代的台灣棒球環境已高度普及，從高中、社團到業餘體系皆存在大量棒球人才，因此聯盟並不單純以球員是否出身傳統棒球科班作為判定標準，而是透過競技成績、個人成就與球探評估三項制度，確認球員是否具備職業發展潛力。所有希望參加新人選秀的球員，皆須向聯盟提出申請，並經由資格審查後，方可列入新人選秀名單。</p>
+    
+    <p><span class="hl-123">基本資格</span><br></p>
+    <p class="hl-123-content">所有參選球員須符合：
+    <br>
+    1.在選秀該年8月31日前年滿18歲，且未與任何職業球團簽訂正式合約。<br>
+    2.具中華民國國籍。<br>
+    3.具備至少3年以上正式棒球訓練或競賽經歷。<br>
+    4.曾參與至少一項由聯盟認可之棒球活動或賽事。<br>
+    5.通過室內棒球聯盟新人資格審查。<br>
+    <br>
+    為因應國際化發展趨勢，同時確保長期於台灣接受棒球教育與訓練之球員具備參與職業選秀之機會，室內棒球聯盟設立「本土培育球員認定制度」。<br>
+    <br>
+    高中階段在台就讀者，於台灣完成至少三年以上高中教育，並且符合除了(2)以外的條件；大學階段在台就讀者，於台灣大專院校就讀期間達四年，並且符合除了(2)以外的條件；球員若因以下原因未完成完整學程，但已於台灣接受實質棒球培育，得提出特殊認定申請，聯盟將綜合判定是否符合本土培育球員資格；業餘或社會人符合以下其中一項即可：參與台灣業餘棒球聯賽或社會人聯賽達四年以上、於台灣企業球隊、社會人球隊完成至少三個球季以上正式登錄、於台灣地方棒球聯盟、業餘競賽體系累積四年以上註冊紀錄。
+    
+    </p>
+    
+    <p><span class="hl-123">高中球員資格</span><br></p>
+    <p class="hl-123-content">由於台灣高中棒球運動高度普及，幾乎各地高中皆可能設有棒球隊或棒球社團，因此「具備高中棒球經歷」並不代表 automatically 取得選秀資格。高中球員須符合以下其中一項條件
+    <br><br>
+    一、競技成績認定<br>
+    球員所屬高中隊伍於近兩年度內符合以下任一條件，且球員本人須登錄在出賽名單
+內：<br>
+    1.參加聯盟認可之全國性高中棒球賽事，取得前16強以上成績<br>
+    2.參加聯盟認可之區域性官方賽事，取得冠軍或亞軍<br>
+    <br>
+    二、個人成績資格<br>
+    <b>投手</b>符合任一：<br>
+    年度正式比賽投球局數達60局以上<br>
+    年度防禦率低於3.50<br>
+    單季三振率達高中聯賽前段標準<br>
+    入選年度最佳投手陣容<br>
+    <br>
+    <b>野手</b>符合任一：<br>
+    年度打擊率達0.275以上<br>
+    年度OPS達0.750以上<br>
+    年度盜壘達25次以上<br>
+    入選年度最佳九人或明星隊<br>
+    <br>
+    野手、投手共同標準<br>
+    1.有入選縣市代表隊、國家隊名單<br>
+    2.受到不同木棒組教練推薦<br>
+    3.在縣級聯賽以上有拿到個人獎項、入選賽事最佳九人等<br>
+    <br>
+    三、球探推薦資格<br>
+    未達上述成績標準，但具有職業潛力者，可透過球探推薦參選。推薦條件：至少兩
+名IBL球團球探提出推薦且通過聯盟新人能力測試
+    
+    
+    </p>
+    
+    <p><span class="hl-123">大學球員資格</span><br></p>
+    <p class="hl-123-content">大學球員須符合以下其一即可：<br>
+    1.大學一級聯賽（如大專聯賽公開一）前十六強正式登錄球員<br>
+    2.大學二級聯賽（如大專聯賽公開二）組前四強正式登錄球員<br>
+    3.大學聯賽有拿到個人獎項之球員<br>
+    4.入選大學區域、國家、明星代表隊<br>
+    
+    </p>
+    
+    <p><span class="hl-123">社會人球員資格</span><br></p>
+    <p class="hl-123-content">
+    符合下列條件中任兩項者，即可取得新人選秀資格：<br>
+    一、正式競賽經歷（符合任一）<br>
+    1.曾為正式註冊之社會人球隊或業餘球隊球員，且累積至少2個球季。<br>
+    2.曾參加聯盟認可之全國性或縣市級棒球聯賽。<br>
+    3.曾代表企業隊、政府機關隊、城市代表隊或其他聯盟認可隊伍參賽。<br>
+    <br>
+    二、競技成績<br>
+    1.入選最佳九人、明星隊或年度最佳球員。<br>
+    2.數據達聯盟公告標準<br>
+    </p>
+    
+   <p>若未符合上述條件，則不取得新人選秀資格。但可投過參加<b>新人測試會</b>來獲得新人選秀資格</p>
+  </div>
+  
+  <!-- 自由球員資格分類 -->
+  <div class="section">
+    <h2 id="1234">新人測試會</h2>
+    
+    <p>室內棒球聯盟新人測試會是室內棒球聯盟於新人選秀前舉辦的官方球員測試活動，主要目的為評估具有職業潛力之球員，並作為新人選秀資格審查及球團觀察的重要依據。新人測試會通常於5～6月舉行，由聯盟統一規劃，各球團球探、聯盟技術委員及相關人員共同參與。</p>
+    
+    <p><span class="hl-full-free">參加資格</span><br></p>
+    <p class="hl-full-free-content">符合下列條件之一者，可向聯盟申請參加：<br>
+    1.社會人及業餘球員：具正式比賽經歷，但缺乏足夠公開數據者。<br>
+    2.高中及大學球員：符合基本資格，但未達競技成績或個人成就認定標準，希望透過測試取得選秀資格者。<br>
+    3.特殊人才：經地方聯盟、教練、球探或技術委員推薦，具有特殊潛力之球員。<br>
+    </p>
+    
+    
+    <p><span class="hl-full-free">測試內容</span><br></p>
+    <p class="hl-full-free-content">新人測試會依球員守備位置進行不同測試，有基本能力測試、實戰測試</p>
+    
+    <p><span class="hl-full-free">評分制度</span><br></p>
+    <p class="hl-full-free-content">測試會採綜合評分制度，聯盟不公布詳細分數，但會將完整評估報告提供各球團作為選秀參考。</p>
+    
+    <p>測試會並非選秀本身，而是新人資格審查的一部分，完成測試後，聯盟新人選秀資格委員會將依據測試成績、球探報告、綜合評估，決定是否核發當年度新人選秀資格。若得到球團推薦，則可直接獲得選秀資格。</p>
+    
+  </div>
+  
+  
+  <!-- 選秀相關規範 -->
+  <div class="section">
+    <h2 id="12345">選秀相關規範</h2>
+    
+    <p><span class="hl-full-free">合約談判權有效期限</span><br></p>
+    <p class="hl-full-free-content">新人選秀完成後，被球團選中的球員，其合約談判權自選秀會結束後生效。球團須於規定期限內與球員完成簽約，逾期未完成簽約者，該球團之選秀權利失效。選秀完成後，正式談判期限：至9月15日止，不過聯盟建議完成簽約期限為8月31日前
+    </p>
+    
+    
+    <p><span class="hl-full-free">簽約金制度</span><br></p>
+    <p class="hl-full-free-content">室內棒球聯盟新人簽約金制度是指球團於新人選秀選中球員後，支付予球員的一次性簽約獎金制度。室內棒球聯盟依選秀順位設定建議簽約金區間，球團與球員可於聯盟規定期限內協商最終金額，不得高於聯盟規定之上限</p>
+    
+    <p><span class="hl-full-free">選秀承諾制度</span><br></p>
+    <p class="hl-full-free-content">室內棒球聯盟為保障新人選秀制度公平性，規定球員於提交新人選秀申請後，即視為接受聯盟選秀規範。球員仍可選擇海外發展，但若已進入IBL選秀程序並被球團選中，則須遵守相關限制。若被選中後拒絕加盟，那回國後須等待2年後才能重新參加新人選秀。</p>
+    
+    
+    
+  </div>
+  
+  
+  
+  <!-- 選秀相關規範 -->
+  <div class="section">
+    <h2 id="234">選秀籤</h2>
+    
+    <p>新人選秀順位於選秀會前公開抽籤決定（通常在春季會議），抽籤資格依前一年度例行賽戰績分配，理論上來說，戰績較差球隊較高抽中前段順位機率，但實際上仍以抽籤為主，避免弱隊故意擺爛等狀元籤、也增加選秀不確定性。每支室內棒球聯盟一軍球隊皆擁有新人選秀權，2024年至2051年間，國軍鳳凰隊雖參與室內棒球聯盟一軍例行賽，但因其球隊定位與一般職業球團不同，因此不具備新人選秀資格。</p>
+  </div>
+  
+  <!-- 相關頁面 -->
+  <div class="section">
+    <h2 id="2345">歷年選秀資訊一覽表</h2>
+    
+    <details class="decade-box">
+    <summary class="decade-summary">2040年代室內棒球聯盟選秀會</summary>
+    <table class="pro-table">
+      <thead>
+        <tr>
+        <th>年度</th>
+        <th>隊數</th>
+        <th>報名人數</th>
+        <th>中選人數</th>
+        <th>狀元籤</th>
+        <th>狀元</th>
+        <th>球員類型</th>
+        <th>備註</th>
+        </tr>
+      </thead>
+      <tbody>
+     
+     <tr>
+        <td>2042</td> 
+        <td>19</td>
+        <td></td> 
+        <td></td>
+        <td><a href="../team/北鐵狼.html">北鐵狼隊</a></td>
+        <td><a href="../players/鄭育成.html">鄭育成</a></td>
+        <td>高卒</td>
+        <td></td>
+      </tr>
+      
+      <tr>
+        <td>2045</td> 
+        <td>19</td>
+        <td></td> 
+        <td></td>
+        <td><a href="../team/基隆雨都.html">基隆雨都隊</a></td>
+        <td><a href="../players/沈岳衡.html">沈岳衡</a></td>
+        <td>大專</td>
+        <td></td>
+      </tr>
+      
+      <tr>
+        <td>2046</td> 
+        <td>19</td>
+        <td></td> 
+        <td></td>
+        <td><a href="../team/樂天桃猿.html">樂天桃猿隊</a></td>
+        <td><a href="../players/黃柏翰.html">黃柏翰</a></td>
+        <td>旅外</td>
+        <td></td>
+      </tr>
+      
+     <tr>
+        <td>2047</td> 
+        <td>19</td>
+        <td></td> 
+        <td></td>
+        <td><a href="../team/富邦守護者.html">富邦守護者隊</a></td>
+        <td><a href="../players/林傑峻.html">林傑峻</a></td>
+        <td>旅外</td>
+        <td></td>
+      </tr>
+      
+      <tr>
+        <td>2048</td> 
+        <td>19</td>
+        <td></td> 
+        <td></td>
+        <td><a href="../team/墾丁鯊魚.html">墾丁鯊魚隊</a></td>
+        <td><a href="../players/莊廷曜.html">莊廷曜</a></td>
+        <td>大專</td>
+        <td></td>
+      </tr>
+        
+    <tr>
+        <td>2049</td> 
+        <td>19</td>
+        <td></td> 
+        <td></td>
+        <td><a href="../team/南投雷霆.html">南投雷霆隊</a></td>
+        <td><a href="../players/許景成.html">許景成</a></td>
+        <td>高卒</td>
+        <td></td>
+      </tr>
+        
+      </tbody>
+    </table>
+  </details>
+    
+    <details class="decade-box">
+    <summary class="decade-summary">2050年代室內棒球聯盟選秀會</summary>
+    <table class="pro-table">
+      <thead>
+        <tr>
+        <th>年度</th>
+        <th>隊數</th>
+        <th>報名人數</th>
+        <th>中選人數</th>
+        <th>狀元籤</th>
+        <th>狀元</th>
+        <th>球員類型</th>
+        <th>備註</th>
+        </tr>
+      </thead>
+      <tbody>
+      
+      <tr>
+        <td>2050</td> 
+        <td>20</td>
+        <td></td> 
+        <td></td>
+        <td><a href="../team/中油火焰.html">中油火焰隊</a></td>
+        <td></td>
+        <td>高卒</td>
+        <td></td>
+      </tr>
+      
+      <tr>
+        <td>2051</td> 
+        <td>20</td>
+        <td></td> 
+        <td></td>
+        <td><a href="../team/中油火焰.html">中油火焰隊</a></td>
+        <td></td>
+        <td>大專</td>
+        <td></td>
+      </tr>
+          
+      </tbody>
+    </table>
+  </details>
+    
+    
+     <table class="stats">
+    <thead>
+      <tr>
+        <th>年度</th>
+        <th>隊數</th>
+        <th>報名人數</th>
+        <th>中選人數</th>
+        <th>狀元籤</th>
+        <th>狀元</th>
+        <th>球員類型</th>
+        <th>備註</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+        <td>2052</td> 
+        <td>20</td>
+        <td></td> 
+        <td></td>
+        <td><a href="../team/奇醫海燕.html">奇醫海燕隊</a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      
+      
+      
+      </tbody>
+      </table>
+    
+  </div>
+  
+  
+  <!-- 聯盟主要贊助商 -->
+  <div class="section">
+    <h2 id="345">聯盟目前贊助商</h2>
+    
+    <p>2041年，室內棒球聯盟與台灣科技企業 Atherion BioSystems（亞瑟恩生醫科技股份有限公司） 簽署長期合作協議，成為聯盟官方主要合作夥伴。Atherion BioSystems是一家成立於2012年的台灣科技企業，主要業務涵蓋AI運動分析系統、個人化健康管理、運動傷害預防、智慧穿戴設備等領域。創辦人兼董事長為闕宏碩。與過往企業透過球隊經營或賽事冠名投入職業棒球不同，闕宏碩選擇將合作重點放在新人選秀制度與球員養成體系，希望從人才源頭提升台灣棒球發展。</p>
+    
+    
+  
+    <!-- 相關頁面 -->
+  <div class="section">
+    <h2 id="3456">相關頁面</h2>
+    <a href="羅曼條款.html">羅曼條款</a><br>
+    <a href="室內棒球聯盟現役選秀.html">室內棒球聯盟現役選秀</a><br>
+    <a href="室內棒球聯盟特別選秀.html">室內棒球聯盟特別選秀</a><br>
+    
+  </div>
+  
+  
+  <!-- 相關頁面 -->
+  <div class="section">
+    <h2 id="456">新聞</h2>
+    
+    <b>2010年代</b><br>
+    <a href="../news/高中球員正式開放選秀.html">室內棒球聯盟 》高中球員正式開放選秀！聯盟迎來「青棒職業化新時代」</a>（2015.03.18）<br>
+    
+    <b>2040年代</b><br>
+    <a href="../news/亞瑟恩與室內棒球聯盟展開選秀會合作.html">室內棒球聯盟 》Atherion BioSystems確定與室內棒球聯盟展開長期合作　投入新人選秀科技化改革</a>（2041.03.15）<br>
+    
+    
+  </div>
+  
+
+
+
+  </div>
+
+<script>
+function showYear(){
+  let year = document.getElementById('year-select').value;
+  document.querySelectorAll('#award-tables table').forEach(tbl=>{
+    tbl.style.display = (tbl.id==='award-'+year) ? '' : 'none';
+  });
+  document.getElementById('year-search').value = year;
+}
+
+function searchYear(){
+  let year = document.getElementById('year-search').value;
+  if(year < 2000 || year > 2051){ alert('年份範圍：2000~2051'); return; }
+  document.getElementById('year-select').value = year;
+  showYear();
+}
+
+// 預設顯示最新年份
+showYear();
+</script>
+
+</body>
+</html>
