@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>室內棒球聯盟新人選秀會</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background: #ffffff;
+  color: #111827;
+  line-height: 1.6;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 80px; /* 關鍵 */
+}
+
+html, body {
+  height: auto;
+  overflow-y: auto;
+}
+
+/* ===== 頂部導覽列 ===== */
+.topnav {
+  display: flex;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 3px solid #e5e7eb;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.topnav a {
+  color: #006000;
+  font-weight:450;
+}
+
+.topnav a:hover {
+  color: #1d4ed8;
+}
+
+/* ===== 頁首 ===== */
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header .sub {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* ===== 區塊 ===== */
+.section {
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-left: 4px solid #111827;
+  padding-left: 8px;
+}
+
+
+
+/* ===== 歷年金手套表格 ===== */
+
+table.stats {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.76em;
+}
+
+table.stats th,
+table.stats td {
+  padding: 6px 8px;
+  text-align: center;
+  border: 1px solid #ddd; /* 改這裡 */
+}
+
+table.stats th {
+  background: #46A3FF;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.best {
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.test {
+  font-weight: bold;
+  color: #FF0000;
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+@media(max-width: 600px) {
+  table.stats th, table.stats td {
+    font-size: 10px;
+    padding: 2px 4px;
+  }
+}
+
+/* ===== 其他獎項連結 ===== */
+.award-summary-wrapper {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: "Noto Sans TC", sans-serif;
+  padding: 0 10px;
+}
+
+.award-summary-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  table-layout: fixed;
+}
+
+.award-summary-table td {
+  padding: 6px 4px; /* 縮小內距 */
+  vertical-align: top;
+  border: 1px solid #ccc;
+  background-color: #fff; /* 白底 */
+}
+
+.award-title {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 0;
+  background: #f4e6f7 !important;
+  border: 1px solid #ccc;
+}
+
+.award-category {
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+  padding: 8px 0;
+  border-radius: 4px;
+}
+
+.award-category.pitcher { background-color: #f4e6f7; } /* 淺藍 */
+.award-category.hitter  { background-color: #f4e6f7; } /* 淺橘 */
+.award-category.other   { background-color: #f4e6f7; } /* 淺灰 */
+.award-category.memorial{ background-color: #f4e6f7; } /* 淺紫 */
+
+.award-item a {
+  display: inline-block;
+  margin: 3px 5px;  /* 空格稍微縮小 */
+  padding: 3px 6px;
+  border-radius: 4px;
+  color: #004b97;
+  text-decoration: none;
+  font-size: 13px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.award-item a:hover {
+  transform: translateY(-1px);
+  background-color: #eef5ff;
+}
+
+@media(max-width: 600px){
+  .award-summary-table td {
+    display: block;
+    width: 100%;
+    margin-bottom: 6px;
+  }
+  .award-item a {
+    font-size: 12px;
+    padding: 2px 4px;
+    margin: 2px 3px;
+  }
+}
+
+.this {
+    font-weight: 600;
+    color: #000000;
+    border-radius: 4px;
+    padding: 2px 4px;
+  }
+
+
+/* 色號1 */
+.hl-123 {
+  background: linear-gradient(transparent 60%, #8ADBD5 60%); 
+  font-weight: bold;
+  padding: 0 2px;
+}
+
+
+.hl-123-content {
+  position: relative;
+  padding-left: 15px;         
+  color: #374151;             
+  font-size: 0.95rem;         
+}
+
+.hl-123-content::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;                   
+  width: 6px;
+  height: 14px;
+  background-color: #8ADBD5;  
+  border-radius: 2px;
+}
+
+/* 色號2 */
+.hl-full-free {
+  background: linear-gradient(transparent 60%, #E99AF0 60%); 
+  font-weight: bold;
+  padding: 0 2px;
+}
+
+.hl-full-free-content {
+  position: relative;
+  padding-left: 15px;
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+.hl-full-free-content::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 6px;
+  height: 14px;
+  background-color: #E99AF0;  
+  border-radius: 2px;
+}
+
+/* 色號3 */
+.hl-abc {
+  background: linear-gradient(transparent 60%, #9ABF5A 60%); 
+  font-weight: bold;
+  padding: 0 2px;
+}
+
+.hl-abc-content {
+  position: relative;
+  padding-left: 15px;
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+.hl-abc-content::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 6px;
+  height: 14px;
+  background-color: #9ABF5A;  
+  border-radius: 2px;
+}
+
+/* 色號4 */
+.hl-abcd {
+  background: linear-gradient(transparent 60%, #E58AA3 60%); 
+  font-weight: bold;
+  padding: 0 2px;
+}
+
+.hl-abcd-content {
+  position: relative;
+  padding-left: 15px;
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+.hl-abcd-content::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 6px;
+  height: 14px;
+  background-color: #E58AA3;  
+  border-radius: 2px;
+}
+
+/* 色號5 */
+.hl-abcde {
+  background: linear-gradient(transparent 60%, #D08AD3 60%); 
+  font-weight: bold;
+  padding: 0 2px;
+}
+
+.hl-abcde-content {
+  position: relative;
+  padding-left: 15px;
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+.hl-abcde-content::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 6px;
+  height: 14px;
+  background-color: #D08AD3;  
+  border-radius: 2px;
+}
+
+/* 職業球隊色系：這裡以藍灰色系為例，你可以自行替換隊色 */
+:root {
+  --pro-primary: #46A3FF; 
+  --pro-accent: #F0F8FF;  /* 亮點藍 */
+  --pro-bg: #F0F8FF;
+}
+
+.decade-box {
+  max-width: 700px;
+  margin-bottom: 5px;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  text-align:center;
+}
+
+.decade-summary {
+  background-color: var(--pro-primary);
+  color: white;
+  overflow: hidden;
+  padding: 5px 7px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+  list-style: none;
+}
+
+/* 職業賽事專用表格：極致扁平化 */
+.pro-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.80rem;
+}
+
+.pro-table th {
+  background: #F0F8FF;
+  padding: 6px;
+  border-bottom: 2px solid #cbd5e1;
+  color: #2D8EF0;
+}
+
+.pro-table td {
+  padding: 5px 8px;
+  border-bottom: 1px solid #f1f5f9;
+  text-align: center;
+}
+
+/* ===== 新增：文章內快速導覽列樣式 ===== */
+.quick-nav {
+  background: #f3f4f6;
+  padding: 10px 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+.quick-nav span {
+  font-weight: bold;
+  margin-right: 10px;
+}
+.quick-nav a {
+  margin-right: 15px;
+  color: #1d4ed8;
+}
+
+</style>
+</head>
+
+<body>
+<div class="container">
+    
+    <nav class="topnav">
+  <a href="../index.html">首頁</a> ⮕ <a href="../term/選秀大會.html">選秀大會</a>  ⮕ <a href="../term/室內棒球聯盟新人選秀會.html">室內棒球聯盟新人選秀會</a> ⮕ <b>室內棒球聯盟高中球員保護條款</b></nav> 
+
+  <!-- 頁首 -->
+  <div class="header">
+    <h1>室內棒球聯盟高中球員保護條款</h1>
+    <div class="sub">條款｜室內棒球聯盟</div>
+  </div>
+  
+  <p><b>室內棒球聯盟高中球員保護條款</b>，簡稱<b>最後夏天條款</b>，是室內棒球聯盟針對應屆高中畢業球員所訂定之新人選秀相關規範。條款規定，凡於當年度新人選秀獲球團指名之應屆高中畢業球員，在夏季全國高中棒球聯賽結束前，球團不得要求球員提前報到、退出賽事，或以任何形式干預學校教練團之調度及訓練安排，以保障球員完成高中棒球生涯最後一項重要賽事。</p>
+  
+  <!-- 選秀資格 -->
+  <div class="section">
+    <h2>制度目的</h2>
+    
+ <p>夏季全國高中棒球聯賽為台灣每年最高層級之青少年棒球賽事，亦是許多高中球員在進入職業階段前最重要的競技舞台。依據賽事規定，當年度應屆高中畢業生仍具參賽資格，得代表原就讀學校參與地方預賽及全國決賽。然而，由於夏季全國高中棒球聯賽賽程通常橫跨6月至8月，而室內棒球聯盟新人選秀固定於7月舉行，部分應屆畢業球員可能在高中賽事尚未結束前，已經成為職業球團指名球員。</p>
+ 
+    <p>聯盟過去曾擔憂，球團可能基於保護選秀資產、避免球員受傷或提前規劃職業生涯等因素，透過直接或間接方式影響球員後續參賽安排。例如向學校或教練團提出建議，要求降低球員出賽頻率、限制投球負荷、調整守備位置，甚至避免球員參與部分重要賽事。若此類情況發生，將可能影響高中球隊之自主決策，破壞高中棒球競賽公平性，也削弱夏季全國高中棒球聯賽作為全國最高高中賽事之價值。</p>
+    
+    <p>因此，室內棒球聯盟制定《高中球員保護條款》，明確規範球團不得干預應屆高中畢業球員於高中賽事期間之參賽權益，確保球員能完整完成高中棒球生涯最後階段。</p>
+    
+
+  <!-- 選秀資格 -->
+  <div class="section">
+    <h2>禁止事項</h2>
+    
+ <p>自球員獲新人選秀指名起至夏季全國高中棒球聯賽結束止，球團不得有下列行為：</p>
+ 
+    <p class="hl-123-content">
+    1.要求球員提前向球團報到或離開學校球隊。<br>
+    2.要求球員放棄或退出夏季全國高中棒球聯賽。<br>
+    3.直接或間接干預學校教練團之球員調度、戰術安排或訓練內容。<br>
+    4.要求限制球員之投球局數、投球數、出賽場次、守備位置、打席數或其他競技安排。<br>
+    5.以合約、獎金、利益交換或其他方式影響球員、教練或學校之參賽決策。<br>
+    6.其他經聯盟認定足以影響高中棒球競賽公平性之行為。<br>
+    
+    </p>
+    
+    <p>球團不得以任何直接或間接方式影響高中球隊之比賽調度或競技決策；即使僅提出建議、請求或施加壓力，經聯盟認定足以影響球隊自主決策者，亦視為違規。例如：「教練，拜託不要讓他投超過80球。」、「這場比賽如果局勢允許，希望不要安排他登板。」，上述言論即使出發點為保護球員健康，若由球團或其相關人士向學校、教練團提出，仍可能構成對高中球隊自主調度之干預。</p>
+    
+    <!-- 選秀資格 -->
+  <div class="section">
+    <h2>違規處分</h2>
+    
+ <p>球團違反《高中球員保護條款》者，聯盟得依違規情節處以以下一項或數項處分：</p>
+ 
+    <p class="hl-123-content">
+    1.處新臺幣500萬元以上、5,000萬元以下罰鍰。<br>
+    2.沒收次年度第一輪新人選秀權。<br>
+    3.情節重大者，得沒收次年度第一輪及第二輪新人選秀權。<br>
+    4.情節特別重大或故意違規者，得沒收次年度前三輪新人選秀權，甚至取消當年度全部新人選秀資格。<br>
+    5.對涉案之球團職員、教練、球探或管理人員處以停權、停職或禁止於聯盟任職等紀律處分。<br>
+    
+    <p>遭沒收之選秀權不得以任何形式補償、交易或遞延使用。</p>
+    
+    </p>
+    
+    
+  
+    <!-- 相關頁面 -->
+  <div class="section">
+    <h2>相關頁面</h2>
+    <a href="../term/室內棒球聯盟新人選秀會.html">室內棒球聯盟新人選秀會</a><br>
+    <a href="../thgame/夏季全國高中棒球聯賽.html">夏季全國高中棒球聯賽</a><br>
+  </div>
+  
+  
+
+
+
+  </div>
+
+<script>
+function showYear(){
+  let year = document.getElementById('year-select').value;
+  document.querySelectorAll('#award-tables table').forEach(tbl=>{
+    tbl.style.display = (tbl.id==='award-'+year) ? '' : 'none';
+  });
+  document.getElementById('year-search').value = year;
+}
+
+function searchYear(){
+  let year = document.getElementById('year-search').value;
+  if(year < 2000 || year > 2051){ alert('年份範圍：2000~2051'); return; }
+  document.getElementById('year-select').value = year;
+  showYear();
+}
+
+// 預設顯示最新年份
+showYear();
+</script>
+
+</body>
+</html>
