@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>室內棒球聯盟新人選秀會</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background: #ffffff;
+  color: #111827;
+  line-height: 1.6;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 80px; /* 關鍵 */
+}
+
+html, body {
+  height: auto;
+  overflow-y: auto;
+}
+
+/* ===== 頂部導覽列 ===== */
+.topnav {
+  display: flex;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 3px solid #e5e7eb;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.topnav a {
+  color: #006000;
+  font-weight:450;
+}
+
+.topnav a:hover {
+  color: #1d4ed8;
+}
+
+/* ===== 頁首 ===== */
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header .sub {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* ===== 區塊 ===== */
+.section {
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-left: 4px solid #111827;
+  padding-left: 8px;
+}
+
+
+
+/* ===== 歷年金手套表格 ===== */
+
+table.stats {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.76em;
+}
+
+table.stats th,
+table.stats td {
+  padding: 6px 8px;
+  text-align: center;
+  border: 1px solid #ddd; /* 改這裡 */
+}
+
+table.stats th {
+  background: #46A3FF;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.best {
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.test {
+  font-weight: bold;
+  color: #FF0000;
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+@media(max-width: 600px) {
+  table.stats th, table.stats td {
+    font-size: 10px;
+    padding: 2px 4px;
+  }
+}
+
+/* ===== 其他獎項連結 ===== */
+.award-summary-wrapper {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: "Noto Sans TC", sans-serif;
+  padding: 0 10px;
+}
+
+.award-summary-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  table-layout: fixed;
+}
+
+.award-summary-table td {
+  padding: 6px 4px; /* 縮小內距 */
+  vertical-align: top;
+  border: 1px solid #ccc;
+  background-color: #fff; /* 白底 */
+}
+
+.award-title {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 0;
+  background: #f4e6f7 !important;
+  border: 1px solid #ccc;
+}
+
+.award-category {
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+  padding: 8px 0;
+  border-radius: 4px;
+}
+
+.award-category.pitcher { background-color: #f4e6f7; } /* 淺藍 */
+.award-category.hitter  { background-color: #f4e6f7; } /* 淺橘 */
+.award-category.other   { background-color: #f4e6f7; } /* 淺灰 */
+.award-category.memorial{ background-color: #f4e6f7; } /* 淺紫 */
+
+.award-item a {
+  display: inline-block;
+  margin: 3px 5px;  /* 空格稍微縮小 */
+  padding: 3px 6px;
+  border-radius: 4px;
+  color: #004b97;
+  text-decoration: none;
+  font-size: 13px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.award-item a:hover {
+  transform: translateY(-1px);
+  background-color: #eef5ff;
+}
+
+@media(max-width: 600px){
+  .award-summary-table td {
+    display: block;
+    width: 100%;
+    margin-bottom: 6px;
+  }
+  .award-item a {
+    font-size: 12px;
+    padding: 2px 4px;
+    margin: 2px 3px;
+  }
+}
+
+.this {
+    font-weight: 600;
+    color: #000000;
+    border-radius: 4px;
+    padding: 2px 4px;
+  }
+
+
+/* 色號1 */
+.hl-123 {
+  background: linear-gradient(transparent 60%, #8ADBD5 60%); 
+  font-weight: bold;
+  padding: 0 2px;
+}
+
+
+.hl-123-content {
+  position: relative;
+  padding-left: 15px;         
+  color: #374151;             
+  font-size: 0.95rem;         
+}
+
+.hl-123-content::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;                   
+  width: 6px;
+  height: 14px;
+  background-color: #8ADBD5;  
+  border-radius: 2px;
+}
+
+/* 色號2 */
+.hl-full-free {
+  background: linear-gradient(transparent 60%, #E99AF0 60%); 
+  font-weight: bold;
+  padding: 0 2px;
+}
+
+.hl-full-free-content {
+  position: relative;
+  padding-left: 15px;
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+.hl-full-free-content::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 6px;
+  height: 14px;
+  background-color: #E99AF0;  
+  border-radius: 2px;
+}
+
+/* 色號3 */
+.hl-abc {
+  background: linear-gradient(transparent 60%, #9ABF5A 60%); 
+  font-weight: bold;
+  padding: 0 2px;
+}
+
+.hl-abc-content {
+  position: relative;
+  padding-left: 15px;
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+.hl-abc-content::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 6px;
+  height: 14px;
+  background-color: #9ABF5A;  
+  border-radius: 2px;
+}
+
+/* 色號4 */
+.hl-abcd {
+  background: linear-gradient(transparent 60%, #E58AA3 60%); 
+  font-weight: bold;
+  padding: 0 2px;
+}
+
+.hl-abcd-content {
+  position: relative;
+  padding-left: 15px;
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+.hl-abcd-content::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 6px;
+  height: 14px;
+  background-color: #E58AA3;  
+  border-radius: 2px;
+}
+
+/* 色號5 */
+.hl-abcde {
+  background: linear-gradient(transparent 60%, #D08AD3 60%); 
+  font-weight: bold;
+  padding: 0 2px;
+}
+
+.hl-abcde-content {
+  position: relative;
+  padding-left: 15px;
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+.hl-abcde-content::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 6px;
+  height: 14px;
+  background-color: #D08AD3;  
+  border-radius: 2px;
+}
+
+/* 職業球隊色系：這裡以藍灰色系為例，你可以自行替換隊色 */
+:root {
+  --pro-primary: #46A3FF; 
+  --pro-accent: #F0F8FF;  /* 亮點藍 */
+  --pro-bg: #F0F8FF;
+}
+
+.decade-box {
+  max-width: 700px;
+  margin-bottom: 5px;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  text-align:center;
+}
+
+.decade-summary {
+  background-color: var(--pro-primary);
+  color: white;
+  overflow: hidden;
+  padding: 5px 7px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+  list-style: none;
+}
+
+/* 職業賽事專用表格：極致扁平化 */
+.pro-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.80rem;
+}
+
+.pro-table th {
+  background: #F0F8FF;
+  padding: 6px;
+  border-bottom: 2px solid #cbd5e1;
+  color: #2D8EF0;
+}
+
+.pro-table td {
+  padding: 5px 8px;
+  border-bottom: 1px solid #f1f5f9;
+  text-align: center;
+}
+
+/* ===== 新增：文章內快速導覽列樣式 ===== */
+.quick-nav {
+  background: #f3f4f6;
+  padding: 10px 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+.quick-nav span {
+  font-weight: bold;
+  margin-right: 10px;
+}
+.quick-nav a {
+  margin-right: 15px;
+  color: #1d4ed8;
+}
+
+</style>
+</head>
+
+<body>
+<div class="container">
+    
+    <nav class="topnav">
+  <a href="../index.html">首頁</a> ⮕ <a href="../term/選秀大會.html">選秀大會</a>  ⮕ <a href="../term/室內棒球聯盟新人選秀會.html">室內棒球聯盟新人選秀會</a> ⮕ <b>羅曼條款</b></nav> 
+
+  <!-- 頁首 -->
+  <div class="header">
+    <h1>羅曼條款</h1>
+    <div class="sub">條款｜室內棒球聯盟</div>
+  </div>
+  
+  <p><b>羅曼條款</b>，正式名稱為<b>外國籍球員新人選秀資格認定條款</b>，是<a href="../league/室內棒球聯盟.html">室內棒球聯盟</a>針對外國籍球員參與新人選秀所制定的特殊資格認定制度。該條款允許未具中華民國國籍，但長期於台灣接受棒球教育與培育之球員，參加室內棒球聯盟新人選秀，並依其培育經歷認定為本土培育球員，以本土球員身份參與選秀，不受一般外籍球員名額及限制規範影響。</p>
+  
+  <!-- 選秀資格 -->
+  <div class="section">
+    <h2>制度目的</h2>
+    
+ <p>室內棒球聯盟成立初期，新人選秀制度主要以「中華民國國籍」作為本土球員認定標準。然而，隨著台灣棒球環境在21世紀後快速發展，台灣逐漸成為亞洲重要棒球培育中心，越來越多外籍家庭、海外學生或國際交流球員，自青少年階段便進入台灣棒球體系。這些球員可能自小在台灣長大讀書、於台灣留學就讀高中、大學，或長期參與台灣業餘及社會人棒球。雖然他們並未取得中華民國國籍，但其棒球養成歷程與本土球員高度相似。聯盟因此開始思考：「球員的棒球培育地，是否比國籍更能代表其與台灣棒球體系的連結？」</p>
+ 
+   </div>
+ 
+  <!-- 選秀資格 -->
+  <div class="section">
+    <h2>羅曼事件</h2>
+    
+ <p>羅曼（Roman Aiden）為美國與加拿大混血兒，出生於北美地區。幼年時期因家庭因素由台灣家庭收養，並自幼於台灣成長，來台後，羅曼接受完整台灣教育，並自青少年時期投入棒球運動。高中階段就讀美和中學，加入校內棒球隊，憑藉優異的投打能力迅速成為球隊主力。</p>
+ 
+  <p>高中三年間，羅曼在台灣高中棒球賽事中展現出色表現，吸引多支室內棒球聯盟球團球探關注，被視為當年度新人選秀的熱門人選。然而，在選秀前的球探調查中，有球團發現羅曼雖長期於台灣接受棒球培育，但因法律國籍仍為外國籍，依照當時室內棒球聯盟規章，他並不屬於新人選秀適用對象，根據當時聯盟外籍球員規定，羅曼若被球團認定為外籍自由球員，可直接與職業球團簽訂外籍球員合約，無須參加新人選秀。此消息曝光後，立即引發球界重大討論。</p>
+  
+  <p>部分球團認為：「羅曼雖然從小在台灣長大，但法律身份仍是外籍球員，依現行規定應按照外籍球員制度處理。」然而，許多高中教練、球迷及球界人士則認為：「羅曼從小接受台灣教育，打台灣高中棒球，與其他高中球員沒有不同，若直接以外籍自由球員簽約，反而破壞新人選秀公平性。」當時最大的爭議在於，羅曼究竟應被視為外籍球員，還是台灣棒球體系培養出的新人</p>
+  
+  <p>事件發生後，室內棒球聯盟召開特別會議，邀集聯盟、球團、球員代表及基層棒球界等相關單位共同研議。經討論後，聯盟於2022年5月18日正式制定「外國籍球員新人選秀資格認定條款」。依據該條款，符合資格之外國籍球員，經室內棒球聯盟新人資格審查後，得認定為本土培育球員。該類球員於聯盟制度上視同本土球員，須透過新人選秀進入職業聯盟，不得以一般外籍自由球員身份直接加盟。此外，本土培育球員於加入職業聯盟後，不占用球隊外籍球員名額（洋將名額），其選秀、簽約及註冊資格皆比照本土新人辦理。</p>
+  
+  <p>2022年5月18日，室內棒球聯盟正式通過「外國籍球員新人選秀資格認定條款」後，羅曼成為該制度下首位通過審查的球員，同年7月舉行的2022年室內棒球聯盟新人選秀會中，羅曼正式參與選秀，並於第一輪獲得球團指名，成為室內棒球聯盟歷史上第一位以「本土培育球員」身份參加新人選秀之外國籍球員。</p>
+
+  </div>
+  
+  <!-- 選秀資格 -->
+  <div class="section">
+    <h2>條款內容</h2>
+    
+    <p>符合以下基本條件條件之外國籍球員，可申請以本土培育球員身份參加新人選秀：</p>
+   <p class="hl-123-content">
+    1.選秀年度8月31日前滿18歲。<br>
+    2.未與任何職業球團簽訂正式合約。<br>
+    3.具備至少3年以上正式棒球訓練或競賽經歷。<br>
+    4.參與至少一項IBL認可之棒球活動或賽事。<br>
+    5.通過新人資格審查。<br>
+    6.達成培育年限認定。<br>
+    </p>
+    
+    </div>
+    
+    
+    <!-- 培育年限認定 -->
+  <div class="section">
+    <h2>培育年限認定</h2>
+    
+   <p>以下為不同階段之認定</p>
+   <p class="hl-123-content">
+    1.高中階段於台灣完成至少三年以上高中教育，並參與台灣高中棒球體系。<br>
+    2.大學階段於台灣大專院校就讀達四年以上並參與大專棒球體系。<br>
+    3.業餘／社會人階段符合以下任一：參與台灣業餘或社會人聯賽四年以上；台灣企業隊、社會人球隊正式登錄三個球季以上；地方棒球聯盟註冊四年以上。<br>
+    4.若球員未完成完整學程，但具有長期台灣棒球培育背景，例如提前離校進入高階訓練、因傷中斷學業、家庭因素離台、就讀國中小但高中大學未符合就讀時程等，可向聯盟提出特殊認定，聯盟將綜合判定後決定是否給予本土身份。<br>
+    </p>
+    
+    </div>
+    
+    <!-- 選秀資格 -->
+  <div class="section">
+    <h2>歷屆適用球員</h2>
+    <table class="stats">
+    <thead>
+      <tr>
+        <th>年度</th>
+        <th>球員</th>
+        <th>國籍背景</th>
+        <th>經歷</th>
+        <th>選秀結果</th>
+        <th>備註</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+        <td>2022</td> 
+        <td>Roman Aiden</td>
+        <td>🇺🇸 美國</td> 
+        <td>美和中學</td>
+        <td>第一輪指名</td>
+        <td>首位適用球員</td>
+      </tr>
+      
+      <tr>
+        <td>2038</td> 
+        <td>Zander Bogart</td>
+        <td>🇳🇱 荷蘭</td> 
+        <td>穀保家商</td>
+        <td>第一輪味全天龍指名</td>
+        <td>首位歐洲籍球員</td>
+      </tr>
+      
+      <tr>
+        <td>2044</td> 
+        <td>田中翔真</td>
+        <td>🇯🇵 日本</td> 
+        <td>台中一中</td>
+        <td>第二輪竹科工程師指名</td>
+        <td></td>
+      </tr>
+      
+      <tr>
+        <td>2046</td> 
+        <td>Jakub Novák</td>
+        <td>🇨🇿 捷克</td> 
+        <td>國立體大</td>
+        <td>第三輪全聯熊指名</td>
+        <td></td>
+      </tr>
+      
+      
+      
+      </tbody>
+      </table>
+    
+   </div>
+    
+    
+  
+    <!-- 相關頁面 -->
+  <div class="section">
+    <h2>相關頁面</h2>
+    <a href="../term/室內棒球聯盟新人選秀會.html">室內棒球聯盟新人選秀會</a><br>
+    <a href="../rule/七年條款.html">七年條款</a><br>
+  </div>
+  
+  
+
+
+
+  </div>
+
+<script>
+function showYear(){
+  let year = document.getElementById('year-select').value;
+  document.querySelectorAll('#award-tables table').forEach(tbl=>{
+    tbl.style.display = (tbl.id==='award-'+year) ? '' : 'none';
+  });
+  document.getElementById('year-search').value = year;
+}
+
+function searchYear(){
+  let year = document.getElementById('year-search').value;
+  if(year < 2000 || year > 2051){ alert('年份範圍：2000~2051'); return; }
+  document.getElementById('year-select').value = year;
+  showYear();
+}
+
+// 預設顯示最新年份
+showYear();
+</script>
+
+</body>
+</html>
