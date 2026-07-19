@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>奇醫海燕</title>
+<link rel="icon" href="https://i.ibb.co/G4fjPR13/Gemini-Generated-Image-leywaqleywaqleyw-Photoroom-1.png" sizes="180x120" type="image/png">
+
+<style>
+/* ===== 全局變數與基礎設定 ===== */
+:root {
+  --primary-color: #0d5c75;    /* 海燕隊色：深海洋藍 */
+  --accent-color: #a5d8ff;     /* 亮點藍 */
+  --text-main: #1f2937;        /* 主要文字深灰 */
+  --text-muted: #4b5563;       /* 次要文字 */
+  --bg-light: #f8fafc;         /* 淺色背景區隔 */
+  --border-color: #e2e8f0;     /* 現代感淡線 */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Arial, "Noto Sans TC", sans-serif;
+  background: #ffffff;
+  color: var(--text-main);
+  line-height: 1.7;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 20px 80px 20px;
+}
+
+/* ===== 頂部導覽列 ===== */
+.topnav {
+  display: flex;
+  gap: 10px;
+  padding: 14px 0;
+  border-bottom: 2px solid var(--border-color);
+  margin-bottom: 20px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+.topnav a { color: var(--text-muted); font-weight: 500; }
+.topnav a:hover { color: var(--primary-color); }
+
+/* ===== 頁首標題 ===== */
+.header {
+  margin-bottom: 20px;
+}
+.header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  color: var(--text-main);
+  font-weight: 700;
+}
+.header .sub {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-top: 5px;
+}
+
+/* ===== 頁面導讀區塊 ===== */
+.page-nav {
+  background: var(--bg-light);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 12px 16px;
+  margin-bottom: 35px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.page-nav-title {
+  font-weight: bold;
+  color: var(--primary-color);
+  border-right: 2px solid var(--border-color);
+  padding-right: 15px;
+}
+.page-nav-links {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.page-nav-links a {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+.page-nav-links a:hover {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+/* ===== 現代網格佈局 ===== */
+.main-layout {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 40px;
+  align-items: start;
+}
+
+/* ===== 左側主要內容區 ===== */
+.content-area {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+}
+
+.section {
+  scroll-margin-top: 20px;
+}
+
+.section h2 {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  margin-top: 0;
+  margin-bottom: 18px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--primary-color);
+  position: relative;
+}
+
+/* ===== 右側基本資料欄 (Infobox) ===== */
+.infobox {
+  background: var(--bg-light);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 20px;
+}
+.infobox-title {
+  background: var(--primary-color);
+  color: #FFFFFF;
+  text-align: center;
+  padding: 6px;
+  font-weight: bold;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+.infobox-section-title {
+  font-weight: bold;
+  background: #e2e8f0;
+  color: var(--text-main);
+  padding: 4px 8px;
+  margin-top: 15px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+.profile div {
+  display: flex;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+.profile div:last-child { border-bottom: none; }
+.profile span {
+  width: 90px;
+  font-weight: 600;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+/* ===== 雜誌風圖文包裝區塊 ===== */
+.media-feature-block {
+  display: flex;
+  gap: 25px;
+  align-items: flex-start;
+  background: var(--bg-light);
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+.media-feature-block.reverse {
+  flex-direction: row-reverse;
+}
+.media-feature-block .text-p {
+  flex: 1;
+}
+
+.feature-media-box {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 260px;
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  padding: 6px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+  text-align: center;
+  box-sizing: border-box;
+}
+.feature-media-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  display: block;
+}
+.feature-media-box .caption {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 6px;
+  line-height: 1.4;
+}
+
+/* ===== 表格現代化設定 ===== */
+.wikitable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+.wikitable th {
+  background: var(--bg-light);
+  border-bottom: 2px solid var(--border-color);
+  padding: 12px;
+  text-align: left;
+  width: 15%;
+  color: var(--primary-color);
+}
+.wikitable td {
+  border-bottom: 1px solid var(--border-color);
+  padding: 12px;
+}
+.player-list { display: flex; flex-wrap: wrap; gap: 10px 15px; }
+.player-no { color: var(--primary-color); font-weight: bold; margin-right: 2px; }
+
+table.stats {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+table.stats th {
+  background: var(--primary-color);
+  color: #fff;
+  padding: 10px;
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+table.stats td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.9rem;
+}
+
+/* ===== 融入你的色號 1 樣式 ===== */
+.hl-123 {
+  background: linear-gradient(transparent 60%, #8ADBD5 60%); 
+  font-weight: bold;
+  padding: 0 2px;
+  white-space: nowrap; /* 加上這行，強制不換行 */
+}
+
+.hl-123-content {
+  position: relative;
+  padding-left: 15px;         
+  color: #374151;             
+  font-size: 0.88rem;         
+}
+.hl-123-content::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;                   
+  width: 5px;
+  height: 13px;
+  background-color: #8ADBD5;  
+  border-radius: 2px;
+}
+
+/* 行動裝置 RWD 適應（修正跑版關鍵） */
+@media (max-width: 992px) {
+  .main-layout { grid-template-columns: 1fr; }
+  .infobox { position: static; margin-bottom: 20px; }
+  /* 修正手機版圖文區塊排列 */
+  .media-feature-block, .media-feature-block.reverse { flex-direction: column; align-items: center; }
+  .feature-media-box { max-width: 100%; }
+  .page-nav { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .page-nav-title { border-right: none; padding-right: 0; padding-bottom: 4px; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  
+  <!-- 導覽列 -->
+  <nav class="topnav">
+    <a href="../index.html">首頁</a> ⮕ <a href="teams.html">球隊</a> ⮕ <a href="台灣球隊.html">台灣球隊</a> ⮕ <a href="室內棒球聯盟球隊.html">室內棒球聯盟球隊</a> ⮕ <b>奇醫海燕</b>
+  </nav>      
+
+  <!-- 頁首標題 -->
+  <div class="header">
+    <h1>奇醫海燕</h1>
+    <div class="sub">球隊｜室內棒球聯盟</div>
+  </div>
+
+  <!-- 頁面導讀區塊 -->
+  <div class="page-nav">
+    <div class="page-nav-title">頁面導讀</div>
+    <div class="page-nav-links">
+      <a href="#history">球隊歷史</a>
+      <a href="#branding">標誌與商標</a>
+      <a href="#roster">現役成員</a>
+      <a href="#manager">歷任總教練</a>
+    </div>
+  </div>
+
+  <!-- 主版面網格 -->
+  <div class="main-layout">
+    
+    <!-- 左側主要內容 -->
+    <div class="content-area">
+      
+      <!-- 簡介 -->
+      <div class="section">
+        <p style="font-size: 1.05rem; margin: 0;">
+          <b>奇醫海燕</b>（英文：QIYI Petrel）是一支台灣的職業棒球隊伍，所屬聯盟為<a href="../league/室內棒球聯盟.html">室內棒球聯盟</a>。
+          該隊的所屬城市為澎湖縣，主場則是位於澎湖縣的<a href="../stadium/海燕球場.html">海燕球場</a>，二軍農場基地以及比賽主場則是位於雲林縣<a href="../stadium/北港棒球運動園區.html">北港棒球運動園區</a>。
+          該隊創立於2045年，前身為澎湖、金門、馬祖共同組成的離島聯隊，目前球隊營運、經營則是由奇雋運動集團旗下子公司奇雋醫療科技股份有限公司負責。
+        </p>
+      </div>
+
+      <!-- 球隊歷史 -->
+      <div class="section" id="history">
+        <h2>球隊歷史</h2>
+        <p>奇醫海燕隊的前身為「離島聯隊」。該隊成立於2020年代進入全面商業化浪潮之際，為聯盟中少數由地方政府與在地企業共同支撐的球隊。當時球隊的營運資金主要來自金門酒廠盈餘提撥、金門在地刀具業者聯名贊助，以及澎湖與馬祖的觀光發展基金。在成立初期，球隊藉由這筆資金在離島地區建立青訓系統，並培養出多名具備離島血統的本土球員。憑藉對離島特殊氣候與強風環境的熟悉度，球隊在主場賽事中具備一定的地理優勢。</p>
+        <p>然而進入2030年代後，隨著職棒環境引入數據科學與球員薪資大幅提升，缺乏大型跨國財團資金挹注的離島聯隊在自由市場上失去競爭力，導致核心球員陸續流失。由於球隊缺乏資金更新先進的數據分析與訓練設備，基層養成與一軍戰績逐漸下滑。2042年賽季，球隊創下單季僅獲35勝的低谷紀錄，長期贊助的金門酒廠遂發出通牒，表示若戰績未能脫離墊底將全面撤資。2043年7月，球團總經理向聯盟發表公開信，坦言球隊因連年虧損已達經營臨界點，隨後棒球界傳出球隊即將解散或與本島球隊合併的傳聞。</p>
+        <p>2045年4月，經營精準醫療與運動科技的「奇雋運動集團」與離島聯隊高層展開轉賣談判。奇雋集團承諾接手後將永久保留澎湖、金門、馬祖的主場地位，並宣布由旗下子公司「奇雋醫療科技」負責球隊實際營運。</p>
+        <p>同年11月4日，奇雋集團於台北圓山飯店舉行記者會，董事長林奇雋與執行長蘇以文親自出席，正式宣布新隊名為「奇醫海燕隊」。首任總教練由曾帶領國家隊奪冠、具備多年國際賽執教經驗的陸廷威出任。</p>
+        <p>2046年至2049年間，奇雋醫療科技對球隊進行了大規模的硬體與後勤改革。球團首先於澎湖縣興建全新的「海燕球場」，該球場在草皮與地板下方埋設了數萬個感測器，用以即時監測球員跑動與投打時的關節、骨骼壓力。此外，球員宿舍亦全面配置微重力神經修復艙，並為一、二軍球員編制專屬的運動醫學、營養與數據分析團隊，每日監控肌肉疲勞度與各項生理指標，以此降低球員傷兵率，並加速年輕選手的養成。</p>
+        <p>2050年球季前，首任總教練陸廷威因身體健康因素決定辭去總教練一職，球團隨後接受其推薦，由曾於國家隊長期合作、具備美國職棒小聯盟執教經驗的首席教練陳昭遠接掌兵符，陸廷威則轉任球團高級顧問，持續協助青訓體系的培育工作。</p>
+        <p>陳昭遠雖然被球迷批評常揠苗助長、還沒養成熟的年輕球員就急著拉上一軍，但同時其大膽啟用新人的作風，也成功讓多位潛力新秀在短時間內累積一軍實戰經驗，並在醫療團隊的嚴密保護下迅速適應職棒強度，為球隊注入了關鍵的活力與板凳深度。</p>
+        <p>在教練團人事交替與新人換血的震盪期中，奇醫海燕隊在2050年與2051年賽季仍展現出穩定的團隊戰力。雖然這兩個賽季皆在例行賽尾聲以些微勝差未能晉級季後賽，但整體的球員結構、戰術執行力與醫療後勤體系，已較離島聯隊時期有顯著提升，持續維持在爭冠的競爭行列中。</p>
+      </div>   
+
+      <!-- 標誌、制服和顏色 -->
+      <div class="section" id="branding">
+        <h2>標誌、制服和顏色</h2>
+        <div class="media-feature-block">
+          <div class="text-p">
+            <p><span class="hl-123">球隊商標文字設計</span></p>
+            <p>2045年11月，隨著奇雋醫療科技正式接手球隊經營權，球隊發布了現行的「破空海燕」商標文字，取代了離島聯隊時期較為傳統的方塊字體。這款設計的核心在於展現「精準醫療」與「極致速度」的融合，字體採用了大幅度向右傾斜的重裝斜體，象徵海燕在強風中俯衝的動態瞬間。</p>
+            <p>在文字細節上，字母的邊緣處理借鑑了手術刀的銳利切角，特別是在首字母「P」與末字母「s」的延伸線條中，展現出極高的物理精確度。字體內部嵌入了水平的數位干擾紋路與速度線。配色方案採用了從底部的「深海藍」向上漸變至頂部的「手術室藍」，強調其現代的醫療科技背景。文字上方盤旋著一隻極簡化的海燕剪影，其翅膀的傾斜角度與字體完全平行，營造出一種數據對齊的嚴謹美感。</p>
+          </div>
+          <div class="feature-media-box">
+            <img src="https://i.ibb.co/G4fjPR13/Gemini-Generated-Image-leywaqleywaqleyw-Photoroom-1.png" alt="球隊商標文字設計">
+            <div class="caption">▲ 2045年發布的「破空海燕」商標文字設計</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 現役成員 -->
+      <div class="section" id="roster">
+        <h2>現役成員</h2>
+        <table class="wikitable">
+          <tr>
+            <th>教練團</th>
+            <td>
+              <div class="player-list">
+                <span class="player-item"><span class="player-no">88</span>王銀鋒（總教練）</span>
+                <span class="player-item"><span class="player-no">71</span>余信德（內野教練）</span>
+                <span class="player-item"><span class="player-no">99</span>張家豪（投捕教練）</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th>投手</th>
+            <td>
+              <div class="player-list">
+                <span class="player-item"><span class="player-no">1</span>陳降谷</span>
+                <span class="player-item"><span class="player-no">8</span>吳宇哲</span>
+                <span class="player-item"><span class="player-no">11</span>江睿辰</span>
+                <span class="player-item"><span class="player-no">17</span>曹佑恩</span>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- 歷任總教練 -->
+      <div class="section" id="manager">
+        <h2>歷任總教練</h2>
+        <table class="stats">
+          <thead>
+            <tr>
+              <th>編號</th>
+              <th>教練名</th>
+              <th>背號</th>
+              <th>接任年份</th>
+              <th>卸任年份</th>
+              <th>台灣大賽冠軍</th>
+              <th>備註</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>8</td>
+              <td>王銀鋒</td>
+              <td>88</td>
+              <td>2041</td>
+              <td>-</td>
+              <td>2次 (2048、2051)</td>
+              <td>現任</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+    
+    <!-- 右側：固定基本資料欄 -->
+    <div class="sidebar-area">
+      <div class="infobox">
+        <div class="infobox-title">奇醫海燕 QiYi Petrel</div>
+        
+        <div class="profile">
+          <div><span>母企業</span>奇雋醫療科技股份有限公司</div>
+          <div><span>創隊日期</span>2045年5月19日</div>
+        </div>
+         
+        <div class="infobox-section-title">分區</div>
+        <div style="padding-left: 4px;">室內棒球聯盟 東區</div>
+        
+        <div class="infobox-section-title">主場球場</div>
+        <div style="padding-left: 4px;">海燕球場</div>
+          
+        <div class="infobox-section-title">隊史冠軍頭銜</div>
+        <div style="padding-left: 4px; display: flex; flex-direction: column; gap: 6px; margin-top: 5px;">
+          <div class="hl-123-content">年度第一：2034、2051</div>
+          <div class="hl-123-content">總冠軍：2028、2038、2048、2050</div>
+        </div>
+          
+        <div class="infobox-section-title">球團核心成員</div>
+        <div class="profile">
+          <div><span>董事長</span>陳紹鴻</div>
+          <div><span>球團領隊</span>林鎮岳</div>
+          <div><span>球團經理</span>張家豪</div>
+          <div><span>總教練</span>余信德</div>
+          <div><span>隊長</span>陳振昌</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
