@@ -240,23 +240,23 @@ a:hover { text-decoration: underline; }
 .player-list { display: flex; flex-wrap: wrap; gap: 10px 15px; }
 .player-no { color: var(--primary-color); font-weight: bold; margin-right: 2px; }
 
+/* ===== 表格 ===== */
 table.stats {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 12px;
+  margin-top: 10px;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.85em;
 }
-table.stats th {
-  background: var(--primary-color);
-  color: #fff;
-  padding: 10px;
-  font-weight: 500;
-  font-size: 0.85rem;
-}
+
+table.stats th,
 table.stats td {
-  padding: 10px;
+  background: var(--primary-color);
+  padding: 6px 8px;
   text-align: center;
-  border-bottom: 1px solid var(--border-color);
-  font-size: 0.9rem;
+  border-bottom: 1px solid #ddd;
 }
 
 /* ===== 融入你的色號 1 樣式 ===== */
