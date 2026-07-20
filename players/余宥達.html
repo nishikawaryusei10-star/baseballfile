@@ -3,503 +3,212 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> 余宥達 </title>
-
-<style>
-body {
-  margin: 0;
-  font-family: "Noto Sans TC", sans-serif;
-  background: #ffffff;
-  color: #111827;
-  line-height: 1.6;
-}
-
-a {
-  color: #1d4ed8;
-  text-decoration: none;
-}
-a:hover { text-decoration: underline; }
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  padding-bottom: 80px; /* 關鍵 */
-}
-
-html, body {
-  height: auto;
-  overflow-y: auto;
-}
-
-/* ===== 橫幅照片 ===== */
-.banner-photo {
-  width: 100%;
-  height: 320px;
-  background-color: #e5e7eb;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #6b7280;
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-
-/* ===== 頁首 ===== */
-.header {
-  margin-bottom: 24px;
-}
-
-.header h1 {
-  margin: 0;
-  font-size: 2rem;
-}
-
-.header .sub {
-  font-size: 0.9rem;
-  color: #4b5563;
-}
-
-/* ===== 主版面 ===== */
-.section {
-  margin-bottom: 28px;
-}
-
-.section h2 {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
-  border-left: 4px solid #111827;
-  padding-left: 8px;
-}
-
-/* ===== 基本資料 ===== */
-.profile {
-  font-size: 0.95rem;
-}
-
-.profile div {
-  padding: 5px 0;
-  border-bottom: 1px solid #e5e7eb;
-}
-
-.profile span {
-  display: inline-block;
-  width: 100px;
-  font-weight: 600;
-  color: #374151;
-}
-
-/* ===== 經歷 ===== */
-.career a {
-  display: inline-block;
-}
-
-.no-break {
-  white-space: nowrap; /* 括號內文字不換行 */
-}
-
-/* ===== 年表 ===== */
-.timeline {
-  font-size: 0.95rem;
-}
-
-.timeline div {
-  margin-bottom: 6px;
-}
-
-.timeline b {
-  display: inline-block;
-  width: 60px;
-}
-
-/* ===== 頂部導覽列 ===== */
-.topnav {
-  display: flex;
-  gap: 10px;
-  padding: 12px 0;
-  border-bottom: 3px solid #e5e7eb;
-  margin-bottom: 10px;
-  font-size: 0.85rem;
-}
-
-.topnav a {
-  color: #006000;
-  font-weight:450;
-}
-
-.topnav a:hover {
-  color: #1d4ed8;
-}
-
-/* ===== 表格 ===== */
-table.stats {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-  font-size: 0.85em;
-}
-
-table.stats th,
-table.stats td {
-  padding: 6px 8px;
-  text-align: center;
-  border-bottom: 1px solid #ddd;
-}
-
-table.stats th {
-  background: #46A3FF;
-  color: #FFFF37;
-  font-weight: 600;
-}
-
-table.stats tbody tr:nth-child(even) td {
-  background: #ECF5FF;
-}
-
-table.stats th:nth-child(2),
-table.stats td:nth-child(2) {
-  white-space: nowrap;
-}
-
-.best {
-  font-weight: bold;       /* 加粗字體 */        
-  border-radius: 4px;
-  padding: 2px 4px;
-}
-
-.test {
-  font-weight: bold;       /* 加粗字體 */
-  color: #FF0000;          /* 改成紅色 */
-  border-radius: 4px;
-  padding: 2px 4px;
-}
-
-/* ===== Footer ===== */
-.footer {
-  border-top: 1px solid #d1d5db;
-  margin-top: 48px;
-  padding-top: 16px;
-  text-align: center;
-  font-size: 0.8rem;
-  color: #6b7280;
-}
-
-/* ===== 右側簡潔照片欄 ===== */
-.side-photo-box {
-  float: right;
-  width: 250px; /* 照片寬度 */
-  margin: 0 0 20px 20px;
-  padding: 5px;
-  border: 1px solid #e5e7eb;
-  background-color: #ffffff;
-  text-align: center;
-}
-
-.side-photo-box img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.photo-caption {
-  font-size: 0.8rem;
-  color: #4b5563;
-  padding: 8px 4px 4px 4px;
-  line-height: 1.4;
-  border-top: 1px solid #f3f4f6;
-  margin-top: 5px;
-}
-
-/* 手機版自動置中 */
-@media (max-width: 600px) {
-  .side-photo-box {
-    float: none;
-    margin: 0 auto 20px auto;
-    width: 90%;
-  }
-}
-</style>
+<title>余宥達</title>
+<link rel="stylesheet" href="../css/players.css">
 </head>
 
-<body>
+<body class="team-petrel">
 
 <div class="container">
-    
+  
+  <!-- 導覽列 -->
   <nav class="topnav">
-  <a href="../index.html">首頁</a> ⮕ <a href="players_overview.html">球員</a> ⮕  <a href="taiwan_players_overview.html">台灣球員</a> ⮕  <b>余宥達</b> </nav>     
+    <a href="../index.html">首頁</a> ⮕ <a href="players_overview.html">球員</a> ⮕ <a href="taiwan_players_overview.html">台灣球員</a> ⮕ <b>余宥達</b>
+  </nav>       
 
-  <!-- 頁首 -->
+  <!-- 頁首標題 -->
   <div class="header">
     <h1>余宥達</h1>
-    <div class="sub"> YU,YOU-DA｜內野手（SS）</div>
-  </div>
-  
-  <!-- 右側照片欄 -->
-  <div class="side-photo-box">
-    <img src="https://i.ibb.co/LXmdQ73m/6861815-B-4-C2-A-4017-AB56-415-D437-A3-F2-F.png" alt="余宥達">
-    <div class="photo-caption">
-      余宥達於2052年效力奇醫海燕隊
-    </div>
-  </div>
-  
-
-  <!-- 基本資料 -->
-  
-  <div class="section">
-    <h2>基本資料</h2>
-    <div class="profile">
-      <div><span>出生日期</span>2028 年 11 月 11 日（23歲）</div>
-      <div><span>身高體重</span>176 公分／75 公斤</div>
-      <div><span>出生地</span>台灣・台中市</div>
-      <div><span>投打習慣</span>右投左右開弓</div>
-      <div><span>守備位置</span>內野手 SS</div>
-      <div><span>職棒選秀</span><a href="../term/2047年室內棒球聯盟新人選秀會.html">2047年室內棒球聯盟選秀會</a><a href="../teams/北鐵狼.html">北鐵狼隊</a>第一輪指名</div>
-    </div>
+    <div class="sub">球員｜室內棒球聯盟 (IBL)</div>
   </div>
 
-  <!-- 球員經歷 -->
-  <div class="section">
-    <h2>球員經歷</h2>
-    <div class="career">
-      <a href="#">彰化縣</a><a href="#">萬來國小少棒隊</a></br>
-      <a href="#">彰化縣</a><a href="#">北斗國中青少棒隊</a></br>
-      <a href="#">彰化縣</a><a href="../highschool/彰化高中青棒隊.html">彰化高中青棒隊</a></br>
-      <a href="#">室內棒球聯盟</a><a href="../teams/北鐵狼.html">北鐵狼隊</a><span class="no-break">（2047/08~2051）</span></br>
-      <a href="#">室內棒球聯盟</a><a href="../teams/奇醫海燕.html">奇醫海燕隊</a>（2052～）</br>
-      <a href="#">室內棒球聯盟</a><a href="../teams/國軍鳳凰.html">國軍鳳凰隊</a>（2047/08～2047/06）
-    </div>
-  </div>
-
-  <!-- 球員介紹 -->
-  <div class="section">
-    <h2>球員介紹</h2>
-余宥達是一位來自彰化縣的棒球選手，守備位置為游擊手，現效力於室內棒球聯盟奇醫海燕隊。其以頂尖的速度、穩定且高水準的游擊守備聞名，同時具備優異的上壘能力與成熟的比賽閱讀能力，是聯盟當今最具代表性的首棒型內野手之一。<br>
-<br>
-
-余宥達自小便展現出過人的運動天賦。來自彰化縣的他，在萬來國小就讀期間加入學校棒球隊，國小時期的他身材較同儕矮小，守備位置也由一開始練的二壘，在高年級被移防至外野，在高年級時遇見傳奇教練沈祥霖，幫助余宥達奠定打擊基礎，並且重新讓他回到中線。進入北斗國中後，迅速成為校隊核心，憑藉靈活的身手與全面的打擊技巧，在全國賽事中嶄露頭角，開始受到球探關注。<br>
-<br>
-高中時期，余宥達就讀於棒球名校彰化高中。儘管球隊內競爭激烈、好手如雲，他仍在高二時站穩主戰游擊手的位置，並在黑豹旗與高中聯賽多次率隊打入淘汰賽，展現出超齡的穩定度與領袖氣質。由於其腳程極快、擅長盜壘與短打破壞戰術，球探圈給予他「小跑車」的稱號，並普遍看好其職業發展。<br>
-<br>
-值得一提的是，余宥達在高中時期開始練習左右開弓。起初僅為應對右投手，但在教練團建議下逐步系統化調整，最終成功轉型為正式的左右開弓打者，使其在打擊對位與上壘穩定性上更具戰術價值。高三賽季，余宥達接下隊長一職，帶領彰化高中於各項賽事繳出亮眼成績，不僅在黑豹旗拿下最佳游擊手與打擊王，更率隊奪得睽違 9 年的全國高中聯賽冠軍，正式確立其頂級高中游擊手的地位。<br>
-<br>
-選秀前評價極高的余宥達，在第一輪即被北鐵狼指名。依聯盟規定，他在選秀後先行入伍服役，期間球隊為其設定明確養成目標，包括提升身體強度以及修正左打揮擊動作。2048年余宥達在國軍隊從一軍開季，退伍後也被球隊安排在一軍，補上因主戰游擊手鄭育成進入國軍隊所留下的空缺。原本僅是測試其養成成果，未料他迅速適應職業層級節奏，並直接站穩先發游擊手與開路先鋒位置。新人球季，余宥達表現堪稱震撼聯盟—— 以.348的聯盟最高打擊率奪下「打擊王」，同時成功盜壘47次，展現壘間破壞力。他也幫助北鐵狼在季後賽一路過關斬將，最終奪下年度總冠軍，並一舉拿下新人王與金手套獎，成為當季最受矚目的新星<br>
-<br>
-2049年，鄭育成服役完畢回歸，球隊仍選擇讓余宥達續任游擊手，並將鄭育成調整至三壘，顯示教練團對其守備與穩定度的高度信任。該季他在6月25日擊出生涯首支全壘打，距離職棒初登場已累積776個打席，堪稱耐心與養成並進的象徵。該年他擊出208支安打，僅以一支之差惜敗林昱傑，無緣安打王，但仍以65次盜壘成功奪下盜壘王，打擊率.344名列聯盟第二，同時敲出3支全壘打，顯示長打能力開始成形。球隊對他的評價是：「余宥達不僅是一名能製造進攻機會的首棒打者，更是一名能夠改變比賽節奏與走向的核心球員。」<br>
-<br>
-2050 年，余宥達延續穩定表現，再以57次盜壘成功拿下生涯第二座盜壘王，正式成為聯盟最具威脅性的跑壘型球員。2051年，余宥達的長打能力終於全面開花。雖在季中因腓腸肌輕度撕裂傷休息一個多月，仍以穩定的擊球內容與成熟的選球能力，最終奪下打擊王，並繳出11支全壘打的生涯新高，完成從「速度型游擊手」到「全能型攻守核心」的重要進化。</br>
-</br>
-2051年賽季結束後，北鐵狼球團內部針對是否提前端出延長合約給余宥達，出現明顯路線分歧。當時余宥達距離完全自由球員資格僅剩2年控制期，正值身價與場上影響力的交會點。最終，北鐵狼與奇醫海燕隊達成交易協議：奇醫海燕隊獲得余宥達，北鐵狼隊獲得內野手林柏佑、陳冠佑、外野手張承恩、現金1200萬新台幣。
-  </div>
-
-  <!-- 個人年表 -->
-  <div class="section">
-    <h2>個人年表</h2>
-    <div class="timeline">
-      <div><b>2047年</b>7月，投入室內棒球聯盟選秀會，被北鐵狼隊在第一輪指名，後以1896萬台幣加盟</div>
-      <div><b>2047年</b>7月，分科測驗錄取中國醫藥大學運動醫學系，不過最後未就讀</div>
-      <div><b>2048年</b>季末，在新人王票選排名第一，拿下該年度新人王</div>
-      <div><b>2049年</b>9月29日，以20歲又321天的年紀達成單季200安，刷新原先由杜承岳保持的21歲又94天</div>
-      <div><b>2050年</b>11月7日，原入選該年世界16強棒球錦標賽，但在自辦熱身賽被觸身球砸傷，預計要休養4～6週，後續辭退該屆賽事</div>
-      <div><b>2051年</b>5月29日，對戰味全天龍隊的比賽受傷，後續診斷為腓腸肌輕度撕裂傷</div>
-      <div><b>2051年</b>5月30日，放入30日傷兵名單</div>
-      <div><b>2051年</b>12月19日，被交易到奇醫海燕隊</div>
-    </div>
-  </div>
-
-  <!-- 生涯成績 -->
- <!-- 生涯成績 -->
-  <div class="section">
-    <h2>職棒生涯成績</h2>
-    室內棒球聯盟一軍打擊成績：
-    <table class="stats">
-    <thead>
-      <tr>
-        <th>年度</th>
-        <th>球隊</th><th>G</th><th>PA</th><th>AB</th><th>H</th>
-        <th>2B</th><th>3B</th><th>HR</th>
-        <th>RBI</th><th>R</th><th>SB</th><th>TB</th><th>SO</th><th>BB</th><th>SAC</th><th>SF</th>
-        <th>AVG</th><th>OBP</th><th>SLG</th><th>OPS</th>
-      </tr>
-    </thead>
-    <tbody>
-
-      <tr>
-      <td>2048</td>
-      <td>北鐵狼</td>
-      <td>114</td>
-      <td>469</td>
-      <td>417</td>
-      <td>145</td>
-      <td>17</td>
-      <td>7</td>
-      <td>0</td>
-      <td>38</td>
-      <td>72</td>
-      <td>47</td>
-      <td>176</td>
-      <td>45</td>
-      <td>41</td>
-      <td>4</td>
-      <td>3</td>
-      <td><span class="best">.348</span></td>
-      <td>.403</td>
-      <td>.422</td>
-      <td>.825</td>
-    <tr>
-      <td>2049</td>
-      <td>北鐵狼</td>
-      <td>148</td>
-      <td>677</td>
-      <td>605</td>
-      <td>208</td>
-      <td>24</td>
-      <td>11</td>
-      <td>1</td>
-      <td>47</td>
-      <td>101</td>
-      <td><span class="best">65</span></td>
-      <td>257</td>
-      <td>69</td>
-      <td>67</td>
-      <td>3</td>
-      <td>2</td>
-      <td>.344</td>
-      <td>.408</td>
-      <td>.425</td>
-      <td>.833</td>
-    </tr>
-    <tr>
-      <td>2050</td>
-      <td>北鐵狼</td>
-      <td>135</td>
-      <td>600</td>
-      <td>541</td>
-      <td>187</td>
-      <td>19</td>
-      <td>9</td>
-      <td>3</td>
-      <td>42</td>
-      <td>87</td>
-      <td><span class="best">57</span></td>
-      <td>233</td>
-      <td>60</td>
-      <td>58</td>
-      <td>1</td>
-      <td>0</td>
-      <td>.346</td>
-      <td>.409</td>
-      <td>.431</td>
-      <td>.840</td>
-    </tr>
-    <tr>
-      <td>2051</td>
-      <td>北鐵狼</td>
-      <td>118</td>
-      <td>539</td>
-      <td>487</td>
-      <td>174</td>
-      <td>29</td>
-      <td>5</td>
-      <td>11</td>
-      <td>89</td>
-      <td>78</td>
-      <td>34</td>
-      <td>246</td>
-      <td>81</td>
-      <td>50</td>
-      <td>1</td>
-      <td>1</td>
-      <td><span class="best">.357</span></td>
-      <td>.416</td>
-      <td>.505</td>
-      <td>.921</td>
-    </tr>
-       <tr>
-      <td>2052</td>
-      <td>奇醫海燕</td>
-      <td>-</td>
-      <td>-</td>
-      <td>-</td>
-      <td>-</td>
-      <td>-</td>
-      <td>-</td>
-      <td>-</td>
-      <td>-</td>
-      <td>-</td>
-      <td>-</td>
-      <td>-</td>
-      <td>-</td>
-      <td>-</td>
-      <td>-</td>
-      <td>-</td>
-      <td>-</td>
-      <td>-</td>
-      <td>-</td>
-      <td>-</td>
-    </tr>
-    <tr class="career">
-      <td colspan="2">通算成績</td>
-      <td>515</td>
-      <td>2285</td>
-      <td>2050</td>
-      <td>714</td>
-      <td>89</td>
-      <td>32</td>
-      <td>15</td>
-      <td>216</td>
-      <td>338</td>
-      <td>203</td>
-      <td>912</td>
-      <td>255</td>
-      <td>218</td>
-      <td>9</td>
-      <td>6</td>
-      <td>.348</td>
-      <td>.409</td>
-      <td>.445</td>
-      <td>.854</td>
-    </tr>
-
-
-  
-    </tbody>
-  </table>
-  </div>
-
-  <!-- 個人獎項 -->
-  <div class="section">
-    <h2>個人獎項</h2>
-    ・2046年黑豹旗全國高中棒球聯賽安打王、最佳游擊手<br>
-    ・2047年王貞治盃全國青棒錦標賽安打獎、最佳游擊手獎<br>
-    ・2047年夏季全國高中聯賽賽會MVP、最佳游擊手、打擊王<br>
-    ・<a href="../term/室內棒球聯盟年度打擊王.html">室內棒球聯盟年度打擊王</a>：2048、2051<br>
-    ・<a href="../term/室內棒球聯盟年度盜壘王.html">室內棒球聯盟年度盜壘王</a>：2049、2050<br>
-    ・<a href="../term/室內棒球聯盟年度新人王.html">室內棒球聯盟年度新人王</a>：2048</br>
-    ・<a href="../term/室內棒球聯盟年度金手套.html">室內棒球聯盟年度金手套</a>游擊手：2050、2051</br>
-    ・<a href="../term/室內棒球聯盟年度最佳陣容.html">室內棒球聯盟年度最佳陣容</a>第一隊游擊手：2051</br>
-    ・<a href="../term/室內棒球聯盟年度最佳陣容.html">室內棒球聯盟年度最佳陣容</a>第二隊游擊手：2049</br>
+  <!-- 主版面網格 -->
+  <div class="main-layout">
     
-  </div>
+    <!-- 左側主要內容區 -->
+    <div class="content-area">
+      
+      <!-- 簡介 -->
+      <div class="section">
+        <p style="font-size: 1.05rem; margin: 0;">
+          <b>余宥達</b>（英文：YU, YOU-DA，2028年11月11日－）是一位來自台灣台中市的職業棒球選手，守備位置為游擊手，現效力於<a href="../league/室內棒球聯盟.html">室內棒球聯盟</a>的<a href="../teams/奇醫海燕.html">奇醫海燕隊</a>。其以頂尖的速度、穩定且高水準的游擊守備聞名，同時具備優異的上壘能力與成熟的比賽閱讀能力，是聯盟當今最具代表性的首棒型內野手之一。
+        </p>
+      </div>
 
-  <!-- 特殊事蹟 -->
-  <div class="section">
-    <h2>特殊事蹟</h2>
-    ・2046年U18世界青棒錦標賽中華代表隊<br>
-    ・室內棒球聯盟明星賽：2048～2051
-  </div>
+      <!-- 球員經歷 -->
+      <div class="section">
+        <h2>球員經歷</h2>
+        <div class="career-list">
+          <a href="#">彰化縣萬來國小少棒隊</a><br>
+          <a href="#">彰化縣北斗國中青少棒隊</a><br>
+          <a href="../highschool/彰化高中青棒隊.html">彰化高中青棒隊</a><br>
+          <a href="../teams/北鐵狼.html">北鐵狼隊</a><span class="no-break">（2047/08~2051）</span><br>
+          <a href="../teams/奇醫海燕.html">奇醫海燕隊</a>（2052～）<br>
+          <a href="../teams/國軍鳳凰.html">國軍鳳凰隊</a>（2047/08～2048/06）
+        </div>
+      </div>   
 
-  <!-- 相關新聞 -->
-  <div class="section">
-    <h2>相關新聞</h2>
-    <a href="#">余宥達以速度與守備叩關職棒選秀 首輪呼聲高仍有成長課題</a><br>
-    <a href="#"></a>
-  </div>
+      <!-- 球員介紹 -->
+      <div class="section">
+        <h2>球員介紹</h2>
+        <p>余宥達自小便展現出過人的運動天賦。來自彰化縣的他，在萬來國小就讀期間加入學校棒球隊，國小時期的他身材較同儕矮小，守備位置也由一開始練的二壘，在高年級被移防至外野。在高年級時遇見傳奇教練沈祥霖，幫助余宥達奠定打擊基礎，並且重新讓他回到中線。進入北斗國中後，迅速成為校隊核心，憑藉靈活的身手與全面的打擊技巧，在全國賽事中嶄露頭角，開始受到球探關注。</p>
+        <p>高中時期，余宥達就讀於棒球名校彰化高中。儘管球隊內競爭激烈、好手如雲，他仍在高二時站穩主戰游擊手的位置，並在黑豹旗與高中聯賽多次率隊打入淘汰賽，展現出超齡的穩定度與領袖氣質。由於其腳程極快、擅長盜壘與短打破壞戰術，球探圈給予他「小跑車」的稱號，並普遍看好其職業發展。</p>
+        <p>值得一提的是，余宥達在高中時期開始練習左右開弓。起初僅為應對右投手，但在教練團建議下逐步系統化調整，最終成功轉型為正式的左右開弓打者，使其在打擊對位與上壘穩定性上更具戰術價值。高三賽季，余宥達接下隊長一職，帶領彰化高中於各項賽事繳出亮眼成績，不僅在黑豹旗拿下最佳游擊手與打擊王，更率隊奪得睽違 9 年的全國高中聯賽冠軍，正式確立其頂級高中游擊手的地位。</p>
+        <p>選秀前評價極高的余宥達，在第一輪即被北鐵狼指名。依聯盟規定，他在選秀後先行入伍服役，期間球隊為其設定明確養成目標，包括提升身體強度以及修正左打揮擊動作。2048年余宥達在國軍隊從一軍開季，退伍後也被球隊安排在一軍，補上因主戰游擊手鄭育成進入國軍隊所留下的空缺。原本僅是測試其養成成果，未料他迅速適應職業層級節奏，並直接站穩先發游擊手與開路先鋒位置。新人球季，余宥達表現堪稱震撼聯盟—— 以.348的最佳打擊率奪下「打擊王」，同時成功盜壘47次，展現壘間破壞力。他也幫助北鐵狼在季後賽一路過關斬將，最終奪下年度總冠軍，並一舉拿下新人王與金手套獎，成為當季最受矚目的新星。</p>
+        <p>2049年，鄭育成服役完畢回歸，球隊仍選擇讓余宥達續任游擊手，並將鄭育成調整至三壘，顯示教練團對其守備與穩定度的高度信任。該季他在6月25日擊出生涯首支全壘打，距離職職棒初登場已累積776個打席，堪稱耐心與養成並進的象徵。該年他擊出208支安打，僅以一支之差惜敗林昱傑，無緣安打王，但仍以65次盜壘成功奪下盜壘王，打擊率.344名列聯盟第二，同時敲出3支全壘打，顯示長打能力開始成形。球隊對他的評價是：「余宥達不僅是一名能製造進攻機會的首棒打者，更是一名能夠改變比賽節奏與走向的核心球員。」</p>
+        <p>2050 年，余宥達延續穩定表現，再以57次盜壘成功拿下生涯第二座盜壘王，正式成為聯盟最具威脅性的跑壘型球員。2051年，余宥達的長打能力終於全面開花。雖在季中因腓腸肌輕度撕裂傷休息一個多月，仍以穩定的擊球內容與成熟的選球能力，最終奪下打擊王，並繳出11支全壘打的生涯新高，完成從「速度型游擊手」到「全能型攻守核心」的重要進化。</p>
+        <p>2051年賽季結束後，北鐵狼球團內部針對是否提前端出延長合約給余宥達，出現明顯路線分歧。當時余宥達距離完全自由球員資格僅剩2年控制期，正值身價與場上影響力的交會點。最終，北鐵狼與奇醫海燕隊達成交易協議：奇醫海燕隊獲得余宥達，北鐵狼隊獲得內野手林柏佑、陳冠佑、外野手張承恩、現金1200萬新台幣。</p>
+      </div>
 
+      <!-- 個人年表 -->
+      <div class="section">
+        <h2>個人年表</h2>
+        <div class="timeline">
+          <div class="timeline-item"><span class="timeline-year">2047年</span><span>7月，投入室內棒球聯盟選秀會，被北鐵狼隊在第一輪指名，後以1896萬台幣加盟</span></div>
+          <div class="timeline-item"><span class="timeline-year">2047年</span><span>7月，分科測驗錄取中國醫藥大學運動醫學系，不過最後未就讀</span></div>
+          <div class="timeline-item"><span class="timeline-year">2048年</span><span>季末，在新人王票選排名第一，拿下該年度新人王</span></div>
+          <div class="timeline-item"><span class="timeline-year">2049年</span><span>9月29日，以20歲又321天的年紀達成單季200安，刷新原先由杜承岳保持的21歲又94天</span></div>
+          <div class="timeline-item"><span class="timeline-year">2050年</span><span>11月7日，原入選該年世界16強棒球錦標賽，但在自辦熱身賽被觸身球砸傷，預計要休養4～6週，後續辭退該屆賽事</span></div>
+          <div class="timeline-item"><span class="timeline-year">2051年</span><span>5月29日，對戰味全天龍隊的比賽受傷，後續診斷為腓腸肌輕度撕裂傷</span></div>
+          <div class="timeline-item"><span class="timeline-year">2051年</span><span>5月30日，放入30日傷兵名單</span></div>
+          <div class="timeline-item"><span class="timeline-year">2051年</span><span>12月19日，被交易到奇醫海燕隊</span></div>
+        </div>
+      </div>
+
+      <!-- 職棒生涯成績 -->
+      <div class="section">
+        <h2>職棒生涯成績</h2>
+        <table class="stats">
+          <thead>
+            <tr>
+              <th>年度</th><th>球隊</th><th>G</th><th>PA</th><th>AB</th><th>H</th>
+              <th>2B</th><th>3B</th><th>HR</th><th>RBI</th><th>R</th><th>SB</th>
+              <th>TB</th><th>SO</th><th>BB</th><th>SAC</th><th>SF</th>
+              <th>AVG</th><th>OBP</th><th>SLG</th><th>OPS</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2048</td><td>北鐵狼</td><td>114</td><td>469</td><td>417</td><td>145</td>
+              <td>17</td><td>7</td><td>0</td><td>38</td><td>72</td><td>47</td>
+              <td>176</td><td>45</td><td>41</td><td>4</td><td>3</td>
+              <td><span class="best">.348</span></td><td>.403</td><td>.422</td><td>.825</td>
+            </tr>
+            <tr>
+              <td>2049</td><td>北鐵狼</td><td>148</td><td>677</td><td>605</td><td>208</td>
+              <td>24</td><td>11</td><td>1</td><td>47</td><td>101</td><td><span class="best">65</span></td>
+              <td>257</td><td>69</td><td>67</td><td>3</td><td>2</td>
+              <td>.344</td><td>.408</td><td>.425</td><td>.833</td>
+            </tr>
+            <tr>
+              <td>2050</td><td>北鐵狼</td><td>135</td><td>600</td><td>541</td><td>187</td>
+              <td>19</td><td>9</td><td>3</td><td>42</td><td>87</td><td><span class="best">57</span></td>
+              <td>233</td><td>60</td><td>58</td><td>1</td><td>0</td>
+              <td>.346</td><td>.409</td><td>.431</td><td>.840</td>
+            </tr>
+            <tr>
+              <td>2051</td><td>北鐵狼</td><td>118</td><td>539</td><td>487</td><td>174</td>
+              <td>29</td><td>5</td><td>11</td><td>89</td><td>78</td><td>34</td>
+              <td>246</td><td>81</td><td>50</td><td>1</td><td>1</td>
+              <td><span class="best">.357</span></td><td>.416</td><td>.505</td><td>.921</td>
+            </tr>
+            <tr>
+              <td>2052</td><td>奇醫海燕</td><td>-</td><td>-</td><td>-</td><td>-</td>
+              <td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td>
+              <td>-</td><td>-</td><td>-</td><td>-</td><td>-</td>
+              <td>-</td><td>-</td><td>-</td><td>-</td>
+            </tr>
+            <tr style="font-weight: 600; background-color: #cbd5e1 !important;">
+              <td colspan="2">通算成績</td><td>515</td><td>2285</td><td>2050</td><td>714</td>
+              <td>89</td><td>32</td><td>15</td><td>216</td><td>338</td><td>203</td>
+              <td>912</td><td>255</td><td>218</td><td>9</td><td>6</td>
+              <td>.348</td><td>.409</td><td>.445</td><td>.854</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 個人獎項 -->
+      <div class="section">
+        <h2>個人獎項</h2>
+        <div class="award-list">
+          ・2046年黑豹旗全國高中棒球聯賽安打王、最佳游擊手<br>
+          ・2047年王貞治盃全國青棒錦標賽安打獎、最佳游擊手獎<br>
+          ・2047年夏季全國高中聯賽賽會MVP、最佳游擊手、打擊王<br>
+          ・<a href="../term/室內棒球聯盟年度打擊王.html">室內棒球聯盟年度打擊王</a>：2048、2051<br>
+          ・<a href="../term/室內棒球聯盟年度盜壘王.html">室內棒球聯盟年度盜壘王</a>：2049、2050<br>
+          ・<a href="../term/室內棒球聯盟年度新人王.html">室內棒球聯盟年度新人王</a>：2048<br>
+          ・<a href="../term/室內棒球聯盟年度金手套.html">室內棒球聯盟年度金手套</a>游擊手：2050、2051<br>
+          ・<a href="../term/室內棒球聯盟年度最佳陣容.html">室內棒球聯盟年度最佳陣容</a>第一隊游擊手：2051<br>
+          ・<a href="../term/室內棒球聯盟年度最佳陣容.html">室內棒球聯盟年度最佳陣容</a>第二隊游擊手：2049
+        </div>
+      </div>
+
+      <!-- 特殊事蹟 -->
+      <div class="section">
+        <h2>特殊事蹟</h2>
+        <div class="incident-list">
+          ・2046年U18世界青棒錦標賽中華代表隊<br>
+          ・室內棒球聯盟明星賽：2048～2051
+        </div>
+      </div>
+
+      <!-- 相關新聞 -->
+      <div class="section">
+        <h2>相關新聞</h2>
+        <ul class="news-list">
+          <li>
+            <a href="#">余宥達以速度與守備叩關職棒選秀 首輪呼聲高仍有成長課題</a>
+            <span class="news-date">（2047.06.18）</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+    
+    <!-- 右側：維基百科式固定基本資料欄 (Infobox) -->
+    <div class="sidebar-area">
+      <div class="infobox">
+        <div class="infobox-title">余宥達 YU, YOU-DA</div>
+        
+        <!-- 球員照片呈現 -->
+        <div class="infobox-image-box">
+          <img src="https://i.ibb.co/LXmdQ73m/6861815-B-4-C2-A-4017-AB56-415-D437-A3-F2-F.png" alt="余宥達">
+          <div class="caption">余宥達於 2052 年效力奇醫海燕隊</div>
+        </div>
+
+        <div class="profile">
+          <div><span>守備位置</span>內野手（游擊手 SS）</div>
+          <div><span>投打習慣</span>右投左右開弓</div>
+          <div><span>背號</span>6</div>
+        </div>
+         
+        <div class="infobox-section-title">基本資料</div>
+        <div class="profile">
+          <div><span>出生日期</span>2028 年 11 月 11 日（23歲）</div>
+          <div><span>身高體重</span>176 公分／75 公斤</div>
+          <div><span>出生地</span>台灣・台中市</div>
+        </div>
+        
+        <div class="infobox-section-title">職棒生涯</div>
+        <div class="profile">
+          <div><span>職棒選秀</span><a href="../term/2047年室內棒球聯盟新人選秀會.html">2047年選秀會</a><br><a href="../teams/北鐵狼.html">北鐵狼隊</a>第一輪指名</div>
+          <div><span>現效力球隊</span><a href="../teams/奇醫海燕.html">奇醫海燕隊</a></div>
+        </div>
+
+        <div class="infobox-section-title">生涯焦點與獎項</div>
+        <div style="padding-left: 4px; display: flex; flex-direction: column; gap: 6px; margin-top: 5px;">
+          <div class="hl-123-content">年度打擊王：2048、2051</div>
+          <div class="hl-123-content">年度盜壘王：2049、2050</div>
+          <div class="hl-123-content">年度金手套游擊手：2050、2051</div>
+          <div class="hl-123-content">年度總冠軍：2048、2050</div>
+        </div>
+          
+      </div>
+    </div>
+
+  </div>
 </div>
-
 
 </body>
 </html>
