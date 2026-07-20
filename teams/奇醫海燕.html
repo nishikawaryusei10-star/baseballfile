@@ -328,6 +328,54 @@ table.stats th {
   text-align: center;
 }
 
+/* ===== 新聞區塊專屬細緻排版 ===== */
+.news-list {
+  list-style: none; /* 移除傳統黑點 */
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* 新聞與新聞之間的間距 */
+}
+
+.news-list li {
+  display: flex;
+  justify-content: space-between; /* 讓新聞標題靠左、日期精準靠右對齊 */
+  align-items: flex-start;
+  font-size: 0.80rem; /* 💡 在這裡調整內文大小，比原本的 1.05rem 更精緻 */
+  border-bottom: 1px dashed var(--border-color); /* 加一條淡淡的虛線分隔線 */
+  padding-bottom: 8px;
+}
+
+.news-list a {
+  color: var(--text-main);
+  text-decoration: none;
+  padding-right: 15px; /* 留點空間給右邊的日期 */
+  line-height: 1.5;
+}
+.news-list a:hover {
+  color: var(--primary-color); /* 滑鼠移過去變球隊主色 */
+  text-decoration: underline;
+}
+
+.news-date {
+  color: var(--text-muted); /* 日期顏色稍微淡化，凸顯標題 */
+  white-space: nowrap;      /* 💡 核心關鍵：強制日期絕對不換行 */
+  font-size: 0.88rem;       /* 日期稍微再縮小一點，更有層次感 */
+  flex-shrink: 0;           /* 防止日期因為標題太長而被壓扁 */
+}
+
+/* 手機版 RWD 適應 */
+@media (max-width: 576px) {
+  .news-list li {
+    flex-direction: column; /* 手機螢幕太小時，自動轉為上下排列以免字疊在一起 */
+    gap: 4px;
+  }
+  .news-date {
+    align-self: flex-end; /* 手機版時日期乖乖靠右 */
+  }
+}
+
 /* 行動裝置 RWD 適應（修正跑版關鍵） */
 @media (max-width: 992px) {
   .main-layout { grid-template-columns: 1fr; }
@@ -607,12 +655,19 @@ table.stats th {
   </details>
       </div>  
 
-      <!-- 新聞 -->
-      <div class="section" id="rename">
+     <!-- 新聞 -->
+      <div class="section" id="news">
         <h2>新聞</h2>
-        <a href="../news/陸廷威總教練遞出辭呈.html">【室內棒球聯盟2045球季重大宣告】離島棒球浴火重生！奇雋醫療科技斥資入主 傳奇名帥陸廷威重返職棒掌「奇醫海燕」兵符</a>（2049.04.15）<br>
-        <a href="../news/奇醫海燕企業入主與新帥加盟.html">室內棒球聯盟 》科技海燕驚傳兵變！開港首任教頭陸廷威因「重度失眠」請辭 轉任顧問、陳昭遠2050年接掌兵符</a>（2049.04.15）
-        
+        <ul class="news-list">
+          <li>
+            <a href="../news/奇醫海燕企業入主與新帥加盟.html">【室內棒球聯盟】離島棒球浴火重生！奇雋醫療科技斥資入主 傳奇名帥陸廷威重返職棒掌「奇醫海燕」兵符</a>
+            <span class="news-date">（2045.11.4）</span>
+          </li>
+          <li>
+            <a href="../news/陸廷威總教練遞出辭呈.html">室內棒球聯盟 》科技海燕驚傳兵變！開港首任教頭陸廷威因「重度失眠」請辭 轉任顧問、陳昭遠2050年接掌兵符</a>
+            <span class="news-date">（2049.04.15）</span>
+          </li>
+        </ul>
       </div>  
 
       
