@@ -365,6 +365,23 @@ table.stats th {
   flex-shrink: 0;           /* 防止日期因為標題太長而被壓扁 */
 }
 
+/* ===== Infobox 專用球隊顏色小方塊 ===== */
+.team-color-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 4px; /* 色塊與色塊之間的間距 */
+  margin-top: 4px;
+  padding-left: 4px;
+}
+
+.color-dot {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #cbd5e1; /* 淡灰色邊框，防止白色或淺色方塊隱形 */
+  border-radius: 3px;        /* 微圓角，質感較好 */
+}
+
 /* 手機版 RWD 適應 */
 @media (max-width: 576px) {
   .news-list li {
@@ -414,6 +431,7 @@ table.stats th {
       <a href="#manager">歷任總教練</a>
       <a href="#rename">隊史沿革</a>
       <a href="#12345">球隊歷年成績</a>
+      <a href="#news">新聞</a>
     </div>
   </div>
 
@@ -689,6 +707,12 @@ table.stats th {
         
         <div class="infobox-section-title">主場球場</div>
         <div style="padding-left: 4px;">海燕球場</div>
+
+        <div class="infobox-section-title">球隊顏色</div>
+        <div class="team-color-wrapper">
+        <span class="color-dot" style="background-color: #20b2aa;" title="主場湖水綠"></span>
+        <span class="color-dot" style="background-color: #0d5c75;" title="深海藍"></span>
+        </div>
           
         <div class="infobox-section-title">隊史冠軍頭銜</div>
         <div style="padding-left: 4px; display: flex; flex-direction: column; gap: 6px; margin-top: 5px;">
