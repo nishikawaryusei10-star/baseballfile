@@ -9,6 +9,10 @@
   --border-color: #e2e8f0;     /* 現代感淡線 */
 }
 
+/* 當 body 套用特定球隊類別時，自動覆蓋主色變數 */
+body.team-petrel { --primary-color: #0d5c75; --accent-color: #a5d8ff; --third-color: #8ADBD5; } /* 奇醫海燕 */
+body.team-wolves { --primary-color: #334155; } /* 北鐵狼 */
+
 html {
   scroll-behavior: smooth;
 }
