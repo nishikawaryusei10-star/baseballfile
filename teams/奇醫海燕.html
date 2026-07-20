@@ -289,6 +289,45 @@ table.stats th {
   border-radius: 2px;
 }
 
+.decade-box {
+  max-width: 700px;
+  margin-bottom: 5px;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  text-align:center;
+}
+
+.decade-summary {
+  background-color: var(--pro-primary);
+  color: white;
+  overflow: hidden;
+  padding: 5px 7px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+  list-style: none;
+}
+
+/* 職業賽事專用表格：極致扁平化 */
+.pro-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.80rem;
+}
+
+.pro-table th {
+  background: #F0F8FF;
+  padding: 6px;
+  border-bottom: 2px solid #cbd5e1;
+  color: #2D8EF0;
+}
+
+.pro-table td {
+  padding: 5px 8px;
+  border-bottom: 1px solid #f1f5f9;
+  text-align: center;
+}
+
 /* 行動裝置 RWD 適應（修正跑版關鍵） */
 @media (max-width: 992px) {
   .main-layout { grid-template-columns: 1fr; }
@@ -510,6 +549,83 @@ table.stats th {
           </tbody>
         </table>
       </div>
+
+      <!-- 球隊歷年成績 -->
+      <div class="section" id="12345">
+        <h2>球隊歷年成績</h2>
+        <details class="decade-box">
+    <summary class="decade-summary">2040年代奇醫海燕球隊戰績</summary>
+     <div style="padding: 10px; text-align: center; color: #64748b;">
+      在此填入該年代的戰績表格...
+    </div>  
+  </details>
+    
+    <details class="decade-box">
+    <summary class="decade-summary">2050年代奇醫海燕球隊戰績</summary>
+    <table class="pro-table">
+      <thead>
+        <tr>
+        <th>年度</th>
+        <th>出賽</th>
+        <th>勝-敗-和</th>
+        <th>勝率</th>
+        <th>分區排名</th>
+        <th>聯盟排名</th>
+        <th>季後賽</th>
+        <th>最終賽果</th>
+        </tr>
+      </thead>
+      <tbody>
+      
+      <tr>
+        <td>2051</td> 
+        <td>150</td>
+        <td>85-65-0</td> 
+        <td>.567</td>
+        <td>2</td>
+        <td>9</td>
+        <td></td>
+        <td></td>
+      </tr>
+          
+      </tbody>
+    </table>
+  </details>
+    
+    
+     <table class="stats">
+    <thead>
+      <tr>
+        <th>年度</th>
+        <th>隊數</th>
+        <th>報名人數</th>
+        <th>中選人數</th>
+        <th>狀元籤</th>
+        <th>狀元</th>
+        <th>球員類型</th>
+        <th>備註</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+        <td>2052</td> 
+        <td>20</td>
+        <td>486</td> 
+        <td></td>
+        <td><a href="../team/奇醫海燕.html">奇醫海燕隊</a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      
+      
+      
+      </tbody>
+      </table>
+      </div>   
+
+      
 
     </div>
     
