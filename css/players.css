@@ -2,6 +2,7 @@
 :root {
   --primary-color: #0d5c75;    /* 海燕隊色：深海洋藍 */
   --accent-color: #a5d8ff;     /* 亮點藍 */
+  --second-color: #f0f7f9;
   --text-main: #1f2937;        /* 主要文字深灰 */
   --text-muted: #4b5563;       /* 次要文字 */
   --bg-light: #f8fafc;         /* 淺色背景區隔 */
@@ -9,7 +10,7 @@
 }
 
 /* 當 body 套用特定球隊類別時，自動覆蓋主色變數 */
-body.team-petrel { --primary-color: #0d5c75; } /* 奇醫海燕 */
+body.team-petrel { --primary-color: #0d5c75; --second-color: #f0f7f9; } /* 奇醫海燕 */
 body.team-wolves { --primary-color: #334155; } /* 北鐵狼 */
 
 html {
@@ -204,7 +205,7 @@ table.stats th {
   font-weight: 600;
 }
 table.stats tbody tr:nth-child(even) td {
-  background: #f0f7f9;
+  background: var(--second-color);
 }
 
 /* 數據高亮標記 */
