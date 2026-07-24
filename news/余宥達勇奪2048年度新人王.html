@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>余宥達勇奪2048年度新人王　打擊王加持締造史詩級菜鳥球季</title>
+
+<style>
+/* ===== 現代新聞媒體變數設定 ===== */
+:root {
+  --media-primary: #0f172a;    /* 現代冷調深藍（主標題、內文） */
+  --media-accent: #0284c7;     /* 體育科技藍（亮點、小標題、邊框） */
+  --media-muted: #64748b;      /* 優雅灰（日期、次要資訊） */
+  --media-bg: #f8fafc;         /* 畫布底色：淺灰藍 */
+  --block-bg: #f1f5f9;         /* 引言/亮點區塊背景 */
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans TC", sans-serif;
+  line-height: 1.8;
+  color: var(--media-primary);
+  background-color: var(--media-bg);
+  margin: 0;
+  padding: 40px 20px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 760px; /* 黃金閱讀寬度，眼睛掃視最舒適 */
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 50px 60px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+}
+
+/* ===== 新聞標頭資訊 ===== */
+.release-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--media-muted);
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-bottom: 1px solid #e2e8f0; 
+  padding-bottom: 16px;
+  margin-bottom: 30px;
+}
+.release-status {
+  font-weight: 700;
+  color: var(--media-accent);
+  background: #e0f2fe;
+  padding: 4px 10px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+}
+.release-date {
+  letter-spacing: 0.5px;
+}
+
+/* ===== 標題層級 ===== */
+h1 {
+  font-size: 2.2rem;
+  color: var(--media-primary);
+  line-height: 1.4;
+  margin: 0 0 24px 0;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+/* ===== 內文小標題（改為現代化下襯線與左側標記） ===== */
+.content h3 {
+  font-size: 1.35rem;
+  color: var(--media-primary);
+  margin-top: 45px;
+  margin-bottom: 18px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e2e8f0;
+  position: relative;
+  font-weight: 700;
+}
+.content h3::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background-color: var(--media-accent); /* 亮點焦點線 */
+}
+
+/* ===== 內文排版 ===== */
+.content p {
+  margin-top: 0;
+  margin-bottom: 24px;
+  text-align: justify;
+  font-size: 1.1rem;
+  color: #334155; /* 稍微降級純黑，長時間閱讀不刺眼 */
+}
+
+/* 新聞導言特別放大（第一段） */
+.content p:first-of-type {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--media-primary);
+  line-height: 1.7;
+}
+
+.dateline {
+  font-weight: 700;
+  color: var(--media-primary);
+  margin-right: 4px;
+}
+
+/* ===== 精選引言區塊 ===== */
+blockquote {
+  background-color: var(--block-bg);
+  border-left: 4px solid var(--media-accent);
+  margin: 35px 0;
+  padding: 24px 28px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--media-primary);
+  line-height: 1.7;
+  border-radius: 0 8px 8px 0;
+}
+
+/* ===== 分隔線與底部資訊 ===== */
+hr {
+  border: 0;
+  border-top: 1px solid #e2e8f0;
+  margin: 50px 0 40px 0;
+}
+
+/* 行動裝置 RWD 完美適應 */
+@media (max-width: 768px) {
+  body {
+    padding: 16px 12px;
+  }
+  .container {
+    padding: 30px 24px;
+    border-radius: 8px;
+  }
+  h1 {
+    font-size: 1.75rem;
+  }
+  .content h3 {
+    font-size: 1.2rem;
+  }
+  .content p {
+    font-size: 1.05rem;
+  }
+  .content p:first-of-type {
+    font-size: 1.1rem;
+  }
+  .release-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- 新聞標頭資訊 -->
+  <div class="release-meta">
+    <span class="release-status">Sports Focus</span>
+    <span class="release-date">發稿日期：2048 年 11 月 19 日</span>
+  </div>
+
+  <header>
+    <h1>余宥達勇奪2048年度新人王　打擊王加持締造史詩級菜鳥球季</h1>
+  </header>
+
+  <main class="content">
+    <p><span class="dateline">【今日記者訊】</span>室內棒球聯盟昨日正式公布2048年年度新人王票選結果，北鐵狼隊游擊手余宥達以近乎一面倒的支持成功摘下年度新人王，為他令人驚豔的職業處女球季再添一座重要個人獎項。</p>
+    
+    <p>余宥達本季以新人身份繳出118場出賽、打擊率 .348、上壘率 .403、長打率 .422、145支安打、47次盜壘的成績，不僅勇奪聯盟打擊王，更在守備端繳出DRS +6、UZR +9的頂尖數據，也獲選為最佳陣容第二隊游擊手，成為聯盟攻守兼備的代表性游擊手之一。</p>
+    
+    <h3>開季仍在國軍隊服役　返隊後意外成為最大驚喜</h3>
+    
+    <p>然而，余宥達這座新人王得來並非一帆風順。2047年選秀會上，余宥達以首輪第三順位加盟北鐵狼，但依聯盟制度，選秀後仍須先至國軍隊完成兵役，因此2048年球季開打時，他仍身披國軍隊球衣。</p>
+    
+    <p>巧合的是，當時國軍隊的主戰游擊手，正是北鐵狼王牌游擊手鄭育成，鄭育成憑藉多年職業經驗與穩定攻守表現，自然占據先發位置，而初來乍到的余宥達則多半擔任替補，透過有限的出賽機會適應職業節奏。即便教練團相當看好他的潛力，也認為還需要更多時間累積經驗，因此開季並未獲得固定先發機會。</p>
+    
+    <p>直到服役期滿後，余宥達提前歸建北鐵狼。由於鄭育成仍須完成兵役，北鐵狼一軍游擊防區出現空缺，球團決定直接將這名首輪新秀拉上一軍，原本只是希望他能利用剩餘球季累積經驗，沒想到卻成為整個賽季最大的驚喜。</p>
+    
+    <p></p>
+    
+    <h3>從「先試試看」到站穩開路先鋒　完全超出球團預期</h3>
+    
+    <p>余宥達返隊後迅速適應一軍節奏，不僅成功站穩先發游擊手位置，更被安排擔任球隊第一棒，從第一次先發開始，他便展現驚人的穩定性。無論面對速球派投手或變化球型投手，都能透過成熟選球與高擊球率持續上壘，再利用速度不斷製造壓力。</p>
+
+    <p>北鐵狼教練團原先設定的目標，只是希望余宥達能適應職業投手、累積比賽經驗，並沒有預期他能立即扛起球隊中線重任。北鐵狼總教練王銀鋒表示，余宥達最大的優點並不是數據，而是成熟的比賽內容：「原本只是希望他上來適應一下職業節奏，沒想到越打越穩。」「最難得的是，不會因為對手比較強就改變自己的打法。他知道自己的優勢在哪，也知道每個打席該做什麼。」</p>
+    
+    
+    <p>王銀鋒也坦言，余宥達的成長速度，確實超出球團原本的預期。「新人第一年最難的是穩定，但他做到了一整年都很穩，這不是每個新人都有辦法做到的。」</p>
+    
+    
+    <h3>守備進階數據名列前茅　新人游擊手已具頂尖水準</h3>
+    
+    <p>除了打擊外，余宥達最受肯定的仍是守備能力，根據聯盟公布的進階數據，他本季繳出DRS+6、UZR+9，兩項數據皆名列聯盟游擊手前段班，球探認為，余宥達最大的優勢，在於第一步反應與守備範圍。他的腳步啟動迅速、接球節奏流暢，加上穩定的傳球能力，使他在新人球季便展現接近聯盟頂級游擊手的守備水準。</p>
+    
+    
+    <h3>新人王實至名歸　北鐵狼迎來下一位核心</h3>
+    
+    <p>對於獲獎，余宥達表示，自己其實沒有想過新人球季能獲得這項榮譽「很開心能拿到新人王，真的很謝謝評審的肯定。不過我覺得，這座獎不是只有我一個人的。」</p>
+    
+    <p>余宥達表示，從國軍隊服役到回到北鐵狼，每一位教練、隊友都給了他很大的幫助「剛進職業的時候，其實很多東西都還在學，不管是比賽節奏、訓練方式，還是面對每一場比賽的心態，教練跟學長都給我很多提醒。」談到新人球季便奪下打擊王，他則認為，自己只是做好球隊交代的工作「我沒有特別去想打擊王或新人王，每天就是想辦法上壘、做好第一棒該做的事情，幫後面的隊友製造得分機會。」</p>
+
+    <p>余宥達也特別提到，球隊願意在他服役期滿後直接給予一軍機會，是自己能夠快速成長的重要原因。「很謝謝球團願意相信我，讓我有機會站在一軍。教練願意給我機會，我就是盡全力把握，不要辜負大家的期待。」</p>
+    
+    <p>最後，余宥達表示，新人王對他而言只是職業生涯的開始，「這座獎對我來說是一種鼓勵，也提醒我要繼續努力。希望未來能幫助球隊贏更多比賽，不要讓大家失望。」</p>
+
+    
+    <h3>鄭育成回歸後守位如何安排？王銀鋒：這是幸福的煩惱</h3>
+
+    <p>隨著主力游擊手鄭育成即將於2049年球季服役期滿歸隊，外界也開始關注北鐵狼內野將如何安排。鄭育成今年雖因服役僅代表國軍隊出賽，仍憑藉優異表現拿下年度最佳陣容第一隊游擊手及金手套獎；而余宥達則在新人球季入選最佳陣容第二隊游擊手，兩名聯盟頂尖游擊手將於明年同隊，也成為休賽季最受矚目的話題之一。</p>
+    
+    <p>對此，北鐵狼總教練王銀鋒表示，球隊目前沒有預設答案，一切仍會回到球場上競爭「這不是只能選一個的問題。對教練來說，有兩個這麼好的中線球員，是好事，不是壞事。」</p>
+    
+    <p>至於是否考慮讓其中一人轉守其他內野位置，王銀鋒則表示，教練團不會排斥任何可能性，但現階段仍希望兩人都以游擊手身分準備「先不要急著想誰要換位置，等兩個人都回來，一起練、一起比，再來做決定。」他也補充，球隊最希望看到的是良性競爭，「有競爭才會進步。如果因為多一個好球員就開始煩惱，那代表球隊人才太少了。」王銀鋒最後表示，2049年春訓將是教練團觀察兩人的重要時機。</p>
+    
+    
+    <p>而總教練也提到，球隊目前主戰游擊手黃韋辰仍處於生涯黃金階段，因此不會急著讓劉子睿承擔立即性的壓力，也認為外界習慣將年輕球員拿來比較，但球團更重視的是每名球員自身的成長曲線，不應該拿選手一直比較。</p>
+    
+    <p>「年輕球員最怕急。他現在要做的是每天進步，把該學的東西學起來。」味全天龍球團也表示，未來仍會依照春訓與二軍階段的觀察，評估劉子睿最適合的守備定位，在不影響球員發展的情況下，逐步培養其成為球隊下一代內野核心。</p>
+    
+  </main>
+
+  <hr>
+
+</div>
+
+</body>
+</html>
