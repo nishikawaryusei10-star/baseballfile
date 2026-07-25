@@ -59,7 +59,7 @@ a:hover { text-decoration: underline; }
 .header h1 {
   margin: 0;
   font-size: 2.2rem;
-  color: var(--text-main);
+  color: var(--primary-color);
   font-weight: 700;
 }
 .header .sub {
