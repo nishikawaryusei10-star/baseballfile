@@ -171,6 +171,14 @@ table.stats tbody tr:nth-child(even) td {
   border-radius: 4px;
 }
 
+.record {
+  font-weight: 800;          /* 字體更重一點點 */
+  background-color: #fef08a; /* 完全相同的淺黃底 */
+  color: #dc2626;            /* 飽和紅字 (Red) */
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
 /* ===== 新聞區塊專屬細緻排版 ===== */
 .news-list {
   list-style: none;
