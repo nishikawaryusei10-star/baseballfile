@@ -11,7 +11,7 @@
 
 /* 當 body 套用特定球隊類別時，自動覆蓋主色變數 */
 body.team-petrel { --primary-color: #0d5c75; --second-color: #f0f7f9; } /* 奇醫海燕 */
-body.team-petrel { --primary-color: #000000; --second-color: #f0f7f9; } /* 藍海虎鯨 */
+body.team-whale { --primary-color: #000000; --second-color: #f0f7f9; } /* 藍海虎鯨 */
 body.team-wolves { --primary-color: #334155; --second-color: #F5F5F5; } /* 北鐵狼 */
 
 html {
