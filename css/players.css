@@ -1,8 +1,8 @@
 /* ===== 全局變數與基礎設定 ===== */
 :root {
-  --primary-color: #0d5c75;    /* 海燕隊色：深海洋藍 */
+  --primary-color: #0d5c75;    /* 預設：海燕隊色（深海洋藍） */
   --accent-color: #a5d8ff;     /* 亮點藍 */
-  --second-color: #f0f7f9;
+  --second-color: #f0f7f9;     /* 表格隔行配色 */
   --text-main: #1f2937;        /* 主要文字深灰 */
   --text-muted: #4b5563;       /* 次要文字 */
   --bg-light: #f8fafc;         /* 淺色背景區隔 */
@@ -11,7 +11,7 @@
 
 /* 當 body 套用特定球隊類別時，自動覆蓋主色變數 */
 body.team-petrel { --primary-color: #0d5c75; --second-color: #f0f7f9; } /* 奇醫海燕 */
-body.team-wolves { --primary-color: #334155; } /* 北鐵狼 */
+body.team-wolves { --primary-color: #334155; --second-color: #f1f5f9; } /* 北鐵狼 */
 
 html {
   scroll-behavior: smooth;
@@ -67,19 +67,11 @@ a:hover { text-decoration: underline; }
   margin-top: 5px;
 }
 
-/* ===== 現代網格佈局 ===== */
-.main-layout {
-  display: grid;
-  grid-template-columns: 1fr 350px;
-  gap: 40px;
-  align-items: start;
-}
-
-/* ===== 左側主要內容區 ===== */
+/* ===== 單欄內容區 ===== */
 .content-area {
   display: flex;
   flex-direction: column;
-  gap: 45px;
+  gap: 40px;
 }
 
 .section {
@@ -96,10 +88,35 @@ a:hover { text-decoration: underline; }
   position: relative;
 }
 
+/* ===== 基本資料條列樣式 ===== */
+.profile-list {
+  font-size: 0.95rem;
+  line-height: 2;
+}
+
+.profile-list-item {
+  display: flex;
+  border-bottom: 1px dashed var(--border-color);
+  padding: 4px 0;
+}
+
+.profile-list-item:last-child {
+  border-bottom: none;
+}
+
+.profile-label {
+  font-weight: 600;
+  width: 110px;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+/* 清單與文字基礎排版 */
 .career-list, .award-list, .incident-list {
   font-size: 0.95rem;
   line-height: 1.8;
 }
+
 .no-break {
   white-space: nowrap;
 }
@@ -114,70 +131,7 @@ a:hover { text-decoration: underline; }
 }
 .timeline-year {
   font-weight: 700;
-  width: 70px;
-  flex-shrink: 0;
-}
-
-/* ===== 右側基本資料欄 (Infobox) ===== */
-.infobox {
-  background: var(--bg-light);
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
-  padding: 16px;
-  font-size: 0.9rem;
-  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
-  position: sticky;
-  top: 20px;
-}
-.infobox-title {
-  background: var(--primary-color);
-  color: #FFFFFF;
-  text-align: center;
-  padding: 6px;
-  font-weight: bold;
-  border-radius: 4px;
-  margin-bottom: 12px;
-}
-.infobox-image-box {
-  background: #ffffff;
-  border: 1px solid var(--border-color);
-  padding: 4px;
-  border-radius: 6px;
-  text-align: center;
-  margin-bottom: 12px;
-}
-.infobox-image-box img {
-  width: 100%;
-  height: auto;
-  border-radius: 4px;
-  display: block;
-}
-.infobox-image-box .caption {
-  font-size: 0.78rem;
-  color: var(--text-muted);
-  margin-top: 6px;
-  line-height: 1.4;
-}
-.infobox-section-title {
-  font-weight: bold;
-  background: #e2e8f0;
-  color: var(--text-main);
-  padding: 4px 8px;
-  margin-top: 15px;
-  margin-bottom: 8px;
-  border-radius: 4px;
-  font-size: 0.85rem;
-}
-.profile div {
-  display: flex;
-  padding: 6px 0;
-  border-bottom: 1px solid var(--border-color);
-}
-.profile div:last-child { border-bottom: none; }
-.profile span {
   width: 80px;
-  font-weight: 600;
-  color: var(--text-muted);
   flex-shrink: 0;
 }
 
@@ -211,34 +165,9 @@ table.stats tbody tr:nth-child(even) td {
 /* 數據高亮標記 */
 .best {
   font-weight: 700;
-  background-color: #fef08a; /* 溫和的淡黃色高亮背景 */
+  background-color: #fef08a; /* 淡黃色高亮 */
   padding: 2px 4px;
   border-radius: 4px;
-}
-
-/* ===== 融入你的色號 1 樣式 ===== */
-.hl-123 {
-  background: linear-gradient(transparent 60%, #8ADBD5 60%); 
-  font-weight: bold;
-  padding: 0 2px;
-  white-space: nowrap;
-}
-
-.hl-123-content {
-  position: relative;
-  padding-left: 15px;         
-  color: #374151;             
-  font-size: 0.88rem;         
-}
-.hl-123-content::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 5px;                    
-  width: 5px;
-  height: 13px;
-  background-color: #8ADBD5;  
-  border-radius: 2px;
 }
 
 /* ===== 新聞區塊專屬細緻排版 ===== */
@@ -273,15 +202,13 @@ table.stats tbody tr:nth-child(even) td {
 
 .news-date {
   color: var(--text-muted);
-  white-space: nowrap;      
-  font-size: 0.85rem;       
-  flex-shrink: 0;           
+  white-space: nowrap;
+  font-size: 0.85rem;
+  flex-shrink: 0;
 }
 
 /* 行動裝置 RWD 適應 */
-@media (max-width: 992px) {
-  .main-layout { grid-template-columns: 1fr; }
-  .infobox { position: static; margin-bottom: 20px; }
+@media (max-width: 768px) {
   table.stats {
     display: block;
     overflow-x: auto;
