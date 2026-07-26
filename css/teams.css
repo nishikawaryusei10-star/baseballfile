@@ -1,5 +1,5 @@
 /* ===== 全局變數與基礎設定 ===== */
-:root, body {
+:root,
   --primary-color: #0d5c75;    /* 預設：深海洋藍 */
   --accent-color: #a5d8ff;     
   --third-color: #8ADBD5;
@@ -14,7 +14,7 @@
 body.team-petrel { --primary-color: #0d5c75; --accent-color: #a5d8ff; --third-color: #8ADBD5; --ccc-color: #FFFFFF } /* 奇醫海燕 */
 body.team-shark { --primary-color: #B15BFF; --accent-color: #a5d8ff; --third-color: #DEB8FF; --ccc-color: #ffffff } /* 墾丁鯊魚 */
 body.team-duck { --primary-color: #FF4500; --accent-color: #a5d8ff; --third-color: #FFAA8F; } /* 烈焰橘鴨 */
-body.team-wolves { --primary-color: #6E6E6E; --accent-color: #a5d8ff; --third-color: #f0f0f0; --ccc-color: #FFFFFF } /* 北鐵狼 */
+body.team-wolves { --primary-color: #6E6E6E; --accent-color: #a5d8ff; --third-color: #f2f2f2; --ccc-color: #000000 } /* 北鐵狼 */
 
 html {
   scroll-behavior: smooth;
@@ -24,7 +24,7 @@ body {
   margin: 0;
   font-family: "Helvetica Neue", Arial, "Noto Sans TC", sans-serif;
   background: #ffffff;
-  color: var(--primary-color);
+  color: var(--text-main);
   line-height: 1.7;
 }
 
