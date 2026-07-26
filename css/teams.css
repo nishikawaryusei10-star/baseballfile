@@ -24,7 +24,7 @@ body {
   margin: 0;
   font-family: "Helvetica Neue", Arial, "Noto Sans TC", sans-serif;
   background: #ffffff;
-  color: var(--text-main);
+  color: var(--primary-color);
   line-height: 1.7;
 }
 
