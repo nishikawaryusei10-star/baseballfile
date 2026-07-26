@@ -1,12 +1,13 @@
 /* ===== 全局變數與基礎設定 ===== */
-:root {
-  --primary-color: #0d5c75;    /* 海燕隊色：深海洋藍 */
-  --accent-color: #a5d8ff;     /* 亮點藍 */
+:root, body {
+  --primary-color: #0d5c75;    /* 預設：深海洋藍 */
+  --accent-color: #a5d8ff;     
   --third-color: #8ADBD5;
-  --text-main: #1f2937;        /* 主要文字深灰 */
-  --text-muted: #4b5563;       /* 次要文字 */
-  --bg-light: #f8fafc;         /* 淺色背景區隔 */
-  --border-color: #e2e8f0;     /* 現代感淡線 */
+  --text-main: #1f2937;        
+  --text-muted: #4b5563;       
+  --bg-light: #f8fafc;          
+  --border-color: #e2e8f0;
+  --black-color: #000000;
 }
 
 /* 當 body 套用特定球隊類別時，自動覆蓋主色變數 */
@@ -224,12 +225,12 @@ a:hover { text-decoration: underline; }
   margin-top: 10px;
 }
 .wikitable th {
-  background: var(--bg-light);
+  background: var(--third-color);
   border-bottom: 2px solid var(--border-color);
   padding: 12px;
   text-align: left;
   width: 15%;
-  color: var(--primary-color);
+  color: var(--black-color);
 }
 .wikitable td {
   border-bottom: 1px solid var(--border-color);
@@ -313,11 +314,12 @@ table.stats th {
   font-size: 0.80rem;
 }
 
+/* 3. 修正 .pro-table，讓它跟著球隊主色走 */
 .pro-table th {
-  background: #F0F8FF;
+  background: var(--bg-light);
   padding: 6px;
-  border-bottom: 2px solid #cbd5e1;
-  color: #2D8EF0;
+  border-bottom: 2px solid var(--primary-color);
+  color: var(--primary-color); /* 👈 改為讀取球隊主色 */
 }
 
 .pro-table td {
