@@ -11,10 +11,10 @@
 }
 
 /* 當 body 套用特定球隊類別時，自動覆蓋主色變數 */
-body.team-petrel { --primary-color: #0d5c75; --accent-color: #a5d8ff; --third-color: #8ADBD5; } /* 奇醫海燕 */
-body.team-shark { --primary-color: #B15BFF; --accent-color: #a5d8ff; --third-color: #DEB8FF; } /* 墾丁鯊魚 */
+body.team-petrel { --primary-color: #0d5c75; --accent-color: #a5d8ff; --third-color: #8ADBD5; --black-color: #FFFFFF } /* 奇醫海燕 */
+body.team-shark { --primary-color: #B15BFF; --accent-color: #a5d8ff; --third-color: #DEB8FF; --black-color: #ffffff } /* 墾丁鯊魚 */
 body.team-duck { --primary-color: #FF4500; --accent-color: #a5d8ff; --third-color: #FFAA8F; } /* 烈焰橘鴨 */
-body.team-wolves { --primary-color: #BEBEBE; --accent-color: #a5d8ff; --third-color: #f0f0f0; } /* 北鐵狼 */
+body.team-wolves { --primary-color: #6E6E6E; --accent-color: #a5d8ff; --third-color: #f0f0f0; --black-color: #FFFFFF } /* 北鐵狼 */
 
 html {
   scroll-behavior: smooth;
