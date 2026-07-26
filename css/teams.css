@@ -1,20 +1,19 @@
 /* ===== 全局變數與基礎設定 ===== */
-:root,
-  --primary-color: #0d5c75;    /* 預設：深海洋藍 */
-  --accent-color: #a5d8ff;     
+:root {
+  --primary-color: #0d5c75;    /* 海燕隊色：深海洋藍 */
+  --accent-color: #a5d8ff;     /* 亮點藍 */
   --third-color: #8ADBD5;
-  --text-main: #1f2937;        
-  --text-muted: #4b5563;       
-  --bg-light: #f8fafc;          
-  --border-color: #e2e8f0;
-  --ccc-color: #000000;
+  --text-main: #1f2937;        /* 主要文字深灰 */
+  --text-muted: #4b5563;       /* 次要文字 */
+  --bg-light: #f8fafc;         /* 淺色背景區隔 */
+  --border-color: #e2e8f0;     /* 現代感淡線 */
 }
 
 /* 當 body 套用特定球隊類別時，自動覆蓋主色變數 */
-body.team-petrel { --primary-color: #0d5c75; --accent-color: #a5d8ff; --third-color: #8ADBD5; --ccc-color: #FFFFFF } /* 奇醫海燕 */
-body.team-shark { --primary-color: #B15BFF; --accent-color: #a5d8ff; --third-color: #DEB8FF; --ccc-color: #ffffff } /* 墾丁鯊魚 */
+body.team-petrel { --primary-color: #0d5c75; --accent-color: #a5d8ff; --third-color: #8ADBD5; } /* 奇醫海燕 */
+body.team-shark { --primary-color: #B15BFF; --accent-color: #a5d8ff; --third-color: #DEB8FF; } /* 墾丁鯊魚 */
 body.team-duck { --primary-color: #FF4500; --accent-color: #a5d8ff; --third-color: #FFAA8F; } /* 烈焰橘鴨 */
-body.team-wolves { --primary-color: #6E6E6E; --accent-color: #a5d8ff; --third-color: #f2f2f2; --ccc-color: #000000 } /* 北鐵狼 */
+body.team-wolves { --primary-color: ##6E6E6E; --accent-color: #a5d8ff; --third-color: #BEBEBE; } /* 北鐵狼 */
 
 html {
   scroll-behavior: smooth;
@@ -230,7 +229,7 @@ a:hover { text-decoration: underline; }
   padding: 12px;
   text-align: left;
   width: 15%;
-  color: var(--ccc-color);
+  color: #000000;
 }
 .wikitable td {
   border-bottom: 1px solid var(--border-color);
@@ -314,12 +313,11 @@ table.stats th {
   font-size: 0.80rem;
 }
 
-/* 3. 修正 .pro-table，讓它跟著球隊主色走 */
 .pro-table th {
-  background: var(--bg-light);
+  background: #F0F8FF;
   padding: 6px;
-  border-bottom: 2px solid var(--primary-color);
-  color: var(--primary-color); /* 👈 改為讀取球隊主色 */
+  border-bottom: 2px solid #cbd5e1;
+  color: #2D8EF0;
 }
 
 .pro-table td {
