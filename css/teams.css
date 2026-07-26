@@ -7,7 +7,6 @@
   --text-muted: #4b5563;       
   --bg-light: #f8fafc;          
   --border-color: #e2e8f0;
-  --black-color: #000000;
 }
 
 /* 當 body 套用特定球隊類別時，自動覆蓋主色變數 */
