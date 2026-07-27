@@ -86,16 +86,24 @@ table.stats1 td {
   border: 1px solid #ffffff; /* 改這裡 */
 }
 
-/* 讓連結繼承 <td> 原本的文字顏色，並移除預設底線 */
+/* ===== 表格超連結文字顏色鎖定 ===== */
+
+/* 1. 讓 <td> 裡面的 <a> 預設繼承 <td> 的文字顏色 */
 table.stats1 td a {
-  color: inherit; /* 繼承 td 設定好的文字顏色 (如白、黑、金黃等) */
-  text-decoration: none; /* 預設不顯示底線 */
+  color: inherit;
+  text-decoration: none;
 }
 
-/* Hover 時依然維持原本的文字顏色，防止被全局的 a:hover 藍色覆蓋 */
+/* 2. 當滑鼠 hover 時，文字顏色依然保持繼承（不變色），只顯示底線 */
 table.stats1 td a:hover {
-  color: inherit; /* 文字顏色保持不變 */
-  text-decoration: underline; /* 滑鼠移上去時顯示底線，提醒使用者這是可點擊的連結 */
+  color: inherit !important; /* 強制繼承 <td> 的 color，絕不變色 */
+  text-decoration: underline;
+}
+
+/* 3. 防止連結點擊過（:visited）或點擊中（:active）變色 */
+table.stats1 td a:visited,
+table.stats1 td a:active {
+  color: inherit;
 }
 
 /* 聯盟 */
