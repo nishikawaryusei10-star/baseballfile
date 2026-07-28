@@ -14,8 +14,9 @@ body.team-petrel { --primary-color: #0d5c75; --accent-color: #a5d8ff; --third-co
 body.team-shark { --primary-color: #B15BFF; --accent-color: #a5d8ff; --third-color: #DEB8FF; } /* 墾丁鯊魚 */
 body.team-duck { --primary-color: #FF4500; --accent-color: #a5d8ff; --third-color: #FFAA8F; } /* 烈焰橘鴨 */
 body.team-wolves { --primary-color: #6E6E6E; --accent-color: #a5d8ff; --third-color: #BEBEBE; } /* 北鐵狼 */
-body.team-nx { --primary-color: #E50914; --accent-color: #a5d8ff; --third-color: #F88B91; } /* 北鐵狼 */
-body.team-Dions { --primary-color: #FF0055; --accent-color: #a5d8ff; --third-color: #FF94B5; } /* 北鐵狼 */
+body.team-nx { --primary-color: #E50914; --accent-color: #a5d8ff; --third-color: #F88B91; } /* NX星航者隊 */
+body.team-Dions { --primary-color: #FF0055; --accent-color: #a5d8ff; --third-color: #FF94B5; } /* 新世紀恐龍隊 */
+body.team-monkey { --primary-color: #58111A; --accent-color: #a5d8ff; --third-color: #BF6872; } /* 酷購樂猿隊 */
 
 
 html {
@@ -232,7 +233,7 @@ a:hover { text-decoration: underline; }
   padding: 12px;
   text-align: left;
   width: 15%;
-  color: #000000;
+  color: #FFFFFF;
 }
 .wikitable td {
   border-bottom: 1px solid var(--border-color);
