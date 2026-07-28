@@ -15,6 +15,7 @@ body.team-shark { --primary-color: #B15BFF; --accent-color: #a5d8ff; --third-col
 body.team-duck { --primary-color: #FF4500; --accent-color: #a5d8ff; --third-color: #FFAA8F; } /* 烈焰橘鴨 */
 body.team-wolves { --primary-color: #6E6E6E; --accent-color: #a5d8ff; --third-color: #BEBEBE; } /* 北鐵狼 */
 body.team-nx { --primary-color: #E50914; --accent-color: #a5d8ff; --third-color: #F88B91; } /* 北鐵狼 */
+body.team-Dions { --primary-color: #FF0055; --accent-color: #a5d8ff; --third-color: #FF94B5; } /* 北鐵狼 */
 
 
 html {
