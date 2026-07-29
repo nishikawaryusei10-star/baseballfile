@@ -15,6 +15,8 @@ def generate_json():
         "japanplayers": "日本球員",
         "mexicoplayers": "墨西哥球員",
         "highschool": "高中球隊",
+        "domplayers": "多明尼加球員",
+        
     }
 
     for folder, tag in folders.items():
