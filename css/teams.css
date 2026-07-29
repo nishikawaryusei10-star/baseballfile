@@ -18,6 +18,7 @@ body.team-nx { --primary-color: #E50914; --accent-color: #a5d8ff; --third-color:
 body.team-Dions { --primary-color: #FF0055; --accent-color: #a5d8ff; --third-color: #FF94B5; } /* 新世紀恐龍隊 */
 body.team-monkey { --primary-color: #58111A; --accent-color: #a5d8ff; --third-color: #BF6872; } /* 酷購樂猿隊 */
 body.team-duck { --primary-color: #FF5F00; --accent-color: #a5d8ff; --third-color: #FFBB87; } /* 全達鴨隊 */
+body.team-eagles { --primary-color: #007A5E; --accent-color: #a5d8ff; --third-color: #73C8AE; } /* 高雄未來之鷹隊 */
 
 
 html {
