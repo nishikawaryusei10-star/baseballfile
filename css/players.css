@@ -158,12 +158,13 @@ table.stats td {
 }
 
 table.stats th {
-  background: var(--primary-color);
-  color: #ffffff;
+  background: var(--tbl-main, var(--primary-color)) !important;
+  color: var(--tbl-text, #ffffff) !important;
   font-weight: 600;
 }
+
 table.stats tbody tr:nth-child(even) td {
-  background: var(--second-color);
+  background: var(--tbl-even, var(--second-color)) !important;
 }
 
 /* 數據高亮標記 */
