@@ -170,7 +170,6 @@ table.stats tbody tr:nth-child(even) td {
 /* 數據高亮標記 */
 .best {
   font-weight: 700;
-  background-color: #fef08a; /* 淡黃色高亮 */
   padding: 2px 4px;
   border-radius: 4px;
 }
