@@ -1,6 +1,6 @@
 /* ===== 全局變數與基礎設定 ===== */
 :root {
-  --primary-color: #0d5c75;    /* 預設：海燕隊色（深海洋藍） */
+  --primary-color: #000000;    /* 預設：海燕隊色（深海洋藍） */
   --accent-color: #a5d8ff;     /* 亮點藍 */
   --second-color: #f0f7f9;     /* 表格隔行配色 */
   --text-main: #1f2937;        /* 主要文字深灰 */
