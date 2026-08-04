@@ -147,6 +147,24 @@ table.stats1 td:nth-child(2) {
   white-space: nowrap;
 }
 
+/* ===== 速查表底部連結區塊 (仿維基百科樣式) ===== */
+.table-footer-links {
+  background-color: #f9f5e8; /* 圖片中的淺米黃色背景 */
+  font-size: 0.75rem;        /* 縮小字體 */
+  padding: 6px 10px !important; 
+  line-height: 1.7;
+}
+
+/* 強制解除上方表格鎖定的連結顏色，改回標準維基藍 */
+table.stats1 td.table-footer-links a {
+  color: #0645ad !important;
+  text-decoration: none;
+}
+
+table.stats1 td.table-footer-links a:hover {
+  color: #0645ad !important;
+  text-decoration: underline;
+}
 
 /* ===== 頁面導讀區塊 ===== */
 .page-nav {
