@@ -21,7 +21,7 @@ body.team-duck { --primary-color: #1f2937; --team-color: #FF5F00; --worb-color: 
 body.team-eagles { --primary-color: #1f2937; --team-color: #007A5E; --worb-color: #ffffff; --third-color: #73C8AE; } /* 高雄未來之鷹隊 */
 body.team-comet { --primary-color: #1f2937; --team-color: #FFDC35; --worb-color: #000000; --third-color: #FFFCEC; }
 body.team-hero { --primary-color: #1f2937; --team-color: #0000E3; --worb-color: #ffffff; --third-color: #C4E1FF; }
-body.team-mil { --primary-color: #1f2937; --team-color: #D4AF37; --worb-color: #000000; --third-color: #C4E1FF; }
+body.team-military { --primary-color: #1f2937; --team-color: #D4AF37; --worb-color: #000000; --third-color: #C4E1FF; }
 
 html {
   scroll-behavior: smooth;
