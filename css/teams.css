@@ -10,16 +10,16 @@
 }
 
 /* 當 body 套用特定球隊類別時，自動覆蓋主色變數 */
-body.team-petrel { --team-color: #0d5c75; --worb-color: #ffffff; --third-color: #8ADBD5; } /* 奇醫海燕 */
-body.team-shark { --team-color: #B15BFF; --worb-color: #ffffff; --third-color: #DEB8FF; } /* 墾丁鯊魚 */
-body.team-duck { --team-color: #FF4500; --worb-color: #ffffff; --third-color: #FFAA8F; } /* 烈焰橘鴨 */
-body.team-wolves { --team-color: #6E6E6E; --worb-color: #ffffff; --third-color: #BEBEBE; } /* 北鐵狼 */
-body.team-nx { --team-color: #E50914; --worb-color: #ffffff; --third-color: #F88B91; } /* NX星航者隊 */
-body.team-Dions { --team-color: #FF0055; --worb-color: #ffffff; --third-color: #FF94B5; } /* 新世紀恐龍隊 */
-body.team-monkey { --team-color: #58111A; --worb-color: #ffffff; --third-color: #BF6872; } /* 酷購樂猿隊 */
-body.team-duck { --team-color: #FF5F00; --worb-color: #ffffff; --third-color: #FFBB87; } /* 全達鴨隊 */
-body.team-eagles { --team-color: #007A5E; --worb-color: #ffffff; --third-color: #73C8AE; } /* 高雄未來之鷹隊 */
-body.team-comet { --team-color: #FFDC35; --worb-color: #000000; --third-color: #FFFCEC; }
+body.team-petrel { --primary-main: #1f2937; --team-color: #0d5c75; --worb-color: #ffffff; --third-color: #8ADBD5; } /* 奇醫海燕 */
+body.team-shark { --primary-main: #1f2937; --team-color: #B15BFF; --worb-color: #ffffff; --third-color: #DEB8FF; } /* 墾丁鯊魚 */
+body.team-duck { --primary-main: #1f2937; --team-color: #FF4500; --worb-color: #ffffff; --third-color: #FFAA8F; } /* 烈焰橘鴨 */
+body.team-wolves { --primary-main: #1f2937; --team-color: #6E6E6E; --worb-color: #ffffff; --third-color: #BEBEBE; } /* 北鐵狼 */
+body.team-nx { --primary-main: #1f2937; --team-color: #E50914; --worb-color: #ffffff; --third-color: #F88B91; } /* NX星航者隊 */
+body.team-Dions { --primary-main: #1f2937; --team-color: #FF0055; --worb-color: #ffffff; --third-color: #FF94B5; } /* 新世紀恐龍隊 */
+body.team-monkey { --primary-main: #1f2937; --team-color: #58111A; --worb-color: #ffffff; --third-color: #BF6872; } /* 酷購樂猿隊 */
+body.team-duck { --primary-main: #1f2937; --team-color: #FF5F00; --worb-color: #ffffff; --third-color: #FFBB87; } /* 全達鴨隊 */
+body.team-eagles { --primary-main: #1f2937; --team-color: #007A5E; --worb-color: #ffffff; --third-color: #73C8AE; } /* 高雄未來之鷹隊 */
+body.team-comet { --primary-main: #1f2937; --team-color: #FFDC35; --worb-color: #000000; --third-color: #FFFCEC; }
 
 
 html {
