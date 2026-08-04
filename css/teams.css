@@ -91,7 +91,7 @@ a:hover { text-decoration: underline; }
 }
 .page-nav-title {
   font-weight: bold;
-  color: var(--primary-color);
+  color: var(--team-color);
   border-right: 2px solid var(--border-color);
   padding-right: 15px;
 }
