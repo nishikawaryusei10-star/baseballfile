@@ -1,7 +1,3 @@
-  // 自動從 <h1> 標題擷取數字年份 (例如 "2051年球季..." 會抓出 "2051")
-const titleText = document.querySelector("h1") ? document.querySelector("h1").innerText : "";
-const currentYear = titleText.match(/\d+/) ? titleText.match(/\d+/)[0] : "2051";
-
   const QUALIFIED_PA = 465;
 
   const columns = [
@@ -33,13 +29,24 @@ const currentYear = titleText.match(/\d+/) ? titleText.match(/\d+/)[0] : "2051";
   let players = [];
 
   const SHEET_ID = "1GUBiauEJ4sAC4PTZrZVT09B4ap7vk5gRAkIS5q-uqbY";
-  const API_URL = `https://opensheet.elk.sh/${SHEET_ID}/${currentYear}`;
 
   async function loadData() {
-    try {
-      const response = await fetch(API_URL);
-      const rawData = await response.json();
+  // 2. 從 <h1> 讀取年份 (抓不到數字就預設 2051)
+  const titleElem = document.querySelector("h1");
+  const titleText = titleElem ? titleElem.innerText : "";
+  const yearMatch = titleText.match(/\d+/);
+  const currentYear = yearMatch ? yearMatch[0] : "2051";
 
+  // 3. 組合出動態 API 網址
+  const API_URL = `https://opensheet.elk.sh/${SHEET_ID}/${currentYear}`;
+
+  // 4. 保留原本的 try ... fetch 流程
+  try {
+    const response = await fetch(API_URL);
+    if (!response.ok) throw new Error(`找不到名為 ${currentYear} 的工作表`);
+    
+    const rawData = await response.json();
+   
       players = rawData.map(item => ({
         name: (item["球員姓名"] || item["球員"] || item["Name"] || "-").toString().trim(),
         team: (item["隊伍"] || item["球隊"] || item["Team"] || "-").toString().trim(),
