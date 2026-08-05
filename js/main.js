@@ -158,4 +158,4 @@
     });
   }
 
-  loadData();
+  window.addEventListener("DOMContentLoaded", loadData);
