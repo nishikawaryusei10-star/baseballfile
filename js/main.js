@@ -29,7 +29,7 @@
   let players = [];
 
   const SHEET_ID = "1GUBiauEJ4sAC4PTZrZVT09B4ap7vk5gRAkIS5q-uqbY";
-  const API_URL = `https://opensheet.elk.sh/${SHEET_ID}/1`;
+  const API_URL = `https://opensheet.elk.sh/${SHEET_ID}/${currentYear}`;
 
   async function loadData() {
     try {
