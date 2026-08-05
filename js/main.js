@@ -28,7 +28,7 @@
   let isDesc = true;
   let players = [];
 
-  const SHEET_ID = "1GUBiauEJ4sAC4PTZrZVT09B4ap7vk5gRAkIS5q-uqbY";
+  
 
   async function loadData() {
   // 2. 從 <h1> 讀取年份 (抓不到數字就預設 2051)
@@ -38,6 +38,7 @@
   const currentYear = yearMatch ? yearMatch[0] : "2051";
 
   // 3. 組合出動態 API 網址
+  const SHEET_ID = "1GUBiauEJ4sAC4PTZrZVT09B4ap7vk5gRAkIS5q-uqbY";
   const API_URL = `https://opensheet.elk.sh/${SHEET_ID}/${currentYear}`;
 
   // 4. 保留原本的 try ... fetch 流程
