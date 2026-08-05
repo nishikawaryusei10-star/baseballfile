@@ -39,7 +39,7 @@
 
   // 3. 組合出動態 API 網址
   const SHEET_ID = "1GUBiauEJ4sAC4PTZrZVT09B4ap7vk5gRAkIS5q-uqbY";
-  const API_URL = `https://opensheet.elk.sh/${SHEET_ID}/${currentYear}`;
+  const API_URL = `https://opensheet.elk.sh/${SHEET_ID}/Y${currentYear}`;
 
   // 4. 保留原本的 try ... fetch 流程
   try {
