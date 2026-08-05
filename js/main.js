@@ -1,3 +1,7 @@
+  // 自動從 <h1> 標題擷取數字年份 (例如 "2051年球季..." 會抓出 "2051")
+const titleText = document.querySelector("h1") ? document.querySelector("h1").innerText : "";
+const currentYear = titleText.match(/\d+/) ? titleText.match(/\d+/)[0] : "2051";
+
   const QUALIFIED_PA = 465;
 
   const columns = [
