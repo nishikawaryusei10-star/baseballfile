@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>年度別打擊成績查詢</title>
+  <link rel="stylesheet" href="css/states1.css">
+  
+</head>
+<body>
+
+<div class="main-container">
+
+  <!-- 頁面標題區 -->
+  <div class="page-header">
+    <h1>年度別打擊成績查詢</h1>
+    <p>室內棒球聯盟歷年打擊與投球詳細數據總覽</p>
+  </div>
+
+  <!-- 搜尋控制列 -->
+  <div class="search-section">
+    <label for="yearInput">搜尋年份：</label>
+    <input type="number" id="yearInput" placeholder="例如: 2045" min="2000" max="2100">
+    
+    <label for="yearSelect">或選擇年份：</label>
+    <select id="yearSelect">
+      <option value="">-- 請選擇 --</option>
+      <!-- 可手動補充過往年份，亦可直接輸入搜尋 -->
+      <option value="2052">2052 年</option>
+      <option value="2051">2051 年</option>
+      <option value="2050">2050 年</option>
+      <option value="2049">2049 年</option>
+      <option value="2048">2048 年</option>
+      <option value="2047">2047 年</option>
+      <option value="2046">2046 年</option>
+      <option value="2045">2045 年</option>
+    </select>
+
+    <button onclick="handleSearch()">查詢成績</button>
+  </div>
+
+  <!-- 歷年成績文字連結清單 -->
+  <div class="section-title">歷年打擊詳細統計資料</div>
+  
+  <ul class="stats-list" id="statsList">
+    <!-- 資料清單：data-year 屬性用於 JavaScript 比對計算 -->
+    <li class="stats-item" data-year="2052">
+      <span class="year-tag">2052年</span>
+      <a href="batting-2052.html">2052年室內棒球聯盟球員打擊詳細統計資料</a>
+    </li>
+    <li class="stats-item" data-year="2051">
+      <span class="year-tag">2051年</span>
+      <a href="batting-2051.html">2051年室內棒球聯盟球員打擊詳細統計資料</a>
+    </li>
+    <li class="stats-item" data-year="2050">
+      <span class="year-tag">2050年</span>
+      <a href="batting-2050.html">2050年室內棒球聯盟球員打擊詳細統計資料</a>
+    </li>
+    <li class="stats-item" data-year="2049">
+      <span class="year-tag">2049年</span>
+      <a href="batting-2049.html">2049年室內棒球聯盟球員打擊詳細統計資料</a>
+    </li>
+    <li class="stats-item" data-year="2048">
+      <span class="year-tag">2048年</span>
+      <a href="batting-2048.html">2048年室內棒球聯盟球員打擊詳細統計資料</a>
+    </li>
+    <li class="stats-item" data-year="2047">
+      <span class="year-tag">2047年</span>
+      <a href="batting-2047.html">2047年室內棒球聯盟球員打擊詳細統計資料</a>
+    </li>
+    <li class="stats-item" data-year="2046">
+      <span class="year-tag">2046年</span>
+      <a href="batting-2046.html">2046年室內棒球聯盟球員打擊詳細統計資料</a>
+    </li>
+    <li class="stats-item" data-year="2045">
+      <span class="year-tag">2045年</span>
+      <a href="batting-2045.html">2045年室內棒球聯盟球員打擊詳細統計資料</a>
+    </li>
+  </ul>
+
+  <div class="notice-msg">* 預設僅顯示近 5 年數據，欲查詢更早期年份資料請使用上方搜尋列。</div>
+
+</div>
+
+<script src="js/states1.js"></script>
+
+</body>
+</html>
