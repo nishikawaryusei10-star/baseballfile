@@ -16,6 +16,7 @@ body.team-wolves { --primary-color: #334155; --second-color: #F5F5F5; } /* 北�
 body.team-iron { --primary-color: #750000; --second-color: #F9EEEE; } /* 北鐵狼 */
 body.team-nx { --primary-color: #E50914; --second-color: #FFF0F1; } /* NX星航者隊 */
 body.team-duck { --primary-color: #FF5F00; --second-color: #FFF5EC; } /* 全達鴨 */
+body.team-eagle { --primary-color: #FF5F00; --second-color: #FFF5EC; } /* 全達鴨 */
 
 html {
   scroll-behavior: smooth;
