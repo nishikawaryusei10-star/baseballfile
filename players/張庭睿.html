@@ -3,305 +3,103 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> 球員資料｜棒球維基館 </title>
-
-<style>
-body {
-  margin: 0;
-  font-family: "Noto Sans TC", sans-serif;
-  background: #ffffff;
-  color: #111827;
-  line-height: 1.6;
-}
-
-a {
-  color: #1d4ed8;
-  text-decoration: none;
-}
-a:hover { text-decoration: underline; }
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* ===== 橫幅照片 ===== */
-.banner-photo {
-  width: 100%;
-  height: 320px;
-  background-color: #e5e7eb;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #6b7280;
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-
-/* ===== 頂部導覽列 ===== */
-.topnav {
-  display: flex;
-  gap: 10px;
-  padding: 12px 0;
-  border-bottom: 3px solid #e5e7eb;
-  margin-bottom: 10px;
-  font-size: 0.85rem;
-}
-
-.topnav a {
-  color: #006000;
-  font-weight:450;
-}
-
-.topnav a:hover {
-  color: #1d4ed8;
-}
-
-/* ===== 頁首 ===== */
-.header {
-  margin-bottom: 24px;
-}
-
-.header h1 {
-  margin: 0;
-  font-size: 2rem;
-}
-
-.header .sub {
-  font-size: 0.9rem;
-  color: #4b5563;
-}
-
-/* ===== 主版面 ===== */
-.section {
-  margin-bottom: 28px;
-}
-
-.section h2 {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
-  border-left: 4px solid #111827;
-  padding-left: 8px;
-}
-
-/* ===== 基本資料 ===== */
-.profile {
-  font-size: 0.95rem;
-}
-
-.profile div {
-  padding: 5px 0;
-  border-bottom: 1px solid #e5e7eb;
-}
-
-.profile span {
-  display: inline-block;
-  width: 100px;
-  font-weight: 600;
-  color: #374151;
-}
-
-/* ===== 經歷 ===== */
-.career a {
-  display: inline-block;
-}
-
-.no-break {
-  white-space: nowrap; /* 括號內文字不換行 */
-}
-
-/* ===== 年表 ===== */
-.timeline {
-  font-size: 0.95rem;
-}
-
-.timeline div {
-  margin-bottom: 6px;
-}
-
-.timeline b {
-  display: inline-block;
-  width: 60px;
-}
-
-/* ===== 表格 ===== */
-table.stats {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-  font-size: 0.85em;
-}
-
-table.stats th,
-table.stats td {
-  padding: 6px 8px;
-  text-align: center;
-  border-bottom: 1px solid #ddd;
-}
-
-table.stats th {
-  background: #006000;
-  color: #FFD306;
-  font-weight: 600;
-}
-
-table.stats tbody tr:nth-child(even) td {
-  background: #F0FFF0;
-}
-
-table.stats th:nth-child(2),
-table.stats td:nth-child(2) {
-  white-space: nowrap;
-}
-
-.best {
-  font-weight: bold;       /* 加粗字體 */        
-  border-radius: 4px;
-  padding: 2px 4px;
-}
-
-.test {
-  font-weight: bold;       /* 加粗字體 */
-  color: #FF0000;          /* 改成紅色 */
-  border-radius: 4px;
-  padding: 2px 4px;
-}
-
-/* ===== Footer ===== */
-.footer {
-  border-top: 1px solid #d1d5db;
-  margin-top: 48px;
-  padding-top: 16px;
-  text-align: center;
-  font-size: 0.8rem;
-  color: #6b7280;
-}
-</style>
+<title>張庭睿</title>
+<link rel="stylesheet" href="../css/players.css">
 </head>
 
-<body>
+<body class="team-eagle">
 
 <div class="container">
   
+  <!-- 導覽列 -->
   <nav class="topnav">
-  <a href="../index.html">首頁</a> ⮕ <a href="players_overview.html">球員</a> ⮕  <a href="taiwan_players_overview.html">台灣球員</a> ⮕  <b>張庭睿</b> </nav>     
+    <a href="../index.html">首頁</a> ⮕ <a href="players_overview.html">球員</a> ⮕ <a href="taiwan_players_overview.html">台灣球員</a> ⮕ <b>張庭睿</b>
+  </nav>       
 
-  <!-- 頁首 -->
+  <!-- 頁首標題 -->
   <div class="header">
     <h1>張庭睿</h1>
-    <div class="sub"> CHANG,TING-RUEI｜內野手（SS）</div>
+    <div class="sub">球員｜室內棒球聯盟</div>
   </div>
 
-  <!-- 基本資料 -->
-  <div class="section">
-    <h2>基本資料</h2>
-    <div class="profile">
-      <div><span>出生日期</span>2032 年 5 月 17 日（19歲）</div>
-      <div><span>身高體重</span>182 公分／79 公斤</div>
-      <div><span>出生地</span>台灣・高雄市</div>
-      <div><span>投打習慣</span>右投左打</div>
-      <div><span>守備位置</span>內野手 SS 2B</div>
-      <div><span>職棒選秀</span><a href="../term/2050年室內棒球聯盟選秀會.html">2050年室內棒球聯盟選秀會</a><a href="../teams/台鋼巨鷹隊.html">台鋼巨鷹隊</a>第一輪指名</div>
+  <!-- 主版面網格 -->
+  <div class="main-layout">
+    
+    <!-- 左側主要內容區 -->
+    <div class="content-area">
+
+      <!-- 基本資料 -->
+    <div class="section">
+      <h2>基本資料</h2>
+      <div class="profile-list">
+        <div class="profile-list-item"><span class="profile-label">出生日期：</span><span>2032 年 5 月 17 日（20歲）</span></div>
+        <div class="profile-list-item"><span class="profile-label">身高體重：</span><span>182 公分／80 公斤</span></div>
+        <div class="profile-list-item"><span class="profile-label">出生地：</span><span>🇹🇼 台灣・臺南市新化區</span></div>
+        <div class="profile-list-item"><span class="profile-label">守備位置：</span><span>內野手 SS 2B</span></div>
+        <div class="profile-list-item"><span class="profile-label">投打習慣：</span><span>右投左打</span></div>
+        <div class="profile-list-item"><span class="profile-label">背號：</span><span>26</span></div>
+        <div class="profile-list-item"><span class="profile-label">職棒選秀：</span><span><a href="2050年室內棒球聯盟新人選秀會.html">2050年室內棒球聯盟選秀會</a><a href="../teams/高雄未來之鷹隊.html">高雄未來之鷹隊</a>第一輪指名</span></div>
+        <div class="profile-list-item"><span class="profile-label">現效力球隊：</span><span><a href="../teams/高雄未來之鷹隊.html">高雄未來之鷹隊</a></span></div>
+      </div>
     </div>
-  </div>
 
-  <!-- 球員經歷 -->
-  <div class="section">
-    <h2>球員經歷</h2>
-    <div class="career">
-      <a href="#">高雄市</a><a href="#">立人國小少棒隊</a></br>
-      <a href="#">高雄市</a><a href="#">新化國中青少棒隊</a></br>
-      <a href="#">高雄市</a><a href="#">高苑工商青棒隊</a></br>
-      <a href="#">室內棒球聯盟</a><a href="../teams/台鋼巨鷹隊.html">台鋼巨鷹隊</a>（2050/08～）</br>
-    </div>
-  </div>
+      <!-- 球員經歷 -->
+      <div class="section">
+        <h2>球員經歷</h2>
+        <div class="career-list">
+          臺南市正新國小少棒隊<br>
+          臺南市新化國中青少棒隊<br>
+          高雄市高苑工商青棒隊<br>
+          <a href="../league/室內棒球聯盟.html">室內棒球聯盟</a><a href="../teams/高雄未來之鷹隊.html">高雄未來之鷹隊</a><span class="no-break">（2044/08～）</span><br>
+        </div>
+      </div>   
 
-  <!-- 球員介紹 -->
-  <div class="section">
-    <h2>球員介紹</h2>
-張庭睿，台南市人，守備位置為游擊手，目前效力於室內棒球聯盟台鋼巨鷹隊，是近年聯盟中最受期待的年輕中線核心之一。</br>
-</br>
-<strong>童年與棒球啟蒙</strong></br>
-張庭睿成長於台南一個典型的棒球家庭。父親曾是業餘甲組聯賽的強打者，雖未踏入職業舞台，但在南部業餘圈頗具名氣；母親則具備田徑選手背景，主項為短跑與跳遠，良好的爆發力與協調性也深深影響了張庭睿的運動基因。家中環境使他從小便將棒球視為生活的一部分，而非單純的興趣。</br>
-</br>
-五歲時，他便開始在家中模仿父親揮棒，用紙團、橡皮球練習擊球節奏；七歲正式加入台南地區少棒隊後，很快展現出同齡罕見的手眼協調與場上專注度。相較於其他孩子熱衷長打，張庭睿在少棒時期便對守備站位與來球判斷展現高度興趣，經常主動向教練詢問跑位與補位細節，這樣的特質也讓他很早就被安排在游擊防區磨練。</br>
-</br>
-<strong>青少棒時期：聲名初起</strong></br>
-進入新化國中後，張庭睿幾乎從一年級起便站穩先發游擊手位置。雖然身材在國中階段並不突出，但他的反應速度、傳球準確度與比賽閱讀能力，讓教練團毫不猶豫將內野防線交給他指揮。國三那年，他迎來個人生涯的第一次全國性爆發。</br>
-</br>
-在全國青少棒錦標賽中，張庭睿以超過五成的打擊率貫穿整個賽事，其中包含一場關鍵戰役的單場雙響砲，成功將球隊一路帶進冠軍戰。雖然最終以亞軍作收，但他在攻守兩端的穩定輸出，仍讓他獲選為賽會「最佳游擊手獎」，並被媒體冠上「新化小巨砲」的稱號，正式進入高中名校雷達。</br>
-</br>
-<strong>高苑工商時期：明星化的養成</strong></br>
-高中階段，張庭睿選擇就讀南台灣傳統強權高苑工商。進入高苑後，他並未經歷太長的適應期，高一便在競爭激烈的內野中脫穎而出，成為固定先發游擊手。高苑講求高強度訓練與戰術紀律，對張庭睿而言，這段時期是他從「天賦型球員」轉變為「完成度型選手」的重要關鍵。</br>
-</br>
-2048年黑豹旗賽事，是他高中生涯的代表作之一。該屆賽事中，他敲出 8 支全壘打，不僅刷新校內游擊手單屆紀錄，也讓外界重新評估他原本被低估的長打潛力。隔年的2049年黑豹旗四強戰，他單場4安打、2次盜壘，幾乎以一己之力撐起球隊進攻火力，最終雖在冠軍戰不敵穀保家商，但他仍連續獲選為賽事最佳游擊手。</br>
-</br>
-高中畢業前一年，他在木棒聯賽中打擊率突破四成，並於全國高中明星賽敲出關鍵逆轉全壘打，進一步奠定他「當屆最完整游擊手」的評價。當時球探普遍認為，他兼具即戰力與成長空間，是少數不需要長時間養成的中線野手。</br>
-</br>
-<strong>選秀與進入職業</strong></br>
-2050年選秀會前，張庭睿被多數球評視為前三順位的穩定人選。最終，台鋼巨鷹隊以第一輪第3順位將他選進，球團內部直接將其定位為「未來十年游擊防線核心」。雙方以簽約金1,905萬新台幣完成簽約，正式展開職業生涯。</br>
-</br>
-進入職業後，張庭睿先從二軍出發，短短半季便展現壓倒性的打擊成熟度，OPS高達 1.018，無論對速球或變化球都能有效攻擊。隨後他被安排參加亞洲冬季聯盟，在面對各國職業層級投手的情況下，仍繳出3成12的打擊率，被視為「已準備好面對一軍強度」的新秀。</br>
-</br>
-台鋼巨鷹長期缺乏穩定的游擊手人選，因此在2051年賽季毫不猶豫將張庭睿拉上一軍開季。他也沒有辜負期待，開季前兩個月打擊率始終維持在三成以上，攻守表現成熟度遠超一般新人，迅速成為球隊先發游擊的不二人選。</br>
-</br>
-不過，隨著賽季深入與比賽強度累積，張庭睿在明星賽後明顯出現體力瓶頸，擊球品質與選球穩定度略有下滑。即便如此，他仍透過防守價值與跑壘判斷彌補進攻起伏，最終以OPS+110的成績完成新人球季，並成功入圍年度新人王。</br>
-</br>
-雖然在票選中敗給繳出歷史級成績的宋昌紘，但張庭睿的新人年表現，已被多數教練與球探認定為「長期先發等級的起點」。
-</br>
-  </div>
+      <!-- 個人年表 -->
+      <div class="section">
+        <h2>個人年表</h2>
+        <div class="timeline">
+          <div class="timeline-item"><span class="timeline-year">2050年</span><span>7月，參加室內棒球聯盟選秀會，被高雄未來之鷹隊以第一指名選中，以簽約金1950萬元、6年新人約正式加盟</span></div>
+          <div class="timeline-item"><span class="timeline-year">2051年</span><span>07月26日，對北鐵狼隊生涯初登場，以先發第七棒游擊手上場守備</span></div>
+          <div class="timeline-item"><span class="timeline-year">2051年</span><span>08月01日，對北鐵狼隊投手呂彥青於五局下擊出生涯首支安打</span></div>
+          <div class="timeline-item"><span class="timeline-year">2051年</span><span>06月26日，對微秒彗星隊投手柯博文於七局下擊出生涯首支全壘打</span></div>
+          <div class="timeline-item"><span class="timeline-year">2051年</span><span>季末在新人王票選排行第五</span></div>
+        </div>
+      </div>
 
-  <!-- 個人年表 -->
-  <div class="section">
-    <h2>個人年表</h2>
-    <div class="timeline">
-      <div><b>2050年</b>7月，參加室內棒球聯盟選秀會，在選秀會上第一輪被台鋼巨鷹隊指名，後以簽約金1905萬新台幣，4年新人合約加盟</div>
-      <div><b>2051年</b>3月28日，初登板即為開幕戰，先發第七棒游擊手，面對北鐵狼呂彥青敲出生涯首安（年紀：18歲315日，史上第二年輕）</div>
-      <div><b>2051年</b>4月21日，面對中信子彈柯博文敲出生涯首轟</div>
-      <div><b>2051年</b>季末，入圍新人王，最後票選第四</div>
-    </div>
-  </div>
-
-  <!-- 生涯成績 -->
- <!-- 生涯成績 -->
-  <div class="section">
-    <h2>職棒生涯成績</h2>
-<strong>室內棒球聯盟一軍打擊成績</strong>
-    <table class="stats">
-    <thead>
-      <tr>
-        <th>年度</th>
-        <th>球隊</th>
-        <th>G</th>
-        <th>PA</th>
-        <th>AB</th>
-        <th>H</th>
-        <th>2B</th>
-        <th>3B</th>
-        <th>HR</th>
-        <th>RBI</th>
-        <th>R</th>
-        <th>SB</th>
-        <th>TB</th>
-        <th>SO</th>
-        <th>BB</th>
-        <th>SAC</th>
-        <th>SF</th>
-        <th>AVG</th>
-        <th>OBP</th>
-        <th>SLG</th>
-        <th>OPS</th>
-      </tr>
-    </thead>
-    <tbody>
-
+      <!-- 職棒生涯成績 -->
+      <div class="section">
+        <h2>職棒生涯成績</h2>
+        <table class="stats">
+          <thead>
+            <tr>
+              <th>年度</th>
+              <th>球隊</th>
+              <th>G</th>
+              <th>PA</th>
+              <th>AB</th>
+              <th>H</th>
+              <th>2B</th>
+              <th>3B</th>
+              <th>HR</th>
+              <th>RBI</th>
+              <th>R</th>
+              <th>SB</th>
+              <th>TB</th>
+              <th>SO</th>
+              <th>BB</th>
+              <th>SAC</th>
+              <th>SF</th>
+              <th>AVG</th>
+              <th>OBP</th>
+              <th>SLG</th>
+              <th>OPS</th>
+            </tr>
+          </thead>
+          <tbody>
+            
     <tr>
       <td>2051</td>
-      <td>台鋼</td>
+      <td>未來之鷹</td>
       <td>134</td>
       <td>542</td>
       <td>496</td>
@@ -322,7 +120,9 @@ table.stats td:nth-child(2) {
       <td>.425</td>
       <td>.765</td>
     </tr>
-    <tr class="career">
+           
+            
+    <tr>
       <td colspan="2">通算成績</td>
       <td>134</td>
       <td>542</td>
@@ -344,42 +144,43 @@ table.stats td:nth-child(2) {
       <td>.425</td>
       <td>.765</td>
     </tr>
-
-
-  
-    </tbody>
-  </table>
-
-      <!-- 成績資料保持原本內容 -->
-      <!-- 這裡略去為簡潔，可直接保留你原本 table 內容 -->
+    
     </tbody>
     </table>
-  </div>
+     </div>
 
-  <!-- 個人獎項 -->
-  <div class="section">
-    <h2>個人獎項</h2>
-    （尚無）
+      <!-- 個人獎項 -->
+      <div class="section">
+        <h2>個人獎項</h2>
+        <div class="award-list">
+        尚無...
+        </div>
+      </div>
 
+      <!-- 特殊事蹟 -->
+      <div class="section">
+        <h2>特殊事蹟</h2>
+        <div class="incident-list">
+        ・室內棒球聯盟明星賽：2051<br>
+        ・2050年U18世界青棒錦標賽中華代表隊<br>
+        </div>
+      </div>
+
+      <!-- 相關新聞 -->
+      <div class="section">
+        <h2>相關新聞</h2>
+        <ul class="news-list">
+
+          
+        </ul>
+      </div>
+
+    </div>
     
-  </div>
+    
 
-  <!-- 特殊事蹟 -->
-  <div class="section">
-    <h2>特殊事蹟</h2>
-     ・<a href="#">室內棒球聯盟明星賽</a>：2051</br>
-     ・<a href="#">2050年U18世界青棒錦標賽</a>中華代表隊</br>
   </div>
-
-  <!-- 相關新聞 -->
-  <div class="section">
-    <h2>相關新聞</h2>
-    <a href="#"></a><br>
-    <a href="#"></a>
-  </div>
-
 </div>
-
 
 </body>
 </html>
