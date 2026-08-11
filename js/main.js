@@ -123,56 +123,38 @@ async function loadData() {
 // 自動計算並渲染頂部 1~5 名數據榜
 // 自動計算並渲染頂部數據榜與聯盟平均三圍
 function renderLeaders() {
-  const container = document.getElementById("leadersContainer");
-  if (!container || players.length === 0) return;
+  if (!players || players.length === 0) return;
 
-  // 1. 計算聯盟整體打擊三圍 (加權平均：總安打/總打數、總上壘/總打席等)
+  // 1. 計算聯盟累積總和
   const totalH = players.reduce((sum, p) => sum + p.h, 0);
   const totalAB = players.reduce((sum, p) => sum + p.ab, 0);
   const totalBB = players.reduce((sum, p) => sum + p.bb, 0);
-  const totalSF = players.reduce((sum, p) => sum + p.sf, 0);
+  const totalSF = players.reduce((sum, p) => sum + (p.sf || 0), 0);
   const totalPA = players.reduce((sum, p) => sum + p.pa, 0);
-  const totalTB = players.reduce((sum, p) => sum + p.tb, 0);
+  const totalTB = players.reduce((sum, p) => sum + (p.tb || 0), 0);
+  const totalHR = players.reduce((sum, p) => sum + p.hr, 0);
 
-  // 聯盟加權計算
+  // 計算平均三圍與 OPS
   const lgAvg = totalAB > 0 ? totalH / totalAB : 0;
   const lgObp = (totalAB + totalBB + totalSF) > 0 ? (totalH + totalBB) / (totalAB + totalBB + totalSF) : 0;
   const lgSlg = totalAB > 0 ? totalTB / totalAB : 0;
   const lgOps = lgObp + lgSlg;
 
-  // 生成「聯盟平均打擊三圍」卡片 HTML
-  let html = `
-    <div class="leader-card" style="border-top: 3px solid #10b981;">
-      <h3>
-        📊 聯盟平均打擊三圍
-        <span class="note">全聯盟數據</span>
-      </h3>
-      <ul class="leader-list" style="padding-top: 4px;">
-        <li class="leader-item">
-          <span class="leader-player">打擊率 (AVG)</span>
-          <span class="leader-val">${formatRate(lgAvg)}</span>
-        </li>
-        <li class="leader-item">
-          <span class="leader-player">上壘率 (OBP)</span>
-          <span class="leader-val">${formatRate(lgObp)}</span>
-        </li>
-        <li class="leader-item">
-          <span class="leader-player">長打率 (SLG)</span>
-          <span class="leader-val">${formatRate(lgSlg)}</span>
-        </li>
-        <li class="leader-item">
-          <span class="leader-player">整體攻擊物料 (OPS)</span>
-          <span class="leader-val" style="color:#10b981;">${formatRate(lgOps)}</span>
-        </li>
-        <li class="leader-item">
-          <span class="leader-player">總對戰人次 / 總打席</span>
-          <span class="leader-val" style="color:#64748b; font-size: 0.85rem;">${totalPA} PA</span>
-        </li>
-      </ul>
-    </div>
-  `;
+  // 2. 更新橫向年度數據橫幅 (Year Summary)
+  if (document.getElementById("lg-avg")) document.getElementById("lg-avg").textContent = formatRate(lgAvg);
+  if (document.getElementById("lg-obp")) document.getElementById("lg-obp").textContent = formatRate(lgObp);
+  if (document.getElementById("lg-slg")) document.getElementById("lg-slg").textContent = formatRate(lgSlg);
+  if (document.getElementById("lg-ops")) document.getElementById("lg-ops").textContent = formatRate(lgOps);
+  if (document.getElementById("lg-pa")) document.getElementById("lg-pa").textContent = totalPA.toLocaleString();
+  if (document.getElementById("lg-ab")) document.getElementById("lg-ab").textContent = totalAB.toLocaleString();
+  if (document.getElementById("lg-h")) document.getElementById("lg-h").textContent = totalH.toLocaleString();
+  if (document.getElementById("lg-hr")) document.getElementById("lg-hr").textContent = totalHR.toLocaleString();
+  if (document.getElementById("lg-bb")) document.getElementById("lg-bb").textContent = totalBB.toLocaleString();
 
-  // 2. 各分項數據排行榜設定
+  // 3. 渲染個人排行榜 Top 5 卡片
+  const targetContainer = document.getElementById("leadersContainer");
+  if (!targetContainer) return;
+
   const categories = [
     { title: "打擊率 (AVG)", key: "avg", isRate: true, needQualified: true },
     { title: "上壘率 (OBP)", key: "obp", isRate: true, needQualified: true },
@@ -183,7 +165,7 @@ function renderLeaders() {
     { title: "盜壘 (SB)", key: "sb", isRate: false, needQualified: false }
   ];
 
-  // 渲染排行榜卡片
+  let html = "";
   categories.forEach(cat => {
     let pool = players.filter(p => cat.needQualified ? p.pa >= QUALIFIED_PA : true);
     pool.sort((a, b) => b[cat.key] - a[cat.key]);
@@ -208,7 +190,7 @@ function renderLeaders() {
     `;
   });
 
-  container.innerHTML = html;
+  targetContainer.innerHTML = html;
 }
 
 function initTableHeader() {
