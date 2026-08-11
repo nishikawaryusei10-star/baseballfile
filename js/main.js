@@ -63,7 +63,6 @@ async function loadData() {
   const currentYear = yearMatch ? yearMatch[0] : "2051";
 
   const SHEET_ID = "1GUBiauEJ4sAC4PTZrZVT09B4ap7vk5gRAkIS5q-uqbY";
-  // 使用 Google 官方 GViz API，避開 OpenSheet 的數字分頁 Bug
   const API_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&sheet=${currentYear}`;
 
   try {
@@ -109,7 +108,8 @@ async function loadData() {
     }));
 
     initTableHeader();
-    renderTable();
+    renderLeaders(); // 渲染數據領先榜
+    renderTable();    // 渲染總表格
   } catch (err) {
     console.error("載入失敗：", err);
     const tbody = document.getElementById("statsBody");
@@ -118,6 +118,52 @@ async function loadData() {
         `<tr><td colspan="21" style="padding: 30px; color: #ef4444; text-align: center;">資料讀取失敗，請確認 Google Sheet 中有名為「${currentYear}」的分頁。</td></tr>`;
     }
   }
+}
+
+// 自動計算並渲染頂部 1~5 名數據榜
+function renderLeaders() {
+  const container = document.getElementById("leadersContainer");
+  if (!container) return;
+
+  const categories = [
+    { title: "打擊率 (AVG)", key: "avg", isRate: true, needQualified: true },
+    { title: "整體攻擊指數 (OPS)", key: "ops", isRate: true, needQualified: true },
+    { title: "安打 (H)", key: "h", isRate: false, needQualified: false },
+    { title: "全壘打 (HR)", key: "hr", isRate: false, needQualified: false },
+    { title: "打點 (RBI)", key: "rbi", isRate: false, needQualified: false },
+    { title: "盜壘 (SB)", key: "sb", isRate: false, needQualified: false }
+  ];
+
+  let html = "";
+
+  categories.forEach(cat => {
+    // 過濾規定打席
+    let pool = players.filter(p => cat.needQualified ? p.pa >= QUALIFIED_PA : true);
+    // 依數據由大到小排序
+    pool.sort((a, b) => b[cat.key] - a[cat.key]);
+    // 取前 5 名
+    const top5 = pool.slice(0, 5);
+
+    html += `
+      <div class="leader-card">
+        <h3>
+          ${cat.title}
+          ${cat.needQualified ? `<span class="note">≥${QUALIFIED_PA}PA</span>` : ""}
+        </h3>
+        <ul class="leader-list">
+          ${top5.map((p, index) => `
+            <li class="leader-item">
+              <span class="leader-rank ${index === 0 ? 'top1' : ''}">${index + 1}</span>
+              <span class="leader-player">${p.name}<span class="leader-team">(${p.team})</span></span>
+              <span class="leader-val">${cat.isRate ? formatRate(p[cat.key]) : p[cat.key]}</span>
+            </li>
+          `).join('')}
+        </ul>
+      </div>
+    `;
+  });
+
+  container.innerHTML = html;
 }
 
 function initTableHeader() {
