@@ -130,6 +130,84 @@
       background-color: var(--accent-bg);
     }
 
+    /* 數據領先榜卡片樣式 */
+    .leaders-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    
+    .leader-card {
+      background: #ffffff;
+      border: 1px solid var(--border-color, #e2e8f0);
+      border-radius: 8px;
+      padding: 16px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    
+    .leader-card h3 {
+      margin: 0 0 12px 0;
+      font-size: 1rem;
+      color: var(--primary-color, #1e293b);
+      border-bottom: 2px solid var(--accent-color, #2563eb);
+      padding-bottom: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .leader-card .note {
+      font-size: 0.75rem;
+      color: #64748b;
+      font-weight: normal;
+    }
+    
+    .leader-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .leader-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 6px 0;
+      font-size: 0.9rem;
+      border-bottom: 1px dashed #f1f5f9;
+    }
+
+    .leader-item:last-child {
+      border-bottom: none;
+    }
+    
+    .leader-rank {
+      font-weight: bold;
+      width: 20px;
+      color: #64748b;
+    }
+
+    .leader-rank.top1 { color: #d97706; } /* 金色風格 */
+    
+    .leader-player {
+      flex: 1;
+      margin: 0 8px;
+      font-weight: 600;
+    }
+
+    .leader-team {
+      font-size: 0.8rem;
+      color: #94a3b8;
+      margin-left: 4px;
+      font-weight: normal;
+    }
+    
+    .leader-val {
+      font-weight: 700;
+      color: var(--accent-color, #2563eb);
+    }
+
     /* 前兩欄固定軸設定 */
     .col-sticky-1 {
       position: sticky;
