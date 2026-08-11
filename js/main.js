@@ -158,7 +158,7 @@ function renderLeaders() {
   const categories = [
     { title: "打擊率 (AVG)", key: "avg", isRate: true, needQualified: true },
     { title: "上壘率 (OBP)", key: "obp", isRate: true, needQualified: true },
-    { title: "整體攻擊物料 (OPS)", key: "ops", isRate: true, needQualified: true },
+    { title: "整體攻擊指數 (OPS)", key: "ops", isRate: true, needQualified: true },
     { title: "安打 (H)", key: "h", isRate: false, needQualified: false },
     { title: "全壘打 (HR)", key: "hr", isRate: false, needQualified: false },
     { title: "打點 (RBI)", key: "rbi", isRate: false, needQualified: false },
