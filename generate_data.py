@@ -16,6 +16,7 @@ def generate_json():
         "mexicoplayers": "墨西哥球員",
         "highschool": "高中球隊",
         "domplayers": "多明尼加球員",
+        "venplayers": "委內瑞拉球員",
         
     }
 
