@@ -121,28 +121,72 @@ async function loadData() {
 }
 
 // 自動計算並渲染頂部 1~5 名數據榜
+// 自動計算並渲染頂部數據榜與聯盟平均三圍
 function renderLeaders() {
   const container = document.getElementById("leadersContainer");
-  if (!container) return;
+  if (!container || players.length === 0) return;
 
+  // 1. 計算聯盟整體打擊三圍 (加權平均：總安打/總打數、總上壘/總打席等)
+  const totalH = players.reduce((sum, p) => sum + p.h, 0);
+  const totalAB = players.reduce((sum, p) => sum + p.ab, 0);
+  const totalBB = players.reduce((sum, p) => sum + p.bb, 0);
+  const totalSF = players.reduce((sum, p) => sum + p.sf, 0);
+  const totalPA = players.reduce((sum, p) => sum + p.pa, 0);
+  const totalTB = players.reduce((sum, p) => sum + p.tb, 0);
+
+  // 聯盟加權計算
+  const lgAvg = totalAB > 0 ? totalH / totalAB : 0;
+  const lgObp = (totalAB + totalBB + totalSF) > 0 ? (totalH + totalBB) / (totalAB + totalBB + totalSF) : 0;
+  const lgSlg = totalAB > 0 ? totalTB / totalAB : 0;
+  const lgOps = lgObp + lgSlg;
+
+  // 生成「聯盟平均打擊三圍」卡片 HTML
+  let html = `
+    <div class="leader-card" style="border-top: 3px solid #10b981;">
+      <h3>
+        📊 聯盟平均打擊三圍
+        <span class="note">全聯盟數據</span>
+      </h3>
+      <ul class="leader-list" style="padding-top: 4px;">
+        <li class="leader-item">
+          <span class="leader-player">打擊率 (AVG)</span>
+          <span class="leader-val">${formatRate(lgAvg)}</span>
+        </li>
+        <li class="leader-item">
+          <span class="leader-player">上壘率 (OBP)</span>
+          <span class="leader-val">${formatRate(lgObp)}</span>
+        </li>
+        <li class="leader-item">
+          <span class="leader-player">長打率 (SLG)</span>
+          <span class="leader-val">${formatRate(lgSlg)}</span>
+        </li>
+        <li class="leader-item">
+          <span class="leader-player">整體攻擊物料 (OPS)</span>
+          <span class="leader-val" style="color:#10b981;">${formatRate(lgOps)}</span>
+        </li>
+        <li class="leader-item">
+          <span class="leader-player">總對戰人次 / 總打席</span>
+          <span class="leader-val" style="color:#64748b; font-size: 0.85rem;">${totalPA} PA</span>
+        </li>
+      </ul>
+    </div>
+  `;
+
+  // 2. 各分項數據排行榜設定
   const categories = [
     { title: "打擊率 (AVG)", key: "avg", isRate: true, needQualified: true },
     { title: "上壘率 (OBP)", key: "obp", isRate: true, needQualified: true },
-    { title: "整體攻擊指數 (OPS)", key: "ops", isRate: true, needQualified: true },
+    { title: "整體攻擊物料 (OPS)", key: "ops", isRate: true, needQualified: true },
     { title: "安打 (H)", key: "h", isRate: false, needQualified: false },
     { title: "全壘打 (HR)", key: "hr", isRate: false, needQualified: false },
     { title: "打點 (RBI)", key: "rbi", isRate: false, needQualified: false },
     { title: "盜壘 (SB)", key: "sb", isRate: false, needQualified: false }
   ];
 
-  let html = "";
-
+  // 渲染排行榜卡片
   categories.forEach(cat => {
-    // 過濾規定打席
     let pool = players.filter(p => cat.needQualified ? p.pa >= QUALIFIED_PA : true);
-    // 依數據由大到小排序
     pool.sort((a, b) => b[cat.key] - a[cat.key]);
-    // 取前 5 名
     const top5 = pool.slice(0, 5);
 
     html += `
