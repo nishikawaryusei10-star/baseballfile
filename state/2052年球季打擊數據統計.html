@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2052年球季打擊數據統計</title>
+  
+  <!-- 引入 CSS 檔案 -->
+  <link rel="stylesheet" href="../css/states.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="control-card">
+    <div class="title-group">
+      <h1>2052年球季打擊數據統計</h1>
+      <p>點擊欄位標頭可進行降冪/升冪排序</p>
+    </div>
+    <label class="filter-group">
+      <input type="checkbox" id="qualifiedFilter" checked onchange="renderTable()">
+      <span>僅顯示達規定打席 (≥ 465 PA)</span>
+    </label>
+  </div>
+
+   <!-- 新增：類似 MLB State Year by Year 橫向整體數據橫幅 -->
+  <div class="year-summary-card">
+    <div class="year-summary-header">
+      <div class="year-summary-title">
+        <span>⚾ 2052 聯盟整體打擊數據 (League Totals)</span>
+      </div>
+      <span class="year-summary-badge">全聯盟彙整</span>
+    </div>
+    <div class="year-stats-grid">
+      <div class="year-stat-item">
+        <span class="year-stat-label">打擊率 (AVG)</span>
+        <span id="lg-avg" class="year-stat-value highlight">.000</span>
+      </div>
+      <div class="year-stat-item">
+        <span class="year-stat-label">上壘率 (OBP)</span>
+        <span id="lg-obp" class="year-stat-value highlight">.000</span>
+      </div>
+      <div class="year-stat-item">
+        <span class="year-stat-label">長打率 (SLG)</span>
+        <span id="lg-slg" class="year-stat-value highlight">.000</span>
+      </div>
+      <div class="year-stat-item">
+        <span class="year-stat-label">整體攻擊指數 (OPS)</span>
+        <span id="lg-ops" class="year-stat-value highlight">.000</span>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- 新增：分項數據排行榜區塊 -->
+  <div id="leadersContainer" class="leaders-grid"></div>
+
+  <div class="table-card">
+    <div class="table-container">
+      <table class="stats-table">
+        <thead>
+          <tr id="tableHeader"></tr>
+        </thead>
+        <tbody id="statsBody">
+          <tr><td colspan="21" style="padding: 40px; color: var(--text-muted);">載入最新數據中...</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- 引入 JavaScript 檔案 -->
+<script src="../js/main.js"></script>
+
+</body>
+</html>
