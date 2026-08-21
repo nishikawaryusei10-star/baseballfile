@@ -3,264 +3,88 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> 林尚軒 </title>
-
-<style>
-body {
-  margin: 0;
-  font-family: "Noto Sans TC", sans-serif;
-  background: #ffffff;
-  color: #111827;
-  line-height: 1.6;
-}
-
-a {
-  color: #1d4ed8;
-  text-decoration: none;
-}
-a:hover { text-decoration: underline; }
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  padding-bottom: 80px;
-}
-
-html, body {
-  height: auto;
-  overflow-y: auto;
-}
-
-/* ===== 橫幅照片 ===== */
-.banner-photo {
-  width: 100%;
-  height: 320px;
-  background-color: #e5e7eb;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #6b7280;
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-
-/* ===== 頁首 ===== */
-.header {
-  margin-bottom: 24px;
-}
-
-.header h1 {
-  margin: 0;
-  font-size: 2rem;
-}
-
-.header .sub {
-  font-size: 0.9rem;
-  color: #4b5563;
-}
-
-/* ===== 主版面 ===== */
-.section {
-  margin-bottom: 28px;
-}
-
-.section h2 {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
-  border-left: 4px solid #111827;
-  padding-left: 8px;
-}
-
-/* ===== 基本資料 ===== */
-.profile {
-  font-size: 0.95rem;
-}
-
-.profile div {
-  padding: 5px 0;
-  border-bottom: 1px solid #e5e7eb;
-}
-
-.profile span {
-  display: inline-block;
-  width: 100px;
-  font-weight: 600;
-  color: #374151;
-}
-
-/* ===== 經歷 ===== */
-.career a {
-  display: inline-block;
-  margin-right: 4px;
-}
-
-.no-break {
-  white-space: nowrap; /* 括號內文字不換行 */
-}
-
-/* ===== 年表 ===== */
-.timeline {
-  font-size: 0.95rem;
-}
-
-.timeline div {
-  margin-bottom: 6px;
-}
-
-.timeline b {
-  display: inline-block;
-  width: 60px;
-}
-
-/* ===== 頂部導覽列 ===== */
-.topnav {
-  display: flex;
-  gap: 10px;
-  padding: 12px 0;
-  border-bottom: 3px solid #e5e7eb;
-  margin-bottom: 10px;
-  font-size: 0.85rem;
-}
-
-.topnav a {
-  color: #006000;
-  font-weight:450;
-}
-
-.topnav a:hover {
-  color: #1d4ed8;
-}
-
-/* ===== 表格 ===== */
-table.stats {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-  font-size: 0.85em;
-}
-
-table.stats th,
-table.stats td {
-  padding: 6px 8px;
-  text-align: center;
-  border-bottom: 1px solid #ddd;
-}
-
-table.stats th {
-  background: #F9F900;
-  color: #000000;
-  font-weight: 600;
-}
-
-table.stats tbody tr:nth-child(even) td {
-  background: #FFFFDF;
-}
-
-table.stats tbody tr:hover td {
-  background: #dce6f3;
-}
-
-table.stats th:nth-child(2),
-table.stats td:nth-child(2) {
-  white-space: nowrap;
-}
-
-.best {
-  font-weight: bold;       /* 加粗字體 */        
-  border-radius: 4px;
-  padding: 2px 4px;
-}
-
-.test {
-  font-weight: bold;       /* 加粗字體 */
-  color: #FF0000;          /* 改成紅色 */
-  border-radius: 4px;
-  padding: 2px 4px;
-}
-
-/* ===== Footer ===== */
-.footer {
-  border-top: 1px solid #d1d5db;
-  margin-top: 48px;
-  padding-top: 16px;
-  text-align: center;
-  font-size: 0.8rem;
-  color: #6b7280;
-}
-</style>
+<title>林尚軒</title>
+<link rel="stylesheet" href="../css/players.css">
 </head>
 
 <body>
 
 <div class="container">
-   
-   <nav class="topnav">
-  <a href="../index.html">首頁</a> ⮕ <a href="players_overview.html">球員</a> ⮕  <a href="taiwan_players_overall.html">台灣球員</a> ⮕  <b>林尚軒</b> </nav>    
 
-  <!-- 頁首 -->
+  <!-- 導覽列 -->
+  <nav class="topnav">
+    <a href="../index.html">首頁</a> ⮕ <a href="players_overview.html">球員</a> ⮕ <a href="tawan_players_overview.html">台灣球員</a> ⮕ <b>林尚軒</b>
+  </nav>
+
+  <!-- 頁首標題 -->
   <div class="header">
     <h1>林尚軒</h1>
-    <div class="sub"> LIN,SHANG-XUAN｜投手（P）</div>
+    <div class="sub">球員｜室內棒球聯盟</div>
   </div>
 
-  <!-- 基本資料 -->
-  <div class="section">
-    <h2>基本資料</h2>
-    <div class="profile">
-      <div><span>出生日期</span>2029 年 5 月 12 日（22歲）</div>
-      <div><span>身高體重</span>185 公分／89 公斤</div>
-      <div><span>出生地</span>台灣・花蓮縣</div>
-      <div><span>投打習慣</span>右投右打</div>
-      <div><span>守備位置</span>投手 RHP</div>
-      <div><span>最快球速</span>160.8 km/h（室內棒球聯盟／2051年）</div>
-      <div><span>職棒選秀</span><a href="../draft/IBL_draft2047.html">2047年室內棒球聯盟選秀會</a><a href="../teams/IBL_bullet.html">中信子彈隊</a>第二輪指名</div>
+  <!-- 主版面網格 -->
+  <div class="main-layout">
+
+    <!-- 左側主要內容區 -->
+    <div class="content-area">
+
+      <!-- 基本資料 -->
+    <div class="section">
+      <h2>基本資料</h2>
+      <div class="profile-list">
+        <div class="profile-list-item"><span class="profile-label">出生日期：</span><span>2029 年 5 月 12 日（23歲）</span></div>
+        <div class="profile-list-item"><span class="profile-label">身高體重：</span><span>185 公分 / 89 公斤</span></div>
+        <div class="profile-list-item"><span class="profile-label">出生地：</span><span>🇹🇼 台灣・花蓮縣花蓮市</span></div>
+        <div class="profile-list-item"><span class="profile-label">守備位置：</span><span>投手 RHP</span></div>
+        <div class="profile-list-item"><span class="profile-label">最快球速：</span><span>160.8 km/h（室內棒球聯盟／2051年）</span></div>
+        <div class="profile-list-item"><span class="profile-label">投打習慣：</span><span>右投右打</span></div>
+        <div class="profile-list-item"><span class="profile-label">背號：</span><span>17</span></div>
+        <div class="profile-list-item"><span class="profile-label">職棒選秀：</span><span><a href="../term/2047年室內棒球聯盟新人選秀會.html">2047年室內棒球聯盟選秀會</a><a href="../teams/微秒彗星隊.html">微秒彗星隊</a></span></div>
+        <div class="profile-list-item"><span class="profile-label">現效力球隊：</span><span><a href="../teams/微秒彗星隊.html">微秒彗星隊</a></span></div>
+      </div>
     </div>
-  </div>
 
-  <!-- 球員經歷 -->
-  <div class="section">
-    <h2>球員經歷</h2>
-    <div class="career">
-      <a href="#">花蓮縣</a><a href="#">中原國小少棒隊</a></br>
-      <a href="#">花蓮縣</a><a href="#">花崗國中青少棒隊</a></br>
-      <a href="#">花蓮縣</a><a href="#">花蓮高中青棒隊</a></br>
-      <a href="#">室內棒球聯盟</a><a href="../teams/IBL_bullet.html">中信子彈</a>（2047/08～）</br>
+      <!-- 球員經歷 -->
+      <div class="section">
+        <h2>球員經歷</h2>
+        <div class="career-list">
+         花蓮縣中原國小少棒隊<br>
+         花蓮縣花崗國中青少棒隊<br>
+         花蓮縣花蓮高中青棒隊<br>
+         <a href="../league/室內棒球聯盟.html">室內棒球聯盟</a><a href="../teams/微秒彗星隊.html">微秒彗星隊</a><span class="no-break">（2047/08～）</span><br>
+        </div>
+      </div>
+
+      <!-- 個人年表 -->
+      <div class="section">
+        <h2>個人年表</h2>
+        <div class="timeline">
+          <div class="timeline-item"><span class="timeline-year">2047年</span><span>7月，參加室內棒球聯盟選秀會，被微秒彗星隊以第二指名選中，以簽約金1406萬元、5年新人約正式加盟</span></div>
+        </div>
+      </div>
+
+    <!-- 選手故事 -->
+    <div class="section">
+    <h2>選手介紹</h2>
+    <b>成為職業選手前</b>
+    <p>林尚軒自小學五年級開始打棒球，在打棒球之前，原本是足球隊成員，不過在小學五年級時為了嘗試不同的社團而加入棒球隊，起初的守備位置是外野手。升上花崗國中後，對棒球有熱忱的他繼續加入棒球隊，在隊上缺乏投手情況下，林尚軒改練投手，而成效出奇地好，經過訓練後國三球速已經能來到138km/h，國中聯賽面對台北強權長安國中先發4.1局無失分，引起許多學校關注，國中畢業後的林尚軒，選擇了升學兼顧打球道路，決定進入花蓮高中</p>
+    <p>在投手教練徐大勇的指導下，加上運動科學輔助，他的技術面提升了不少，最快球速也能來到143km，升上高二後在每個盃賽都能有好成績，其中在2046年雪山盃拿下投手獎，也讓他在升上高三前，入選了2046年U18世界青棒錦標賽，在U-18對戰中國、美國分別先發奪勝。</p>
+    <p>高三後林尚軒球速極速進步到152km/h，在黑豹旗更有測到154km/h的速度，優異的表現也吸引國內外球探的目光。黑熊旗結束後，他公開表示希望先升學，不過在申請入學時，他自評自己進入職業應該會比進入大學還好。<p>
+    <p>原訂要升學為主的林尚軒臨時改變主意，在選秀會報名截止前四天宣布投入2047年選秀會，而微秒彗星隊在第二輪就早早選走這位未來的王牌投手，後以簽約金1406萬，5年新人約加盟球隊<p>
+    <b>室內棒球聯盟時期</b>
+    <p>2048年，林尚軒在球團安排下加入國軍鳳凰隊服役，球團以提升身體素質、增重為主，他在二軍前七場先發主投43.1局僅有4分自責分，防禦率低到只有0.83，改變教練團要整季讓他在二軍的想法。6/25日，林尚軒被升上一軍，6/27首度面對奇醫海燕隊先發，主投5.2局送出6次三振、5個保送，失4分，不過在隊友強大火力下拿下生涯首勝。該季他在一軍有10場先發出賽，56.1局投球中留下防禦率3.99、WHIP1.30的成績，在季後賽林尚軒有1場登板紀錄，主投4局失5分吞敗，國軍隊在季後賽首輪遭到淘汰。</p>
+    <p>2049年，林尚軒開季前二場比賽雖然投得跌跌撞撞，總計10局失6分，但在短暫二軍調整後找回王牌身手，該季先發25場拿下11勝5敗，防禦率2.94的好成績。在季後賽他出賽4場全部繳出超優質先發，其中總冠軍G6先發8.2局無失分，也帶領微秒彗星隊獲得總冠軍。</p>
+    <p>2050年，繳出王牌身手的林尚軒首度被選為開幕戰先發，該年他僅20歲，先發6.1局失3分，在隊友火力掩護下獲得開幕戰勝投。6月24日，對戰苗栗石虎隊的比賽中他丟出160.5km/h的速球，成為室內棒球聯盟第二位投出超過160公里的本土選手。該季他出賽29場拿下14勝，防禦率僅2.49，季末也入選史華特票選，不過僅排名第七。不過他的表現仍受到國家隊教練團肯定，入選世界棒球16強代表隊，以先發身分主投16.1局僅失1分，壓制波多黎各與南韓強打線，成為中華隊奪得季軍的重要功臣。</p>
+    <p>2051年季初，昨季16強好表現的林尚軒再度被球團安排為開幕戰先發投手，開幕戰先發7局無失分送出7K，連續兩年在開幕戰都獲得勝投。今年在速度方面比起去年更進步，速球均速來到154.4km/h，新練的卡特球均速也能來到152.6km/h，不過他對該球種控制能力較差，被打擊率高達.271。林尚軒該季出賽31場，繳出16勝6敗，防禦率1.78、被打擊率.188都是聯盟最佳，季後在史華特獎票選中也成功擊敗<a href="楊振賢.html">楊振賢</a>，首度拿下屬於投手的最高榮譽。</p>
+    <p>2052年初，林尚軒入選經典賽代表隊，在預賽對戰多明尼加首戰先發5.1局送出6次三振無失分的好投，並且在複賽八強對戰義大利中繼1.2局無失分，雖然最後在四強賽敗給委內瑞拉，不過林尚軒兩場好投也讓他引起眾多美職球探關注。回歸母隊後的林尚軒依舊強勢，6月先發五場37.1局中送出47K，防禦率則是完美的0，且截至8月16日，林尚軒20場先發丟了138.1局並未被敲出任何的全壘打，直到8/17日7局上2出局才被苗栗石虎隊<a href="徐聖傑.html">徐聖傑</a>敲出陽春砲，單季連續局數未被敲全壘打的紀錄停留在145局，也中止了該季他的15連勝。</p>  
+      
     </div>
-  </div>
 
-  <!-- 球員介紹 -->
-  <div class="section">
-    <h2>球員介紹</h2>
-林尚軒是一位來自花蓮縣的棒球選手，守備位置為投手，目前效力於室內棒球聯盟中信子彈隊<br> 
-<br> 
-林尚軒出生於花蓮，從小在山海之間長大。國小時期便展現優異的協調性與下肢力量，早期以游擊手與外野手為主。直到國中後期，教練才發現他出手角度乾淨、肩肘結構條件良好，開始嘗試讓他站上投手丘。當時他的球速僅約135km左右，但出手穩定、手臂揮動效率佳，屬於可塑性極高的投手原石。國中畢業後，他選擇升學，進入花蓮高中就讀。這個決定成為職涯轉折點。在投手教練徐大勇的指導下，他開始接觸運動課學，透過動作捕捉分析、出手角度與旋轉效率優化、下肢動能傳導訓練，透過數據與影像回放，他逐步修正跨步幅度與軀幹旋轉時間點，使球速在短時間內明顯提升。高一黑豹旗最快球速就進不到143km。雖然不算亮眼，但也開始進入球探觀察名單。高二最速提升至149km，入選該年U18青棒代表隊，集訓期間新增一顆高速滑球作為主要決勝球，轉速與位移幅度皆達慢慢成熟。該年黑豹旗帶領花蓮高中闖進64強，最終因投球數限制無法登板，惜敗穀保家商，但已讓全國記住他的名字。高三球速正式突破152km，控球穩定度顯著進步，四縫線速球具上竄尾勁，搭配滑球與變速球，三球種品質完整。各大賽事場邊測速槍林立，球探筆記本翻頁速度甚至比比賽節奏還快。當時對他的評語是：「原始素材好，成長曲線漂亮，還沒到極限。」<br>
-<br>
-面對旅外、選秀與升學三條道路，林尚軒始終低調。黑熊旗結束後，他公開表示希望先升學，再評估選秀時機。然而，透過學測申請入學時，在第二階段面試接連受挫。雖仍有備取機會，他卻在思考後選擇放棄。林尚軒自評身體已接近成熟階段且投球機制穩定，適合提前進入職業系統，若再等四年，成長幅度未必更高，最終，他決定直接投入該屆選秀。該年競爭異常激烈包括彰中的國家隊二遊、多名即戰力大專王牌，而林尚軒屬於天花板高、但需時間養成型。然而，中信子彈隊看中他的上限與可塑性，毫不猶豫在第二輪選中這位東部未來之星。<br>
-<br>
-選秀後，球團立即安排他進入國軍隊服役。在紀律化生活與球團專屬菜單下，他專注於球隊的菜單，增加肌肉量、提升身體素質。隔年六月退伍後測試成果良好，球團在七月中將他升上一軍。新人年10出賽，雖局數受控，成績不亮眼，但以他這個年紀來看，壓制力與成熟度已超出預期。2049年是林尚軒第一個完整新人賽季，他正式卡住輪值位置。防禦率低於3.00，FIP、K/9、被打擊率皆屬聯盟前段。被評為「最有機會挑戰王牌地位的年輕先發」。2050年林尚軒除了在球季表現更進步，季末也受到國家隊教練團肯定，入選世界棒球16強代表隊，以先發身分主投16.1局僅失1分，壓制波多黎各與南韓強打線，成為中華隊奪得季軍的重要功臣。這年他僅21歲。2051年，他繳出：防禦率1.78，隨著2051年防禦率王到手，國外球探密切關注。被普遍認為是：「下一位具備旅外實力的本土王牌投手候選人。」
-
-  </div>
-
-  <!-- 個人年表 -->
-  <div class="section">
-    <h2>個人年表</h2>
-    <div class="timeline">
-<div><b>2047年</b>7月，參加該年選秀會，在第二輪被中信子彈隊隊指名，後以簽約金1485萬新台幣、4年新人合約加盟</div>
-<div><b>2047年</b>7月，進入國軍鳳凰隊服役</div>
-<div><b>2050年</b>6月24日，對戰苗栗石虎隊的比賽投出161公里的速球，經官方認證後為160.5公里，成為室內棒球聯盟第二位投出超過160公里的本土選手</div>
-</div>
-  </div>
-
-  <!-- 生涯成績 -->
- <!-- 生涯成績 -->
-  <div class="section">
+    <!-- 職棒生涯成績 -->
+    <div class="section">
     <h2>職棒生涯成績</h2>
-    <b>室內棒球聯盟一軍投球成績：</b>
-    <table class="stats">
+    室內棒球聯盟一軍打擊成績：
+    <table class="stats" style="--tbl-main: #F9F900; --tbl-text: #000000; --tbl-even: #ffffdf;">
     <thead>
       <tr>
       <th>年度</th>
@@ -289,7 +113,7 @@ table.stats td:nth-child(2) {
 
     <tr>
      <td>2048</td>
-      <td>中信子彈</td>
+      <td>國軍鳳凰</td>
       <td>10</td>
       <td>10</td>
       <td>2</td>
@@ -312,7 +136,7 @@ table.stats td:nth-child(2) {
 
     <tr>
      <td>2049</td>
-      <td>中信子彈</td>
+      <td>微秒彗星</td>
       <td>27</td>
       <td>25</td>
       <td>11</td>
@@ -335,7 +159,7 @@ table.stats td:nth-child(2) {
 
     <tr>
      <td>2050</td>
-      <td>中信子彈</td>
+      <td>微秒彗星</td>
       <td>29</td>
       <td>29</td>
       <td>14</td>
@@ -358,7 +182,7 @@ table.stats td:nth-child(2) {
 
    <tr>
      <td>2051</td>
-      <td>中信子彈</td>
+      <td>微秒彗星</td>
       <td>31</td>
       <td>31</td>
       <td>16</td>
@@ -370,12 +194,12 @@ table.stats td:nth-child(2) {
       <td>793</td>
       <td>149</td>
       <td>4</td>
-      <td>.188</td>
+      <td><b>.188</b></td>
       <td>205</td>
       <td>43</td>
       <td>43</td>
       <td>38</td>
-      <td><span class="best">1.78</span></td>
+      <td><b>1.78</b></td>
       <td>1.00</td>
     </tr>
     <tr class="career">
@@ -404,45 +228,38 @@ table.stats td:nth-child(2) {
   
     </tbody>
   </table>
+    
+     </div>
 
-      <!-- 成績資料保持原本內容 -->
-      <!-- 這裡略去為簡潔，可直接保留你原本 table 內容 -->
-    </tbody>
-    </table>
-  </div>
+      <!-- 個人獎項 -->
+      <div class="section">
+        <h2>個人獎項</h2>
+        <div class="award-list">
+        ・<a href="../term/室內棒球聯盟年度防禦率王.html">室內棒球聯盟年度防禦率王</a>：2051<br>
+        ・<a href="../term/室內棒球聯盟年度金手套獎.html">室內棒球聯盟年度金手套獎</a>投手：2050<br>
+        ・<a href="../term/室內棒球聯盟年度史華特獎.html">室內棒球聯盟年度史華特獎</a>：2051<br>
+        ・<a href="../term/室內棒球聯盟單月mvp.html">室內棒球聯盟投手單月mvp</a>：2052/06<br>
+        </div>
+      </div>
 
-  <!-- 個人獎項 -->
-  <div class="section">
-    <h2>個人獎項</h2>
-    ・<a href="../term/室內棒球聯盟年度防禦率王.html">室內棒球聯盟年度防禦率王</a>：2051</br>
-    ・<a href="../term/室內棒球聯盟年度金手套.html">室內棒球聯盟年度金手套</a>：2050</br>
+      <!-- 特殊事蹟 -->
+      <div class="section">
+        <h2>特殊事蹟</h2>
+        <div class="incident-list">
+        尚無...
+        </div>
+      </div>
+
+      <!-- 相關新聞 -->
+      <div class="section">
+        <h2>相關新聞</h2>
+        
+      </div>
+
     </div>
 
-  <!-- 特殊事蹟 -->
-  <div class="section">
-    <h2>特殊事蹟</h2>
-    ・<a href="#">2046年U18世界青棒錦標賽</a>中華代表隊</br>
-    ・<a href="#">2047年U18世界青棒錦標賽</a>中華代表隊</br>
-    ・<a href="#">2050年WBSC世界16強錦標賽</a>中華代表隊</br>
-    ・<a href="#">2052年世界棒球經典賽</a>中華代表隊</br>
   </div>
-
-  <!-- 相關新聞 -->
-  <div class="section">
-    <h2>相關新聞</h2>
-    <a href="../news/2052六月投打MVP.html">室內棒球聯盟》六月投打MVP出爐！何仁峻上演「大逆襲」勇奪打擊獎、中信子彈本土王牌林尚軒防禦率「完美0」全票獲選投手MVP</a><br>
-    <a href="#"></a>
-  </div>
-  
-  <div class="section">
-    <h2>延伸閱讀</h2>
-    ・球速超過160km/h的選手<br>
-  </div>
-  
 </div>
-
-  
-
 
 </body>
 </html>
